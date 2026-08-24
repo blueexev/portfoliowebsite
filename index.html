@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Name — Portfolio</title>
+<meta name="description" content="Portfolio of Your Name — designer & developer.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="#top" class="nav-mark">Y.N. / 01</a>
+      <button class="nav-toggle" aria-label="Toggle menu">☰ Menu</button>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#playground">Playground</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero" id="top">
+    <div class="hero-inner">
+      <div>
+        <p class="eyebrow hero-eyebrow">Portfolio — Est. 2026</p>
+        <h1>Your Name,<br>building things<br><em>with care.</em></h1>
+        <p class="hero-role">Designer &amp; Developer — Product / Web / Visual Systems</p>
+        <p class="hero-desc">
+          I'm a [your discipline, e.g. computer science student &amp; visual designer] who likes
+          turning small ideas into things people can actually click on. This page is a record
+          of what I've built, what I use to build it, and what I make when nobody assigned it.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+        </div>
+      </div>
+      <div class="hero-stamp">
+        <div class="hero-stamp-text">Portfolio<br>★ 2026 ★<br>Handmade</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about">
+    <div class="wrap reveal">
+      <p class="eyebrow">01 — About</p>
+      <h2 class="section-title">A little about me</h2>
+      <p class="section-sub">Where I've been, what I care about, and how I like to work.</p>
+
+      <div class="about-grid">
+        <div class="about-frame">
+          <div class="about-frame-inner">Your Photo<br>(replace this box with an &lt;img&gt;)</div>
+        </div>
+        <div class="about-text">
+          <p>
+            <strong>Hi, I'm Your Name.</strong> I'm currently studying [your degree/field] at
+            [your college/university], and I spend most of my time somewhere between a sketchbook
+            and a code editor. I like problems that need both — where something has to work
+            <em>and</em> feel like it was made by a person, not a template.
+          </p>
+          <p>
+            My background is in [mention relevant experience — internships, clubs, freelance
+            work, competitions]. I've picked up most of what I know by building things I was
+            curious about first and figuring out the "proper" way to do it later.
+          </p>
+          <p>
+            Outside of coursework, I'm usually [hobby/interest — e.g. sketching, photography,
+            reading design blogs, tinkering with old cameras] — a lot of it quietly shapes how
+            I design.
+          </p>
+          <dl class="about-facts">
+            <div><dt>Based in</dt><dd>Your City, Country</dd></div>
+            <div><dt>Currently</dt><dd>Studying / Working at ___</dd></div>
+            <div><dt>Focus</dt><dd>UI Design · Front-End Dev</dd></div>
+            <div><dt>Open to</dt><dd>Internships &amp; Freelance</dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section id="skills">
+    <div class="wrap reveal">
+      <p class="eyebrow">02 — Skills</p>
+      <h2 class="section-title">What I work with</h2>
+      <p class="section-sub">The languages, tools and software I reach for most often.</p>
+
+      <div class="skills-cols">
+        <div>
+          <h3 style="font-size:1.05rem; margin-bottom:14px;">Skills</h3>
+          <div class="skill-list">
+            <span class="skill-pill">HTML &amp; CSS</span>
+            <span class="skill-pill">JavaScript</span>
+            <span class="skill-pill">UI / UX Design</span>
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">Responsive Design</span>
+            <span class="skill-pill">Wireframing</span>
+            <span class="skill-pill">Typography</span>
+            <span class="skill-pill">Branding</span>
+            <!-- add / remove <span class="skill-pill">…</span> as needed -->
+          </div>
+        </div>
+        <div>
+          <h3 style="font-size:1.05rem; margin-bottom:14px;">Software</h3>
+          <div class="stamp-grid">
+            <div class="stamp" style="--r:-2deg"><span>Figma</span></div>
+            <div class="stamp" style="--r:1.5deg"><span>VS Code</span></div>
+            <div class="stamp" style="--r:-1deg"><span>Photoshop</span></div>
+            <div class="stamp" style="--r:2deg"><span>Illustrator</span></div>
+            <div class="stamp" style="--r:-1.5deg"><span>Premiere Pro</span></div>
+            <div class="stamp" style="--r:1deg"><span>Blender</span></div>
+            <!-- duplicate a .stamp div for every extra tool -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section id="projects">
+    <div class="wrap reveal">
+      <p class="eyebrow">03 — Selected Work</p>
+      <h2 class="section-title">Six projects, up close</h2>
+      <p class="section-sub">Click any ticket to open the full write-up — process, tools, and outcome.</p>
+
+      <div class="projects-grid">
+
+        <article class="ticket">
+          <span class="ticket-num">No. 01</span>
+          <h3>Project One Title</h3>
+          <p>One or two lines describing what this project is and the problem it solves.</p>
+          <div class="ticket-tags"><span>Web App</span><span>React</span></div>
+          <a href="pages/project-1.html" class="ticket-link">View project <span>→</span></a>
+        </article>
+
+        <article class="ticket">
+          <span class="ticket-num">No. 02</span>
+          <h3>Project Two Title</h3>
+          <p>One or two lines describing what this project is and the problem it solves.</p>
+          <div class="ticket-tags"><span>Mobile</span><span>Figma</span></div>
+          <a href="pages/project-2.html" class="ticket-link">View project <span>→</span></a>
+        </article>
+
+        <article class="ticket">
+          <span class="ticket-num">No. 03</span>
+          <h3>Project Three Title</h3>
+          <p>One or two lines describing what this project is and the problem it solves.</p>
+          <div class="ticket-tags"><span>Python</span><span>Data</span></div>
+          <a href="pages/project-3.html" class="ticket-link">View project <span>→</span></a>
+        </article>
+
+        <article class="ticket">
+          <span class="ticket-num">No. 04</span>
+          <h3>Project Four Title</h3>
+          <p>One or two lines describing what this project is and the problem it solves.</p>
+          <div class="ticket-tags"><span>Branding</span><span>Print</span></div>
+          <a href="pages/project-4.html" class="ticket-link">View project <span>→</span></a>
+        </article>
+
+        <article class="ticket">
+          <span class="ticket-num">No. 05</span>
+          <h3>Project Five Title</h3>
+          <p>One or two lines describing what this project is and the problem it solves.</p>
+          <div class="ticket-tags"><span>Website</span><span>CMS</span></div>
+          <a href="pages/project-5.html" class="ticket-link">View project <span>→</span></a>
+        </article>
+
+        <article class="ticket">
+          <span class="ticket-num">No. 06</span>
+          <h3>Project Six Title</h3>
+          <p>One or two lines describing what this project is and the problem it solves.</p>
+          <div class="ticket-tags"><span>Game</span><span>Unity</span></div>
+          <a href="pages/project-6.html" class="ticket-link">View project <span>→</span></a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ VIBE PLAYGROUND ============ -->
+  <section id="playground">
+    <div class="wrap reveal">
+      <div class="playground">
+        <div>
+          <p class="eyebrow">04 — Off Syllabus</p>
+          <h2>The Vibe Playground</h2>
+          <p>
+            Not everything I make is for a grade or a client. This is the folder of side
+            experiments, weird little tools, half-finished art, and things I built purely
+            because I was curious — outside of any curriculum.
+          </p>
+          <a href="pages/vibe-playground.html" class="btn btn-primary" style="margin-top:22px;">Step Inside →</a>
+        </div>
+        <div class="playground-badge">Unofficial<br>&amp; Unassigned</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT / FOOTER ============ -->
+  <footer id="contact">
+    <div class="wrap">
+      <p class="footer-mark">Let's talk</p>
+      <h2 style="margin-bottom:18px;">your.email@example.com</h2>
+      <ul class="footer-links">
+        <li><a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://instagram.com/yourusername" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="#top">Back to Top ↑</a></li>
+      </ul>
+      <p class="footer-copy">© 2026 Your Name. Built by hand, in VS Code.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
