@@ -1,224 +1,1665 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vaishnavi Venkatesh — Portfolio</title>
-<meta name="description" content="  Vaishnavi Venkatesh — Visual storyteller and Interaction designer.">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Vaishnavi Venkatesh — Interaction Designer</title>
+
+  <meta
+    name="description"
+    content="Vaishnavi Venkatesh is an interaction designer exploring visual storytelling, immersive experiences and digital interfaces."
+  >
+
+  <style>
+    /* =========================================================
+       BASE
+    ========================================================= */
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #f4f1eb;
+      color: #171717;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.55;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    ::selection {
+      background: #171717;
+      color: #f4f1eb;
+    }
+
+    /* =========================================================
+       LAYOUT
+    ========================================================= */
+
+    .site-width {
+      width: min(1080px, calc(100% - 80px));
+      margin: 0 auto;
+    }
+
+    section {
+      padding: 110px 0;
+    }
+
+    .eyebrow {
+      font-size: 10px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #777;
+      margin-bottom: 20px;
+    }
+
+    .section-title {
+      font-size: clamp(30px, 4vw, 48px);
+      font-weight: 500;
+      letter-spacing: -0.045em;
+      line-height: 1.05;
+      max-width: 700px;
+    }
+
+    .section-sub {
+      margin-top: 18px;
+      max-width: 510px;
+      font-size: 14px;
+      color: #666;
+    }
+
+    /* =========================================================
+       NAVIGATION
+    ========================================================= */
+
+    .site-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+
+      background: rgba(244, 241, 235, 0.88);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(23, 23, 23, 0.1);
+    }
+
+    .nav-inner {
+      width: min(1080px, calc(100% - 80px));
+      margin: auto;
+
+      height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-mark {
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 27px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 11px;
+      color: #555;
+      transition: color 0.25s ease;
+    }
+
+    .nav-links a:hover {
+      color: #000;
+    }
+
+    .nav-toggle {
+      display: none;
+      border: 0;
+      background: none;
+      cursor: pointer;
+    }
+
+    /* =========================================================
+       HERO
+    ========================================================= */
+
+    .hero {
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      padding-top: 120px;
+      padding-bottom: 80px;
+    }
+
+    .hero-inner {
+      width: min(1080px, calc(100% - 80px));
+      margin: auto;
+
+      display: grid;
+      grid-template-columns: 1fr 170px;
+      gap: 70px;
+      align-items: end;
+    }
+
+    .hero h1 {
+      font-size: clamp(52px, 8vw, 96px);
+      font-weight: 500;
+      line-height: 0.92;
+      letter-spacing: -0.065em;
+      max-width: 850px;
+    }
+
+    .hero-role {
+      margin-top: 28px;
+      font-size: 13px;
+      color: #444;
+      letter-spacing: 0.02em;
+    }
+
+    .hero-desc {
+      margin-top: 25px;
+      max-width: 560px;
+      font-size: 14px;
+      line-height: 1.8;
+      color: #606060;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 32px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 11px 17px;
+      font-size: 11px;
+      border: 1px solid #171717;
+
+      transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: #171717;
+      color: #f4f1eb;
+    }
+
+    .btn-primary:hover {
+      background: #333;
+    }
+
+    .btn-ghost {
+      background: transparent;
+    }
+
+    .btn-ghost:hover {
+      background: #171717;
+      color: #f4f1eb;
+    }
+
+    .hero-stamp {
+      width: 150px;
+      height: 150px;
+      border: 1px solid #171717;
+      border-radius: 50%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      transform: rotate(7deg);
+      transition: transform 0.5s ease;
+    }
+
+    .hero-stamp:hover {
+      transform: rotate(-8deg) scale(1.04);
+    }
+
+    .hero-stamp-text {
+      font-size: 10px;
+      line-height: 1.8;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    /* =========================================================
+       DRAW + PLAY
+    ========================================================= */
+
+    #play {
+      padding-top: 50px;
+    }
+
+    .play-intro {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 40px;
+      margin-bottom: 28px;
+    }
+
+    .play-note {
+      max-width: 330px;
+      font-size: 12px;
+      color: #777;
+      line-height: 1.7;
+    }
+
+    .canvas-wrap {
+      position: relative;
+      border: 1px solid #171717;
+      background: #ebe7df;
+      overflow: hidden;
+    }
+
+    #drawingCanvas {
+      display: block;
+      width: 100%;
+      height: 350px;
+      cursor: crosshair;
+      touch-action: none;
+    }
+
+    .canvas-label {
+      position: absolute;
+      top: 18px;
+      left: 20px;
+
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+
+      pointer-events: none;
+      color: #555;
+    }
+
+    .canvas-controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      border-top: 1px solid #171717;
+      padding: 12px 15px;
+    }
+
+    .canvas-hint {
+      font-size: 10px;
+      color: #777;
+    }
+
+    .clear-button {
+      border: 1px solid #171717;
+      background: transparent;
+      padding: 7px 12px;
+      font-size: 10px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .clear-button:hover {
+      background: #171717;
+      color: #fff;
+    }
+
+    .play-symbols {
+      display: flex;
+      gap: 9px;
+      margin-top: 16px;
+    }
+
+    .play-symbol {
+      width: 34px;
+      height: 34px;
+
+      border: 1px solid #171717;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-size: 13px;
+      cursor: pointer;
+
+      transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        color 0.25s ease;
+    }
+
+    .play-symbol:hover {
+      transform: rotate(8deg) translateY(-3px);
+      background: #171717;
+      color: white;
+    }
+
+    /* =========================================================
+       ABOUT
+    ========================================================= */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.7fr 1.3fr;
+      gap: 90px;
+      margin-top: 65px;
+      align-items: start;
+    }
+
+    .about-frame {
+      aspect-ratio: 4 / 5;
+      border: 1px solid #171717;
+      padding: 9px;
+    }
+
+    .about-frame-inner {
+      height: 100%;
+      background: #ded9d0;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+      font-size: 10px;
+      color: #777;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .about-text {
+      max-width: 590px;
+    }
+
+    .about-text p {
+      font-size: 14px;
+      color: #4f4f4f;
+      line-height: 1.85;
+      margin-bottom: 20px;
+    }
+
+    .about-text strong {
+      color: #171717;
+      font-weight: 600;
+    }
+
+    .about-facts {
+      margin-top: 38px;
+      border-top: 1px solid rgba(23, 23, 23, 0.2);
+    }
+
+    .about-facts div {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(23, 23, 23, 0.2);
+    }
+
+    .about-facts dt {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #888;
+    }
+
+    .about-facts dd {
+      font-size: 12px;
+    }
+
+    /* =========================================================
+       SKILLS
+    ========================================================= */
+
+    #skills {
+      border-top: 1px solid rgba(23, 23, 23, 0.12);
+    }
+
+    .skills-cols {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 90px;
+      margin-top: 60px;
+    }
+
+    .skills-cols h3 {
+      font-size: 12px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 18px;
+    }
+
+    .skill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .skill-pill {
+      border: 1px solid #aaa;
+      padding: 7px 11px;
+      font-size: 11px;
+      color: #555;
+      transition: all 0.2s ease;
+    }
+
+    .skill-pill:hover {
+      border-color: #171717;
+      color: #171717;
+      transform: translateY(-2px);
+    }
+
+    .stamp-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .stamp {
+      min-width: 90px;
+      height: 50px;
+      border: 1px solid #171717;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      transform: rotate(var(--r));
+      transition: transform 0.25s ease;
+    }
+
+    .stamp:hover {
+      transform: rotate(0deg) translateY(-3px);
+    }
+
+    .stamp span {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    /* =========================================================
+       PROJECTS
+    ========================================================= */
+
+    #projects {
+      border-top: 1px solid rgba(23, 23, 23, 0.12);
+    }
+
+    .projects-grid {
+      margin-top: 65px;
+
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .ticket {
+      position: relative;
+
+      min-height: 280px;
+      border: 1px solid #171717;
+      padding: 25px;
+
+      display: flex;
+      flex-direction: column;
+
+      transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+    }
+
+    .ticket:hover {
+      transform: translateY(-5px);
+      background: #eae6de;
+    }
+
+    .ticket-num {
+      font-size: 9px;
+      color: #888;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .ticket h3 {
+      margin-top: 35px;
+      font-size: 24px;
+      font-weight: 500;
+      letter-spacing: -0.03em;
+    }
+
+    .ticket p {
+      margin-top: 12px;
+      max-width: 410px;
+      font-size: 12px;
+      line-height: 1.7;
+      color: #666;
+    }
+
+    .ticket-tags {
+      display: flex;
+      gap: 6px;
+      margin-top: 20px;
+    }
+
+    .ticket-tags span {
+      border: 1px solid #aaa;
+      padding: 5px 8px;
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+    }
+
+    .ticket-link {
+      margin-top: auto;
+      padding-top: 30px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .ticket-link span {
+      display: inline-block;
+      transition: transform 0.2s ease;
+    }
+
+    .ticket-link:hover span {
+      transform: translateX(5px);
+    }
+
+    /* =========================================================
+       PLAYGROUND
+    ========================================================= */
+
+    .playground {
+      border: 1px solid #171717;
+      padding: 50px;
+
+      display: grid;
+      grid-template-columns: 1fr 150px;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .playground h2 {
+      font-size: 38px;
+      font-weight: 500;
+      letter-spacing: -0.04em;
+    }
+
+    .playground p {
+      max-width: 520px;
+      margin-top: 17px;
+      font-size: 13px;
+      line-height: 1.8;
+      color: #666;
+    }
+
+    .playground-badge {
+      width: 125px;
+      height: 125px;
+      border-radius: 50%;
+      border: 1px solid #171717;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      font-size: 9px;
+      line-height: 1.7;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+
+      transform: rotate(-8deg);
+    }
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
+    footer {
+      padding: 100px 0 45px;
+      border-top: 1px solid rgba(23, 23, 23, 0.15);
+    }
+
+    .footer-mark {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #777;
+      margin-bottom: 18px;
+    }
+
+    footer h2 {
+      font-size: clamp(28px, 5vw, 54px);
+      font-weight: 500;
+      letter-spacing: -0.05em;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .footer-links a {
+      font-size: 11px;
+      color: #666;
+    }
+
+    .footer-links a:hover {
+      color: #000;
+    }
+
+    .footer-copy {
+      margin-top: 70px;
+      font-size: 9px;
+      color: #999;
+    }
+
+    /* =========================================================
+       REVEAL ANIMATION
+    ========================================================= */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(25px);
+      transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* =========================================================
+       RESPONSIVE
+    ========================================================= */
+
+    @media (max-width: 760px) {
+
+      .site-width,
+      .nav-inner,
+      .hero-inner {
+        width: min(100% - 36px, 1080px);
+      }
+
+      section {
+        padding: 80px 0;
+      }
+
+      .nav-inner {
+        height: 60px;
+      }
+
+      .nav-links {
+        display: none;
+
+        position: absolute;
+        top: 60px;
+        left: 18px;
+        right: 18px;
+
+        padding: 20px;
+        background: #f4f1eb;
+        border: 1px solid #171717;
+
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 17px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-toggle {
+        display: block;
+        font-size: 11px;
+      }
+
+      .hero {
+        min-height: auto;
+        padding-top: 130px;
+      }
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      .hero h1 {
+        font-size: clamp(48px, 15vw, 78px);
+      }
+
+      .hero-stamp {
+        width: 100px;
+        height: 100px;
+      }
+
+      .hero-stamp-text {
+        font-size: 8px;
+      }
+
+      .play-intro {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      #drawingCanvas {
+        height: 260px;
+      }
+
+      .about-grid,
+      .skills-cols,
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-grid,
+      .skills-cols {
+        gap: 45px;
+      }
+
+      .about-frame {
+        max-width: 300px;
+      }
+
+      .playground {
+        grid-template-columns: 1fr;
+        padding: 30px;
+      }
+
+      .playground-badge {
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+  </style>
 </head>
+
 <body>
 
-  <!-- ============ NAV ============ -->
+  <!-- =========================================================
+       NAVIGATION
+  ========================================================= -->
+
   <nav class="site-nav">
     <div class="nav-inner">
-      <a href="#top" class="nav-mark">Y.N. / 01</a>
-      <button class="nav-toggle" aria-label="Toggle menu">☰ Menu</button>
+
+      <a href="#top" class="nav-mark">
+        V.V. / 01
+      </a>
+
+      <button class="nav-toggle" aria-label="Open navigation">
+        Menu
+      </button>
+
       <ul class="nav-links">
+        <li><a href="#play">Play</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#playground">Playground</a></li>
+        <li><a href="#projects">Work</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+
     </div>
   </nav>
 
-  <!-- ============ HERO ============ -->
+
+  <!-- =========================================================
+       HERO
+  ========================================================= -->
+
   <header class="hero" id="top">
+
     <div class="hero-inner">
+
       <div>
-        <p class="eyebrow hero-eyebrow">Portfolio — Est. 2026</p>
-        <h1>Vaishnavi Venkatesh</h1>
-        <p class="hero-role">Designer &amp; Developer — Product / Web / Visual Systems</p>
-        <p class="hero-desc">
-          I'm a interaction and visual designer who creates worthwile experiences who likes
-          turning small ideas into things people can actually click on. This page is a record
-          of what I've built, what I use to build it, and what I make when nobody assigned it.
+
+        <p class="eyebrow">
+          Interaction Designer / Visual Storyteller
         </p>
+
+        <h1>
+          Vaishnavi<br>
+          Venkatesh
+        </h1>
+
+        <p class="hero-role">
+          Interfaces, immersive experiences &amp; stories that people can step into.
+        </p>
+
+        <p class="hero-desc">
+          I work across interaction design, visual storytelling and emerging
+          technologies. I like projects that sit somewhere between a screen,
+          a space and a story.
+        </p>
+
         <div class="hero-actions">
-          <a href="#projects" class="btn btn-primary">View Projects</a>
-          <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+
+          <a href="#projects" class="btn btn-primary">
+            See my work
+          </a>
+
+          <a href="#about" class="btn btn-ghost">
+            A little about me
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="hero-stamp">
+        <div class="hero-stamp-text">
+          Portfolio<br>
+          ★ 2026 ★<br>
+          Selected work
         </div>
       </div>
-      <div class="hero-stamp">
-        <div class="hero-stamp-text">Portfolio<br>★ 2026 ★<br>Handmade</div>
-      </div>
+
     </div>
+
   </header>
 
-  <!-- ============ ABOUT ============ -->
+
+  <!-- =========================================================
+       DRAW + PLAY
+  ========================================================= -->
+
+  <section id="play">
+
+    <div class="site-width reveal">
+
+      <div class="play-intro">
+
+        <div>
+          <p class="eyebrow">
+            Before we get serious
+          </p>
+
+          <h2 class="section-title">
+            Draw something.
+          </h2>
+        </div>
+
+        <p class="play-note">
+          This space doesn't really do anything important.
+          That's precisely why it's here. Draw a line, make a shape,
+          leave something behind.
+        </p>
+
+      </div>
+
+
+      <div class="canvas-wrap">
+
+        <div class="canvas-label">
+          Interactive canvas / 01
+        </div>
+
+        <canvas id="drawingCanvas"></canvas>
+
+        <div class="canvas-controls">
+
+          <span class="canvas-hint">
+            Click + drag to draw
+          </span>
+
+          <button class="clear-button" id="clearCanvas">
+            Clear
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <div class="play-symbols">
+
+        <div class="play-symbol">+</div>
+        <div class="play-symbol">○</div>
+        <div class="play-symbol">×</div>
+        <div class="play-symbol">↗</div>
+        <div class="play-symbol">✦</div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================================
+       ABOUT
+  ========================================================= -->
+
   <section id="about">
-    <div class="wrap reveal">
-      <p class="eyebrow">01 — About</p>
-      <h2 class="section-title">A little about me</h2>
-      <p class="section-sub">Where I've been, what I care about, and how I like to work.</p>
+
+    <div class="site-width reveal">
+
+      <p class="eyebrow">
+        01 — About
+      </p>
+
+      <h2 class="section-title">
+        A little about me.
+      </h2>
+
+      <p class="section-sub">
+        The person behind the pixels, prototypes and slightly too many open tabs.
+      </p>
+
 
       <div class="about-grid">
+
         <div class="about-frame">
-          <div class="about-frame-inner">Your Photo<br>(replace this box with an &lt;img&gt;)</div>
+
+          <div class="about-frame-inner">
+            Your photo goes here
+          </div>
+
         </div>
+
+
         <div class="about-text">
+
           <p>
-            <strong>Hi, I'm Your Name.</strong> I'm currently studying [your degree/field] at
-            [your college/university], and I spend most of my time somewhere between a sketchbook
-            and a code editor. I like problems that need both — where something has to work
-            <em>and</em> feel like it was made by a person, not a template.
+            <strong>Hi, I'm Vaishnavi.</strong>
+            I'm an interaction design student interested in the space
+            between technology, culture and storytelling.
           </p>
+
           <p>
-            My background is in [mention relevant experience — internships, clubs, freelance
-            work, competitions]. I've picked up most of what I know by building things I was
-            curious about first and figuring out the "proper" way to do it later.
+            My work moves between UI/UX, visual design, AR/VR,
+            immersive experiences and digital storytelling. I enjoy
+            taking something that initially feels abstract and finding
+            a way for people to experience it rather than simply look at it.
           </p>
+
           <p>
-            Outside of coursework, I'm usually [hobby/interest — e.g. sketching, photography,
-            reading design blogs, tinkering with old cameras] — a lot of it quietly shapes how
-            I design.
+            I'm especially drawn to projects involving heritage,
+            museums, Indian visual culture and emerging technology.
+            But I'm equally happy experimenting with a tiny interaction
+            just because I wondered what would happen if I clicked it.
           </p>
+
+
           <dl class="about-facts">
-            <div><dt>Based in</dt><dd>Your City, Country</dd></div>
-            <div><dt>Currently</dt><dd>Studying / Working at ___</dd></div>
-            <div><dt>Focus</dt><dd>UI Design · Front-End Dev</dd></div>
-            <div><dt>Open to</dt><dd>Internships &amp; Freelance</dd></div>
+
+            <div>
+              <dt>Based in</dt>
+              <dd>Ahmedabad / Mumbai</dd>
+            </div>
+
+            <div>
+              <dt>Studying</dt>
+              <dd>Interaction Design</dd>
+            </div>
+
+            <div>
+              <dt>Exploring</dt>
+              <dd>XR · UI/UX · Visual Storytelling</dd>
+            </div>
+
+            <div>
+              <dt>Open to</dt>
+              <dd>Internships · Collaborations · Interesting problems</dd>
+            </div>
+
           </dl>
+
         </div>
+
       </div>
+
     </div>
+
   </section>
 
-  <!-- ============ SKILLS ============ -->
+
+  <!-- =========================================================
+       SKILLS
+  ========================================================= -->
+
   <section id="skills">
-    <div class="wrap reveal">
-      <p class="eyebrow">02 — Skills</p>
-      <h2 class="section-title">What I work with</h2>
-      <p class="section-sub">The languages, tools and software I reach for most often.</p>
+
+    <div class="site-width reveal">
+
+      <p class="eyebrow">
+        02 — Skills
+      </p>
+
+      <h2 class="section-title">
+        Things I like making things with.
+      </h2>
+
+      <p class="section-sub">
+        A mix of design, technology and visual tools depending on what
+        the project needs.
+      </p>
+
 
       <div class="skills-cols">
+
         <div>
-          <h3 style="font-size:1.05rem; margin-bottom:14px;">Skills</h3>
+
+          <h3>
+            Design &amp; Interaction
+          </h3>
+
           <div class="skill-list">
-            <span class="skill-pill">HTML &amp; CSS</span>
-            <span class="skill-pill">JavaScript</span>
-            <span class="skill-pill">UI / UX Design</span>
-            <span class="skill-pill">Python</span>
-            <span class="skill-pill">Responsive Design</span>
+
+            <span class="skill-pill">UI / UX</span>
+            <span class="skill-pill">Interaction Design</span>
+            <span class="skill-pill">Visual Design</span>
+            <span class="skill-pill">Prototyping</span>
             <span class="skill-pill">Wireframing</span>
-            <span class="skill-pill">Typography</span>
-            <span class="skill-pill">Branding</span>
-            <!-- add / remove <span class="skill-pill">…</span> as needed -->
+            <span class="skill-pill">Motion</span>
+            <span class="skill-pill">Storytelling</span>
+            <span class="skill-pill">Experience Design</span>
+
           </div>
+
         </div>
+
+
         <div>
-          <h3 style="font-size:1.05rem; margin-bottom:14px;">Software</h3>
+
+          <h3>
+            Tools &amp; Technology
+          </h3>
+
           <div class="stamp-grid">
-            <div class="stamp" style="--r:-2deg"><span>Figma</span></div>
-            <div class="stamp" style="--r:1.5deg"><span>VS Code</span></div>
-            <div class="stamp" style="--r:-1deg"><span>Photoshop</span></div>
-            <div class="stamp" style="--r:2deg"><span>Illustrator</span></div>
-            <div class="stamp" style="--r:-1.5deg"><span>Premiere Pro</span></div>
-            <div class="stamp" style="--r:1deg"><span>Blender</span></div>
-            <!-- duplicate a .stamp div for every extra tool -->
+
+            <div class="stamp" style="--r:-2deg">
+              <span>Figma</span>
+            </div>
+
+            <div class="stamp" style="--r:1.5deg">
+              <span>Blender</span>
+            </div>
+
+            <div class="stamp" style="--r:-1deg">
+              <span>Unity</span>
+            </div>
+
+            <div class="stamp" style="--r:2deg">
+              <span>After Effects</span>
+            </div>
+
+            <div class="stamp" style="--r:-1.5deg">
+              <span>Photoshop</span>
+            </div>
+
+            <div class="stamp" style="--r:1deg">
+              <span>Illustrator</span>
+            </div>
+
+            <div class="stamp" style="--r:-2deg">
+              <span>p5.js</span>
+            </div>
+
+            <div class="stamp" style="--r:2deg">
+              <span>TouchDesigner</span>
+            </div>
+
           </div>
+
         </div>
+
       </div>
+
     </div>
+
   </section>
 
-  <!-- ============ PROJECTS ============ -->
+
+  <!-- =========================================================
+       PROJECTS
+  ========================================================= -->
+
   <section id="projects">
-    <div class="wrap reveal">
-      <p class="eyebrow">03 — Selected Work</p>
-      <h2 class="section-title">Six projects, up close</h2>
-      <p class="section-sub">Click any ticket to open the full write-up — process, tools, and outcome.</p>
+
+    <div class="site-width reveal">
+
+      <p class="eyebrow">
+        03 — Selected Work
+      </p>
+
+      <h2 class="section-title">
+        Things I've been making.
+      </h2>
+
+      <p class="section-sub">
+        A selection of projects across interaction design,
+        immersive storytelling, research and visual systems.
+      </p>
+
 
       <div class="projects-grid">
 
-        <article class="ticket">
-          <span class="ticket-num">No. 01</span>
-          <h3>Project One Title</h3>
-          <p>One or two lines describing what this project is and the problem it solves.</p>
-          <div class="ticket-tags"><span>Web App</span><span>React</span></div>
-          <a href="pages/project-1.html" class="ticket-link">View project <span>→</span></a>
-        </article>
+
+        <!-- PROJECT 01 -->
 
         <article class="ticket">
-          <span class="ticket-num">No. 02</span>
-          <h3>Project Two Title</h3>
-          <p>One or two lines describing what this project is and the problem it solves.</p>
-          <div class="ticket-tags"><span>Mobile</span><span>Figma</span></div>
-          <a href="pages/project-2.html" class="ticket-link">View project <span>→</span></a>
-        </article>
 
-        <article class="ticket">
-          <span class="ticket-num">No. 03</span>
-          <h3>Project Three Title</h3>
-          <p>One or two lines describing what this project is and the problem it solves.</p>
-          <div class="ticket-tags"><span>Python</span><span>Data</span></div>
-          <a href="pages/project-3.html" class="ticket-link">View project <span>→</span></a>
-        </article>
+          <span class="ticket-num">
+            No. 01 / XR
+          </span>
 
-        <article class="ticket">
-          <span class="ticket-num">No. 04</span>
-          <h3>Project Four Title</h3>
-          <p>One or two lines describing what this project is and the problem it solves.</p>
-          <div class="ticket-tags"><span>Branding</span><span>Print</span></div>
-          <a href="pages/project-4.html" class="ticket-link">View project <span>→</span></a>
-        </article>
+          <h3>
+            Dhanushkodi
+          </h3>
 
-        <article class="ticket">
-          <span class="ticket-num">No. 05</span>
-          <h3>Project Five Title</h3>
-          <p>One or two lines describing what this project is and the problem it solves.</p>
-          <div class="ticket-tags"><span>Website</span><span>CMS</span></div>
-          <a href="pages/project-5.html" class="ticket-link">View project <span>→</span></a>
-        </article>
-
-        <article class="ticket">
-          <span class="ticket-num">No. 06</span>
-          <h3>Project Six Title</h3>
-          <p>One or two lines describing what this project is and the problem it solves.</p>
-          <div class="ticket-tags"><span>Game</span><span>Unity</span></div>
-          <a href="pages/project-6.html" class="ticket-link">View project <span>→</span></a>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ VIBE PLAYGROUND ============ -->
-  <section id="playground">
-    <div class="wrap reveal">
-      <div class="playground">
-        <div>
-          <p class="eyebrow">04 — Off Syllabus</p>
-          <h2>The Vibe Playground</h2>
           <p>
-            Not everything I make is for a grade or a client. This is the folder of side
-            experiments, weird little tools, half-finished art, and things I built purely
-            because I was curious — outside of any curriculum.
+            A multisensory VR experience that reconstructs
+            Dhanushkodi through memory, place and the aftermath
+            of the 1964 cyclone.
           </p>
-          <a href="pages/vibe-playground.html" class="btn btn-primary" style="margin-top:22px;">Step Inside →</a>
-        </div>
-        <div class="playground-badge">Unofficial<br>&amp; Unassigned</div>
+
+          <div class="ticket-tags">
+            <span>VR</span>
+            <span>Unity</span>
+            <span>Storytelling</span>
+          </div>
+
+          <a href="pages/project-1.html" class="ticket-link">
+            View project <span>→</span>
+          </a>
+
+        </article>
+
+
+        <!-- PROJECT 02 -->
+
+        <article class="ticket">
+
+          <span class="ticket-num">
+            No. 02 / Product
+          </span>
+
+          <h3>
+            Woice
+          </h3>
+
+          <p>
+            A playful speech therapy experience designed to make
+            everyday practice more engaging for children through
+            games, sounds and visual feedback.
+          </p>
+
+          <div class="ticket-tags">
+            <span>UX</span>
+            <span>Research</span>
+            <span>Gamification</span>
+          </div>
+
+          <a href="pages/project-2.html" class="ticket-link">
+            View project <span>→</span>
+          </a>
+
+        </article>
+
+
+        <!-- PROJECT 03 -->
+
+        <article class="ticket">
+
+          <span class="ticket-num">
+            No. 03 / Data
+          </span>
+
+          <h3>
+            Air &amp; Birds
+          </h3>
+
+          <p>
+            A data-driven visualisation exploring how changing
+            air quality affects bird populations across Ahmedabad.
+          </p>
+
+          <div class="ticket-tags">
+            <span>p5.js</span>
+            <span>Data</span>
+            <span>Visualisation</span>
+          </div>
+
+          <a href="pages/project-3.html" class="ticket-link">
+            View project <span>→</span>
+          </a>
+
+        </article>
+
+
+        <!-- PROJECT 04 -->
+
+        <article class="ticket">
+
+          <span class="ticket-num">
+            No. 04 / Culture
+          </span>
+
+          <h3>
+            ITI
+          </h3>
+
+          <p>
+            A DIY puppet theatre kit that introduces children
+            to Indian folk stories through making, performing
+            and augmented reality.
+          </p>
+
+          <div class="ticket-tags">
+            <span>AR</span>
+            <span>Culture</span>
+            <span>Product</span>
+          </div>
+
+          <a href="pages/project-4.html" class="ticket-link">
+            View project <span>→</span>
+          </a>
+
+        </article>
+
+
+        <!-- PROJECT 05 -->
+
+        <article class="ticket">
+
+          <span class="ticket-num">
+            No. 05 / Experience
+          </span>
+
+          <h3>
+            Ganesh Museum
+          </h3>
+
+          <p>
+            An interactive museum experience exploring how Ganesh
+            is created, celebrated, experienced and eventually let go.
+          </p>
+
+          <div class="ticket-tags">
+            <span>Immersive</span>
+            <span>Interaction</span>
+            <span>Culture</span>
+          </div>
+
+          <a href="pages/project-5.html" class="ticket-link">
+            View project <span>→</span>
+          </a>
+
+        </article>
+
+
+        <!-- PROJECT 06 -->
+
+        <article class="ticket">
+
+          <span class="ticket-num">
+            No. 06 / Play
+          </span>
+
+          <h3>
+            Taru
+          </h3>
+
+          <p>
+            A playful board game exploring emotional recognition
+            through expressions, colour and the nine Navarasas.
+          </p>
+
+          <div class="ticket-tags">
+            <span>Game Design</span>
+            <span>UX</span>
+            <span>Play</span>
+          </div>
+
+          <a href="pages/project-6.html" class="ticket-link">
+            View project <span>→</span>
+          </a>
+
+        </article>
+
       </div>
+
     </div>
+
   </section>
 
-  <!-- ============ CONTACT / FOOTER ============ -->
-  <footer id="contact">
-    <div class="wrap">
-      <p class="footer-mark">Let's talk</p>
-      <h2 style="margin-bottom:18px;">your.email@example.com</h2>
-      <ul class="footer-links">
-        <li><a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a></li>
-        <li><a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener">LinkedIn</a></li>
-        <li><a href="https://instagram.com/yourusername" target="_blank" rel="noopener">Instagram</a></li>
-        <li><a href="#top">Back to Top ↑</a></li>
-      </ul>
-      <p class="footer-copy">© 2026 Your Name. Built by hand, in VS Code.</p>
+
+  <!-- =========================================================
+       PLAYGROUND
+  ========================================================= -->
+
+  <section id="playground">
+
+    <div class="site-width reveal">
+
+      <div class="playground">
+
+        <div>
+
+          <p class="eyebrow">
+            04 — Off Syllabus
+          </p>
+
+          <h2>
+            The Vibe Playground
+          </h2>
+
+          <p>
+            Side experiments, visual experiments, tiny interactions,
+            half-finished ideas and things that started with
+            “I wonder if I can...”
+          </p>
+
+          <a
+            href="pages/vibe-playground.html"
+            class="btn btn-primary"
+            style="margin-top:22px;"
+          >
+            Step inside →
+          </a>
+
+        </div>
+
+
+        <div class="playground-badge">
+          Unofficial<br>
+          &amp; Unassigned
+        </div>
+
+      </div>
+
     </div>
+
+  </section>
+
+
+  <!-- =========================================================
+       FOOTER
+  ========================================================= -->
+
+  <footer id="contact">
+
+    <div class="site-width">
+
+      <p class="footer-mark">
+        Let's talk
+      </p>
+
+      <h2>
+        your.email@example.com
+      </h2>
+
+      <ul class="footer-links">
+
+        <li>
+          <a
+            href="https://github.com/blueexev"
+            target="_blank"
+            rel="noopener"
+          >
+            GitHub
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener"
+          >
+            LinkedIn
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener"
+          >
+            Instagram
+          </a>
+        </li>
+
+        <li>
+          <a href="#top">
+            Back to top ↑
+          </a>
+        </li>
+
+      </ul>
+
+      <p class="footer-copy">
+        © 2026 Vaishnavi Venkatesh. Built by hand.
+      </p>
+
+    </div>
+
   </footer>
 
-  <script src="script.js"></script>
+
+  <!-- =========================================================
+       JAVASCRIPT
+  ========================================================= -->
+
+  <script>
+
+    /* ---------------------------------------------------------
+       MOBILE MENU
+    --------------------------------------------------------- */
+
+    const navToggle = document.querySelector(".nav-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    navToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+      });
+    });
+
+
+    /* ---------------------------------------------------------
+       DRAWING CANVAS
+    --------------------------------------------------------- */
+
+    const canvas = document.getElementById("drawingCanvas");
+    const ctx = canvas.getContext("2d");
+    const clearButton = document.getElementById("clearCanvas");
+
+    let drawing = false;
+
+    function resizeCanvas() {
+
+      const rect = canvas.getBoundingClientRect();
+
+      const previousImage = canvas.width
+        ? ctx.getImageData(0, 0, canvas.width, canvas.height)
+        : null;
+
+      canvas.width = rect.width;
+      canvas.height = rect.height;
+
+      ctx.lineCap = "round";
+      ctx.lineJoin = "round";
+      ctx.lineWidth = 2;
+      ctx.strokeStyle = "#171717";
+
+      if (previousImage) {
+        try {
+          ctx.putImageData(previousImage, 0, 0);
+        } catch (error) {
+          // Ignore resize restoration errors.
+        }
+      }
+    }
+
+    resizeCanvas();
+
+    window.addEventListener("resize", resizeCanvas);
+
+
+    function getPosition(event) {
+
+      const rect = canvas.getBoundingClientRect();
+
+      return {
+        x: event.clientX - rect.left,
+        y: event.clientY - rect.top
+      };
+
+    }
+
+
+    canvas.addEventListener("pointerdown", event => {
+
+      drawing = true;
+
+      const position = getPosition(event);
+
+      ctx.beginPath();
+      ctx.moveTo(position.x, position.y);
+
+      canvas.setPointerCapture(event.pointerId);
+
+    });
+
+
+    canvas.addEventListener("pointermove", event => {
+
+      if (!drawing) return;
+
+      const position = getPosition(event);
+
+      ctx.lineTo(position.x, position.y);
+      ctx.stroke();
+
+    });
+
+
+    canvas.addEventListener("pointerup", () => {
+
+      drawing = false;
+      ctx.closePath();
+
+    });
+
+
+    canvas.addEventListener("pointerleave", () => {
+
+      drawing = false;
+      ctx.closePath();
+
+    });
+
+
+    clearButton.addEventListener("click", () => {
+
+      ctx.clearRect(
+        0,
+        0,
+        canvas.width,
+        canvas.height
+      );
+
+    });
+
+
+    /* ---------------------------------------------------------
+       SCROLL REVEAL
+    --------------------------------------------------------- */
+
+    const revealElements = document.querySelectorAll(".reveal");
+
+    const observer = new IntersectionObserver(
+      entries => {
+
+        entries.forEach(entry => {
+
+          if (entry.isIntersecting) {
+
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+
+          }
+
+        });
+
+      },
+      {
+        threshold: 0.12
+      }
+    );
+
+
+    revealElements.forEach(element => {
+      observer.observe(element);
+    });
+
+
+    /* ---------------------------------------------------------
+       LITTLE INTERACTIVE SYMBOLS
+    --------------------------------------------------------- */
+
+    const symbols = document.querySelectorAll(".play-symbol");
+
+    symbols.forEach(symbol => {
+
+      symbol.addEventListener("click", () => {
+
+        const randomRotation =
+          Math.floor(Math.random() * 30) - 15;
+
+        symbol.style.transform =
+          `rotate(${randomRotation}deg) translateY(-5px)`;
+
+      });
+
+    });
+
+  </script>
+
 </body>
 </html>
