@@ -2,843 +2,1326 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Vaishnavi Venkatesh — Interaction Designer</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta
-    name="description"
-    content="Vaishnavi Venkatesh — Interaction Designer, Visual Storyteller and Experience Designer."
-  >
+<title>VV — Selected Works</title>
 
-  <style>
+<meta
+name="description"
+content="Selected works by Vaishnavi Venkatesh, interaction designer and visual storyteller."
+>
 
-    /* =========================================================
-       RESET
-    ========================================================= */
+<!--
+=========================================================
+FONT SETUP
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+If you have the Quano font files, put them inside:
+
+fonts/
+    Quano-Regular.woff2
+    Quano-Italic.woff2
+
+The website will automatically use them.
+
+If you don't have Quano yet, the fallback fonts will still
+give you the editorial / museum feeling.
+=========================================================
+-->
+
+<style>
+
+/* ========================================================
+   QUANO
+======================================================== */
+
+@font-face {
+
+    font-family: "Quano";
+
+    src: url("fonts/Quano-Regular.woff2")
+    format("woff2");
+
+    font-weight: 400;
+
+    font-style: normal;
+
+}
+
+@font-face {
+
+    font-family: "Quano";
+
+    src: url("fonts/Quano-Italic.woff2")
+    format("woff2");
+
+    font-weight: 400;
+
+    font-style: italic;
+
+}
+
+
+/* ========================================================
+   RESET
+======================================================== */
+
+* {
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+body {
+
+    background: #e9e4d9;
+
+    color: #191817;
+
+    font-family:
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
+
+    overflow-x: hidden;
+
+}
+
+
+/* ========================================================
+   GLOBAL
+======================================================== */
+
+a {
+
+    color: inherit;
+
+    text-decoration: none;
+
+}
+
+button {
+
+    font: inherit;
+
+}
+
+::selection {
+
+    background: #191817;
+
+    color: #e9e4d9;
+
+}
+
+
+/*
+This controls the width of almost everything.
+
+Want the website EVEN MORE inside?
+
+Change:
+
+860px
+
+to:
+
+760px
+
+or
+
+700px
+*/
+
+.page-width {
+
+    width: min(
+        860px,
+        calc(100% - 200px)
+    );
+
+    margin: auto;
+
+}
+
+
+/* ========================================================
+   TOP NAV
+======================================================== */
+
+.site-nav {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    padding: 26px 0;
+
+    pointer-events: none;
+
+}
+
+.nav-inner {
+
+    width: min(
+        860px,
+        calc(100% - 200px)
+    );
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    pointer-events: auto;
+
+}
+
+
+/* YOUR NAME */
+
+.artist-name {
+
+    font-size: 9px;
+
+    text-transform: uppercase;
+
+    letter-spacing: .15em;
+
+    font-weight: 500;
+
+}
+
+
+/* NAV */
+
+.nav-links {
+
+    display: flex;
+
+    gap: 25px;
+
+    list-style: none;
+
+}
+
+.nav-links a {
+
+    font-size: 8px;
+
+    text-transform: uppercase;
+
+    letter-spacing: .12em;
+
+    color: #77716a;
+
+    transition:
+        color .3s ease;
+
+}
+
+.nav-links a:hover {
+
+    color: #191817;
+
+}
+
+
+/* ========================================================
+   HERO / OPENING WALL
+======================================================== */
+
+.hero {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    position: relative;
+
+    padding:
+        150px 0
+        100px;
+
+}
+
+
+/*
+The hero is intentionally NOT your name.
+
+It introduces the work.
+*/
+
+.hero-content {
+
+    width: 100%;
+
+    text-align: center;
+
+}
+
+
+/* SMALL MUSEUM LABEL */
+
+.collection-label {
+
+    font-size: 8px;
+
+    text-transform: uppercase;
+
+    letter-spacing: .2em;
+
+    color: #77716a;
+
+    margin-bottom: 35px;
+
+}
+
+
+/* MAIN HEADING */
+
+.hero-title {
+
+    font-family:
+        "Quano",
+        "Bodoni Moda",
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-weight: 400;
+
+    font-size:
+        clamp(48px, 7vw, 82px);
+
+    line-height: .92;
+
+    letter-spacing: -.055em;
+
+    max-width: 800px;
+
+    margin: auto;
+
+}
+
+
+/* ITALIC EMPHASIS */
+
+.hero-title em {
+
+    font-style: italic;
+
+}
+
+
+/* DESCRIPTION */
+
+.hero-description {
+
+    max-width: 390px;
+
+    margin:
+        35px auto
+        0;
+
+    font-size: 11px;
+
+    line-height: 1.8;
+
+    color: #68635d;
+
+}
+
+
+/* SCROLL */
+
+.scroll-note {
+
+    position: absolute;
+
+    bottom: 35px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    font-size: 7px;
+
+    text-transform: uppercase;
+
+    letter-spacing: .2em;
+
+    color: #858079;
+
+}
+
+.scroll-note span {
+
+    display: block;
+
+    text-align: center;
+
+    margin-top: 8px;
+
+    font-size: 12px;
+
+}
+
+
+/* ========================================================
+   DIVIDER
+======================================================== */
+
+.museum-rule {
+
+    width: 100%;
+
+    height: 1px;
+
+    background:
+        rgba(25,24,23,.18);
+
+}
+
+
+/* ========================================================
+   PROJECT SECTION
+======================================================== */
+
+.projects-section {
+
+    padding:
+        130px 0
+        150px;
+
+}
+
+
+/* SECTION HEADER */
+
+.section-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-end;
+
+    margin-bottom: 70px;
+
+}
+
+.section-number {
+
+    font-size: 8px;
+
+    color: #77716a;
+
+    text-transform: uppercase;
+
+    letter-spacing: .15em;
+
+}
+
+.section-title {
+
+    font-family:
+        "Quano",
+        "Bodoni Moda",
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 39px;
+
+    font-weight: 400;
+
+    letter-spacing: -.045em;
+
+    line-height: 1;
+
+}
+
+
+/* ========================================================
+   PROJECT
+======================================================== */
+
+.project {
+
+    position: relative;
+
+    padding:
+        0 0
+        100px;
+
+    margin-bottom: 100px;
+
+    border-bottom:
+        1px solid
+        rgba(25,24,23,.16);
+
+}
+
+
+/* PROJECT TOP */
+
+.project-meta {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+
+}
+
+.project-index {
+
+    font-size: 8px;
+
+    letter-spacing: .15em;
+
+    text-transform: uppercase;
+
+    color: #77716a;
+
+}
+
+.project-year {
+
+    font-size: 8px;
+
+    color: #77716a;
+
+}
+
+
+/* ========================================================
+   PROJECT IMAGE
+======================================================== */
+
+.project-image {
+
+    width: 100%;
+
+    height: 430px;
+
+    background: #d5cfc3;
+
+    overflow: hidden;
+
+    position: relative;
+
+    cursor: pointer;
+
+}
+
+
+/*
+Replace these backgrounds with your actual project images.
+
+Example:
+
+background-image:
+url("images/dhanushkodi.jpg");
+
+*/
+
+.project-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    filter:
+        grayscale(20%)
+        contrast(.95);
+
+    transition:
+        transform .8s
+        cubic-bezier(.2,.7,.2,1),
+
+        filter .8s ease;
+
+}
+
+
+/* IMAGE HOVER */
+
+.project:hover
+.project-image img {
+
+    transform: scale(1.045);
+
+    filter:
+        grayscale(0%)
+        contrast(1);
+
+}
+
+
+/* PROJECT NUMBER OVER IMAGE */
+
+.image-number {
+
+    position: absolute;
+
+    top: 18px;
+
+    left: 18px;
+
+    z-index: 2;
+
+    width: 38px;
+
+    height: 38px;
+
+    border-radius: 50%;
+
+    background: #e9e4d9;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 8px;
+
+}
+
+
+/* ========================================================
+   PROJECT INFORMATION
+======================================================== */
+
+.project-info {
+
+    display: grid;
+
+    grid-template-columns:
+        1.25fr
+        .75fr;
+
+    gap: 70px;
+
+    margin-top: 30px;
+
+}
+
+
+.project-title {
+
+    font-family:
+        "Quano",
+        "Bodoni Moda",
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 31px;
+
+    font-weight: 400;
+
+    letter-spacing: -.035em;
+
+    line-height: 1;
+
+}
+
+
+.project-description {
+
+    font-size: 10px;
+
+    color: #67625b;
+
+    line-height: 1.8;
+
+    margin-top: 14px;
+
+    max-width: 430px;
+
+}
+
+
+/* RIGHT SIDE */
+
+.project-details {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    gap: 22px;
+
+}
+
+
+.detail {
+
+    border-top:
+        1px solid
+        rgba(25,24,23,.2);
+
+    padding-top: 9px;
+
+}
+
+.detail-label {
+
+    display: block;
+
+    font-size: 7px;
+
+    text-transform: uppercase;
+
+    letter-spacing: .14em;
+
+    color: #8a847c;
+
+    margin-bottom: 6px;
+
+}
+
+.detail-value {
+
+    font-size: 9px;
+
+}
+
+
+/* VIEW PROJECT */
+
+.project-link {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 30px;
+
+    font-size: 8px;
+
+    text-transform: uppercase;
+
+    letter-spacing: .12em;
+
+    border-bottom:
+        1px solid
+        #191817;
+
+    padding-bottom: 5px;
+
+    transition:
+        gap .3s ease;
+
+}
+
+.project-link:hover {
+
+    gap: 14px;
+
+}
+
+
+/* ========================================================
+   PROJECT HOVER CURSOR
+======================================================== */
+
+.project-cursor {
+
+    position: fixed;
+
+    pointer-events: none;
+
+    z-index: 2000;
+
+    width: 90px;
+
+    height: 90px;
+
+    border-radius: 50%;
+
+    background: #191817;
+
+    color: #e9e4d9;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    font-size: 7px;
+
+    text-transform: uppercase;
+
+    letter-spacing: .1em;
+
+    opacity: 0;
+
+    transform:
+        translate(-50%, -50%)
+        scale(.6);
+
+    transition:
+        opacity .25s ease,
+        transform .25s ease;
+
+}
+
+.project-cursor.active {
+
+    opacity: 1;
+
+    transform:
+        translate(-50%, -50%)
+        scale(1);
+
+}
+
+
+/* ========================================================
+   ABOUT
+======================================================== */
+
+.about-section {
+
+    padding:
+        120px 0
+        140px;
+
+}
+
+.about-layout {
+
+    display: grid;
+
+    grid-template-columns:
+        .8fr
+        1.2fr;
+
+    gap: 80px;
+
+}
+
+
+/* PORTRAIT PLACEHOLDER */
+
+.about-image {
+
+    aspect-ratio:
+        3 / 4;
+
+    background: #d4cec2;
+
+    overflow: hidden;
+
+}
+
+.about-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+/* ABOUT TEXT */
+
+.about-heading {
+
+    font-family:
+        "Quano",
+        "Bodoni Moda",
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 36px;
+
+    font-weight: 400;
+
+    line-height: .95;
+
+    letter-spacing: -.04em;
+
+    margin-bottom: 28px;
+
+}
+
+.about-text {
+
+    font-size: 11px;
+
+    line-height: 1.9;
+
+    color: #66615b;
+
+    max-width: 430px;
+
+}
+
+.about-text p + p {
+
+    margin-top: 17px;
+
+}
+
+
+/* ========================================================
+   SMALL ARCHIVE
+======================================================== */
+
+.archive-section {
+
+    padding:
+        100px 0
+        130px;
+
+    background: #ded8cc;
+
+}
+
+
+.archive-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 45px;
+
+}
+
+
+.archive-title {
+
+    font-family:
+        "Quano",
+        "Bodoni Moda",
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 35px;
+
+    font-weight: 400;
+
+}
+
+
+/* ARCHIVE ROW */
+
+.archive-item {
+
+    display: grid;
+
+    grid-template-columns:
+        60px
+        1fr
+        100px;
+
+    gap: 20px;
+
+    align-items: center;
+
+    padding:
+        15px 0;
+
+    border-top:
+        1px solid
+        rgba(25,24,23,.18);
+
+    transition:
+        padding .3s ease;
+
+}
+
+.archive-item:last-child {
+
+    border-bottom:
+        1px solid
+        rgba(25,24,23,.18);
+
+}
+
+.archive-item:hover {
+
+    padding-left: 10px;
+
+}
+
+
+.archive-number {
+
+    font-size: 7px;
+
+    color: #77716a;
+
+}
+
+
+.archive-name {
+
+    font-family:
+        "Quano",
+        Georgia,
+        serif;
+
+    font-size: 17px;
+
+}
+
+
+.archive-type {
+
+    font-size: 7px;
+
+    text-transform: uppercase;
+
+    letter-spacing: .1em;
+
+    color: #77716a;
+
+}
+
+
+/* ========================================================
+   CONTACT
+======================================================== */
+
+.contact-section {
+
+    padding:
+        150px 0
+        80px;
+
+    text-align: center;
+
+}
+
+.contact-small {
+
+    font-size: 8px;
+
+    text-transform: uppercase;
+
+    letter-spacing: .18em;
+
+    color: #77716a;
+
+    margin-bottom: 25px;
+
+}
+
+.contact-heading {
+
+    font-family:
+        "Quano",
+        "Bodoni Moda",
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(40px, 6vw, 68px);
+
+    font-weight: 400;
+
+    line-height: .95;
+
+    letter-spacing: -.05em;
+
+}
+
+.contact-email {
+
+    display: inline-block;
+
+    margin-top: 30px;
+
+    font-size: 10px;
+
+    border-bottom:
+        1px solid
+        #191817;
+
+    padding-bottom: 5px;
+
+}
+
+
+/* ========================================================
+   FOOTER
+======================================================== */
+
+footer {
+
+    width: min(
+        860px,
+        calc(100% - 200px)
+    );
+
+    margin: auto;
+
+    padding:
+        25px 0
+        35px;
+
+    border-top:
+        1px solid
+        rgba(25,24,23,.18);
+
+    display: flex;
+
+    justify-content: space-between;
+
+}
+
+.footer-text {
+
+    font-size: 7px;
+
+    color: #8a847c;
+
+    text-transform: uppercase;
+
+    letter-spacing: .1em;
+
+}
+
+.footer-links {
+
+    display: flex;
+
+    gap: 20px;
+
+}
+
+.footer-links a {
+
+    font-size: 7px;
+
+    text-transform: uppercase;
+
+    letter-spacing: .1em;
+
+}
+
+
+/* ========================================================
+   SCROLL REVEAL
+======================================================== */
+
+.reveal {
+
+    opacity: 0;
+
+    transform:
+        translateY(30px);
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+
+}
+
+.reveal.visible {
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+
+}
+
+
+/* ========================================================
+   MOBILE
+======================================================== */
+
+@media(max-width: 760px) {
+
+
+    .page-width,
+    .nav-inner,
+    footer {
+
+        width:
+            calc(100% - 40px);
+
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      background: #f4f1eb;
-      color: #171717;
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.55;
-      overflow-x: hidden;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    button {
-      font: inherit;
-    }
-
-    ::selection {
-      background: #171717;
-      color: #f4f1eb;
-    }
-
-
-    /* =========================================================
-       GLOBAL WIDTH
-    ========================================================= */
-
-    .site-width {
-      width: min(800px, calc(100% - 180px));
-      margin: 0 auto;
-    }
-
-    section {
-      padding: 125px 0;
-    }
-
-    .eyebrow {
-      font-size: 9px;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: #777;
-      margin-bottom: 18px;
-    }
-
-    .section-title {
-      font-size: clamp(28px, 3.5vw, 42px);
-      font-weight: 500;
-      letter-spacing: -0.045em;
-      line-height: 1.05;
-      max-width: 600px;
-    }
-
-    .section-sub {
-      margin-top: 16px;
-      max-width: 440px;
-      font-size: 12px;
-      color: #666;
-      line-height: 1.7;
-    }
-
-
-    /* =========================================================
-       NAVIGATION
-    ========================================================= */
 
     .site-nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1000;
 
-      background: rgba(244, 241, 235, 0.9);
-      backdrop-filter: blur(14px);
+        padding:
+            20px 0;
 
-      border-bottom: 1px solid rgba(23, 23, 23, 0.1);
     }
 
-    .nav-inner {
-      width: min(800px, calc(100% - 180px));
-      margin: auto;
-
-      height: 66px;
-
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .nav-mark {
-      font-size: 10px;
-      letter-spacing: 0.08em;
-      font-weight: 600;
-    }
 
     .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 23px;
-      list-style: none;
-    }
 
-    .nav-links a {
-      font-size: 9px;
-      color: #555;
-      transition: color 0.25s ease;
-    }
-
-    .nav-links a:hover {
-      color: #000;
-    }
-
-    .nav-toggle {
-      display: none;
-      border: 0;
-      background: none;
-      cursor: pointer;
-      font-size: 10px;
-    }
-
-
-    /* =========================================================
-       HERO
-    ========================================================= */
-
-    .hero {
-      min-height: 92vh;
-
-      display: flex;
-      align-items: center;
-
-      padding-top: 130px;
-      padding-bottom: 100px;
-    }
-
-    .hero-inner {
-      width: min(800px, calc(100% - 180px));
-      margin: auto;
-
-      display: grid;
-      grid-template-columns: 1fr 115px;
-      gap: 55px;
-      align-items: end;
-    }
-
-    .hero h1 {
-      font-size: clamp(44px, 6vw, 68px);
-      font-weight: 500;
-
-      line-height: 0.92;
-      letter-spacing: -0.065em;
-
-      max-width: 700px;
-    }
-
-    .hero-role {
-      margin-top: 25px;
-
-      font-size: 11px;
-      color: #444;
-      letter-spacing: 0.02em;
-    }
-
-    .hero-desc {
-      margin-top: 21px;
-
-      max-width: 470px;
-
-      font-size: 12px;
-      line-height: 1.8;
-
-      color: #606060;
-    }
-
-    .hero-actions {
-      display: flex;
-      gap: 9px;
-      margin-top: 27px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-
-      padding: 9px 14px;
-
-      font-size: 9px;
-
-      border: 1px solid #171717;
-
-      transition:
-        background 0.25s ease,
-        color 0.25s ease,
-        transform 0.25s ease;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-    }
-
-    .btn-primary {
-      background: #171717;
-      color: #f4f1eb;
-    }
-
-    .btn-primary:hover {
-      background: #333;
-    }
-
-    .btn-ghost {
-      background: transparent;
-    }
-
-    .btn-ghost:hover {
-      background: #171717;
-      color: #f4f1eb;
-    }
-
-    .hero-stamp {
-      width: 112px;
-      height: 112px;
-
-      border: 1px solid #171717;
-      border-radius: 50%;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      text-align: center;
-
-      transform: rotate(7deg);
-
-      transition: transform 0.5s ease;
-    }
-
-    .hero-stamp:hover {
-      transform: rotate(-8deg) scale(1.04);
-    }
-
-    .hero-stamp-text {
-      font-size: 8px;
-      line-height: 1.8;
-
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-    }
-
-
-    /* =========================================================
-       ABOUT
-    ========================================================= */
-
-    #about {
-      padding-top: 125px;
-    }
-
-    .about-grid {
-      display: grid;
-
-      grid-template-columns: 0.65fr 1.35fr;
-
-      gap: 85px;
-
-      margin-top: 65px;
-
-      align-items: start;
-    }
-
-    .about-frame {
-      aspect-ratio: 4 / 5;
-
-      border: 1px solid #171717;
-
-      padding: 8px;
-    }
-
-    .about-frame-inner {
-      height: 100%;
-
-      background: #ded9d0;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      text-align: center;
-
-      font-size: 8px;
-
-      color: #777;
-
-      letter-spacing: 0.08em;
-
-      text-transform: uppercase;
-    }
-
-    .about-text {
-      max-width: 480px;
-    }
-
-    .about-text p {
-      font-size: 12px;
-
-      color: #4f4f4f;
-
-      line-height: 1.85;
-
-      margin-bottom: 19px;
-    }
-
-    .about-text strong {
-      color: #171717;
-      font-weight: 600;
-    }
-
-    .about-facts {
-      margin-top: 34px;
-
-      border-top: 1px solid rgba(23, 23, 23, 0.2);
-    }
-
-    .about-facts div {
-      display: grid;
-
-      grid-template-columns: 100px 1fr;
-
-      padding: 11px 0;
-
-      border-bottom: 1px solid rgba(23, 23, 23, 0.2);
-    }
-
-    .about-facts dt {
-      font-size: 8px;
-
-      text-transform: uppercase;
-
-      letter-spacing: 0.1em;
-
-      color: #888;
-    }
-
-    .about-facts dd {
-      font-size: 10px;
-    }
-
-
-    /* =========================================================
-       SKILLS
-    ========================================================= */
-
-    #skills {
-      border-top: 1px solid rgba(23, 23, 23, 0.12);
-    }
-
-    .skills-cols {
-      display: grid;
-
-      grid-template-columns: 1fr 1fr;
-
-      gap: 70px;
-
-      margin-top: 60px;
-    }
-
-    .skills-cols h3 {
-      font-size: 9px;
-
-      font-weight: 500;
-
-      text-transform: uppercase;
-
-      letter-spacing: 0.1em;
-
-      margin-bottom: 17px;
-    }
-
-    .skill-list {
-      display: flex;
-
-      flex-wrap: wrap;
-
-      gap: 7px;
-    }
-
-    .skill-pill {
-      border: 1px solid #aaa;
-
-      padding: 6px 9px;
-
-      font-size: 9px;
-
-      color: #555;
-
-      transition: all 0.2s ease;
-    }
-
-    .skill-pill:hover {
-      border-color: #171717;
-
-      color: #171717;
-
-      transform: translateY(-2px);
-    }
-
-    .stamp-grid {
-      display: flex;
-
-      flex-wrap: wrap;
-
-      gap: 8px;
-    }
-
-    .stamp {
-      min-width: 78px;
-      height: 44px;
-
-      border: 1px solid #171717;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      transform: rotate(var(--r));
-
-      transition: transform 0.25s ease;
-    }
-
-    .stamp:hover {
-      transform: rotate(0deg) translateY(-3px);
-    }
-
-    .stamp span {
-      font-size: 8px;
-
-      text-transform: uppercase;
-
-      letter-spacing: 0.08em;
-    }
-
-
-    /* =========================================================
-       PROJECTS
-    ========================================================= */
-
-    #projects {
-      border-top: 1px solid rgba(23, 23, 23, 0.12);
-    }
-
-    .projects-grid {
-      margin-top: 65px;
-
-      display: grid;
-
-      grid-template-columns: repeat(2, 1fr);
-
-      gap: 16px;
-    }
-
-    .ticket {
-      position: relative;
-
-      min-height: 270px;
-
-      border: 1px solid #171717;
-
-      padding: 25px;
-
-      display: flex;
-      flex-direction: column;
-
-      transition:
-        transform 0.3s ease,
-        background 0.3s ease;
-    }
-
-    .ticket:hover {
-      transform: translateY(-5px);
-
-      background: #eae6de;
-    }
-
-    .ticket-num {
-      font-size: 7px;
-
-      color: #888;
-
-      letter-spacing: 0.12em;
-
-      text-transform: uppercase;
-    }
-
-    .ticket h3 {
-      margin-top: 32px;
-
-      font-size: 19px;
-
-      font-weight: 500;
-
-      letter-spacing: -0.03em;
-    }
-
-    .ticket p {
-      margin-top: 11px;
-
-      max-width: 340px;
-
-      font-size: 10px;
-
-      line-height: 1.75;
-
-      color: #666;
-    }
-
-    .ticket-tags {
-      display: flex;
-
-      gap: 5px;
-
-      margin-top: 17px;
-    }
-
-    .ticket-tags span {
-      border: 1px solid #aaa;
-
-      padding: 4px 7px;
-
-      font-size: 7px;
-
-      text-transform: uppercase;
-
-      letter-spacing: 0.07em;
-    }
-
-    .ticket-link {
-      margin-top: auto;
-
-      padding-top: 24px;
-
-      font-size: 9px;
-
-      font-weight: 600;
-    }
-
-    .ticket-link span {
-      display: inline-block;
-
-      transition: transform 0.2s ease;
-    }
-
-    .ticket-link:hover span {
-      transform: translateX(5px);
-    }
-
-
-    /* =========================================================
-       PLAYGROUND
-    ========================================================= */
-
-    #playground {
-      padding-top: 100px;
-    }
-
-    .playground {
-      border: 1px solid #171717;
-
-      padding: 45px;
-
-      display: grid;
-
-      grid-template-columns: 1fr 110px;
-
-      gap: 55px;
-
-      align-items: center;
-    }
-
-    .playground h2 {
-      font-size: 29px;
-
-      font-weight: 500;
-
-      letter-spacing: -0.04em;
-    }
-
-    .playground p {
-      max-width: 410px;
-
-      margin-top: 15px;
-
-      font-size: 10px;
-
-      line-height: 1.8;
-
-      color: #666;
-    }
-
-    .playground-badge {
-      width: 100px;
-      height: 100px;
-
-      border-radius: 50%;
-
-      border: 1px solid #171717;
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      text-align: center;
-
-      font-size: 7px;
-
-      line-height: 1.7;
-
-      text-transform: uppercase;
-
-      letter-spacing: 0.1em;
-
-      transform: rotate(-8deg);
-    }
-
-
-    /* =========================================================
-       FOOTER
-    ========================================================= */
-
-    footer {
-      padding: 100px 0 40px;
-
-      border-top: 1px solid rgba(23, 23, 23, 0.15);
-    }
-
-    .footer-mark {
-      font-size: 8px;
-
-      text-transform: uppercase;
-
-      letter-spacing: 0.15em;
-
-      color: #777;
-
-      margin-bottom: 17px;
-    }
-
-    footer h2 {
-      font-size: clamp(25px, 3.5vw, 42px);
-
-      font-weight: 500;
-
-      letter-spacing: -0.05em;
-    }
-
-    .footer-links {
-      list-style: none;
-
-      display: flex;
-
-      flex-wrap: wrap;
-
-      gap: 22px;
-
-      margin-top: 27px;
-    }
-
-    .footer-links a {
-      font-size: 9px;
-
-      color: #666;
-    }
-
-    .footer-links a:hover {
-      color: #000;
-    }
-
-    .footer-copy {
-      margin-top: 60px;
-
-      font-size: 7px;
-
-      color: #999;
-    }
-
-
-    /* =========================================================
-       SCROLL REVEAL
-    ========================================================= */
-
-    .reveal {
-      opacity: 0;
-
-      transform: translateY(22px);
-
-      transition:
-        opacity 0.7s ease,
-        transform 0.7s ease;
-    }
-
-    .reveal.visible {
-      opacity: 1;
-
-      transform: translateY(0);
-    }
-
-
-    /* =========================================================
-       MOBILE
-    ========================================================= */
-
-    @media (max-width: 760px) {
-
-      .site-width,
-      .nav-inner,
-      .hero-inner {
-        width: calc(100% - 36px);
-      }
-
-      section {
-        padding: 85px 0;
-      }
-
-      .nav-inner {
-        height: 60px;
-      }
-
-      .nav-links {
         display: none;
 
-        position: absolute;
+    }
 
-        top: 60px;
 
-        left: 18px;
-        right: 18px;
+    .hero {
 
-        padding: 20px;
-
-        background: #f4f1eb;
-
-        border: 1px solid #171717;
-
-        flex-direction: column;
-
-        align-items: flex-start;
-
-        gap: 17px;
-      }
-
-      .nav-links.active {
-        display: flex;
-      }
-
-      .nav-toggle {
-        display: block;
-      }
-
-      .hero {
-        min-height: auto;
-
-        padding-top: 120px;
-      }
-
-      .hero-inner {
-        grid-template-columns: 1fr;
-
-        gap: 40px;
-      }
-
-      .hero h1 {
-        font-size: clamp(43px, 13vw, 68px);
-      }
-
-      .hero-stamp {
-        width: 95px;
-        height: 95px;
-      }
-
-      .about-grid,
-      .skills-cols,
-      .projects-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .about-grid,
-      .skills-cols {
-        gap: 45px;
-      }
-
-      .about-frame {
-        max-width: 280px;
-      }
-
-      .playground {
-        grid-template-columns: 1fr;
-
-        padding: 30px;
-
-        gap: 35px;
-      }
-
-      .playground-badge {
-        width: 90px;
-        height: 90px;
-      }
+        padding:
+            130px 0
+            100px;
 
     }
 
-  </style>
+
+    .hero-title {
+
+        font-size:
+            clamp(45px, 14vw, 70px);
+
+    }
+
+
+    .projects-section {
+
+        padding:
+            90px 0
+            100px;
+
+    }
+
+
+    .section-header {
+
+        display: block;
+
+    }
+
+
+    .section-title {
+
+        margin-top: 15px;
+
+    }
+
+
+    .project-image {
+
+        height: 300px;
+
+    }
+
+
+    .project-info {
+
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
+    }
+
+
+    .about-layout {
+
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
+    }
+
+
+    .about-image {
+
+        max-width: 300px;
+
+    }
+
+
+    .archive-item {
+
+        grid-template-columns:
+            40px
+            1fr;
+
+    }
+
+
+    .archive-type {
+
+        display: none;
+
+    }
+
+
+    .project-cursor {
+
+        display: none;
+
+    }
+
+
+    footer {
+
+        display: block;
+
+    }
+
+
+    .footer-links {
+
+        margin-top: 15px;
+
+    }
+
+}
+
+</style>
 
 </head>
 
@@ -846,688 +1329,1327 @@
 <body>
 
 
-  <!-- =========================================================
-       NAVIGATION
-  ========================================================= -->
+<!-- ========================================================
+     CUSTOM CURSOR
+======================================================== -->
 
-  <nav class="site-nav">
+<div class="project-cursor">
+    View<br>work
+</div>
+
+
+<!-- ========================================================
+     NAVIGATION
+======================================================== -->
+
+<nav class="site-nav">
 
     <div class="nav-inner">
 
-      <a href="#top" class="nav-mark">
-        V.V. / 01
-      </a>
+        <!-- YOUR NAME -->
+        <a href="#top" class="artist-name">
 
-      <button class="nav-toggle" aria-label="Open navigation">
-        Menu
-      </button>
+            Vaishnavi Venkatesh
 
-      <ul class="nav-links">
+        </a>
 
-        <li>
-          <a href="#about">About</a>
-        </li>
 
-        <li>
-          <a href="#skills">Skills</a>
-        </li>
+        <ul class="nav-links">
 
-        <li>
-          <a href="#projects">Work</a>
-        </li>
+            <li>
+                <a href="#work">
+                    Work
+                </a>
+            </li>
 
-        <li>
-          <a href="#playground">Playground</a>
-        </li>
+            <li>
+                <a href="#about">
+                    About
+                </a>
+            </li>
 
-        <li>
-          <a href="#contact">Contact</a>
-        </li>
+            <li>
+                <a href="#archive">
+                    Archive
+                </a>
+            </li>
 
-      </ul>
+            <li>
+                <a href="#contact">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
 
     </div>
 
-  </nav>
+</nav>
 
 
-  <!-- =========================================================
-       HERO
-  ========================================================= -->
+<!-- ========================================================
+     HERO
+======================================================== -->
 
-  <header class="hero" id="top">
+<header class="hero" id="top">
 
-    <div class="hero-inner">
+    <div class="page-width">
 
-      <div>
+        <div class="hero-content">
 
-        <p class="eyebrow">
-          Interaction Designer / Visual Storyteller
+            <p class="collection-label">
+
+                Selected works / 2022—2026
+
+            </p>
+
+
+            <h1 class="hero-title">
+
+                Stories, systems
+                <br>
+                &amp; <em>spaces</em> to
+                experience.
+
+            </h1>
+
+
+            <p class="hero-description">
+
+                A collection of experiments and projects
+                exploring interaction, visual storytelling,
+                culture and emerging technology.
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="scroll-note">
+
+        Explore the collection
+
+        <span>↓</span>
+
+    </div>
+
+</header>
+
+
+<div class="museum-rule"></div>
+
+
+<!-- ========================================================
+     PROJECTS
+======================================================== -->
+
+<section class="projects-section" id="work">
+
+    <div class="page-width">
+
+
+        <div class="section-header">
+
+            <div>
+
+                <p class="section-number">
+                    01 / Collection
+                </p>
+
+            </div>
+
+            <h2 class="section-title">
+                Selected work
+            </h2>
+
+        </div>
+
+
+        <!-- ==================================================
+             PROJECT 01
+        ================================================== -->
+
+        <article class="project reveal">
+
+
+            <div class="project-meta">
+
+                <span class="project-index">
+                    Work 01
+                </span>
+
+                <span class="project-year">
+                    2025
+                </span>
+
+            </div>
+
+
+            <div
+                class="project-image"
+                data-project="Dhanushkodi"
+            >
+
+                <!--
+                REPLACE THIS WITH YOUR IMAGE
+
+                <img
+                    src="images/dhanushkodi.jpg"
+                    alt="Dhanushkodi VR project"
+                >
+                -->
+
+                <div class="image-number">
+                    01
+                </div>
+
+            </div>
+
+
+            <div class="project-info">
+
+
+                <div>
+
+                    <h3 class="project-title">
+                        Dhanushkodi
+                    </h3>
+
+                    <p class="project-description">
+
+                        A multisensory VR experience that
+                        reconstructs Dhanushkodi through
+                        memory, place and the aftermath
+                        of the 1964 cyclone.
+
+                    </p>
+
+
+                    <a
+                        href="pages/project-1.html"
+                        class="project-link"
+                    >
+
+                        Enter project →
+
+                    </a>
+
+                </div>
+
+
+                <div class="project-details">
+
+
+                    <div class="detail">
+
+                        <span class="detail-label">
+                            Medium
+                        </span>
+
+                        <span class="detail-value">
+                            VR / 3D
+                        </span>
+
+                    </div>
+
+
+                    <div class="detail">
+
+                        <span class="detail-label">
+                            Role
+                        </span>
+
+                        <span class="detail-value">
+                            Design / Concept
+                        </span>
+
+                    </div>
+
+
+                    <div class="detail">
+
+                        <span class="detail-label">
+                            Tools
+                        </span>
+
+                        <span class="detail-value">
+                            Unity / Blender
+                        </span>
+
+                    </div>
+
+
+                    <div class="detail">
+
+                        <span class="detail-label">
+                            Type
+                        </span>
+
+                        <span class="detail-value">
+                            Experience
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- ==================================================
+             PROJECT 02
+        ================================================== -->
+
+        <article class="project reveal">
+
+
+            <div class="project-meta">
+
+                <span class="project-index">
+                    Work 02
+                </span>
+
+                <span class="project-year">
+                    2026
+                </span>
+
+            </div>
+
+
+            <div
+                class="project-image"
+                data-project="Woice"
+            >
+
+                <!--
+                <img
+                    src="images/woice.jpg"
+                    alt="Woice speech therapy project"
+                >
+                -->
+
+                <div class="image-number">
+                    02
+                </div>
+
+            </div>
+
+
+            <div class="project-info">
+
+
+                <div>
+
+                    <h3 class="project-title">
+                        Woice
+                    </h3>
+
+                    <p class="project-description">
+
+                        A playful speech therapy experience
+                        designed around sound, repetition,
+                        visual feedback and everyday practice.
+
+                    </p>
+
+
+                    <a
+                        href="pages/project-2.html"
+                        class="project-link"
+                    >
+
+                        Enter project →
+
+                    </a>
+
+                </div>
+
+
+                <div class="project-details">
+
+
+                    <div class="detail">
+
+                        <span class="detail-label">
+                            Medium
+                        </span>
+
+                        <span class="detail-value">
+                            Digital Product
+                        </span>
+
+                    </div>
+
+
+                    <div class="detail">
+
+                        <span class="detail-label">
+                            Role
+                        </span>
+
+                        <span class="detail-value">
+                            UX / Research
+                        </span>
+
+                    </div>
+
+
+                    <div class="detail">
+
+                        <span class="detail-label">
+                            Tools
+                        </span>
+
+                        <span class="detail-value">
+                            Figma
+                        </span>
+
+                    </div>
+
+
+                    <div class="detail">
+
+                        <span class="detail-label">
+                            Type
+                        </span>
+
+                        <span class="detail-value">
+                            Product
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- ==================================================
+             PROJECT 03
+        ================================================== -->
+
+        <article class="project reveal">
+
+
+            <div class="project-meta">
+
+                <span class="project-index">
+                    Work 03
+                </span>
+
+                <span class="project-year">
+                    2025
+                </span>
+
+            </div>
+
+
+            <div
+                class="project-image"
+                data-project="Air & Birds"
+            >
+
+                <!--
+                <img
+                    src="images/air-birds.jpg"
+                    alt="AQI bird visualisation"
+                >
+                -->
+
+                <div class="image-number">
+                    03
+                </div>
+
+            </div>
+
+
+            <div class="project-info">
+
+
+                <div>
+
+                    <h3 class="project-title">
+                        Air &amp; Birds
+                    </h3>
+
+                    <p class="project-description">
+
+                        A data-driven visualisation exploring
+                        the relationship between air quality
+                        and bird populations across Ahmedabad.
+
+                    </p>
+
+
+                    <a
+                        href="pages/project-3.html"
+                        class="project-link"
+                    >
+
+                        Enter project →
+
+                    </a>
+
+                </div>
+
+
+                <div class="project-details">
+
+
+                    <div class="detail">
+
+                        <span class="detail-label">
+                            Medium
+                        </span>
+
+                        <span class="detail-value">
+                            Data Visualisation
+                        </span>
+
+                    </div>
+
+
+                    <div class="detail">
+
+                        <span class="detail-label">
+                            Role
+                        </span>
+
+                        <span class="detail-value">
+                            Interaction / Visual
+                        </span>
+
+                    </div>
+
+
+                    <div class="detail">
+
+                        <span class="detail-label">
+                            Tools
+                        </span>
+
+                        <span class="detail-value">
+                            p5.js
+                        </span>
+
+                    </div>
+
+
+                    <div class="detail">
+
+                        <span class="detail-label">
+                            Type
+                        </span>
+
+                        <span class="detail-value">
+                            Data
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- ==================================================
+             PROJECT 04
+        ================================================== -->
+
+        <article class="project reveal">
+
+
+            <div class="project-meta">
+
+                <span class="project-index">
+                    Work 04
+                </span>
+
+                <span class="project-year">
+                    2025
+                </span>
+
+            </div>
+
+
+            <div
+                class="project-image"
+                data-project="ITI"
+            >
+
+                <!--
+                <img
+                    src="images/iti.jpg"
+                    alt="ITI puppet theatre kit"
+                >
+                -->
+
+                <div class="image-number">
+                    04
+                </div>
+
+            </div>
+
+
+            <div class="project-info">
+
+
+                <div>
+
+                    <h3 class="project-title">
+                        ITI
+                    </h3>
+
+                    <p class="project-description">
+
+                        A DIY puppet theatre kit that brings
+                        Indian folk stories into the hands of
+                        children through making, performing
+                        and augmented reality.
+
+                    </p>
+
+
+                    <a
+                        href="pages/project-4.html"
+                        class="project-link"
+                    >
+
+                        Enter project →
+
+                    </a>
+
+                </div>
+
+
+                <div class="project-details">
+
+
+                    <div class="detail">
+
+                        <span class="detail-label">
+                            Medium
+                        </span>
+
+                        <span class="detail-value">
+                            AR / Product
+                        </span>
+
+                    </div>
+
+
+                    <div class="detail">
+
+                        <span class="detail-label">
+                            Role
+                        </span>
+
+                        <span class="detail-value">
+                            Experience Design
+                        </span>
+
+                    </div>
+
+
+                    <div class="detail">
+
+                        <span class="detail-label">
+                            Tools
+                        </span>
+
+                        <span class="detail-value">
+                            Blender / AR
+                        </span>
+
+                    </div>
+
+
+                    <div class="detail">
+
+                        <span class="detail-label">
+                            Type
+                        </span>
+
+                        <span class="detail-value">
+                            Cultural
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- ==================================================
+             PROJECT 05
+        ================================================== -->
+
+        <article class="project reveal">
+
+
+            <div class="project-meta">
+
+                <span class="project-index">
+                    Work 05
+                </span>
+
+                <span class="project-year">
+                    2026
+                </span>
+
+            </div>
+
+
+            <div
+                class="project-image"
+                data-project="Ganesh Museum"
+            >
+
+                <!--
+                <img
+                    src="images/ganesh.jpg"
+                    alt="Interactive Ganesh museum project"
+                >
+                -->
+
+                <div class="image-number">
+                    05
+                </div>
+
+            </div>
+
+
+            <div class="project-info">
+
+
+                <div>
+
+                    <h3 class="project-title">
+                        Ganesh Museum
+                    </h3>
+
+                    <p class="project-description">
+
+                        An interactive museum experience
+                        exploring creation, celebration,
+                        memory and the ritual of letting go.
+
+                    </p>
+
+
+                    <a
+                        href="pages/project-5.html"
+                        class="project-link"
+                    >
+
+                        Enter project →
+
+                    </a>
+
+                </div>
+
+
+                <div class="project-details">
+
+
+                    <div class="detail">
+
+                        <span class="detail-label">
+                            Medium
+                        </span>
+
+                        <span class="detail-value">
+                            Immersive
+                        </span>
+
+                    </div>
+
+
+                    <div class="detail">
+
+                        <span class="detail-label">
+                            Role
+                        </span>
+
+                        <span class="detail-value">
+                            Experience Design
+                        </span>
+
+                    </div>
+
+
+                    <div class="detail">
+
+                        <span class="detail-label">
+                            Focus
+                        </span>
+
+                        <span class="detail-value">
+                            Culture / Ritual
+                        </span>
+
+                    </div>
+
+
+                    <div class="detail">
+
+                        <span class="detail-label">
+                            Type
+                        </span>
+
+                        <span class="detail-value">
+                            Museum
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- ==================================================
+             PROJECT 06
+        ================================================== -->
+
+        <article class="project reveal">
+
+
+            <div class="project-meta">
+
+                <span class="project-index">
+                    Work 06
+                </span>
+
+                <span class="project-year">
+                    2025
+                </span>
+
+            </div>
+
+
+            <div
+                class="project-image"
+                data-project="Taru"
+            >
+
+                <!--
+                <img
+                    src="images/taru.jpg"
+                    alt="Taru board game"
+                >
+                -->
+
+                <div class="image-number">
+                    06
+                </div>
+
+            </div>
+
+
+            <div class="project-info">
+
+
+                <div>
+
+                    <h3 class="project-title">
+                        Taru
+                    </h3>
+
+                    <p class="project-description">
+
+                        A playful board game exploring emotional
+                        recognition through expressions, colour
+                        and the nine Navarasas.
+
+                    </p>
+
+
+                    <a
+                        href="pages/project-6.html"
+                        class="project-link"
+                    >
+
+                        Enter project →
+
+                    </a>
+
+                </div>
+
+
+                <div class="project-details">
+
+
+                    <div class="detail">
+
+                        <span class="detail-label">
+                            Medium
+                        </span>
+
+                        <span class="detail-value">
+                            Game
+                        </span>
+
+                    </div>
+
+
+                    <div class="detail">
+
+                        <span class="detail-label">
+                            Role
+                        </span>
+
+                        <span class="detail-value">
+                            Game / UX
+                        </span>
+
+                    </div>
+
+
+                    <div class="detail">
+
+                        <span class="detail-label">
+                            Focus
+                        </span>
+
+                        <span class="detail-value">
+                            Emotion
+                        </span>
+
+                    </div>
+
+
+                    <div class="detail">
+
+                        <span class="detail-label">
+                            Type
+                        </span>
+
+                        <span class="detail-value">
+                            Play
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+<!-- ========================================================
+     ABOUT
+======================================================== -->
+
+<section class="about-section" id="about">
+
+    <div class="page-width">
+
+
+        <div class="about-layout">
+
+
+            <div class="about-image">
+
+                <!--
+                PUT YOUR PHOTO HERE:
+
+                <img
+                    src="images/vaishnavi.jpg"
+                    alt="Vaishnavi Venkatesh"
+                >
+                -->
+
+            </div>
+
+
+            <div>
+
+                <h2 class="about-heading">
+
+                    The person
+                    <br>
+                    behind the work.
+
+                </h2>
+
+
+                <div class="about-text">
+
+                    <p>
+
+                        I'm Vaishnavi, an interaction designer
+                        interested in the space between technology,
+                        culture and storytelling.
+
+                    </p>
+
+
+                    <p>
+
+                        My work moves across UI/UX, immersive
+                        experiences, visual storytelling, AR/VR
+                        and experimental interfaces.
+
+                    </p>
+
+
+                    <p>
+
+                        I am particularly interested in projects
+                        that turn stories, places and cultural
+                        ideas into experiences people can actually
+                        interact with.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ========================================================
+     ARCHIVE
+======================================================== -->
+
+<section class="archive-section" id="archive">
+
+    <div class="page-width">
+
+
+        <div class="archive-header">
+
+            <span class="section-number">
+                02 / Archive
+            </span>
+
+            <h2 class="archive-title">
+                Other things
+            </h2>
+
+        </div>
+
+
+        <div class="archive-item">
+
+            <span class="archive-number">
+                07
+            </span>
+
+            <span class="archive-name">
+                Experiments
+            </span>
+
+            <span class="archive-type">
+                Visual
+            </span>
+
+        </div>
+
+
+        <div class="archive-item">
+
+            <span class="archive-number">
+                08
+            </span>
+
+            <span class="archive-name">
+                XR Studies
+            </span>
+
+            <span class="archive-type">
+                Immersive
+            </span>
+
+        </div>
+
+
+        <div class="archive-item">
+
+            <span class="archive-number">
+                09
+            </span>
+
+            <span class="archive-name">
+                Visual Experiments
+            </span>
+
+            <span class="archive-type">
+                Image
+            </span>
+
+        </div>
+
+
+        <div class="archive-item">
+
+            <span class="archive-number">
+                10
+            </span>
+
+            <span class="archive-name">
+                Small Interactions
+            </span>
+
+            <span class="archive-type">
+                Web
+            </span>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ========================================================
+     CONTACT
+======================================================== -->
+
+<section class="contact-section" id="contact">
+
+    <div class="page-width">
+
+        <p class="contact-small">
+            03 / Correspondence
         </p>
 
-        <h1>
-          Vaishnavi<br>
-          Venkatesh
-        </h1>
 
-        <p class="hero-role">
-          Interfaces, immersive experiences &amp; stories that people can step into.
-        </p>
+        <h2 class="contact-heading">
 
-        <p class="hero-desc">
-          I work across interaction design, visual storytelling and emerging
-          technologies. I like projects that sit somewhere between a screen,
-          a space and a story.
-        </p>
+            Let's make
+            <br>
+            something worth
+            <em>looking at.</em>
 
-        <div class="hero-actions">
-
-          <a href="#projects" class="btn btn-primary">
-            See my work
-          </a>
-
-          <a href="#about" class="btn btn-ghost">
-            A little about me
-          </a>
-
-        </div>
-
-      </div>
+        </h2>
 
 
-      <div class="hero-stamp">
+        <a
+            href="mailto:your.email@example.com"
+            class="contact-email"
+        >
 
-        <div class="hero-stamp-text">
-          Portfolio<br>
-          ★ 2026 ★<br>
-          Selected work
-        </div>
+            your.email@example.com
 
-      </div>
+        </a>
 
     </div>
 
-  </header>
+</section>
 
 
-  <!-- =========================================================
-       ABOUT
-  ========================================================= -->
+<!-- ========================================================
+     FOOTER
+======================================================== -->
 
-  <section id="about">
+<footer>
 
-    <div class="site-width reveal">
 
-      <p class="eyebrow">
-        01 — About
-      </p>
+    <span class="footer-text">
 
-      <h2 class="section-title">
-        A little about me.
-      </h2>
+        Vaishnavi Venkatesh
+        ·
+        2026
 
-      <p class="section-sub">
-        The person behind the pixels, prototypes and slightly too many open tabs.
-      </p>
+    </span>
 
 
-      <div class="about-grid">
+    <div class="footer-links">
 
-        <div class="about-frame">
-
-          <div class="about-frame-inner">
-            Your photo goes here
-          </div>
-
-        </div>
-
-
-        <div class="about-text">
-
-          <p>
-            <strong>Hi, I'm Vaishnavi.</strong>
-            I'm an interaction design student interested in the space
-            between technology, culture and storytelling.
-          </p>
-
-          <p>
-            My work moves between UI/UX, visual design, AR/VR,
-            immersive experiences and digital storytelling. I enjoy
-            taking something that initially feels abstract and finding
-            a way for people to experience it rather than simply look at it.
-          </p>
-
-          <p>
-            I'm especially drawn to projects involving heritage,
-            museums, Indian visual culture and emerging technology.
-            But I'm equally happy experimenting with a tiny interaction
-            just because I wondered what would happen if I clicked it.
-          </p>
-
-
-          <dl class="about-facts">
-
-            <div>
-              <dt>Based in</dt>
-              <dd>Ahmedabad / Mumbai</dd>
-            </div>
-
-            <div>
-              <dt>Studying</dt>
-              <dd>Interaction Design</dd>
-            </div>
-
-            <div>
-              <dt>Exploring</dt>
-              <dd>XR · UI/UX · Visual Storytelling</dd>
-            </div>
-
-            <div>
-              <dt>Open to</dt>
-              <dd>Internships · Collaborations · Interesting problems</dd>
-            </div>
-
-          </dl>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================================================
-       SKILLS
-  ========================================================= -->
-
-  <section id="skills">
-
-    <div class="site-width reveal">
-
-      <p class="eyebrow">
-        02 — Skills
-      </p>
-
-      <h2 class="section-title">
-        Things I like making things with.
-      </h2>
-
-      <p class="section-sub">
-        A mix of design, technology and visual tools depending on what
-        the project needs.
-      </p>
-
-
-      <div class="skills-cols">
-
-        <div>
-
-          <h3>
-            Design &amp; Interaction
-          </h3>
-
-          <div class="skill-list">
-
-            <span class="skill-pill">UI / UX</span>
-            <span class="skill-pill">Interaction Design</span>
-            <span class="skill-pill">Visual Design</span>
-            <span class="skill-pill">Prototyping</span>
-            <span class="skill-pill">Wireframing</span>
-            <span class="skill-pill">Motion</span>
-            <span class="skill-pill">Storytelling</span>
-            <span class="skill-pill">Experience Design</span>
-
-          </div>
-
-        </div>
-
-
-        <div>
-
-          <h3>
-            Tools &amp; Technology
-          </h3>
-
-          <div class="stamp-grid">
-
-            <div class="stamp" style="--r:-2deg">
-              <span>Figma</span>
-            </div>
-
-            <div class="stamp" style="--r:1.5deg">
-              <span>Blender</span>
-            </div>
-
-            <div class="stamp" style="--r:-1deg">
-              <span>Unity</span>
-            </div>
-
-            <div class="stamp" style="--r:2deg">
-              <span>After Effects</span>
-            </div>
-
-            <div class="stamp" style="--r:-1.5deg">
-              <span>Photoshop</span>
-            </div>
-
-            <div class="stamp" style="--r:1deg">
-              <span>Illustrator</span>
-            </div>
-
-            <div class="stamp" style="--r:-2deg">
-              <span>p5.js</span>
-            </div>
-
-            <div class="stamp" style="--r:2deg">
-              <span>TouchDesigner</span>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================================================
-       PROJECTS
-  ========================================================= -->
-
-  <section id="projects">
-
-    <div class="site-width reveal">
-
-      <p class="eyebrow">
-        03 — Selected Work
-      </p>
-
-      <h2 class="section-title">
-        Things I've been making.
-      </h2>
-
-      <p class="section-sub">
-        A selection of projects across interaction design,
-        immersive storytelling, research and visual systems.
-      </p>
-
-
-      <div class="projects-grid">
-
-
-        <article class="ticket">
-
-          <span class="ticket-num">
-            No. 01 / XR
-          </span>
-
-          <h3>
-            Dhanushkodi
-          </h3>
-
-          <p>
-            A multisensory VR experience that reconstructs
-            Dhanushkodi through memory, place and the aftermath
-            of the 1964 cyclone.
-          </p>
-
-          <div class="ticket-tags">
-            <span>VR</span>
-            <span>Unity</span>
-            <span>Storytelling</span>
-          </div>
-
-          <a href="pages/project-1.html" class="ticket-link">
-            View project <span>→</span>
-          </a>
-
-        </article>
-
-
-        <article class="ticket">
-
-          <span class="ticket-num">
-            No. 02 / Product
-          </span>
-
-          <h3>
-            Woice
-          </h3>
-
-          <p>
-            A playful speech therapy experience designed to make
-            everyday practice more engaging for children through
-            games, sounds and visual feedback.
-          </p>
-
-          <div class="ticket-tags">
-            <span>UX</span>
-            <span>Research</span>
-            <span>Gamification</span>
-          </div>
-
-          <a href="pages/project-2.html" class="ticket-link">
-            View project <span>→</span>
-          </a>
-
-        </article>
-
-
-        <article class="ticket">
-
-          <span class="ticket-num">
-            No. 03 / Data
-          </span>
-
-          <h3>
-            Air &amp; Birds
-          </h3>
-
-          <p>
-            A data-driven visualisation exploring how changing
-            air quality affects bird populations across Ahmedabad.
-          </p>
-
-          <div class="ticket-tags">
-            <span>p5.js</span>
-            <span>Data</span>
-            <span>Visualisation</span>
-          </div>
-
-          <a href="pages/project-3.html" class="ticket-link">
-            View project <span>→</span>
-          </a>
-
-        </article>
-
-
-        <article class="ticket">
-
-          <span class="ticket-num">
-            No. 04 / Culture
-          </span>
-
-          <h3>
-            ITI
-          </h3>
-
-          <p>
-            A DIY puppet theatre kit that introduces children
-            to Indian folk stories through making, performing
-            and augmented reality.
-          </p>
-
-          <div class="ticket-tags">
-            <span>AR</span>
-            <span>Culture</span>
-            <span>Product</span>
-          </div>
-
-          <a href="pages/project-4.html" class="ticket-link">
-            View project <span>→</span>
-          </a>
-
-        </article>
-
-
-        <article class="ticket">
-
-          <span class="ticket-num">
-            No. 05 / Experience
-          </span>
-
-          <h3>
-            Ganesh Museum
-          </h3>
-
-          <p>
-            An interactive museum experience exploring how Ganesh
-            is created, celebrated, experienced and eventually let go.
-          </p>
-
-          <div class="ticket-tags">
-            <span>Immersive</span>
-            <span>Interaction</span>
-            <span>Culture</span>
-          </div>
-
-          <a href="pages/project-5.html" class="ticket-link">
-            View project <span>→</span>
-          </a>
-
-        </article>
-
-
-        <article class="ticket">
-
-          <span class="ticket-num">
-            No. 06 / Play
-          </span>
-
-          <h3>
-            Taru
-          </h3>
-
-          <p>
-            A playful board game exploring emotional recognition
-            through expressions, colour and the nine Navarasas.
-          </p>
-
-          <div class="ticket-tags">
-            <span>Game Design</span>
-            <span>UX</span>
-            <span>Play</span>
-          </div>
-
-          <a href="pages/project-6.html" class="ticket-link">
-            View project <span>→</span>
-          </a>
-
-        </article>
-
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================================================
-       PLAYGROUND
-    ========================================================= -->
-
-  <section id="playground">
-
-    <div class="site-width reveal">
-
-      <div class="playground">
-
-        <div>
-
-          <p class="eyebrow">
-            04 — Off Syllabus
-          </p>
-
-          <h2>
-            The Vibe Playground
-          </h2>
-
-          <p>
-            Side experiments, visual experiments, tiny interactions,
-            half-finished ideas and things that started with
-            “I wonder if I can...”
-          </p>
-
-          <a
-            href="pages/vibe-playground.html"
-            class="btn btn-primary"
-            style="margin-top:22px;"
-          >
-            Step inside →
-          </a>
-
-        </div>
-
-
-        <div class="playground-badge">
-          Unofficial<br>
-          &amp; Unassigned
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================================================
-       FOOTER
-  ========================================================= -->
-
-  <footer id="contact">
-
-    <div class="site-width">
-
-      <p class="footer-mark">
-        Let's talk
-      </p>
-
-      <h2>
-        your.email@example.com
-      </h2>
-
-      <ul class="footer-links">
-
-        <li>
-          <a
+        <a
             href="https://github.com/blueexev"
             target="_blank"
-            rel="noopener"
-          >
+        >
             GitHub
-          </a>
-        </li>
+        </a>
 
-        <li>
-          <a
+
+        <a
             href="https://linkedin.com"
             target="_blank"
-            rel="noopener"
-          >
+        >
             LinkedIn
-          </a>
-        </li>
+        </a>
 
-        <li>
-          <a
-            href="https://instagram.com"
-            target="_blank"
-            rel="noopener"
-          >
-            Instagram
-          </a>
-        </li>
 
-        <li>
-          <a href="#top">
-            Back to top ↑
-          </a>
-        </li>
-
-      </ul>
-
-      <p class="footer-copy">
-        © 2026 Vaishnavi Venkatesh. Built by hand.
-      </p>
+        <a href="#top">
+            ↑ Top
+        </a>
 
     </div>
 
-  </footer>
+
+</footer>
 
 
-  <!-- =========================================================
-       JAVASCRIPT
-  ========================================================= -->
+<!-- ========================================================
+     JAVASCRIPT
+======================================================== -->
 
-  <script>
-
-    /* MOBILE MENU */
-
-    const navToggle =
-      document.querySelector(".nav-toggle");
-
-    const navLinks =
-      document.querySelector(".nav-links");
+<script>
 
 
-    navToggle.addEventListener("click", () => {
+/* ========================================================
+   SCROLL REVEAL
+======================================================== */
 
-      navLinks.classList.toggle("active");
-
-    });
-
-
-    document
-      .querySelectorAll(".nav-links a")
-      .forEach(link => {
-
-        link.addEventListener("click", () => {
-
-          navLinks.classList.remove("active");
-
-        });
-
-      });
+const revealElements =
+document.querySelectorAll(".reveal");
 
 
-    /* SCROLL REVEAL */
+const observer =
+new IntersectionObserver(
 
-    const revealElements =
-      document.querySelectorAll(".reveal");
+    entries => {
 
+        entries.forEach(entry => {
 
-    const observer =
-      new IntersectionObserver(
+            if (
+                entry.isIntersecting
+            ) {
 
-        entries => {
+                entry.target.classList.add(
+                    "visible"
+                );
 
-          entries.forEach(entry => {
-
-            if (entry.isIntersecting) {
-
-              entry.target.classList.add("visible");
-
-              observer.unobserve(
-                entry.target
-              );
+                observer.unobserve(
+                    entry.target
+                );
 
             }
 
-          });
+        });
 
-        },
+    },
 
-        {
-          threshold: 0.12
+    {
+        threshold: .12
+    }
+
+);
+
+
+revealElements.forEach(
+    element =>
+    observer.observe(element)
+);
+
+
+/* ========================================================
+   PROJECT CURSOR
+======================================================== */
+
+const cursor =
+document.querySelector(".project-cursor");
+
+
+const projects =
+document.querySelectorAll(".project");
+
+
+projects.forEach(project => {
+
+
+    project.addEventListener(
+        "mouseenter",
+        () => {
+
+            cursor.classList.add(
+                "active"
+            );
+
+        }
+    );
+
+
+    project.addEventListener(
+        "mouseleave",
+        () => {
+
+            cursor.classList.remove(
+                "active"
+            );
+
+        }
+    );
+
+
+    project.addEventListener(
+        "mousemove",
+        event => {
+
+            cursor.style.left =
+                event.clientX + "px";
+
+            cursor.style.top =
+                event.clientY + "px";
+
+        }
+    );
+
+});
+
+
+/* ========================================================
+   SMALL PARALLAX EFFECT
+======================================================== */
+
+window.addEventListener(
+    "scroll",
+    () => {
+
+        const hero =
+        document.querySelector(".hero-content");
+
+        const scroll =
+        window.scrollY;
+
+        if (
+            scroll < window.innerHeight
+        ) {
+
+            hero.style.transform =
+                `translateY(${scroll * .08}px)`;
+
+            hero.style.opacity =
+                1 - scroll / 700;
+
         }
 
-      );
+    }
+);
 
 
-    revealElements.forEach(element => {
+</script>
 
-      observer.observe(element);
-
-    });
-
-  </script>
 
 </body>
 
