@@ -1,3 +1,6 @@
+# Portfolio `index.html`
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,8 +15,9 @@
   >
 
   <style>
+
     /* =========================================================
-       BASE
+       RESET + BASE
     ========================================================= */
 
     * {
@@ -48,8 +52,10 @@
       color: #f4f1eb;
     }
 
+
     /* =========================================================
-       LAYOUT
+       MAIN WIDTH
+       This controls the horizontal space of the portfolio.
     ========================================================= */
 
     .site-width {
@@ -58,7 +64,7 @@
     }
 
     section {
-      padding: 110px 0;
+      padding: 125px 0;
     }
 
     .eyebrow {
@@ -70,19 +76,20 @@
     }
 
     .section-title {
-      font-size: clamp(30px, 4vw, 48px);
+      font-size: clamp(30px, 4vw, 46px);
       font-weight: 500;
       letter-spacing: -0.045em;
       line-height: 1.05;
-      max-width: 700px;
+      max-width: 650px;
     }
 
     .section-sub {
       margin-top: 18px;
-      max-width: 510px;
-      font-size: 14px;
+      max-width: 480px;
+      font-size: 13px;
       color: #666;
     }
+
 
     /* =========================================================
        NAVIGATION
@@ -97,21 +104,23 @@
 
       background: rgba(244, 241, 235, 0.88);
       backdrop-filter: blur(14px);
+
       border-bottom: 1px solid rgba(23, 23, 23, 0.1);
     }
 
     .nav-inner {
-      width: min(1080px, calc(100% - 80px));
+      width: min(920px, calc(100% - 140px));
       margin: auto;
 
       height: 68px;
+
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
 
     .nav-mark {
-      font-size: 12px;
+      font-size: 11px;
       letter-spacing: 0.08em;
       font-weight: 600;
     }
@@ -124,8 +133,9 @@
     }
 
     .nav-links a {
-      font-size: 11px;
+      font-size: 10px;
       color: #555;
+
       transition: color 0.25s ease;
     }
 
@@ -140,55 +150,64 @@
       cursor: pointer;
     }
 
+
     /* =========================================================
        HERO
     ========================================================= */
 
     .hero {
       min-height: 92vh;
+
       display: flex;
       align-items: center;
-      padding-top: 120px;
-      padding-bottom: 80px;
+
+      padding-top: 135px;
+      padding-bottom: 100px;
     }
 
     .hero-inner {
-      width: min(1080px, calc(100% - 80px));
+      width: min(920px, calc(100% - 140px));
       margin: auto;
 
       display: grid;
-      grid-template-columns: 1fr 170px;
-      gap: 70px;
+      grid-template-columns: 1fr 135px;
+      gap: 65px;
       align-items: end;
     }
 
     .hero h1 {
-      font-size: clamp(52px, 8vw, 96px);
+      font-size: clamp(48px, 7vw, 78px);
       font-weight: 500;
+
       line-height: 0.92;
       letter-spacing: -0.065em;
-      max-width: 850px;
+
+      max-width: 780px;
     }
 
     .hero-role {
       margin-top: 28px;
-      font-size: 13px;
+
+      font-size: 12px;
       color: #444;
       letter-spacing: 0.02em;
     }
 
     .hero-desc {
-      margin-top: 25px;
-      max-width: 560px;
-      font-size: 14px;
+      margin-top: 24px;
+
+      max-width: 510px;
+
+      font-size: 13px;
       line-height: 1.8;
+
       color: #606060;
     }
 
     .hero-actions {
       display: flex;
       gap: 10px;
-      margin-top: 32px;
+      margin-top: 30px;
     }
 
     .btn {
@@ -196,8 +215,10 @@
       align-items: center;
       justify-content: center;
 
-      padding: 11px 17px;
-      font-size: 11px;
+      padding: 10px 16px;
+
+      font-size: 10px;
+
       border: 1px solid #171717;
 
       transition:
@@ -229,17 +250,20 @@
     }
 
     .hero-stamp {
-      width: 150px;
-      height: 150px;
+      width: 130px;
+      height: 130px;
+
       border: 1px solid #171717;
       border-radius: 50%;
 
       display: flex;
       align-items: center;
       justify-content: center;
+
       text-align: center;
 
       transform: rotate(7deg);
+
       transition: transform 0.5s ease;
     }
 
@@ -248,60 +272,74 @@
     }
 
     .hero-stamp-text {
-      font-size: 10px;
+      font-size: 9px;
       line-height: 1.8;
+
       text-transform: uppercase;
       letter-spacing: 0.12em;
     }
+
 
     /* =========================================================
        DRAW + PLAY
     ========================================================= */
 
     #play {
-      padding-top: 50px;
+      padding-top: 45px;
+      padding-bottom: 125px;
     }
 
     .play-intro {
       display: flex;
       justify-content: space-between;
       align-items: end;
-      gap: 40px;
-      margin-bottom: 28px;
+
+      gap: 60px;
+
+      margin-bottom: 30px;
     }
 
     .play-note {
-      max-width: 330px;
-      font-size: 12px;
+      max-width: 300px;
+
+      font-size: 11px;
       color: #777;
       line-height: 1.7;
     }
 
     .canvas-wrap {
       position: relative;
+
       border: 1px solid #171717;
       background: #ebe7df;
+
       overflow: hidden;
     }
 
     #drawingCanvas {
       display: block;
+
       width: 100%;
-      height: 350px;
+      height: 340px;
+
       cursor: crosshair;
+
       touch-action: none;
     }
 
     .canvas-label {
       position: absolute;
-      top: 18px;
-      left: 20px;
 
-      font-size: 10px;
+      top: 17px;
+      left: 19px;
+
+      font-size: 9px;
+
       letter-spacing: 0.12em;
       text-transform: uppercase;
 
       pointer-events: none;
+
       color: #555;
     }
 
@@ -311,20 +349,25 @@
       justify-content: space-between;
 
       border-top: 1px solid #171717;
-      padding: 12px 15px;
+
+      padding: 11px 14px;
     }
 
     .canvas-hint {
-      font-size: 10px;
+      font-size: 9px;
       color: #777;
     }
 
     .clear-button {
       border: 1px solid #171717;
       background: transparent;
-      padding: 7px 12px;
-      font-size: 10px;
+
+      padding: 6px 11px;
+
+      font-size: 9px;
+
       cursor: pointer;
+
       transition: all 0.2s ease;
     }
 
@@ -335,20 +378,23 @@
 
     .play-symbols {
       display: flex;
-      gap: 9px;
-      margin-top: 16px;
+      gap: 8px;
+
+      margin-top: 14px;
     }
 
     .play-symbol {
-      width: 34px;
-      height: 34px;
+      width: 32px;
+      height: 32px;
 
       border: 1px solid #171717;
+
       display: flex;
       align-items: center;
       justify-content: center;
 
-      font-size: 13px;
+      font-size: 12px;
+
       cursor: pointer;
 
       transition:
@@ -359,30 +405,43 @@
 
     .play-symbol:hover {
       transform: rotate(8deg) translateY(-3px);
+
       background: #171717;
       color: white;
     }
+
 
     /* =========================================================
        ABOUT
     ========================================================= */
 
+    #about {
+      padding-top: 125px;
+    }
+
     .about-grid {
       display: grid;
+
       grid-template-columns: 0.7fr 1.3fr;
-      gap: 90px;
-      margin-top: 65px;
+
+      gap: 105px;
+
+      margin-top: 70px;
+
       align-items: start;
     }
 
     .about-frame {
       aspect-ratio: 4 / 5;
+
       border: 1px solid #171717;
+
       padding: 9px;
     }
 
     .about-frame-inner {
       height: 100%;
+
       background: #ded9d0;
 
       display: flex;
@@ -390,20 +449,27 @@
       justify-content: center;
 
       text-align: center;
-      font-size: 10px;
+
+      font-size: 9px;
+
       color: #777;
+
       letter-spacing: 0.08em;
+
       text-transform: uppercase;
     }
 
     .about-text {
-      max-width: 590px;
+      max-width: 540px;
     }
 
     .about-text p {
-      font-size: 14px;
+      font-size: 13px;
+
       color: #4f4f4f;
+
       line-height: 1.85;
+
       margin-bottom: 20px;
     }
 
@@ -414,26 +480,34 @@
 
     .about-facts {
       margin-top: 38px;
+
       border-top: 1px solid rgba(23, 23, 23, 0.2);
     }
 
     .about-facts div {
       display: grid;
-      grid-template-columns: 120px 1fr;
+
+      grid-template-columns: 110px 1fr;
+
       padding: 12px 0;
+
       border-bottom: 1px solid rgba(23, 23, 23, 0.2);
     }
 
     .about-facts dt {
-      font-size: 10px;
+      font-size: 9px;
+
       text-transform: uppercase;
+
       letter-spacing: 0.1em;
+
       color: #888;
     }
 
     .about-facts dd {
-      font-size: 12px;
+      font-size: 11px;
     }
+
 
     /* =========================================================
        SKILLS
@@ -445,48 +519,66 @@
 
     .skills-cols {
       display: grid;
+
       grid-template-columns: 1fr 1fr;
-      gap: 90px;
-      margin-top: 60px;
+
+      gap: 100px;
+
+      margin-top: 65px;
     }
 
     .skills-cols h3 {
-      font-size: 12px;
+      font-size: 10px;
+
       font-weight: 500;
+
       text-transform: uppercase;
+
       letter-spacing: 0.1em;
+
       margin-bottom: 18px;
     }
 
     .skill-list {
       display: flex;
+
       flex-wrap: wrap;
+
       gap: 8px;
     }
 
     .skill-pill {
       border: 1px solid #aaa;
-      padding: 7px 11px;
-      font-size: 11px;
+
+      padding: 7px 10px;
+
+      font-size: 10px;
+
       color: #555;
+
       transition: all 0.2s ease;
     }
 
     .skill-pill:hover {
       border-color: #171717;
+
       color: #171717;
+
       transform: translateY(-2px);
     }
 
     .stamp-grid {
       display: flex;
+
       flex-wrap: wrap;
+
       gap: 10px;
     }
 
     .stamp {
-      min-width: 90px;
-      height: 50px;
+      min-width: 86px;
+      height: 48px;
+
       border: 1px solid #171717;
 
       display: flex;
@@ -494,6 +586,7 @@
       justify-content: center;
 
       transform: rotate(var(--r));
+
       transition: transform 0.25s ease;
     }
 
@@ -502,10 +595,13 @@
     }
 
     .stamp span {
-      font-size: 10px;
+      font-size: 9px;
+
       text-transform: uppercase;
+
       letter-spacing: 0.08em;
     }
+
 
     /* =========================================================
        PROJECTS
@@ -516,19 +612,23 @@
     }
 
     .projects-grid {
-      margin-top: 65px;
+      margin-top: 70px;
 
       display: grid;
+
       grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
+
+      gap: 20px;
     }
 
     .ticket {
       position: relative;
 
-      min-height: 280px;
+      min-height: 290px;
+
       border: 1px solid #171717;
-      padding: 25px;
+
+      padding: 29px;
 
       display: flex;
       flex-direction: column;
@@ -540,54 +640,75 @@
 
     .ticket:hover {
       transform: translateY(-5px);
+
       background: #eae6de;
     }
 
     .ticket-num {
-      font-size: 9px;
+      font-size: 8px;
+
       color: #888;
+
       letter-spacing: 0.12em;
+
       text-transform: uppercase;
     }
 
     .ticket h3 {
       margin-top: 35px;
-      font-size: 24px;
+
+      font-size: 22px;
+
       font-weight: 500;
+
       letter-spacing: -0.03em;
     }
 
     .ticket p {
       margin-top: 12px;
-      max-width: 410px;
-      font-size: 12px;
-      line-height: 1.7;
+
+      max-width: 390px;
+
+      font-size: 11px;
+
+      line-height: 1.75;
+
       color: #666;
     }
 
     .ticket-tags {
       display: flex;
+
       gap: 6px;
-      margin-top: 20px;
+
+      margin-top: 19px;
     }
 
     .ticket-tags span {
       border: 1px solid #aaa;
+
       padding: 5px 8px;
-      font-size: 9px;
+
+      font-size: 8px;
+
       text-transform: uppercase;
+
       letter-spacing: 0.07em;
     }
 
     .ticket-link {
       margin-top: auto;
-      padding-top: 30px;
-      font-size: 11px;
+
+      padding-top: 28px;
+
+      font-size: 10px;
+
       font-weight: 600;
     }
 
     .ticket-link span {
       display: inline-block;
+
       transition: transform 0.2s ease;
     }
 
@@ -595,86 +716,118 @@
       transform: translateX(5px);
     }
 
+
     /* =========================================================
        PLAYGROUND
     ========================================================= */
 
     .playground {
       border: 1px solid #171717;
-      padding: 50px;
+
+      padding: 55px;
 
       display: grid;
-      grid-template-columns: 1fr 150px;
-      gap: 60px;
+
+      grid-template-columns: 1fr 130px;
+
+      gap: 70px;
+
       align-items: center;
     }
 
     .playground h2 {
-      font-size: 38px;
+      font-size: 34px;
+
       font-weight: 500;
+
       letter-spacing: -0.04em;
     }
 
     .playground p {
-      max-width: 520px;
+      max-width: 480px;
+
       margin-top: 17px;
-      font-size: 13px;
+
+      font-size: 12px;
+
       line-height: 1.8;
+
       color: #666;
     }
 
     .playground-badge {
-      width: 125px;
-      height: 125px;
+      width: 115px;
+      height: 115px;
+
       border-radius: 50%;
+
       border: 1px solid #171717;
 
       display: flex;
+
       align-items: center;
+
       justify-content: center;
+
       text-align: center;
 
-      font-size: 9px;
+      font-size: 8px;
+
       line-height: 1.7;
+
       text-transform: uppercase;
+
       letter-spacing: 0.1em;
 
       transform: rotate(-8deg);
     }
+
 
     /* =========================================================
        FOOTER
     ========================================================= */
 
     footer {
-      padding: 100px 0 45px;
+      padding: 110px 0 45px;
+
       border-top: 1px solid rgba(23, 23, 23, 0.15);
     }
 
     .footer-mark {
-      font-size: 10px;
+      font-size: 9px;
+
       text-transform: uppercase;
+
       letter-spacing: 0.15em;
+
       color: #777;
+
       margin-bottom: 18px;
     }
 
     footer h2 {
-      font-size: clamp(28px, 5vw, 54px);
+      font-size: clamp(28px, 4vw, 48px);
+
       font-weight: 500;
+
       letter-spacing: -0.05em;
     }
 
     .footer-links {
       list-style: none;
+
       display: flex;
+
       flex-wrap: wrap;
+
       gap: 25px;
+
       margin-top: 30px;
     }
 
     .footer-links a {
-      font-size: 11px;
+      font-size: 10px;
+
       color: #666;
     }
 
@@ -684,17 +837,22 @@
 
     .footer-copy {
       margin-top: 70px;
-      font-size: 9px;
+
+      font-size: 8px;
+
       color: #999;
     }
 
+
     /* =========================================================
-       REVEAL ANIMATION
+       SCROLL REVEAL
     ========================================================= */
 
     .reveal {
       opacity: 0;
+
       transform: translateY(25px);
+
       transition:
         opacity 0.7s ease,
         transform 0.7s ease;
@@ -702,11 +860,13 @@
 
     .reveal.visible {
       opacity: 1;
+
       transform: translateY(0);
     }
 
+
     /* =========================================================
-       RESPONSIVE
+       MOBILE
     ========================================================= */
 
     @media (max-width: 760px) {
@@ -714,11 +874,11 @@
       .site-width,
       .nav-inner,
       .hero-inner {
-        width: min(100% - 36px, 1080px);
+        width: calc(100% - 36px);
       }
 
       section {
-        padding: 80px 0;
+        padding: 85px 0;
       }
 
       .nav-inner {
@@ -729,16 +889,22 @@
         display: none;
 
         position: absolute;
+
         top: 60px;
+
         left: 18px;
         right: 18px;
 
         padding: 20px;
+
         background: #f4f1eb;
+
         border: 1px solid #171717;
 
         flex-direction: column;
+
         align-items: flex-start;
+
         gap: 17px;
       }
 
@@ -748,21 +914,24 @@
 
       .nav-toggle {
         display: block;
-        font-size: 11px;
+
+        font-size: 10px;
       }
 
       .hero {
         min-height: auto;
-        padding-top: 130px;
+
+        padding-top: 125px;
       }
 
       .hero-inner {
         grid-template-columns: 1fr;
+
         gap: 45px;
       }
 
       .hero h1 {
-        font-size: clamp(48px, 15vw, 78px);
+        font-size: clamp(46px, 14vw, 72px);
       }
 
       .hero-stamp {
@@ -776,7 +945,10 @@
 
       .play-intro {
         flex-direction: column;
+
         align-items: flex-start;
+
+        gap: 25px;
       }
 
       #drawingCanvas {
@@ -791,7 +963,7 @@
 
       .about-grid,
       .skills-cols {
-        gap: 45px;
+        gap: 50px;
       }
 
       .about-frame {
@@ -800,25 +972,32 @@
 
       .playground {
         grid-template-columns: 1fr;
-        padding: 30px;
+
+        padding: 32px;
+
+        gap: 40px;
       }
 
       .playground-badge {
         width: 100px;
         height: 100px;
       }
+
     }
 
   </style>
 </head>
 
+
 <body>
+
 
   <!-- =========================================================
        NAVIGATION
   ========================================================= -->
 
   <nav class="site-nav">
+
     <div class="nav-inner">
 
       <a href="#top" class="nav-mark">
@@ -830,14 +1009,31 @@
       </button>
 
       <ul class="nav-links">
-        <li><a href="#play">Play</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Work</a></li>
-        <li><a href="#contact">Contact</a></li>
+
+        <li>
+          <a href="#play">Play</a>
+        </li>
+
+        <li>
+          <a href="#about">About</a>
+        </li>
+
+        <li>
+          <a href="#skills">Skills</a>
+        </li>
+
+        <li>
+          <a href="#projects">Work</a>
+        </li>
+
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+
       </ul>
 
     </div>
+
   </nav>
 
 
@@ -884,12 +1080,15 @@
 
       </div>
 
+
       <div class="hero-stamp">
+
         <div class="hero-stamp-text">
           Portfolio<br>
           ★ 2026 ★<br>
           Selected work
         </div>
+
       </div>
 
     </div>
@@ -908,6 +1107,7 @@
       <div class="play-intro">
 
         <div>
+
           <p class="eyebrow">
             Before we get serious
           </p>
@@ -915,6 +1115,7 @@
           <h2 class="section-title">
             Draw something.
           </h2>
+
         </div>
 
         <p class="play-note">
@@ -1174,8 +1375,6 @@
       <div class="projects-grid">
 
 
-        <!-- PROJECT 01 -->
-
         <article class="ticket">
 
           <span class="ticket-num">
@@ -1204,8 +1403,6 @@
 
         </article>
 
-
-        <!-- PROJECT 02 -->
 
         <article class="ticket">
 
@@ -1236,8 +1433,6 @@
         </article>
 
 
-        <!-- PROJECT 03 -->
-
         <article class="ticket">
 
           <span class="ticket-num">
@@ -1265,8 +1460,6 @@
 
         </article>
 
-
-        <!-- PROJECT 04 -->
 
         <article class="ticket">
 
@@ -1297,8 +1490,6 @@
         </article>
 
 
-        <!-- PROJECT 05 -->
-
         <article class="ticket">
 
           <span class="ticket-num">
@@ -1326,8 +1517,6 @@
 
         </article>
 
-
-        <!-- PROJECT 06 -->
 
         <article class="ticket">
 
@@ -1483,9 +1672,9 @@
 
   <script>
 
-    /* ---------------------------------------------------------
+    /* =========================================================
        MOBILE MENU
-    --------------------------------------------------------- */
+    ========================================================= */
 
     const navToggle = document.querySelector(".nav-toggle");
     const navLinks = document.querySelector(".nav-links");
@@ -1495,15 +1684,17 @@
     });
 
     document.querySelectorAll(".nav-links a").forEach(link => {
+
       link.addEventListener("click", () => {
         navLinks.classList.remove("active");
       });
+
     });
 
 
-    /* ---------------------------------------------------------
+    /* =========================================================
        DRAWING CANVAS
-    --------------------------------------------------------- */
+    ========================================================= */
 
     const canvas = document.getElementById("drawingCanvas");
     const ctx = canvas.getContext("2d");
@@ -1511,13 +1702,10 @@
 
     let drawing = false;
 
+
     function resizeCanvas() {
 
       const rect = canvas.getBoundingClientRect();
-
-      const previousImage = canvas.width
-        ? ctx.getImageData(0, 0, canvas.width, canvas.height)
-        : null;
 
       canvas.width = rect.width;
       canvas.height = rect.height;
@@ -1527,14 +1715,8 @@
       ctx.lineWidth = 2;
       ctx.strokeStyle = "#171717";
 
-      if (previousImage) {
-        try {
-          ctx.putImageData(previousImage, 0, 0);
-        } catch (error) {
-          // Ignore resize restoration errors.
-        }
-      }
     }
+
 
     resizeCanvas();
 
@@ -1560,7 +1742,11 @@
       const position = getPosition(event);
 
       ctx.beginPath();
-      ctx.moveTo(position.x, position.y);
+
+      ctx.moveTo(
+        position.x,
+        position.y
+      );
 
       canvas.setPointerCapture(event.pointerId);
 
@@ -1573,7 +1759,11 @@
 
       const position = getPosition(event);
 
-      ctx.lineTo(position.x, position.y);
+      ctx.lineTo(
+        position.x,
+        position.y
+      );
+
       ctx.stroke();
 
     });
@@ -1582,6 +1772,7 @@
     canvas.addEventListener("pointerup", () => {
 
       drawing = false;
+
       ctx.closePath();
 
     });
@@ -1590,6 +1781,7 @@
     canvas.addEventListener("pointerleave", () => {
 
       drawing = false;
+
       ctx.closePath();
 
     });
@@ -1607,43 +1799,56 @@
     });
 
 
-    /* ---------------------------------------------------------
+    /* =========================================================
        SCROLL REVEAL
-    --------------------------------------------------------- */
+    ========================================================= */
 
-    const revealElements = document.querySelectorAll(".reveal");
+    const revealElements =
+      document.querySelectorAll(".reveal");
 
-    const observer = new IntersectionObserver(
-      entries => {
 
-        entries.forEach(entry => {
+    const observer =
+      new IntersectionObserver(
 
-          if (entry.isIntersecting) {
+        entries => {
 
-            entry.target.classList.add("visible");
-            observer.unobserve(entry.target);
+          entries.forEach(entry => {
 
-          }
+            if (entry.isIntersecting) {
 
-        });
+              entry.target.classList.add("visible");
 
-      },
-      {
-        threshold: 0.12
-      }
-    );
+              observer.unobserve(
+                entry.target
+              );
+
+            }
+
+          });
+
+        },
+
+        {
+          threshold: 0.12
+        }
+
+      );
 
 
     revealElements.forEach(element => {
+
       observer.observe(element);
+
     });
 
 
-    /* ---------------------------------------------------------
-       LITTLE INTERACTIVE SYMBOLS
-    --------------------------------------------------------- */
+    /* =========================================================
+       INTERACTIVE SYMBOLS
+    ========================================================= */
 
-    const symbols = document.querySelectorAll(".play-symbol");
+    const symbols =
+      document.querySelectorAll(".play-symbol");
+
 
     symbols.forEach(symbol => {
 
@@ -1663,3 +1868,4 @@
 
 </body>
 </html>
+```
