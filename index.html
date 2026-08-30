@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -11,30 +12,14 @@
 <meta
 name="description"
 content="Selected works by Vaishnavi Venkatesh, interaction designer and visual storyteller."
+
 >
 
-<!--
-=========================================================
-FONT SETUP
-
-If you have the Quano font files, put them inside:
-
-fonts/
-    Quano-Regular.woff2
-    Quano-Italic.woff2
-
-The website will automatically use them.
-
-If you don't have Quano yet, the fallback fonts will still
-give you the editorial / museum feeling.
-=========================================================
--->
+<!-- ========================================================
+     FONT SETUP
+======================================================== -->
 
 <style>
-
-/* ========================================================
-   QUANO
-======================================================== */
 
 @font-face {
 
@@ -126,23 +111,9 @@ button {
 }
 
 
-/*
-This controls the width of almost everything.
-
-Want the website EVEN MORE inside?
-
-Change:
-
-860px
-
-to:
-
-760px
-
-or
-
-700px
-*/
+/* ========================================================
+   PAGE WIDTH
+======================================================== */
 
 .page-width {
 
@@ -157,7 +128,7 @@ or
 
 
 /* ========================================================
-   TOP NAV
+   TOP NAVIGATION
 ======================================================== */
 
 .site-nav {
@@ -165,7 +136,6 @@ or
     position: fixed;
 
     top: 0;
-
     left: 0;
 
     width: 100%;
@@ -198,7 +168,7 @@ or
 }
 
 
-/* YOUR NAME */
+/* NAME */
 
 .artist-name {
 
@@ -213,7 +183,7 @@ or
 }
 
 
-/* NAV */
+/* NAV LINKS */
 
 .nav-links {
 
@@ -248,7 +218,7 @@ or
 
 
 /* ========================================================
-   HERO / OPENING WALL
+   HERO
 ======================================================== */
 
 .hero {
@@ -269,13 +239,6 @@ or
 
 }
 
-
-/*
-The hero is intentionally NOT your name.
-
-It introduces the work.
-*/
-
 .hero-content {
 
     width: 100%;
@@ -285,7 +248,7 @@ It introduces the work.
 }
 
 
-/* SMALL MUSEUM LABEL */
+/* SMALL LABEL */
 
 .collection-label {
 
@@ -328,9 +291,6 @@ It introduces the work.
 
 }
 
-
-/* ITALIC EMPHASIS */
-
 .hero-title em {
 
     font-style: italic;
@@ -357,7 +317,7 @@ It introduces the work.
 }
 
 
-/* SCROLL */
+/* SCROLL NOTE */
 
 .scroll-note {
 
@@ -544,17 +504,6 @@ It introduces the work.
 
 }
 
-
-/*
-Replace these backgrounds with your actual project images.
-
-Example:
-
-background-image:
-url("images/dhanushkodi.jpg");
-
-*/
-
 .project-image img {
 
     width: 100%;
@@ -592,7 +541,7 @@ url("images/dhanushkodi.jpg");
 }
 
 
-/* PROJECT NUMBER OVER IMAGE */
+/* PROJECT NUMBER */
 
 .image-number {
 
@@ -677,7 +626,9 @@ url("images/dhanushkodi.jpg");
 }
 
 
-/* RIGHT SIDE */
+/* ========================================================
+   PROJECT DETAILS
+======================================================== */
 
 .project-details {
 
@@ -690,7 +641,6 @@ url("images/dhanushkodi.jpg");
     gap: 22px;
 
 }
-
 
 .detail {
 
@@ -725,7 +675,9 @@ url("images/dhanushkodi.jpg");
 }
 
 
-/* VIEW PROJECT */
+/* ========================================================
+   VIEW PROJECT LINK
+======================================================== */
 
 .project-link {
 
@@ -762,65 +714,6 @@ url("images/dhanushkodi.jpg");
 
 
 /* ========================================================
-   PROJECT HOVER CURSOR
-======================================================== */
-
-.project-cursor {
-
-    position: fixed;
-
-    pointer-events: none;
-
-    z-index: 2000;
-
-    width: 90px;
-
-    height: 90px;
-
-    border-radius: 50%;
-
-    background: #191817;
-
-    color: #e9e4d9;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    text-align: center;
-
-    font-size: 7px;
-
-    text-transform: uppercase;
-
-    letter-spacing: .1em;
-
-    opacity: 0;
-
-    transform:
-        translate(-50%, -50%)
-        scale(.6);
-
-    transition:
-        opacity .25s ease,
-        transform .25s ease;
-
-}
-
-.project-cursor.active {
-
-    opacity: 1;
-
-    transform:
-        translate(-50%, -50%)
-        scale(1);
-
-}
-
-
-/* ========================================================
    ABOUT
 ======================================================== */
 
@@ -845,7 +738,7 @@ url("images/dhanushkodi.jpg");
 }
 
 
-/* PORTRAIT PLACEHOLDER */
+/* PHOTO */
 
 .about-image {
 
@@ -869,7 +762,7 @@ url("images/dhanushkodi.jpg");
 }
 
 
-/* ABOUT TEXT */
+/* ABOUT HEADING */
 
 .about-heading {
 
@@ -892,6 +785,9 @@ url("images/dhanushkodi.jpg");
 
 }
 
+
+/* ABOUT TEXT */
+
 .about-text {
 
     font-size: 11px;
@@ -912,7 +808,7 @@ url("images/dhanushkodi.jpg");
 
 
 /* ========================================================
-   SMALL ARCHIVE
+   ARCHIVE
 ======================================================== */
 
 .archive-section {
@@ -925,7 +821,6 @@ url("images/dhanushkodi.jpg");
 
 }
 
-
 .archive-header {
 
     display: flex;
@@ -935,7 +830,6 @@ url("images/dhanushkodi.jpg");
     margin-bottom: 45px;
 
 }
-
 
 .archive-title {
 
@@ -994,7 +888,6 @@ url("images/dhanushkodi.jpg");
 
 }
 
-
 .archive-number {
 
     font-size: 7px;
@@ -1002,7 +895,6 @@ url("images/dhanushkodi.jpg");
     color: #77716a;
 
 }
-
 
 .archive-name {
 
@@ -1014,7 +906,6 @@ url("images/dhanushkodi.jpg");
     font-size: 17px;
 
 }
-
 
 .archive-type {
 
@@ -1180,6 +1071,29 @@ footer {
 
 
 /* ========================================================
+   BACKGROUND CANVAS
+======================================================== */
+
+#bg-canvas {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -1;
+
+    pointer-events: none;
+
+}
+
+#bg-canvas canvas {
+
+    display: block;
+
+}
+
+
+/* ========================================================
    MOBILE
 ======================================================== */
 
@@ -1299,13 +1213,6 @@ footer {
     }
 
 
-    .project-cursor {
-
-        display: none;
-
-    }
-
-
     footer {
 
         display: block;
@@ -1325,18 +1232,13 @@ footer {
 
 </head>
 
-
 <body>
 
-
 <!-- ========================================================
-     CUSTOM CURSOR
+     BACKGROUND CANVAS
 ======================================================== -->
 
-<div class="project-cursor">
-    View<br>work
-</div>
-
+<div id="bg-canvas"></div>
 
 <!-- ========================================================
      NAVIGATION
@@ -1344,48 +1246,49 @@ footer {
 
 <nav class="site-nav">
 
-    <div class="nav-inner">
+```
+<div class="nav-inner">
 
-        <!-- YOUR NAME -->
-        <a href="#top" class="artist-name">
+    <a
+        href="#top"
+        class="artist-name"
+    >
+        Vaishnavi Venkatesh
+    </a>
 
-            Vaishnavi Venkatesh
 
-        </a>
+    <ul class="nav-links">
 
+        <li>
+            <a href="#work">
+                Work
+            </a>
+        </li>
 
-        <ul class="nav-links">
+        <li>
+            <a href="#about">
+                About
+            </a>
+        </li>
 
-            <li>
-                <a href="#work">
-                    Work
-                </a>
-            </li>
+        <li>
+            <a href="#archive">
+                Archive
+            </a>
+        </li>
 
-            <li>
-                <a href="#about">
-                    About
-                </a>
-            </li>
+        <li>
+            <a href="#contact">
+                Contact
+            </a>
+        </li>
 
-            <li>
-                <a href="#archive">
-                    Archive
-                </a>
-            </li>
+    </ul>
 
-            <li>
-                <a href="#contact">
-                    Contact
-                </a>
-            </li>
-
-        </ul>
-
-    </div>
+</div>
+```
 
 </nav>
-
 
 <!-- ========================================================
      HERO
@@ -1393,1078 +1296,1056 @@ footer {
 
 <header class="hero" id="top">
 
-    <div class="page-width">
+```
+<div class="page-width">
 
-        <div class="hero-content">
+    <div class="hero-content">
 
-            <p class="collection-label">
+        <p class="collection-label">
 
-                Selected works / 2022—2026
+            Selected works / 2022—2026
 
-            </p>
-
-
-            <h1 class="hero-title">
-
-                Stories, systems
-                <br>
-                &amp; <em>spaces</em> to
-                experience.
-
-            </h1>
+        </p>
 
 
-            <p class="hero-description">
+        <h1 class="hero-title">
 
-                A collection of experiments and projects
-                exploring interaction, visual storytelling,
-                culture and emerging technology.
+            Stories, systems
+            <br>
+            &amp; <em>spaces</em> to
+            experience.
 
-            </p>
-
-        </div>
-
-    </div>
+        </h1>
 
 
-    <div class="scroll-note">
+        <p class="hero-description">
 
-        Explore the collection
+            A collection of experiments and projects
+            exploring interaction, visual storytelling,
+            culture and emerging technology.
 
-        <span>↓</span>
+        </p>
 
     </div>
+
+</div>
+
+
+<div class="scroll-note">
+
+    Explore the collection
+
+    <span>↓</span>
+
+</div>
+```
 
 </header>
 
-
 <div class="museum-rule"></div>
-
 
 <!-- ========================================================
      PROJECTS
 ======================================================== -->
 
-<section class="projects-section" id="work">
+<section
+    class="projects-section"
+    id="work"
+>
 
-    <div class="page-width">
+```
+<div class="page-width">
 
 
-        <div class="section-header">
+    <div class="section-header">
 
-            <div>
+        <div>
 
-                <p class="section-number">
-                    01 / Collection
-                </p>
+            <p class="section-number">
+                01 / Collection
+            </p>
 
-            </div>
+        </div>
 
-            <h2 class="section-title">
-                Selected work
-            </h2>
+        <h2 class="section-title">
+            Selected work
+        </h2>
+
+    </div>
+
+
+    <!-- ==================================================
+         PROJECT 01
+    ================================================== -->
+
+    <article class="project reveal">
+
+        <div class="project-meta">
+
+            <span class="project-index">
+                Work 01
+            </span>
+
+            <span class="project-year">
+                2025
+            </span>
 
         </div>
 
 
-        <!-- ==================================================
-             PROJECT 01
-        ================================================== -->
+        <div
+            class="project-image"
+            data-project="Dhanushkodi"
+        >
 
-        <article class="project reveal">
-
-
-            <div class="project-meta">
-
-                <span class="project-index">
-                    Work 01
-                </span>
-
-                <span class="project-year">
-                    2025
-                </span>
-
-            </div>
-
-
-            <div
-                class="project-image"
-                data-project="Dhanushkodi"
+            <img
+                src="images/dhanushkodi.jpg"
+                alt="Dhanushkodi VR project"
             >
 
-                <!--
-                REPLACE THIS WITH YOUR IMAGE
+            <div class="image-number">
+                01
+            </div>
 
-                <img
-                    src="images/dhanushkodi.jpg"
-                    alt="Dhanushkodi VR project"
+        </div>
+
+
+        <div class="project-info">
+
+
+            <div>
+
+                <h3 class="project-title">
+                    Dhanushkodi
+                </h3>
+
+                <p class="project-description">
+
+                    A multisensory VR experience that
+                    reconstructs Dhanushkodi through
+                    memory, place and the aftermath
+                    of the 1964 cyclone.
+
+                </p>
+
+
+                <a
+                    href="pages/project-1.html"
+                    class="project-link"
                 >
-                -->
-
-                <div class="image-number">
-                    01
-                </div>
+                    Enter project →
+                </a>
 
             </div>
 
 
-            <div class="project-info">
+            <div class="project-details">
 
 
-                <div>
+                <div class="detail">
 
-                    <h3 class="project-title">
-                        Dhanushkodi
-                    </h3>
+                    <span class="detail-label">
+                        Medium
+                    </span>
 
-                    <p class="project-description">
-
-                        A multisensory VR experience that
-                        reconstructs Dhanushkodi through
-                        memory, place and the aftermath
-                        of the 1964 cyclone.
-
-                    </p>
-
-
-                    <a
-                        href="pages/project-1.html"
-                        class="project-link"
-                    >
-
-                        Enter project →
-
-                    </a>
+                    <span class="detail-value">
+                        VR / 3D
+                    </span>
 
                 </div>
 
 
-                <div class="project-details">
+                <div class="detail">
+
+                    <span class="detail-label">
+                        Role
+                    </span>
+
+                    <span class="detail-value">
+                        Design / Concept
+                    </span>
+
+                </div>
 
 
-                    <div class="detail">
+                <div class="detail">
 
-                        <span class="detail-label">
-                            Medium
-                        </span>
+                    <span class="detail-label">
+                        Tools
+                    </span>
 
-                        <span class="detail-value">
-                            VR / 3D
-                        </span>
+                    <span class="detail-value">
+                        Unity / Blender
+                    </span>
 
-                    </div>
-
-
-                    <div class="detail">
-
-                        <span class="detail-label">
-                            Role
-                        </span>
-
-                        <span class="detail-value">
-                            Design / Concept
-                        </span>
-
-                    </div>
+                </div>
 
 
-                    <div class="detail">
+                <div class="detail">
 
-                        <span class="detail-label">
-                            Tools
-                        </span>
+                    <span class="detail-label">
+                        Type
+                    </span>
 
-                        <span class="detail-value">
-                            Unity / Blender
-                        </span>
-
-                    </div>
-
-
-                    <div class="detail">
-
-                        <span class="detail-label">
-                            Type
-                        </span>
-
-                        <span class="detail-value">
-                            Experience
-                        </span>
-
-                    </div>
+                    <span class="detail-value">
+                        Experience
+                    </span>
 
                 </div>
 
             </div>
 
-        </article>
+        </div>
+
+    </article>
 
 
-        <!-- ==================================================
-             PROJECT 02
-        ================================================== -->
+    <!-- ==================================================
+         PROJECT 02
+    ================================================== -->
 
-        <article class="project reveal">
+    <article class="project reveal">
+
+        <div class="project-meta">
+
+            <span class="project-index">
+                Work 02
+            </span>
+
+            <span class="project-year">
+                2026
+            </span>
+
+        </div>
 
 
-            <div class="project-meta">
+        <div
+            class="project-image"
+            data-project="Woice"
+        >
 
-                <span class="project-index">
-                    Work 02
-                </span>
-
-                <span class="project-year">
-                    2026
-                </span>
-
-            </div>
-
-
-            <div
-                class="project-image"
-                data-project="Woice"
+            <img
+                src="images/woice.jpg"
+                alt="Woice speech therapy project"
             >
 
-                <!--
-                <img
-                    src="images/woice.jpg"
-                    alt="Woice speech therapy project"
+            <div class="image-number">
+                02
+            </div>
+
+        </div>
+
+
+        <div class="project-info">
+
+
+            <div>
+
+                <h3 class="project-title">
+                    Woice
+                </h3>
+
+                <p class="project-description">
+
+                    A playful speech therapy experience
+                    designed around sound, repetition,
+                    visual feedback and everyday practice.
+
+                </p>
+
+
+                <a
+                    href="pages/project-2.html"
+                    class="project-link"
                 >
-                -->
-
-                <div class="image-number">
-                    02
-                </div>
+                    Enter project →
+                </a>
 
             </div>
 
 
-            <div class="project-info">
+            <div class="project-details">
 
 
-                <div>
+                <div class="detail">
 
-                    <h3 class="project-title">
-                        Woice
-                    </h3>
+                    <span class="detail-label">
+                        Medium
+                    </span>
 
-                    <p class="project-description">
-
-                        A playful speech therapy experience
-                        designed around sound, repetition,
-                        visual feedback and everyday practice.
-
-                    </p>
-
-
-                    <a
-                        href="pages/project-2.html"
-                        class="project-link"
-                    >
-
-                        Enter project →
-
-                    </a>
+                    <span class="detail-value">
+                        Digital Product
+                    </span>
 
                 </div>
 
 
-                <div class="project-details">
+                <div class="detail">
+
+                    <span class="detail-label">
+                        Role
+                    </span>
+
+                    <span class="detail-value">
+                        UX / Research
+                    </span>
+
+                </div>
 
 
-                    <div class="detail">
+                <div class="detail">
 
-                        <span class="detail-label">
-                            Medium
-                        </span>
+                    <span class="detail-label">
+                        Tools
+                    </span>
 
-                        <span class="detail-value">
-                            Digital Product
-                        </span>
+                    <span class="detail-value">
+                        Figma
+                    </span>
 
-                    </div>
-
-
-                    <div class="detail">
-
-                        <span class="detail-label">
-                            Role
-                        </span>
-
-                        <span class="detail-value">
-                            UX / Research
-                        </span>
-
-                    </div>
+                </div>
 
 
-                    <div class="detail">
+                <div class="detail">
 
-                        <span class="detail-label">
-                            Tools
-                        </span>
+                    <span class="detail-label">
+                        Type
+                    </span>
 
-                        <span class="detail-value">
-                            Figma
-                        </span>
-
-                    </div>
-
-
-                    <div class="detail">
-
-                        <span class="detail-label">
-                            Type
-                        </span>
-
-                        <span class="detail-value">
-                            Product
-                        </span>
-
-                    </div>
+                    <span class="detail-value">
+                        Product
+                    </span>
 
                 </div>
 
             </div>
 
-        </article>
+        </div>
+
+    </article>
 
 
-        <!-- ==================================================
-             PROJECT 03
-        ================================================== -->
+    <!-- ==================================================
+         PROJECT 03
+    ================================================== -->
 
-        <article class="project reveal">
+    <article class="project reveal">
+
+        <div class="project-meta">
+
+            <span class="project-index">
+                Work 03
+            </span>
+
+            <span class="project-year">
+                2025
+            </span>
+
+        </div>
 
 
-            <div class="project-meta">
+        <div
+            class="project-image"
+            data-project="Air & Birds"
+        >
 
-                <span class="project-index">
-                    Work 03
-                </span>
-
-                <span class="project-year">
-                    2025
-                </span>
-
-            </div>
-
-
-            <div
-                class="project-image"
-                data-project="Air & Birds"
+            <img
+                src="images/air-birds.jpg"
+                alt="AQI bird visualisation"
             >
 
-                <!--
-                <img
-                    src="images/air-birds.jpg"
-                    alt="AQI bird visualisation"
+            <div class="image-number">
+                03
+            </div>
+
+        </div>
+
+
+        <div class="project-info">
+
+
+            <div>
+
+                <h3 class="project-title">
+                    Air &amp; Birds
+                </h3>
+
+                <p class="project-description">
+
+                    A data-driven visualisation exploring
+                    the relationship between air quality
+                    and bird populations across Ahmedabad.
+
+                </p>
+
+
+                <a
+                    href="pages/project-3.html"
+                    class="project-link"
                 >
-                -->
-
-                <div class="image-number">
-                    03
-                </div>
+                    Enter project →
+                </a>
 
             </div>
 
 
-            <div class="project-info">
+            <div class="project-details">
 
 
-                <div>
+                <div class="detail">
 
-                    <h3 class="project-title">
-                        Air &amp; Birds
-                    </h3>
+                    <span class="detail-label">
+                        Medium
+                    </span>
 
-                    <p class="project-description">
-
-                        A data-driven visualisation exploring
-                        the relationship between air quality
-                        and bird populations across Ahmedabad.
-
-                    </p>
-
-
-                    <a
-                        href="pages/project-3.html"
-                        class="project-link"
-                    >
-
-                        Enter project →
-
-                    </a>
+                    <span class="detail-value">
+                        Data Visualisation
+                    </span>
 
                 </div>
 
 
-                <div class="project-details">
+                <div class="detail">
+
+                    <span class="detail-label">
+                        Role
+                    </span>
+
+                    <span class="detail-value">
+                        Interaction / Visual
+                    </span>
+
+                </div>
 
 
-                    <div class="detail">
+                <div class="detail">
 
-                        <span class="detail-label">
-                            Medium
-                        </span>
+                    <span class="detail-label">
+                        Tools
+                    </span>
 
-                        <span class="detail-value">
-                            Data Visualisation
-                        </span>
+                    <span class="detail-value">
+                        p5.js
+                    </span>
 
-                    </div>
-
-
-                    <div class="detail">
-
-                        <span class="detail-label">
-                            Role
-                        </span>
-
-                        <span class="detail-value">
-                            Interaction / Visual
-                        </span>
-
-                    </div>
+                </div>
 
 
-                    <div class="detail">
+                <div class="detail">
 
-                        <span class="detail-label">
-                            Tools
-                        </span>
+                    <span class="detail-label">
+                        Type
+                    </span>
 
-                        <span class="detail-value">
-                            p5.js
-                        </span>
-
-                    </div>
-
-
-                    <div class="detail">
-
-                        <span class="detail-label">
-                            Type
-                        </span>
-
-                        <span class="detail-value">
-                            Data
-                        </span>
-
-                    </div>
+                    <span class="detail-value">
+                        Data
+                    </span>
 
                 </div>
 
             </div>
 
-        </article>
+        </div>
+
+    </article>
 
 
-        <!-- ==================================================
-             PROJECT 04
-        ================================================== -->
+    <!-- ==================================================
+         PROJECT 04
+    ================================================== -->
 
-        <article class="project reveal">
+    <article class="project reveal">
+
+        <div class="project-meta">
+
+            <span class="project-index">
+                Work 04
+            </span>
+
+            <span class="project-year">
+                2025
+            </span>
+
+        </div>
 
 
-            <div class="project-meta">
+        <div
+            class="project-image"
+            data-project="ITI"
+        >
 
-                <span class="project-index">
-                    Work 04
-                </span>
-
-                <span class="project-year">
-                    2025
-                </span>
-
-            </div>
-
-
-            <div
-                class="project-image"
-                data-project="ITI"
+            <img
+                src="images/iti.jpg"
+                alt="ITI puppet theatre kit"
             >
 
-                <!--
-                <img
-                    src="images/iti.jpg"
-                    alt="ITI puppet theatre kit"
+            <div class="image-number">
+                04
+            </div>
+
+        </div>
+
+
+        <div class="project-info">
+
+
+            <div>
+
+                <h3 class="project-title">
+                    ITI
+                </h3>
+
+                <p class="project-description">
+
+                    A DIY puppet theatre kit that brings
+                    Indian folk stories into the hands of
+                    children through making, performing
+                    and augmented reality.
+
+                </p>
+
+
+                <a
+                    href="pages/project-4.html"
+                    class="project-link"
                 >
-                -->
-
-                <div class="image-number">
-                    04
-                </div>
+                    Enter project →
+                </a>
 
             </div>
 
 
-            <div class="project-info">
+            <div class="project-details">
 
 
-                <div>
+                <div class="detail">
 
-                    <h3 class="project-title">
-                        ITI
-                    </h3>
+                    <span class="detail-label">
+                        Medium
+                    </span>
 
-                    <p class="project-description">
-
-                        A DIY puppet theatre kit that brings
-                        Indian folk stories into the hands of
-                        children through making, performing
-                        and augmented reality.
-
-                    </p>
-
-
-                    <a
-                        href="pages/project-4.html"
-                        class="project-link"
-                    >
-
-                        Enter project →
-
-                    </a>
+                    <span class="detail-value">
+                        AR / Product
+                    </span>
 
                 </div>
 
 
-                <div class="project-details">
+                <div class="detail">
+
+                    <span class="detail-label">
+                        Role
+                    </span>
+
+                    <span class="detail-value">
+                        Experience Design
+                    </span>
+
+                </div>
 
 
-                    <div class="detail">
+                <div class="detail">
 
-                        <span class="detail-label">
-                            Medium
-                        </span>
+                    <span class="detail-label">
+                        Tools
+                    </span>
 
-                        <span class="detail-value">
-                            AR / Product
-                        </span>
+                    <span class="detail-value">
+                        Blender / AR
+                    </span>
 
-                    </div>
-
-
-                    <div class="detail">
-
-                        <span class="detail-label">
-                            Role
-                        </span>
-
-                        <span class="detail-value">
-                            Experience Design
-                        </span>
-
-                    </div>
+                </div>
 
 
-                    <div class="detail">
+                <div class="detail">
 
-                        <span class="detail-label">
-                            Tools
-                        </span>
+                    <span class="detail-label">
+                        Type
+                    </span>
 
-                        <span class="detail-value">
-                            Blender / AR
-                        </span>
-
-                    </div>
-
-
-                    <div class="detail">
-
-                        <span class="detail-label">
-                            Type
-                        </span>
-
-                        <span class="detail-value">
-                            Cultural
-                        </span>
-
-                    </div>
+                    <span class="detail-value">
+                        Cultural
+                    </span>
 
                 </div>
 
             </div>
 
-        </article>
+        </div>
+
+    </article>
 
 
-        <!-- ==================================================
-             PROJECT 05
-        ================================================== -->
+    <!-- ==================================================
+         PROJECT 05
+    ================================================== -->
 
-        <article class="project reveal">
+    <article class="project reveal">
+
+        <div class="project-meta">
+
+            <span class="project-index">
+                Work 05
+            </span>
+
+            <span class="project-year">
+                2026
+            </span>
+
+        </div>
 
 
-            <div class="project-meta">
+        <div
+            class="project-image"
+            data-project="Ganesh Museum"
+        >
 
-                <span class="project-index">
-                    Work 05
-                </span>
-
-                <span class="project-year">
-                    2026
-                </span>
-
-            </div>
-
-
-            <div
-                class="project-image"
-                data-project="Ganesh Museum"
+            <img
+                src="images/ganesh.jpg"
+                alt="Interactive Ganesh museum project"
             >
 
-                <!--
-                <img
-                    src="images/ganesh.jpg"
-                    alt="Interactive Ganesh museum project"
+            <div class="image-number">
+                05
+            </div>
+
+        </div>
+
+
+        <div class="project-info">
+
+
+            <div>
+
+                <h3 class="project-title">
+                    Ganesh Museum
+                </h3>
+
+                <p class="project-description">
+
+                    An interactive museum experience
+                    exploring creation, celebration,
+                    memory and the ritual of letting go.
+
+                </p>
+
+
+                <a
+                    href="pages/project-5.html"
+                    class="project-link"
                 >
-                -->
-
-                <div class="image-number">
-                    05
-                </div>
+                    Enter project →
+                </a>
 
             </div>
 
 
-            <div class="project-info">
+            <div class="project-details">
 
 
-                <div>
+                <div class="detail">
 
-                    <h3 class="project-title">
-                        Ganesh Museum
-                    </h3>
+                    <span class="detail-label">
+                        Medium
+                    </span>
 
-                    <p class="project-description">
-
-                        An interactive museum experience
-                        exploring creation, celebration,
-                        memory and the ritual of letting go.
-
-                    </p>
-
-
-                    <a
-                        href="pages/project-5.html"
-                        class="project-link"
-                    >
-
-                        Enter project →
-
-                    </a>
+                    <span class="detail-value">
+                        Immersive
+                    </span>
 
                 </div>
 
 
-                <div class="project-details">
+                <div class="detail">
+
+                    <span class="detail-label">
+                        Role
+                    </span>
+
+                    <span class="detail-value">
+                        Experience Design
+                    </span>
+
+                </div>
 
 
-                    <div class="detail">
+                <div class="detail">
 
-                        <span class="detail-label">
-                            Medium
-                        </span>
+                    <span class="detail-label">
+                        Focus
+                    </span>
 
-                        <span class="detail-value">
-                            Immersive
-                        </span>
+                    <span class="detail-value">
+                        Culture / Ritual
+                    </span>
 
-                    </div>
-
-
-                    <div class="detail">
-
-                        <span class="detail-label">
-                            Role
-                        </span>
-
-                        <span class="detail-value">
-                            Experience Design
-                        </span>
-
-                    </div>
+                </div>
 
 
-                    <div class="detail">
+                <div class="detail">
 
-                        <span class="detail-label">
-                            Focus
-                        </span>
+                    <span class="detail-label">
+                        Type
+                    </span>
 
-                        <span class="detail-value">
-                            Culture / Ritual
-                        </span>
-
-                    </div>
-
-
-                    <div class="detail">
-
-                        <span class="detail-label">
-                            Type
-                        </span>
-
-                        <span class="detail-value">
-                            Museum
-                        </span>
-
-                    </div>
+                    <span class="detail-value">
+                        Museum
+                    </span>
 
                 </div>
 
             </div>
 
-        </article>
+        </div>
+
+    </article>
 
 
-        <!-- ==================================================
-             PROJECT 06
-        ================================================== -->
+    <!-- ==================================================
+         PROJECT 06
+    ================================================== -->
 
-        <article class="project reveal">
+    <article class="project reveal">
+
+        <div class="project-meta">
+
+            <span class="project-index">
+                Work 06
+            </span>
+
+            <span class="project-year">
+                2025
+            </span>
+
+        </div>
 
 
-            <div class="project-meta">
+        <div
+            class="project-image"
+            data-project="Taru"
+        >
 
-                <span class="project-index">
-                    Work 06
-                </span>
-
-                <span class="project-year">
-                    2025
-                </span>
-
-            </div>
-
-
-            <div
-                class="project-image"
-                data-project="Taru"
+            <img
+                src="images/taru.jpg"
+                alt="Taru board game"
             >
 
-                <!--
-                <img
-                    src="images/taru.jpg"
-                    alt="Taru board game"
+            <div class="image-number">
+                06
+            </div>
+
+        </div>
+
+
+        <div class="project-info">
+
+
+            <div>
+
+                <h3 class="project-title">
+                    Taru
+                </h3>
+
+                <p class="project-description">
+
+                    A playful board game exploring emotional
+                    recognition through expressions, colour
+                    and the nine Navarasas.
+
+                </p>
+
+
+                <a
+                    href="pages/project-6.html"
+                    class="project-link"
                 >
-                -->
-
-                <div class="image-number">
-                    06
-                </div>
+                    Enter project →
+                </a>
 
             </div>
 
 
-            <div class="project-info">
+            <div class="project-details">
 
 
-                <div>
+                <div class="detail">
 
-                    <h3 class="project-title">
-                        Taru
-                    </h3>
+                    <span class="detail-label">
+                        Medium
+                    </span>
 
-                    <p class="project-description">
-
-                        A playful board game exploring emotional
-                        recognition through expressions, colour
-                        and the nine Navarasas.
-
-                    </p>
-
-
-                    <a
-                        href="pages/project-6.html"
-                        class="project-link"
-                    >
-
-                        Enter project →
-
-                    </a>
+                    <span class="detail-value">
+                        Game
+                    </span>
 
                 </div>
 
 
-                <div class="project-details">
+                <div class="detail">
+
+                    <span class="detail-label">
+                        Role
+                    </span>
+
+                    <span class="detail-value">
+                        Game / UX
+                    </span>
+
+                </div>
 
 
-                    <div class="detail">
+                <div class="detail">
 
-                        <span class="detail-label">
-                            Medium
-                        </span>
+                    <span class="detail-label">
+                        Focus
+                    </span>
 
-                        <span class="detail-value">
-                            Game
-                        </span>
+                    <span class="detail-value">
+                        Emotion
+                    </span>
 
-                    </div>
-
-
-                    <div class="detail">
-
-                        <span class="detail-label">
-                            Role
-                        </span>
-
-                        <span class="detail-value">
-                            Game / UX
-                        </span>
-
-                    </div>
+                </div>
 
 
-                    <div class="detail">
+                <div class="detail">
 
-                        <span class="detail-label">
-                            Focus
-                        </span>
+                    <span class="detail-label">
+                        Type
+                    </span>
 
-                        <span class="detail-value">
-                            Emotion
-                        </span>
-
-                    </div>
-
-
-                    <div class="detail">
-
-                        <span class="detail-label">
-                            Type
-                        </span>
-
-                        <span class="detail-value">
-                            Play
-                        </span>
-
-                    </div>
+                    <span class="detail-value">
+                        Play
+                    </span>
 
                 </div>
 
             </div>
 
-        </article>
+        </div>
+
+    </article>
 
 
-    </div>
+</div>
+```
 
 </section>
-
 
 <!-- ========================================================
      ABOUT
 ======================================================== -->
 
-<section class="about-section" id="about">
+<section
+    class="about-section"
+    id="about"
+>
 
-    <div class="page-width">
-
-
-        <div class="about-layout">
-
-
-            <div class="about-image">
-
-                <!--
-                PUT YOUR PHOTO HERE:
-
-                <img
-                    src="images/vaishnavi.jpg"
-                    alt="Vaishnavi Venkatesh"
-                >
-                -->
-
-            </div>
+```
+<div class="page-width">
 
 
-            <div>
-
-                <h2 class="about-heading">
-
-                    The person
-                    <br>
-                    behind the work.
-
-                </h2>
+    <div class="about-layout">
 
 
-                <div class="about-text">
+        <div class="about-image">
 
-                    <p>
-
-                        I'm Vaishnavi, an interaction designer
-                        interested in the space between technology,
-                        culture and storytelling.
-
-                    </p>
-
-
-                    <p>
-
-                        My work moves across UI/UX, immersive
-                        experiences, visual storytelling, AR/VR
-                        and experimental interfaces.
-
-                    </p>
-
-
-                    <p>
-
-                        I am particularly interested in projects
-                        that turn stories, places and cultural
-                        ideas into experiences people can actually
-                        interact with.
-
-                    </p>
-
-                </div>
-
-            </div>
-
+            <img
+                src="images/vaishnavi.jpg"
+                alt="Vaishnavi Venkatesh"
+            >
 
         </div>
 
+
+        <div>
+
+            <h2 class="about-heading">
+
+                The person
+                <br>
+                behind the work.
+
+            </h2>
+
+
+            <div class="about-text">
+
+                <p>
+
+                    I'm Vaishnavi, an interaction designer
+                    interested in the space between technology,
+                    culture and storytelling.
+
+                </p>
+
+
+                <p>
+
+                    My work moves across UI/UX, immersive
+                    experiences, visual storytelling, AR/VR
+                    and experimental interfaces.
+
+                </p>
+
+
+                <p>
+
+                    I am particularly interested in projects
+                    that turn stories, places and cultural
+                    ideas into experiences people can actually
+                    interact with.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
     </div>
 
-</section>
+</div>
+```
 
+</section>
 
 <!-- ========================================================
      ARCHIVE
 ======================================================== -->
 
-<section class="archive-section" id="archive">
+<section
+    class="archive-section"
+    id="archive"
+>
 
-    <div class="page-width">
-
-
-        <div class="archive-header">
-
-            <span class="section-number">
-                02 / Archive
-            </span>
-
-            <h2 class="archive-title">
-                Other things
-            </h2>
-
-        </div>
+```
+<div class="page-width">
 
 
-        <div class="archive-item">
+    <div class="archive-header">
 
-            <span class="archive-number">
-                07
-            </span>
+        <span class="section-number">
+            02 / Archive
+        </span>
 
-            <span class="archive-name">
-                Experiments
-            </span>
-
-            <span class="archive-type">
-                Visual
-            </span>
-
-        </div>
-
-
-        <div class="archive-item">
-
-            <span class="archive-number">
-                08
-            </span>
-
-            <span class="archive-name">
-                XR Studies
-            </span>
-
-            <span class="archive-type">
-                Immersive
-            </span>
-
-        </div>
-
-
-        <div class="archive-item">
-
-            <span class="archive-number">
-                09
-            </span>
-
-            <span class="archive-name">
-                Visual Experiments
-            </span>
-
-            <span class="archive-type">
-                Image
-            </span>
-
-        </div>
-
-
-        <div class="archive-item">
-
-            <span class="archive-number">
-                10
-            </span>
-
-            <span class="archive-name">
-                Small Interactions
-            </span>
-
-            <span class="archive-type">
-                Web
-            </span>
-
-        </div>
-
+        <h2 class="archive-title">
+            Other things
+        </h2>
 
     </div>
 
-</section>
 
+    <div class="archive-item">
+
+        <span class="archive-number">
+            07
+        </span>
+
+        <span class="archive-name">
+            Experiments
+        </span>
+
+        <span class="archive-type">
+            Visual
+        </span>
+
+    </div>
+
+
+    <div class="archive-item">
+
+        <span class="archive-number">
+            08
+        </span>
+
+        <span class="archive-name">
+            XR Studies
+        </span>
+
+        <span class="archive-type">
+            Immersive
+        </span>
+
+    </div>
+
+
+    <div class="archive-item">
+
+        <span class="archive-number">
+            09
+        </span>
+
+        <span class="archive-name">
+            Visual Experiments
+        </span>
+
+        <span class="archive-type">
+            Image
+        </span>
+
+    </div>
+
+
+    <div class="archive-item">
+
+        <span class="archive-number">
+            10
+        </span>
+
+        <span class="archive-name">
+            Small Interactions
+        </span>
+
+        <span class="archive-type">
+            Web
+        </span>
+
+    </div>
+
+
+</div>
+```
+
+</section>
 
 <!-- ========================================================
      CONTACT
 ======================================================== -->
 
-<section class="contact-section" id="contact">
+<section
+    class="contact-section"
+    id="contact"
+>
 
-    <div class="page-width">
+```
+<div class="page-width">
 
-        <p class="contact-small">
-            03 / Correspondence
-        </p>
-
-
-        <h2 class="contact-heading">
-
-            Let's make
-            <br>
-            something worth
-            <em>looking at.</em>
-
-        </h2>
+    <p class="contact-small">
+        03 / Correspondence
+    </p>
 
 
-        <a
-            href="mailto:your.email@example.com"
-            class="contact-email"
-        >
+    <h2 class="contact-heading">
 
-            your.email@example.com
+        Let's make
+        <br>
+        something worth
+        <em>looking at.</em>
 
-        </a>
+    </h2>
 
-    </div>
+
+    <a
+        href="mailto:your.email@example.com"
+        class="contact-email"
+    >
+        your.email@example.com
+    </a>
+
+</div>
+```
 
 </section>
-
 
 <!-- ========================================================
      FOOTER
@@ -2472,43 +2353,54 @@ footer {
 
 <footer>
 
+```
+<span class="footer-text">
 
-    <span class="footer-text">
+    Vaishnavi Venkatesh
+    ·
+    2026
 
-        Vaishnavi Venkatesh
-        ·
-        2026
-
-    </span>
-
-
-    <div class="footer-links">
-
-        <a
-            href="https://github.com/blueexev"
-            target="_blank"
-        >
-            GitHub
-        </a>
+</span>
 
 
-        <a
-            href="https://linkedin.com"
-            target="_blank"
-        >
-            LinkedIn
-        </a>
+<div class="footer-links">
 
 
-        <a href="#top">
-            ↑ Top
-        </a>
+    <a
+        href="https://github.com/blueexev"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        GitHub
+    </a>
 
-    </div>
 
+    <a
+        href="https://linkedin.com"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        LinkedIn
+    </a>
+
+
+    <a href="#top">
+        ↑ Top
+    </a>
+
+
+</div>
+```
 
 </footer>
 
+<!-- ========================================================
+     P5.JS
+======================================================== -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+
+<script src="sketch.js"></script>
 
 <!-- ========================================================
      JAVASCRIPT
@@ -2564,62 +2456,7 @@ revealElements.forEach(
 
 
 /* ========================================================
-   PROJECT CURSOR
-======================================================== */
-
-const cursor =
-document.querySelector(".project-cursor");
-
-
-const projects =
-document.querySelectorAll(".project");
-
-
-projects.forEach(project => {
-
-
-    project.addEventListener(
-        "mouseenter",
-        () => {
-
-            cursor.classList.add(
-                "active"
-            );
-
-        }
-    );
-
-
-    project.addEventListener(
-        "mouseleave",
-        () => {
-
-            cursor.classList.remove(
-                "active"
-            );
-
-        }
-    );
-
-
-    project.addEventListener(
-        "mousemove",
-        event => {
-
-            cursor.style.left =
-                event.clientX + "px";
-
-            cursor.style.top =
-                event.clientY + "px";
-
-        }
-    );
-
-});
-
-
-/* ========================================================
-   SMALL PARALLAX EFFECT
+   HERO PARALLAX
 ======================================================== */
 
 window.addEventListener(
@@ -2627,17 +2464,22 @@ window.addEventListener(
     () => {
 
         const hero =
-        document.querySelector(".hero-content");
+        document.querySelector(
+            ".hero-content"
+        );
 
         const scroll =
         window.scrollY;
 
+
         if (
-            scroll < window.innerHeight
+            scroll <
+            window.innerHeight
         ) {
 
             hero.style.transform =
                 `translateY(${scroll * .08}px)`;
+
 
             hero.style.opacity =
                 1 - scroll / 700;
@@ -2649,7 +2491,6 @@ window.addEventListener(
 
 
 </script>
-
 
 </body>
 

@@ -1,88 +1,1173 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Project One Title — Your Name</title>
-<link rel="stylesheet" href="../style.css">
+
+<title>Dhanushkodi — Vaishnavi Venkatesh</title>
+
+<style>
+
+/* ========================================================
+   QUANO FONT
+======================================================== */
+
+@font-face {
+
+    font-family: "Quano";
+
+    src: url("../fonts/Quano-Regular.woff2")
+    format("woff2");
+
+    font-weight: 400;
+
+    font-style: normal;
+
+}
+
+@font-face {
+
+    font-family: "Quano";
+
+    src: url("../fonts/Quano-Italic.woff2")
+    format("woff2");
+
+    font-weight: 400;
+
+    font-style: italic;
+
+}
+
+
+/* ========================================================
+   RESET
+======================================================== */
+
+* {
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+body {
+
+    background: #e9e4d9;
+
+    color: #191817;
+
+    font-family:
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
+
+    overflow-x: hidden;
+
+}
+
+a {
+
+    color: inherit;
+
+    text-decoration: none;
+
+}
+
+::selection {
+
+    background: #191817;
+
+    color: #e9e4d9;
+
+}
+
+
+/* ========================================================
+   PAGE WIDTH
+======================================================== */
+
+.page-width {
+
+    width: min(
+        860px,
+        calc(100% - 200px)
+    );
+
+    margin: auto;
+
+}
+
+
+/* ========================================================
+   NAVIGATION
+======================================================== */
+
+.site-nav {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    padding: 26px 0;
+
+}
+
+.nav-inner {
+
+    width: min(
+        860px,
+        calc(100% - 200px)
+    );
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+
+/* NAME */
+
+.artist-name {
+
+    font-size: 9px;
+
+    text-transform: uppercase;
+
+    letter-spacing: .15em;
+
+    font-weight: 500;
+
+}
+
+
+/* NAV */
+
+.nav-links {
+
+    display: flex;
+
+    gap: 25px;
+
+    list-style: none;
+
+}
+
+.nav-links a {
+
+    font-size: 8px;
+
+    text-transform: uppercase;
+
+    letter-spacing: .12em;
+
+    color: #77716a;
+
+    transition:
+        color .3s ease;
+
+}
+
+.nav-links a:hover {
+
+    color: #191817;
+
+}
+
+
+/* ========================================================
+   PROJECT HERO
+======================================================== */
+
+.project-hero {
+
+    min-height: 75vh;
+
+    display: flex;
+
+    align-items: center;
+
+    padding:
+        150px 0
+        100px;
+
+}
+
+.project-hero-content {
+
+    width: 100%;
+
+}
+
+
+/* BACK */
+
+.back-link {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: 8px;
+
+    text-transform: uppercase;
+
+    letter-spacing: .12em;
+
+    color: #77716a;
+
+    margin-bottom: 55px;
+
+    transition:
+        gap .3s ease,
+        color .3s ease;
+
+}
+
+.back-link:hover {
+
+    gap: 13px;
+
+    color: #191817;
+
+}
+
+
+/* LABEL */
+
+.collection-label {
+
+    font-size: 8px;
+
+    text-transform: uppercase;
+
+    letter-spacing: .2em;
+
+    color: #77716a;
+
+    margin-bottom: 28px;
+
+}
+
+
+/* TITLE */
+
+.project-main-title {
+
+    font-family:
+        "Quano",
+        "Bodoni Moda",
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-weight: 400;
+
+    font-size:
+        clamp(50px, 7vw, 82px);
+
+    line-height: .92;
+
+    letter-spacing: -.055em;
+
+    max-width: 800px;
+
+}
+
+
+/* INTRO */
+
+.project-intro {
+
+    max-width: 430px;
+
+    margin-top: 35px;
+
+    font-size: 11px;
+
+    line-height: 1.8;
+
+    color: #68635d;
+
+}
+
+
+/* ========================================================
+   META
+======================================================== */
+
+.project-meta {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 25px;
+
+    margin-top: 60px;
+
+    padding-top: 18px;
+
+    border-top:
+        1px solid
+        rgba(25,24,23,.2);
+
+}
+
+.meta-item {
+
+    min-width: 0;
+
+}
+
+.meta-label {
+
+    display: block;
+
+    font-size: 7px;
+
+    text-transform: uppercase;
+
+    letter-spacing: .14em;
+
+    color: #8a847c;
+
+    margin-bottom: 8px;
+
+}
+
+.meta-value {
+
+    font-size: 9px;
+
+    line-height: 1.5;
+
+}
+
+
+/* ========================================================
+   DIVIDER
+======================================================== */
+
+.museum-rule {
+
+    width: 100%;
+
+    height: 1px;
+
+    background:
+        rgba(25,24,23,.18);
+
+}
+
+
+/* ========================================================
+   PROJECT BODY
+======================================================== */
+
+.project-body {
+
+    padding:
+        110px 0
+        140px;
+
+}
+
+
+/* ========================================================
+   COVER IMAGE
+======================================================== */
+
+.project-image {
+
+    width: 100%;
+
+    height: 520px;
+
+    background: #d5cfc3;
+
+    overflow: hidden;
+
+    margin-bottom: 110px;
+
+}
+
+.project-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    filter:
+        grayscale(20%)
+        contrast(.95);
+
+    transition:
+        transform .8s
+        cubic-bezier(.2,.7,.2,1),
+
+        filter .8s ease;
+
+}
+
+.project-image:hover img {
+
+    transform:
+        scale(1.025);
+
+    filter:
+        grayscale(0%)
+        contrast(1);
+
+}
+
+
+/* ========================================================
+   CONTENT
+======================================================== */
+
+.project-content {
+
+    max-width: 680px;
+
+    margin: auto;
+
+}
+
+
+/* SECTION LABEL */
+
+.content-label {
+
+    font-size: 8px;
+
+    text-transform: uppercase;
+
+    letter-spacing: .15em;
+
+    color: #77716a;
+
+    margin-bottom: 25px;
+
+}
+
+
+/* HEADINGS */
+
+.project-content h2 {
+
+    font-family:
+        "Quano",
+        "Bodoni Moda",
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 39px;
+
+    font-weight: 400;
+
+    letter-spacing: -.045em;
+
+    line-height: 1;
+
+    margin-bottom: 25px;
+
+}
+
+
+/* PARAGRAPHS */
+
+.project-content p {
+
+    max-width: 560px;
+
+    font-size: 11px;
+
+    line-height: 1.9;
+
+    color: #66615b;
+
+    margin-bottom: 70px;
+
+}
+
+
+/* LIST */
+
+.project-content ul {
+
+    margin-top: -40px;
+
+    margin-bottom: 90px;
+
+    padding-left: 18px;
+
+}
+
+.project-content li {
+
+    font-size: 10px;
+
+    line-height: 1.9;
+
+    color: #66615b;
+
+    padding-left: 5px;
+
+}
+
+
+/* ========================================================
+   SECOND IMAGE
+======================================================== */
+
+.project-image.secondary {
+
+    margin:
+        20px 0
+        110px;
+
+    height: 430px;
+
+}
+
+
+/* ========================================================
+   PROJECT NAVIGATION
+======================================================== */
+
+.project-navigation {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-top: 120px;
+
+    padding-top: 25px;
+
+    border-top:
+        1px solid
+        rgba(25,24,23,.18);
+
+}
+
+
+/* ========================================================
+   FOOTER
+======================================================== */
+
+footer {
+
+    width: min(
+        860px,
+        calc(100% - 200px)
+    );
+
+    margin: auto;
+
+    padding:
+        25px 0
+        35px;
+
+    border-top:
+        1px solid
+        rgba(25,24,23,.18);
+
+    display: flex;
+
+    justify-content: space-between;
+
+}
+
+.footer-text {
+
+    font-size: 7px;
+
+    color: #8a847c;
+
+    text-transform: uppercase;
+
+    letter-spacing: .1em;
+
+}
+
+.footer-links {
+
+    display: flex;
+
+    gap: 20px;
+
+}
+
+.footer-links a {
+
+    font-size: 7px;
+
+    text-transform: uppercase;
+
+    letter-spacing: .1em;
+
+}
+
+
+/* ========================================================
+   MOBILE
+======================================================== */
+
+@media(max-width: 760px) {
+
+
+    .page-width,
+    .nav-inner,
+    footer {
+
+        width:
+            calc(100% - 40px);
+
+    }
+
+
+    .site-nav {
+
+        padding:
+            20px 0;
+
+    }
+
+
+    .nav-links {
+
+        display: none;
+
+    }
+
+
+    .project-hero {
+
+        min-height: auto;
+
+        padding:
+            130px 0
+            80px;
+
+    }
+
+
+    .back-link {
+
+        margin-bottom: 45px;
+
+    }
+
+
+    .project-main-title {
+
+        font-size:
+            clamp(45px, 14vw, 70px);
+
+    }
+
+
+    .project-meta {
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap: 30px;
+
+        margin-top: 50px;
+
+    }
+
+
+    .project-body {
+
+        padding:
+            80px 0
+            100px;
+
+    }
+
+
+    .project-image {
+
+        height: 300px;
+
+        margin-bottom: 80px;
+
+    }
+
+
+    .project-content h2 {
+
+        font-size: 34px;
+
+    }
+
+
+    .project-content p {
+
+        margin-bottom: 55px;
+
+    }
+
+
+    .project-image.secondary {
+
+        height: 300px;
+
+        margin:
+            0 0
+            80px;
+
+    }
+
+
+    .project-navigation {
+
+        margin-top: 80px;
+
+    }
+
+
+    footer {
+
+        display: block;
+
+    }
+
+
+    .footer-links {
+
+        margin-top: 15px;
+
+    }
+
+}
+
+</style>
+
 </head>
+
 <body>
 
-  <nav class="site-nav">
-    <div class="nav-inner">
-      <a href="../index.html" class="nav-mark">Y.N. / 01</a>
-      <button class="nav-toggle" aria-label="Toggle menu">☰ Menu</button>
-      <ul class="nav-links">
-        <li><a href="../index.html#about">About</a></li>
-        <li><a href="../index.html#skills">Skills</a></li>
-        <li><a href="../index.html#projects">Projects</a></li>
-        <li><a href="../index.html#playground">Playground</a></li>
-        <li><a href="../index.html#contact">Contact</a></li>
-      </ul>
+<!-- ========================================================
+     NAVIGATION
+======================================================== -->
+
+<nav class="site-nav">
+
+```
+<div class="nav-inner">
+
+
+    <a
+        href="../index.html"
+        class="artist-name"
+    >
+        Vaishnavi Venkatesh
+    </a>
+
+
+    <ul class="nav-links">
+
+        <li>
+            <a href="../index.html#work">
+                Work
+            </a>
+        </li>
+
+        <li>
+            <a href="../index.html#about">
+                About
+            </a>
+        </li>
+
+        <li>
+            <a href="../index.html#archive">
+                Archive
+            </a>
+        </li>
+
+        <li>
+            <a href="../index.html#contact">
+                Contact
+            </a>
+        </li>
+
+    </ul>
+
+
+</div>
+```
+
+</nav>
+
+<!-- ========================================================
+     PROJECT HERO
+======================================================== -->
+
+<header class="project-hero">
+
+```
+<div class="page-width">
+
+    <div class="project-hero-content">
+
+
+        <a
+            href="../index.html#work"
+            class="back-link"
+        >
+            ← Back to selected work
+        </a>
+
+
+        <p class="collection-label">
+
+            Work 01 / Selected Work
+
+        </p>
+
+
+        <h1 class="project-main-title">
+
+            Dhanushkodi
+
+        </h1>
+
+
+        <p class="project-intro">
+
+            A multisensory VR experience that
+            reconstructs Dhanushkodi through
+            memory, place and the aftermath
+            of the 1964 cyclone.
+
+        </p>
+
+
+        <!-- PROJECT META -->
+
+        <div class="project-meta">
+
+
+            <div class="meta-item">
+
+                <span class="meta-label">
+                    Medium
+                </span>
+
+                <span class="meta-value">
+                    VR / 3D
+                </span>
+
+            </div>
+
+
+            <div class="meta-item">
+
+                <span class="meta-label">
+                    Role
+                </span>
+
+                <span class="meta-value">
+                    Design / Concept
+                </span>
+
+            </div>
+
+
+            <div class="meta-item">
+
+                <span class="meta-label">
+                    Tools
+                </span>
+
+                <span class="meta-value">
+                    Unity / Blender
+                </span>
+
+            </div>
+
+
+            <div class="meta-item">
+
+                <span class="meta-label">
+                    Year
+                </span>
+
+                <span class="meta-value">
+                    2025
+                </span>
+
+            </div>
+
+
+        </div>
+
+
     </div>
-  </nav>
 
-  <header class="subpage-hero">
-    <div class="wrap">
-      <a href="../index.html#projects" class="back-link">← Back to all projects</a>
-      <p class="eyebrow">No. 01 — Selected Work</p>
-      <h1 class="section-title">Project One Title</h1>
-      <p class="section-sub" style="margin-bottom:0;">
-        A one-sentence summary of what this project is and why it exists.
-      </p>
+</div>
+```
 
-      <dl class="subpage-meta">
-        <div><dt>Role</dt><dd>Designer &amp; Developer</dd></div>
-        <div><dt>Timeline</dt><dd>Month Year – Month Year</dd></div>
-        <div><dt>Tools</dt><dd>React, Figma, Node.js</dd></div>
-        <div><dt>Link</dt><dd><a href="#" target="_blank" rel="noopener" style="text-decoration:underline;">Live site ↗</a></dd></div>
-      </dl>
+</header>
+
+<div class="museum-rule"></div>
+
+<!-- ========================================================
+     PROJECT BODY
+======================================================== -->
+
+<section class="project-body">
+
+```
+<div class="page-width">
+
+
+    <!-- COVER -->
+
+    <div class="project-image">
+
+        <!--
+        Replace with your actual project image:
+
+        <img
+            src="../images/dhanushkodi.jpg"
+            alt="Dhanushkodi VR experience"
+        >
+        -->
+
     </div>
-  </header>
 
-  <section class="subpage-body">
-    <div class="wrap">
 
-      <div class="subpage-figure">Project cover image / screenshot goes here</div>
+    <div class="project-content">
 
-      <h2>The brief</h2>
-      <p>
-        Describe the problem you were solving or the goal you set for yourself. Who was this
-        for, and what did they need? Keep this to a short, clear paragraph.
-      </p>
 
-      <h2>What I did</h2>
-      <p>
-        Walk through your process — research, design decisions, technical choices. This is the
-        section where you explain your thinking, not just what the final thing looks like.
-      </p>
-      <ul>
-        <li>Key step or decision one</li>
-        <li>Key step or decision two</li>
-        <li>Key step or decision three</li>
-      </ul>
+        <!-- ==================================================
+             THE BRIEF
+        ================================================== -->
 
-      <div class="subpage-figure">A second screenshot or process image</div>
+        <p class="content-label">
+            01 / The brief
+        </p>
 
-      <h2>The outcome</h2>
-      <p>
-        What happened as a result? Mention outcomes, metrics, feedback, or simply what you
-        learned if it was a personal/academic project.
-      </p>
 
-      <div class="subpage-nav">
-        <a href="project-6.html" class="back-link">← Previous project</a>
-        <a href="project-2.html" class="back-link">Next project →</a>
-      </div>
+        <h2>
+            The brief
+        </h2>
+
+
+        <p>
+
+            Describe the problem you were solving or
+            the goal you set for yourself. Who was this
+            for, and what did they need? Keep this to a
+            short, clear paragraph.
+
+        </p>
+
+
+        <!-- ==================================================
+             WHAT I DID
+        ================================================== -->
+
+        <p class="content-label">
+            02 / Process
+        </p>
+
+
+        <h2>
+            What I did
+        </h2>
+
+
+        <p>
+
+            Walk through your process — research, design
+            decisions, technical choices. This is the
+            section where you explain your thinking,
+            not just what the final thing looks like.
+
+        </p>
+
+
+        <ul>
+
+            <li>
+                Key step or decision one
+            </li>
+
+            <li>
+                Key step or decision two
+            </li>
+
+            <li>
+                Key step or decision three
+            </li>
+
+        </ul>
+
+
     </div>
-  </section>
 
-  <footer>
-    <div class="wrap">
-      <p class="footer-copy">© 2026 Your Name. Built by hand, in VS Code.</p>
+
+    <!-- SECOND IMAGE -->
+
+    <div class="project-image secondary">
+
+        <!--
+        Replace with another image:
+
+        <img
+            src="../images/dhanushkodi-process.jpg"
+            alt="Dhanushkodi project process"
+        >
+        -->
+
     </div>
-  </footer>
 
-  <script src="../script.js"></script>
+
+    <div class="project-content">
+
+
+        <!-- ==================================================
+             OUTCOME
+        ================================================== -->
+
+        <p class="content-label">
+            03 / The outcome
+        </p>
+
+
+        <h2>
+            The outcome
+        </h2>
+
+
+        <p>
+
+            What happened as a result? Mention outcomes,
+            metrics, feedback, or simply what you learned
+            if it was a personal or academic project.
+
+        </p>
+
+
+    </div>
+
+
+    <!-- ==================================================
+         PREVIOUS / NEXT
+    ================================================== -->
+
+    <div class="project-navigation">
+
+
+        <a
+            href="project-6.html"
+            class="back-link"
+        >
+            ← Previous project
+        </a>
+
+
+        <a
+            href="project-2.html"
+            class="back-link"
+        >
+            Next project →
+        </a>
+
+
+    </div>
+
+
+</div>
+```
+
+</section>
+
+<!-- ========================================================
+     FOOTER
+======================================================== -->
+
+<footer>
+
+```
+<span class="footer-text">
+
+    Vaishnavi Venkatesh
+    ·
+    2026
+
+</span>
+
+
+<div class="footer-links">
+
+
+    <a
+        href="https://github.com/blueexev"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        GitHub
+    </a>
+
+
+    <a
+        href="https://linkedin.com"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        LinkedIn
+    </a>
+
+
+    <a href="../index.html">
+        ↑ Top
+    </a>
+
+
+</div>
+```
+
+</footer>
+
 </body>
+
 </html>

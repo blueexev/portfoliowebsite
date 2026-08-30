@@ -35,14 +35,42 @@ html{ scroll-behavior: smooth; }
 
 body{
   margin:0;
-  background-color: var(--paper);
-  background-image:
-    radial-gradient(rgba(43,42,34,0.035) 1px, transparent 1px);
-  background-size: 3px 3px;
+  background-color: #D8CBA4; /* the "desk" behind the paper sheet — visible only in the margins */
   color: var(--ink);
   font-family: var(--font-body);
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
+}
+
+/* =========================================================
+   BACKGROUND CANVAS — full viewport, always behind #page-surface,
+   never intercepts clicks (pointer-events: none)
+   ========================================================= */
+#bg-canvas{
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+#bg-canvas canvas{ display:block; }
+
+/* =========================================================
+   PAGE SURFACE — the centered "paper sheet" that holds every
+   real section. Its opaque background + dot texture is what
+   was previously on <body>; moving it here means the p5
+   sketch behind it is only ever visible in the outer margins.
+   ========================================================= */
+#page-surface{
+  position: relative;
+  z-index: 1;
+  max-width: 1080px;
+  margin: 0 auto;
+  background-color: var(--paper);
+  background-image: radial-gradient(rgba(43,42,34,0.035) 1px, transparent 1px);
+  background-size: 3px 3px;
+  border-left: 1px solid var(--paper-line);
+  border-right: 1px solid var(--paper-line);
+  box-shadow: 0 0 70px rgba(43,42,34,0.22);
 }
 
 img{ max-width:100%; display:block; }
@@ -578,6 +606,201 @@ footer{
 }
 
 /* =========================================================
+   CUSTOM CURSOR (desktop / pointer:fine only)
+   ========================================================= */
+@media (pointer: fine){
+  body.has-custom-cursor, body.has-custom-cursor *{ cursor: none !important; }
+
+  .cursor-dot,
+  .cursor-ring{
+    position: fixed;
+    top:0; left:0;
+    pointer-events: none;
+    z-index: 9999;
+    border-radius: 50%;
+    transform: translate(-50%,-50%);
+    will-change: transform;
+  }
+  .cursor-dot{
+    width: 6px; height: 6px;
+    background: var(--rust);
+  }
+  .cursor-ring{
+    width: 34px; height: 34px;
+    border: 1px solid var(--ink);
+    display:flex; align-items:center; justify-content:center;
+    transition: width 0.2s ease, height 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+  }
+  .cursor-ring span{
+    font-family: var(--font-type);
+    font-size: 0.55rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--paper);
+    opacity: 0;
+    transition: opacity 0.15s ease;
+    white-space: nowrap;
+  }
+  .cursor-ring.is-active{
+    width: 62px; height: 62px;
+    background: var(--ink);
+    border-color: var(--ink);
+  }
+  .cursor-ring.is-active span{ opacity: 1; }
+  .cursor-ring.is-drag{
+    background: var(--rust-deep);
+    border-color: var(--rust-deep);
+  }
+}
+
+/* =========================================================
+   TILT CARDS (projects grid gets a hover perspective)
+   ========================================================= */
+.projects-grid{ perspective: 1200px; }
+.ticket{
+  transform-style: preserve-3d;
+  transition: transform 0.12s ease-out, box-shadow 0.2s ease;
+  will-change: transform;
+}
+.ticket:hover{
+  box-shadow: 0 10px 0 rgba(43,42,34,0.09), 0 18px 32px rgba(43,42,34,0.2);
+}
+
+/* =========================================================
+   MICROCOPY — small witty asides under section titles
+   ========================================================= */
+.microcopy{
+  font-family: var(--font-type);
+  font-size: 0.74rem;
+  color: var(--ink-soft);
+  opacity: 0.75;
+  margin-top: -1.8rem;
+  margin-bottom: 2.4rem;
+}
+
+/* =========================================================
+   CORKBOARD — draggable playground preview & full page
+   ========================================================= */
+.corkboard{
+  position: relative;
+  background:
+    radial-gradient(rgba(43,42,34,0.12) 1px, transparent 1.4px) 0 0/14px 14px,
+    var(--paper-deep);
+  border: 1px solid var(--ink);
+  border-radius: var(--radius-md);
+  min-height: 340px;
+  overflow: hidden;
+  touch-action: none;
+}
+.corkboard-hint{
+  position:absolute;
+  top: 14px; left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-type);
+  font-size: 0.66rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  opacity: 0.6;
+  pointer-events:none;
+  z-index: 0;
+}
+.sticker{
+  position: absolute;
+  width: 168px;
+  background: var(--paper);
+  border: 1px solid var(--ink);
+  border-radius: 2px;
+  box-shadow: 0 6px 14px rgba(43,42,34,0.22);
+  padding: 10px 10px 14px;
+  cursor: grab;
+  user-select: none;
+  transform: rotate(var(--r, 0deg));
+  transition: box-shadow 0.15s ease;
+}
+.sticker:active{ cursor: grabbing; }
+.sticker.dragging{
+  box-shadow: 0 16px 28px rgba(43,42,34,0.32);
+  transition: none;
+  z-index: 50;
+}
+.sticker .pin{
+  position:absolute;
+  top: -8px; left: 50%;
+  transform: translateX(-50%);
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  background: var(--rust);
+  box-shadow: 0 2px 3px rgba(0,0,0,0.35);
+}
+.sticker .sticker-face{
+  aspect-ratio: 4/3;
+  background: var(--paper-deep);
+  border: 1px dashed var(--paper-line);
+  display:flex; align-items:center; justify-content:center;
+  font-family: var(--font-type);
+  font-size: 0.68rem;
+  color: var(--ink-soft);
+  text-align:center;
+  padding: 8px;
+  margin-bottom: 8px;
+}
+.sticker h4{
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  margin: 0 0 4px;
+  pointer-events:none;
+}
+.sticker p{
+  font-family: var(--font-body);
+  font-size: 0.76rem;
+  color: var(--ink-soft);
+  margin: 0;
+  pointer-events:none;
+}
+.sticker .flip-hint{
+  font-family: var(--font-type);
+  font-size: 0.6rem;
+  color: var(--rust-deep);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 6px;
+  display:block;
+  pointer-events:none;
+}
+.sticker.flipped .sticker-face{ display:none; }
+.sticker.flipped .sticker-detail{ display:block; }
+.sticker-detail{ display:none; font-size: 0.78rem; color: var(--ink-soft); margin-bottom: 8px; pointer-events:none; }
+
+/* =========================================================
+   SITE INDEX — dense footer link list
+   ========================================================= */
+.site-index{
+  padding: 60px 0 20px;
+  border-top: 1px solid var(--paper-line);
+}
+.site-index .index-grid{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px 40px;
+}
+.site-index h4{
+  font-family: var(--font-type);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--rust-deep);
+  margin: 0 0 12px;
+}
+.site-index ul{ display:flex; flex-direction: column; gap: 8px; }
+.site-index a{
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  border-bottom: 1px solid transparent;
+}
+.site-index a:hover{ color: var(--ink); border-color: var(--paper-line); }
+
+/* =========================================================
    RESPONSIVE
    ========================================================= */
 @media (max-width: 880px){
@@ -605,4 +828,8 @@ footer{
   .projects-grid{ grid-template-columns: 1fr; }
   .stamp-grid{ grid-template-columns: repeat(2,1fr); }
   section{ padding: 60px 0; }
+  .site-index .index-grid{ grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 420px){
+  .site-index .index-grid{ grid-template-columns: 1fr; }
 }
