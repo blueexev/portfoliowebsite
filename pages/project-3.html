@@ -1,13 +1,10 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Air &amp; Birds — Vaishnavi Venkatesh</title>
+<title>Fragile Flights — Vaishnavi Venkatesh</title>
 
 <style>
 
@@ -503,6 +500,27 @@ a {
 
 }
 
+/* SUB-HEADINGS (component / subsection names) */
+
+.project-content h3 {
+
+    font-family:
+        "Quano",
+        "Bodoni Moda",
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 18px;
+
+    font-weight: 400;
+
+    letter-spacing: -.02em;
+
+    margin-bottom: 12px;
+
+}
+
 
 /* CONTENT PARAGRAPHS */
 
@@ -520,6 +538,12 @@ a {
 
 }
 
+.project-content p.tight {
+
+    margin-bottom: 30px;
+
+}
+
 
 /* LIST */
 
@@ -530,6 +554,14 @@ a {
     margin-bottom: 90px;
 
     padding-left: 18px;
+
+}
+
+.project-content ul.tight {
+
+    margin-top: 0;
+
+    margin-bottom: 30px;
 
 }
 
@@ -789,7 +821,6 @@ footer {
 
 <nav class="site-nav">
 
-```
 <div class="nav-inner">
 
 
@@ -831,7 +862,6 @@ footer {
 
 
 </div>
-```
 
 </nav>
 
@@ -841,7 +871,6 @@ footer {
 
 <header class="project-hero">
 
-```
 <div class="page-width">
 
     <div class="project-hero-content">
@@ -857,23 +886,24 @@ footer {
 
         <p class="collection-label">
 
-            Work 03 / Selected Work
+            Selected Work
 
         </p>
 
 
         <h1 class="project-main-title">
 
-            Air &amp; Birds
+            Fragile Flights
 
         </h1>
 
 
         <p class="project-intro">
 
-            A data-driven visualisation exploring
-            the relationship between air quality
-            and bird populations across Ahmedabad.
+            A data-driven visualisation exploring how poor air
+            quality — especially PM2.5 pollution from urban
+            construction — affects bird health and habitat
+            connectivity across Ahmedabad.
 
         </p>
 
@@ -882,6 +912,8 @@ footer {
 
         <div class="project-meta">
 
+            <!-- Tools/role/year weren't explicitly stated in the
+                 source PDF beyond p5.js — edit as needed. -->
 
             <div class="meta-item">
 
@@ -890,7 +922,7 @@ footer {
                 </span>
 
                 <span class="meta-value">
-                    Data Visualisation
+                    Data Visualisation / Simulation
                 </span>
 
             </div>
@@ -903,7 +935,7 @@ footer {
                 </span>
 
                 <span class="meta-value">
-                    Interaction / Visual
+                    Research / Interaction / Visual
                 </span>
 
             </div>
@@ -941,7 +973,6 @@ footer {
     </div>
 
 </div>
-```
 
 </header>
 
@@ -953,7 +984,6 @@ footer {
 
 <section class="project-body">
 
-```
 <div class="page-width">
 
 
@@ -964,11 +994,11 @@ footer {
     <div class="project-image">
 
         <!--
-        Replace with your actual image:
+        Hero shot — birds in the Ahmedabad smog:
 
         <img
-            src="../images/air-birds.jpg"
-            alt="Air & Birds data visualisation"
+            src="../images/fragile-flights-hero.jpg"
+            alt="Fragile Flights — birds in Ahmedabad smog"
         >
         -->
 
@@ -979,85 +1009,89 @@ footer {
 
 
         <!-- ==================================================
-             THE BRIEF
+             PROJECT BRIEF
         ================================================== -->
 
         <p class="content-label">
-            01 / The brief
+            01 / Project brief
         </p>
 
 
         <h2>
-            The brief
+            Project brief
         </h2>
 
 
         <p>
 
-            Describe the problem you were solving or
-            the goal you set for yourself. Who was this
-            for, and what did they need? Keep this to a
-            short, clear paragraph.
+            Ahmedabad today exists as a collection of fragmented
+            ecological islands. Famous green lungs like Parimal
+            Garden and the Riverfront are majestic in isolation, but
+            they are severed by vast, hostile expanses of heat and
+            toxic air.
+
+        </p>
+
+        <p>
+
+            While our urban planning has successfully created a
+            seamless network for human transit and concrete density,
+            it has inadvertently constructed a series of "Biological
+            Deserts" for the wildlife that sustains our ecosystem.
+
+        </p>
+
+        <p>
+
+            For a bird or a pollinator, the city is not a grid of
+            roads; it is a landscape of impassable "Chemical Walls,"
+            where high AQI and extreme thermal stress act as
+            invisible barriers, trapping life in shrinking pockets of
+            green.
 
         </p>
 
 
         <!-- ==================================================
-             WHAT I DID
+             INTENT
         ================================================== -->
 
         <p class="content-label">
-            02 / Process
+            02 / Intent
         </p>
 
 
         <h2>
-            What I did
+            Intent
         </h2>
 
 
         <p>
 
-            Walk through your process — research, design
-            decisions, technical choices. This is the
-            section where you explain your thinking,
-            not just what the final thing looks like.
+            This project focuses on birds in Ahmedabad. Through data
+            visualisation, it highlights how poor air quality —
+            especially PM2.5 pollution caused by urban construction —
+            affects bird health and disrupts their natural habitat
+            and survival.
 
         </p>
-
-
-        <ul>
-
-            <li>
-                Key step or decision one
-            </li>
-
-            <li>
-                Key step or decision two
-            </li>
-
-            <li>
-                Key step or decision three
-            </li>
-
-        </ul>
 
 
     </div>
 
 
     <!-- ==================================================
-         SECOND IMAGE
+         WHY BIRDS / WHY ARCHITECTS MATRIX
     ================================================== -->
 
     <div class="project-image secondary">
 
         <!--
-        Replace with your process image:
+        Influence/impact quadrant diagrams:
 
         <img
-            src="../images/air-birds-process.jpg"
-            alt="Air & Birds project process"
+            src="../images/why-birds-why-architects.jpg"
+            alt="Why birds / why architects influence-impact matrix"
         >
         -->
 
@@ -1066,29 +1100,294 @@ footer {
 
     <div class="project-content">
 
+        <p class="content-label">
+            03 / Framing
+        </p>
+
+        <h2>
+            Why birds? Why architects?
+        </h2>
+
+        <p>
+
+            Two influence–impact matrices were used to position birds
+            and architects on the same axes — most/least influential
+            against most/least affected — to make the case for why
+            each belongs at the centre of this project.
+
+        </p>
+
 
         <!-- ==================================================
-             THE OUTCOME
+             TARGET AUDIENCE
         ================================================== -->
 
         <p class="content-label">
-            03 / The outcome
+            04 / Target audience
         </p>
 
 
         <h2>
-            The outcome
+            Target audience
         </h2>
 
+        <h3>Architects</h3>
 
         <p>
 
-            What happened as a result? Mention outcomes,
-            metrics, feedback, or simply what you learned
-            if it was a personal or academic project.
+            This data prompts architects and urban planners to
+            advocate for inserting green bubbles every 500 metres as
+            an ecological requirement. Our target audience are the
+            designers of the city who can make an actual impact.
 
         </p>
 
+        <ul>
+
+            <li>
+                To move away from anthropocentric design, the shift
+                must happen at the planning level.
+            </li>
+
+            <li>
+                Planners are the ones who can transform Ahmedabad from
+                a series of disconnected parks into a breathable,
+                living network.
+            </li>
+
+            <li>
+                They are the professionals responsible for essential
+                life-support infrastructure — this project argues that
+                biological connectivity is a fundamental part of that
+                urban utility.
+            </li>
+
+        </ul>
+
+
+        <!-- ==================================================
+             DATASETS
+        ================================================== -->
+
+        <p class="content-label">
+            05 / Datasets
+        </p>
+
+
+        <h2>
+            Datasets we chose to work with
+        </h2>
+
+        <ul>
+
+            <li>The physical map of the city of Ahmedabad</li>
+
+            <li>The AQI data over the past 3 years (2022–2024)</li>
+
+            <li>The body mass of specific bird species</li>
+
+            <li>
+                Locations of different talukas and important places,
+                in (x, y) format
+            </li>
+
+            <li>AQI data across the city — most and least affected</li>
+
+            <li>Research papers</li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- ==================================================
+         MAJOR COMPONENTS
+    ================================================== -->
+
+    <div class="project-image">
+
+        <!--
+        System diagram / UI flow of the simulation's components:
+
+        <img
+            src="../images/major-components.jpg"
+            alt="Major components of the Fragile Flights simulation"
+        >
+        -->
+
+    </div>
+
+
+    <div class="project-content">
+
+        <p class="content-label">
+            06 / Major components
+        </p>
+
+        <h2>
+            Major components of our project
+        </h2>
+
+        <h3>Loading screen</h3>
+        <p class="tight">
+            The user selects a bird species, and the corresponding
+            habitat and AQI map load.
+        </p>
+
+        <h3>Bird simulation</h3>
+        <p class="tight">
+            Birds move as a flock using noise-based motion, cohesion
+            behaviour and collision avoidance.
+        </p>
+
+        <h3>AQI detection</h3>
+        <p class="tight">
+            Each bird samples the AQI map's colours — pollution
+            severity is classified into different colours.
+        </p>
+
+        <h3>Health system</h3>
+        <p class="tight">
+            Three sliders decrease based on pollution: lung damage,
+            wing damage and neurological damage.
+        </p>
+
+        <h3>Path visualization</h3>
+        <p class="tight">
+            After extinction, bird movement paths can be displayed.
+            Users can export a path image, or restart.
+        </p>
+
+        <h3>Weekly progression</h3>
+        <p>
+            Every 10 seconds equals one week. Environmental warnings
+            appear, and birds gradually die over time.
+        </p>
+
+    </div>
+
+
+    <!-- ==================================================
+         GOAL OF THE PROJECT
+    ================================================== -->
+
+    <div class="project-image secondary">
+
+        <!--
+        Connectivity-gap map output of the simulation:
+
+        <img
+            src="../images/goal-connectivity-map.jpg"
+            alt="Map identifying connectivity gaps for wildlife"
+        >
+        -->
+
+    </div>
+
+
+    <div class="project-content">
+
+        <p class="content-label">
+            07 / Goal
+        </p>
+
+        <h2>
+            Goal of the project
+        </h2>
+
+        <p>
+
+            The goal is to generate a map that identifies
+            connectivity gaps — places where wildlife is being
+            throttled.
+
+        </p>
+
+        <p>
+
+            More broadly, the project is meant to prompt urban
+            architects and planners to create ecological spaces and
+            bubbles for birds to cope with bad AQI levels. It also
+            adds value if people become more aware of their own
+            actions and their effect.
+
+        </p>
+
+    </div>
+
+
+    <!-- ==================================================
+         VISUAL LANGUAGE
+    ================================================== -->
+
+    <div class="project-image">
+
+        <!--
+        Visual language board — loading screens, "ALL THE BIRDS ARE
+        DEAD" end screen, bird species cards, health-status icons:
+
+        <img
+            src="../images/visual-language.jpg"
+            alt="Visual language of the Fragile Flights project"
+        >
+        -->
+
+    </div>
+
+
+    <div class="project-content">
+
+        <p class="content-label">
+            08 / Visual language
+        </p>
+
+        <h2>
+            Visual language of the project
+        </h2>
+
+        <p>
+
+            A high-contrast palette of alert reds, deep blues and
+            toxic greens was used throughout the interface to keep the
+            tone urgent and diagnostic, closer to a warning system
+            than a nature app.
+
+        </p>
+
+        <ul>
+
+            <li>#8B091D</li>
+            <li>#DC2424</li>
+            <li>#163D5D</li>
+            <li>#177E79</li>
+            <li>#18A900</li>
+
+        </ul>
+
+
+        <!-- ==================================================
+             FINAL LINK AND DISPLAY
+        ================================================== -->
+
+        <p class="content-label">
+            09 / Final link and display
+        </p>
+
+        <h2>
+            Final link and display
+        </h2>
+
+        <p>
+
+            The full interactive simulation is built in p5.js and can
+            be tried at
+            <a
+                href="https://editor.p5js.org/vaishnavichettiar/full/7Rpw5pZBL"
+                target="_blank"
+                rel="noopener noreferrer"
+            >editor.p5js.org/vaishnavichettiar/full/7Rpw5pZBL</a>.
+
+        </p>
 
     </div>
 
@@ -1120,7 +1419,6 @@ footer {
 
 
 </div>
-```
 
 </section>
 
@@ -1130,7 +1428,6 @@ footer {
 
 <footer>
 
-```
 <span class="footer-text">
 
     Vaishnavi Venkatesh
@@ -1169,7 +1466,6 @@ footer {
 
 
 </div>
-```
 
 </footer>
 

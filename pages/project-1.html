@@ -1,72 +1,46 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Dhanushkodi — Vaishnavi Venkatesh</title>
+<title>Dhanushkodi - A lost legend</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 
 <style>
-
-/* ========================================================
-   QUANO FONT
-======================================================== */
-
 @font-face {
-
-    font-family: "Quano";
-
-    src: url("../fonts/Quano-Regular.woff2")
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-Regular.woff2")
     format("woff2");
-
     font-weight: 400;
-
     font-style: normal;
 
 }
-
 @font-face {
-
-    font-family: "Quano";
-
-    src: url("../fonts/Quano-Italic.woff2")
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat.woff2")
     format("woff2");
-
     font-weight: 400;
-
     font-style: italic;
-
 }
-
-
-/* ========================================================
-   RESET
-======================================================== */
 
 * {
 
     margin: 0;
     padding: 0;
-
     box-sizing: border-box;
-
 }
 
 html {
-
     scroll-behavior: smooth;
-
 }
 
 body {
-
     background: #e9e4d9;
-
     color: #191817;
-
     font-family:
         "Helvetica Neue",
         Helvetica,
@@ -74,433 +48,250 @@ body {
         sans-serif;
 
     overflow-x: hidden;
-
 }
 
 a {
-
     color: inherit;
-
     text-decoration: none;
-
 }
 
 ::selection {
-
     background: #191817;
-
     color: #e9e4d9;
-
 }
 
-
-/* ========================================================
-   PAGE WIDTH
-======================================================== */
-
 .page-width {
-
     width: min(
         860px,
         calc(100% - 200px)
     );
-
     margin: auto;
-
 }
-
-
-/* ========================================================
-   NAVIGATION
-======================================================== */
 
 .site-nav {
 
     position: fixed;
-
     top: 0;
     left: 0;
-
     width: 100%;
-
     z-index: 1000;
-
     padding: 26px 0;
 
 }
-
 .nav-inner {
 
     width: min(
         860px,
         calc(100% - 200px)
     );
-
     margin: auto;
-
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
-
 }
-
-
-/* NAME */
 
 .artist-name {
-
-    font-size: 9px;
-
+    font-size: 12px;
     text-transform: uppercase;
-
     letter-spacing: .15em;
-
     font-weight: 500;
-
 }
-
-
-/* NAV */
-
 .nav-links {
-
     display: flex;
-
     gap: 25px;
-
     list-style: none;
-
 }
 
 .nav-links a {
-
-    font-size: 8px;
-
+    font-size: 12px;
     text-transform: uppercase;
-
     letter-spacing: .12em;
-
     color: #77716a;
-
     transition:
         color .3s ease;
-
 }
 
 .nav-links a:hover {
-
     color: #191817;
-
 }
 
-
-/* ========================================================
-   PROJECT HERO
-======================================================== */
-
 .project-hero {
-
     min-height: 75vh;
-
     display: flex;
-
     align-items: center;
-
     padding:
-        150px 0
+        150px 
         100px;
 
 }
 
 .project-hero-content {
-
     width: 100%;
-
 }
-
-
-/* BACK */
-
 .back-link {
-
     display: inline-flex;
-
     align-items: center;
-
     gap: 8px;
-
-    font-size: 8px;
-
+    font-size: 10px;
     text-transform: uppercase;
-
     letter-spacing: .12em;
-
     color: #77716a;
-
     margin-bottom: 55px;
-
     transition:
         gap .3s ease,
         color .3s ease;
-
 }
 
 .back-link:hover {
-
     gap: 13px;
-
     color: #191817;
-
 }
-
-
-/* LABEL */
-
-.collection-label {
-
-    font-size: 8px;
-
-    text-transform: uppercase;
-
-    letter-spacing: .2em;
-
-    color: #77716a;
-
-    margin-bottom: 28px;
-
-}
-
-
-/* TITLE */
-
 .project-main-title {
 
     font-family:
-        "Quano",
+        "Montserrat",
         "Bodoni Moda",
         "Cormorant Garamond",
         Georgia,
         serif;
 
     font-weight: 400;
-
     font-size:
         clamp(50px, 7vw, 82px);
-
-    line-height: .92;
-
+    line-height: 1.50;
     letter-spacing: -.055em;
-
     max-width: 800px;
 
 }
-
-
-/* INTRO */
-
 .project-intro {
-
     max-width: 430px;
-
     margin-top: 35px;
-
-    font-size: 11px;
-
+    font-size: 13px;
     line-height: 1.8;
-
     color: #68635d;
-
 }
-
-
-/* ========================================================
-   META
-======================================================== */
 
 .project-meta {
 
     display: grid;
-
     grid-template-columns:
         repeat(4, 1fr);
-
     gap: 25px;
-
     margin-top: 60px;
-
     padding-top: 18px;
-
     border-top:
         1px solid
         rgba(25,24,23,.2);
-
 }
 
 .meta-item {
-
     min-width: 0;
-
 }
 
 .meta-label {
-
     display: block;
-
-    font-size: 7px;
-
+    font-size: 12px;
     text-transform: uppercase;
-
-    letter-spacing: .14em;
-
+    letter-spacing: 0.14em;
     color: #8a847c;
-
     margin-bottom: 8px;
 
 }
-
 .meta-value {
-
-    font-size: 9px;
-
+    font-size: 15px;
     line-height: 1.5;
-
 }
-
-
-/* ========================================================
-   DIVIDER
-======================================================== */
 
 .museum-rule {
 
     width: 100%;
-
     height: 1px;
-
     background:
         rgba(25,24,23,.18);
 
 }
-
-
-/* ========================================================
-   PROJECT BODY
-======================================================== */
-
 .project-body {
-
     padding:
-        110px 0
+        50px 0
         140px;
 
 }
 
-
-/* ========================================================
-   COVER IMAGE
-======================================================== */
-
 .project-image {
-
     width: 100%;
-
     height: 520px;
-
     background: #d5cfc3;
-
     overflow: hidden;
-
     margin-bottom: 110px;
-
 }
 
 .project-image img {
-
     width: 100%;
-
     height: 100%;
-
     object-fit: cover;
-
     display: block;
-
     filter:
         grayscale(20%)
         contrast(.95);
-
     transition:
         transform .8s
         cubic-bezier(.2,.7,.2,1),
-
         filter .8s ease;
-
 }
 
 .project-image:hover img {
-
     transform:
         scale(1.025);
-
     filter:
         grayscale(0%)
         contrast(1);
-
 }
-
-
-/* ========================================================
-   CONTENT
-======================================================== */
 
 .project-content {
-
     max-width: 680px;
-
     margin: auto;
-
 }
-
-
-/* SECTION LABEL */
 
 .content-label {
-
-    font-size: 8px;
-
+    font-family:
+        "Montserrat",
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
+    font-size: 12px;
     text-transform: uppercase;
-
     letter-spacing: .15em;
-
     color: #77716a;
-
     margin-bottom: 25px;
-
 }
-
-
-/* HEADINGS */
-
 .project-content h2 {
 
     font-family:
-        "Quano",
+        "Montserrat",
         "Bodoni Moda",
         "Cormorant Garamond",
         Georgia,
         serif;
 
-    font-size: 39px;
-
+    font-size: 30px;
     font-weight: 400;
-
-    letter-spacing: -.045em;
-
+    letter-spacing: 0.005em;
     line-height: 1;
-
     margin-bottom: 25px;
+}
 
+.project-content h3 {
+    font-family:
+        "Montserrat",
+        "Bodoni Moda",
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 0.005em;
+    margin-bottom: 12px;
 }
 
 
@@ -510,7 +301,7 @@ a {
 
     max-width: 560px;
 
-    font-size: 11px;
+    font-size: 13px;
 
     line-height: 1.9;
 
@@ -520,73 +311,42 @@ a {
 
 }
 
-
-/* LIST */
+.project-content p.tight {
+    margin-bottom: 30px;
+}
 
 .project-content ul {
-
     margin-top: -40px;
-
     margin-bottom: 90px;
-
     padding-left: 18px;
-
 }
 
 .project-content li {
-
-    font-size: 10px;
-
+    font-size: 13px;
     line-height: 1.9;
-
     color: #66615b;
-
     padding-left: 5px;
-
 }
 
-
-/* ========================================================
-   SECOND IMAGE
-======================================================== */
-
 .project-image.secondary {
-
     margin:
         20px 0
         110px;
 
     height: 430px;
-
 }
-
-
-/* ========================================================
-   PROJECT NAVIGATION
-======================================================== */
 
 .project-navigation {
 
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
-
     margin-top: 120px;
-
     padding-top: 25px;
-
     border-top:
         1px solid
         rgba(25,24,23,.18);
-
 }
-
-
-/* ========================================================
-   FOOTER
-======================================================== */
 
 footer {
 
@@ -612,68 +372,39 @@ footer {
 }
 
 .footer-text {
-
-    font-size: 7px;
-
+    font-size: 10px;
     color: #8a847c;
-
     text-transform: uppercase;
-
     letter-spacing: .1em;
-
 }
 
 .footer-links {
-
     display: flex;
-
-    gap: 20px;
-
+    gap: 50px;
 }
 
 .footer-links a {
-
-    font-size: 7px;
-
+    font-size: 10px;
     text-transform: uppercase;
-
     letter-spacing: .1em;
-
 }
 
-
-/* ========================================================
-   MOBILE
-======================================================== */
-
 @media(max-width: 760px) {
-
-
     .page-width,
     .nav-inner,
     footer {
-
         width:
             calc(100% - 40px);
-
     }
-
-
     .site-nav {
-
         padding:
             20px 0;
-
     }
-
-
     .nav-links {
 
         display: none;
 
     }
-
-
     .project-hero {
 
         min-height: auto;
@@ -681,73 +412,38 @@ footer {
         padding:
             130px 0
             80px;
-
     }
-
-
     .back-link {
-
         margin-bottom: 45px;
-
     }
-
-
     .project-main-title {
-
         font-size:
             clamp(45px, 14vw, 70px);
-
     }
-
-
     .project-meta {
-
         grid-template-columns:
             1fr 1fr;
-
         gap: 30px;
-
         margin-top: 50px;
-
     }
-
-
     .project-body {
-
         padding:
             80px 0
             100px;
 
     }
-
-
     .project-image {
-
-        height: 300px;
-
+        height: 150px;
         margin-bottom: 80px;
-
     }
-
-
     .project-content h2 {
-
-        font-size: 34px;
-
+        font-size: 25px;
     }
-
-
     .project-content p {
-
         margin-bottom: 55px;
-
     }
-
-
     .project-image.secondary {
-
         height: 300px;
-
         margin:
             0 0
             80px;
@@ -756,42 +452,21 @@ footer {
 
 
     .project-navigation {
-
         margin-top: 80px;
-
     }
-
-
     footer {
-
         display: block;
-
     }
-
-
     .footer-links {
-
         margin-top: 15px;
-
     }
-
 }
-
 </style>
-
 </head>
-
 <body>
-
-<!-- ========================================================
-     NAVIGATION
-======================================================== -->
-
 <nav class="site-nav">
 
-```
 <div class="nav-inner">
-
 
     <a
         href="../index.html"
@@ -799,8 +474,6 @@ footer {
     >
         Vaishnavi Venkatesh
     </a>
-
-
     <ul class="nav-links">
 
         <li>
@@ -808,123 +481,75 @@ footer {
                 Work
             </a>
         </li>
-
         <li>
             <a href="../index.html#about">
                 About
             </a>
         </li>
-
         <li>
             <a href="../index.html#archive">
-                Archive
+                PLAYGROUND
             </a>
         </li>
-
         <li>
             <a href="../index.html#contact">
                 Contact
             </a>
         </li>
-
     </ul>
-
-
 </div>
-```
-
 </nav>
 
-<!-- ========================================================
-     PROJECT HERO
-======================================================== -->
-
 <header class="project-hero">
-
-```
 <div class="page-width">
 
     <div class="project-hero-content">
-
-
         <a
             href="../index.html#work"
             class="back-link"
         >
-            ← Back to selected work
+            #Back to selected work
         </a>
-
-
-        <p class="collection-label">
-
-            Work 01 / Selected Work
-
-        </p>
-
-
         <h1 class="project-main-title">
-
-            Dhanushkodi
-
+            Dhanushkodi - the lost land
         </h1>
-
-
         <p class="project-intro">
-
-            A multisensory VR experience that
-            reconstructs Dhanushkodi through
-            memory, place and the aftermath
+            A multisensory VR experience that reconstructs Dhanushkodi
+            through memory, place and the aftermath
             of the 1964 cyclone.
-
         </p>
-
-
-        <!-- PROJECT META -->
 
         <div class="project-meta">
-
-
             <div class="meta-item">
-
                 <span class="meta-label">
                     Medium
                 </span>
-
                 <span class="meta-value">
-                    VR / 3D
+                   VR / 3D / Gesture Based Interactions
                 </span>
 
             </div>
 
 
             <div class="meta-item">
-
                 <span class="meta-label">
                     Role
                 </span>
-
                 <span class="meta-value">
-                    Design / Concept
+                    Concept / Environment / 3D Assets
                 </span>
-
             </div>
 
-
             <div class="meta-item">
-
                 <span class="meta-label">
                     Tools
                 </span>
-
                 <span class="meta-value">
-                    Unity / Blender
+                    Unity / Blender / Arduino
                 </span>
-
             </div>
 
-
             <div class="meta-item">
-
                 <span class="meta-label">
                     Year
                 </span>
@@ -932,214 +557,520 @@ footer {
                 <span class="meta-value">
                     2025
                 </span>
-
             </div>
-
-
         </div>
-
-
     </div>
-
 </div>
-```
 
 </header>
-
 <div class="museum-rule"></div>
-
-<!-- ========================================================
-     PROJECT BODY
-======================================================== -->
-
 <section class="project-body">
-
-```
 <div class="page-width">
-
-
-    <!-- COVER -->
 
     <div class="project-image">
 
         <!--
-        Replace with your actual project image:
+        Hero / establishing shot of Dhanushkodi coastline
+        (aerial / map view of the peninsula):
 
         <img
-            src="../images/dhanushkodi.jpg"
-            alt="Dhanushkodi VR experience"
+            src="../images/dhanushkodi-coastline.jpg"
+            alt="Dhanushkodi coastline aerial view"
         >
         -->
 
     </div>
 
-
     <div class="project-content">
-
-
-        <!-- ==================================================
-             THE BRIEF
-        ================================================== -->
-
         <p class="content-label">
-            01 / The brief
+            01 / Context
         </p>
-
-
         <h2>
-            The brief
+            Context
         </h2>
-
-
         <p>
-
-            Describe the problem you were solving or
-            the goal you set for yourself. Who was this
-            for, and what did they need? Keep this to a
-            short, clear paragraph.
-
+            Dhanushkodi is one of the southernmost towns in India, which
+            was once a thriving marketplace but was destroyed by a
+            cyclone that hit in 1964 and was later declared a ghost
+            town — making room for a lot of stories, religious
+            importance and myths about the place.
         </p>
-
-
-        <!-- ==================================================
-             WHAT I DID
-        ================================================== -->
-
-        <p class="content-label">
-            02 / Process
-        </p>
-
-
-        <h2>
-            What I did
-        </h2>
-
-
-        <p>
-
-            Walk through your process — research, design
-            decisions, technical choices. This is the
-            section where you explain your thinking,
-            not just what the final thing looks like.
-
-        </p>
-
-
-        <ul>
-
-            <li>
-                Key step or decision one
-            </li>
-
-            <li>
-                Key step or decision two
-            </li>
-
-            <li>
-                Key step or decision three
-            </li>
-
-        </ul>
-
-
     </div>
-
-
-    <!-- SECOND IMAGE -->
 
     <div class="project-image secondary">
 
         <!--
-        Replace with another image:
+        Assets built — grid of 3D ruin assets
+        (boat, structure, church ruins etc):
 
         <img
-            src="../images/dhanushkodi-process.jpg"
-            alt="Dhanushkodi project process"
+            src="../images/assets-built.jpg"
+            alt="3D assets built for the Dhanushkodi VR world"
         >
         -->
 
     </div>
-
-
     <div class="project-content">
-
-
-        <!-- ==================================================
-             OUTCOME
-        ================================================== -->
-
         <p class="content-label">
-            03 / The outcome
+            02 / Assets built
         </p>
-
-
         <h2>
-            The outcome
+            Assets built
         </h2>
-
-
-        <p>
-
-            What happened as a result? Mention outcomes,
-            metrics, feedback, or simply what you learned
-            if it was a personal or academic project.
-
-        </p>
-
-
     </div>
 
+    <div class="project-image">
 
-    <!-- ==================================================
-         PREVIOUS / NEXT
-    ================================================== -->
+        <!--
+        Unity world built — screenshots of the environment
+        laid out in the Unity editor:
+
+        <img
+            src="../images/unity-world-built.jpg"
+            alt="Dhanushkodi environment built in Unity"
+        >
+        -->
+
+    </div>
+    <div class="project-content">
+        <p class="content-label">
+            03 / Unity world built
+        </p>
+        <h2>
+            Unity world built
+        </h2>
+    </div>
+
+    <div class="project-image secondary">
+
+        <!--
+        VR World screenshots — player POV as the archaeologist,
+        camera interaction, community spaces:
+
+        <img
+            src="../images/vr-world-screens.jpg"
+            alt="VR world screenshots showing player interactions"
+        >
+        -->
+
+    </div>
+    <div class="project-content">
+        <p class="content-label">
+            04 / VR World
+        </p>
+        <h2>
+            Key insights and interactions
+        </h2>
+        <p>
+            The role of the player was that of an archaeologist from the
+            Government Survey of India.
+        </p>
+        <ul>
+            <li>
+                A film camera "click" interaction let the user
+                photograph and document the VR world.
+            </li>
+            <li>
+                Important spaces of community interaction were built
+                into the VR world to help the user know more about the
+                place, Dhanushkodi.
+            </li>
+        </ul>
+
+        <p class="content-label">
+            05 / Why make it multisensory?
+        </p>
+        <h2>
+            Why make it multisensory?
+        </h2>
+        <ul>
+            <li>
+                A natural and human way of interaction.
+            </li>
+            <li>
+                Makes users feel connected to Dhanushkodi's lost
+                memories.
+            </li>
+            <li>
+                Adds tactile / sensory feedback beyond VR hand tracking.
+            </li>
+            <li>
+                Bridges the gap between physical and virtual worlds.
+            </li>
+        </ul>
+    </div>
+
+    <div class="project-image">
+
+        <!--
+        Making it multisensory — narrative stills of the character
+        Arun revisiting Dhanushkodi:
+
+        <img
+            src="../images/multisensory-narrative.jpg"
+            alt="Narrative stills of Arun revisiting Dhanushkodi"
+        >
+        -->
+
+    </div>
+    <div class="project-content">
+        <p class="content-label">
+            06 / Making it multisensory — narrative
+        </p>
+        <h2>
+            Making it multisensory — narrative
+        </h2>
+        <p>
+            The main character, Arun, is a 41-year-old archaeologist from
+            the Government Survey of India who revisits his hometown,
+            Dhanushkodi, 36 years after the tragic event took place.
+        </p>
+        <p>
+            He is assigned to document the place after so many years,
+            and in doing so also revives and witnesses some memories of
+            his own with his father, who died during the cyclone.
+        </p>
+        <p>
+            His visits to specific places trigger memories and prompt
+            the user to think about how the protagonist's life might
+            have looked before all these years.
+        </p>
+    </div>
+
+    <div class="project-image secondary">
+
+        <!--
+        Senses we focused on — sensory photography
+        (sea breeze, wet sand, coastal textures):
+
+        <img
+            src="../images/senses-photography.jpg"
+            alt="Sensory photographs used to build the VR experience"
+        >
+        -->
+
+    </div>
+    <div class="project-content">
+        <p class="content-label">
+            07 / Senses we focused on
+        </p>
+        <h2>
+            Senses we focused on
+        </h2>
+
+        <h3>Sight</h3>
+        <p class="tight">
+            Visuals of ruined Dhanushkodi and recreated scenes of the
+            town before the cyclone help users see the contrast between
+            past and present.
+        </p>
+
+        <h3>Touch</h3>
+        <p class="tight">
+            Gesture-based controls let users use hand movements to
+            explore the space and reveal hidden memories, making the
+            experience more engaging.
+        </p>
+
+        <h3>Hear</h3>
+        <p class="tight">
+            Ambient sounds like sea waves, wind, footsteps, conversations
+            and storm effects create an emotional and realistic
+            atmosphere.
+        </p>
+
+        <h3>Smell</h3>
+        <p>
+            Sensory photographs — of sea breeze, wet sand and the coastal
+            environment — enhance the setting and make users feel more
+            present in the scene.
+        </p>
+    </div>
+
+    <div class="project-image">
+
+        <!--
+        Gesture based interactions — the Arduino glove prototype
+        in use:
+
+        <img
+            src="../images/gesture-glove.jpg"
+            alt="Gesture recognition glove built with Arduino"
+        >
+        -->
+
+    </div>
+    <div class="project-content">
+        <p class="content-label">
+            08 / Gesture based interactions
+        </p>
+        <h2>
+            Why chosen interactions?
+        </h2>
+        <p>
+            To enable this interaction, we developed a gesture
+            recognition glove using Arduino. When activated, the glove
+            triggers a transition allowing users to witness the town as
+            it existed before the devastating 1964 Rameshwaram cyclone.
+            The moment the user loses contact, the immersive VR
+            environment shifts back to the ruins.
+        </p>
+        <p>
+            This deliberate shift between past and present creates a
+            powerful contrast, encouraging users to reflect on the
+            theme of loss. The interaction is not just visual but
+            emotional — making the user an active participant rather
+            than a passive observer.
+        </p>
+        <p>
+            Touch triggers memory far more deeply than just looking at
+            something. We wanted to make the user an active participant
+            in the experience rather than someone who simply witnesses
+            the visuals.
+        </p>
+        <p>
+            To bring a ghost town to life, we needed to physically reach
+            into its past — so we tied that interaction to the
+            character's own memory.
+        </p>
+        <p>
+            A glove makes it feel like your own hands are helping you
+            connect with the past. It's also a more feasible and
+            convenient option for building an immersive experience.
+        </p>
+        <p>
+            The glove isn't a tech choice — it's a storytelling choice
+            to build an emotional connection.
+        </p>
+    </div>
+
+    <div class="project-image secondary">
+
+        <!--
+        Worldbuilding — environment concept art / renders of the
+        four VR locations:
+
+        <img
+            src="../images/worldbuilding.jpg"
+            alt="Worldbuilding renders of the VR environment"
+        >
+        -->
+
+    </div>
+    <div class="project-content">
+        <p class="content-label">
+            09 / Worldbuilding
+        </p>
+        <h2>
+            Video based storytelling
+        </h2>
+        <p>
+            We built four main locations into our VR environment —
+            the Church, the Stone bridge, the Boats and the Market.
+            Understanding the importance of these places, we wove a
+            storyline around each location to give the player a better
+            insight into the protagonist's life.
+        </p>
+    </div>
+
+    <div class="project-image">
+
+        <!--
+        The Church — young Arun and his father outside the church:
+
+        <img
+            src="../images/story-church.jpg"
+            alt="The Church storytelling scene"
+        >
+        -->
+
+    </div>
+    <div class="project-content">
+        <p class="content-label">
+            The Church
+        </p>
+        <p>
+            Young Arun used to go to the church with his dad — the
+            stereotypical Tamil dad, strict in principle yet simple and
+            innocent at heart. Arun would ask him silly, curious
+            questions, and his father always answered every one.
+        </p>
+    </div>
+
+    <div class="project-image secondary">
+
+        <!--
+        The Market — Arun and his father at the market stalls:
+
+        <img
+            src="../images/story-market.jpg"
+            alt="The Market storytelling scene"
+        >
+        -->
+
+    </div>
+    <div class="project-content">
+        <p class="content-label">
+            Market
+        </p>
+        <p>
+            Arun used to whine for things he wanted, which his mother
+            denied — but his father would secretly buy them for him
+            anyway, becoming his favourite friend.
+        </p>
+    </div>
+
+    <div class="project-image">
+
+        <!--
+        Stone bridge — Arun playing the seashell game:
+
+        <img
+            src="../images/story-stone-bridge.jpg"
+            alt="Stone bridge storytelling scene"
+        >
+        -->
+
+    </div>
+    <div class="project-content">
+        <p class="content-label">
+            Stone bridge
+        </p>
+        <p>
+            Here, Arun learned the seashell game and heard about the
+            philosophies running through his family since the time of
+            his ancestors.
+        </p>
+    </div>
+
+    <div class="project-image secondary">
+
+        <!--
+        Boats — Arun hiding among the fishing boats with his father:
+
+        <img
+            src="../images/story-boats.jpg"
+            alt="Boats storytelling scene"
+        >
+        -->
+
+    </div>
+    <div class="project-content">
+        <p class="content-label">
+            Boats
+        </p>
+        <p>
+            Arun used to hide among the boats, and his father would come
+            find him there — teaching him small principles of life that
+            he never forgot, even after he grew up.
+        </p>
+    </div>
+
+    <div class="project-image">
+
+        <!--
+        Character design — Arun and family character sheets,
+        Malgudi Days-inspired art style:
+
+        <img
+            src="../images/character-design.jpg"
+            alt="Character design sheets inspired by Malgudi Days"
+        >
+        -->
+
+    </div>
+    <div class="project-content">
+        <p class="content-label">
+            10 / Character design
+        </p>
+        <h2>
+            Character design
+        </h2>
+        <p>
+            The art style and colour scheme of the animation is inspired
+            by the cartoon Malgudi Days, chosen to keep the roots and
+            theme of the project alive through the video sequences —
+            making the story more interesting and easier to understand
+            from the user's perspective.
+        </p>
+    </div>
+
+    <div class="project-image secondary">
+
+        <!--
+        Exhibition setup / documentation — photos of the physical
+        installation, glove demo, visitors experiencing the piece:
+
+        <img
+            src="../images/exhibition-setup.jpg"
+            alt="Exhibition setup and documentation photos"
+        >
+        -->
+
+    </div>
+    <div class="project-content">
+        <p class="content-label">
+            11 / Exhibition setup / documentation
+        </p>
+        <h2>
+            Exhibition setup / documentation
+        </h2>
+
+        <p class="content-label">
+            12 / Impact created
+        </p>
+        <h2>
+            Impact created
+        </h2>
+        <ul>
+            <li>
+                Created an emotional connection with Dhanushkodi's lost
+                heritage.
+            </li>
+            <li>
+                Helped users experience history instead of just learning
+                about it.
+            </li>
+            <li>
+                Increased immersion through multisensory storytelling
+                and interaction.
+            </li>
+            <li>
+                Encouraged empathy and curiosity toward forgotten places
+                and cultures.
+            </li>
+            <li>
+                Made cultural preservation more engaging using VR and
+                gesture-based interaction.
+            </li>
+        </ul>
+    </div>
 
     <div class="project-navigation">
-
-
         <a
             href="project-6.html"
             class="back-link"
         >
             ← Previous project
         </a>
-
-
         <a
             href="project-2.html"
             class="back-link"
         >
             Next project →
         </a>
-
-
     </div>
-
-
 </div>
-```
-
 </section>
-
-<!-- ========================================================
-     FOOTER
-======================================================== -->
 
 <footer>
 
-```
 <span class="footer-text">
-
     Vaishnavi Venkatesh
     ·
     2026
-
 </span>
-
-
 <div class="footer-links">
-
-
     <a
         href="https://github.com/blueexev"
         target="_blank"
@@ -1147,8 +1078,6 @@ footer {
     >
         GitHub
     </a>
-
-
     <a
         href="https://linkedin.com"
         target="_blank"
@@ -1156,18 +1085,10 @@ footer {
     >
         LinkedIn
     </a>
-
-
     <a href="../index.html">
         ↑ Top
     </a>
-
-
 </div>
-```
-
 </footer>
-
 </body>
-
 </html>

@@ -1,72 +1,46 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Project Two Title — Vaishnavi Venkatesh</title>
+<title>Mandi - Bopal Vegetable Market Study</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 
 <style>
-
-/* ========================================================
-   QUANO
-======================================================== */
-
 @font-face {
-
-    font-family: "Quano";
-
-    src: url("../fonts/Quano-Regular.woff2")
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-Regular.woff2")
     format("woff2");
-
     font-weight: 400;
-
     font-style: normal;
 
 }
-
 @font-face {
-
-    font-family: "Quano";
-
-    src: url("../fonts/Quano-Italic.woff2")
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat.woff2")
     format("woff2");
-
     font-weight: 400;
-
     font-style: italic;
-
 }
-
-
-/* ========================================================
-   RESET
-======================================================== */
 
 * {
 
     margin: 0;
     padding: 0;
-
     box-sizing: border-box;
-
 }
 
 html {
-
     scroll-behavior: smooth;
-
 }
 
 body {
-
     background: #e9e4d9;
-
     color: #191817;
-
     font-family:
         "Helvetica Neue",
         Helvetica,
@@ -74,441 +48,260 @@ body {
         sans-serif;
 
     overflow-x: hidden;
-
 }
 
 a {
-
     color: inherit;
-
     text-decoration: none;
-
 }
 
 ::selection {
-
     background: #191817;
-
     color: #e9e4d9;
-
 }
 
-
-/* ========================================================
-   PAGE WIDTH
-======================================================== */
-
 .page-width {
-
     width: min(
         860px,
         calc(100% - 200px)
     );
-
     margin: auto;
-
 }
-
-
-/* ========================================================
-   NAVIGATION
-======================================================== */
 
 .site-nav {
 
     position: fixed;
-
     top: 0;
     left: 0;
-
     width: 100%;
-
     z-index: 1000;
-
     padding: 26px 0;
 
 }
-
 .nav-inner {
 
     width: min(
         860px,
         calc(100% - 200px)
     );
-
     margin: auto;
-
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
-
 }
-
 
 .artist-name {
-
-    font-size: 9px;
-
+    font-size: 12px;
     text-transform: uppercase;
-
     letter-spacing: .15em;
-
     font-weight: 500;
-
 }
-
-
 .nav-links {
-
     display: flex;
-
     gap: 25px;
-
     list-style: none;
-
 }
 
 .nav-links a {
-
-    font-size: 8px;
-
+    font-size: 12px;
     text-transform: uppercase;
-
     letter-spacing: .12em;
-
     color: #77716a;
-
     transition:
         color .3s ease;
-
 }
 
 .nav-links a:hover {
-
     color: #191817;
-
 }
 
-
-/* ========================================================
-   PROJECT HERO
-======================================================== */
-
 .project-hero {
-
     min-height: 75vh;
-
     display: flex;
-
     align-items: center;
-
     padding:
-        150px 0
+        150px 
         100px;
 
 }
 
 .project-hero-content {
-
     width: 100%;
-
 }
-
-
-/* ========================================================
-   BACK LINK
-======================================================== */
-
 .back-link {
-
     display: inline-flex;
-
     align-items: center;
-
     gap: 8px;
-
-    font-size: 8px;
-
+    font-size: 10px;
     text-transform: uppercase;
-
     letter-spacing: .12em;
-
     color: #77716a;
-
     margin-bottom: 55px;
-
     transition:
         gap .3s ease,
         color .3s ease;
-
 }
 
 .back-link:hover {
-
     gap: 13px;
-
     color: #191817;
-
 }
-
-
-/* ========================================================
-   PROJECT LABEL
-======================================================== */
-
-.collection-label {
-
-    font-size: 8px;
-
-    text-transform: uppercase;
-
-    letter-spacing: .2em;
-
-    color: #77716a;
-
-    margin-bottom: 28px;
-
-}
-
-
-/* ========================================================
-   MAIN TITLE
-======================================================== */
-
 .project-main-title {
 
     font-family:
-        "Quano",
+        "Montserrat",
         "Bodoni Moda",
         "Cormorant Garamond",
         Georgia,
         serif;
 
     font-weight: 400;
-
     font-size:
         clamp(50px, 7vw, 82px);
-
-    line-height: .92;
-
+    line-height: 1.50;
     letter-spacing: -.055em;
-
     max-width: 800px;
 
 }
-
-
-/* ========================================================
-   INTRO
-======================================================== */
-
 .project-intro {
-
     max-width: 430px;
-
     margin-top: 35px;
-
-    font-size: 11px;
-
+    font-size: 13px;
     line-height: 1.8;
-
     color: #68635d;
-
 }
-
-
-/* ========================================================
-   PROJECT META
-======================================================== */
 
 .project-meta {
 
     display: grid;
-
     grid-template-columns:
         repeat(4, 1fr);
-
     gap: 25px;
-
     margin-top: 60px;
-
     padding-top: 18px;
-
     border-top:
         1px solid
         rgba(25,24,23,.2);
-
 }
 
 .meta-item {
-
     min-width: 0;
-
 }
 
 .meta-label {
-
     display: block;
-
-    font-size: 7px;
-
+    font-size: 12px;
     text-transform: uppercase;
-
-    letter-spacing: .14em;
-
+    letter-spacing: 0.14em;
     color: #8a847c;
-
     margin-bottom: 8px;
 
 }
-
 .meta-value {
-
-    font-size: 9px;
-
+    font-size: 15px;
     line-height: 1.5;
-
 }
-
-
-/* ========================================================
-   DIVIDER
-======================================================== */
 
 .museum-rule {
 
     width: 100%;
-
     height: 1px;
-
     background:
         rgba(25,24,23,.18);
 
 }
-
-
-/* ========================================================
-   PROJECT BODY
-======================================================== */
-
 .project-body {
-
     padding:
-        110px 0
+        50px 0
         140px;
 
 }
 
-
-/* ========================================================
-   PROJECT IMAGE
-======================================================== */
-
 .project-image {
-
     width: 100%;
-
     height: 520px;
-
     background: #d5cfc3;
-
     overflow: hidden;
-
     margin-bottom: 110px;
-
 }
 
 .project-image img {
-
     width: 100%;
-
     height: 100%;
-
     object-fit: cover;
-
     display: block;
-
     filter:
         grayscale(20%)
         contrast(.95);
-
     transition:
         transform .8s
         cubic-bezier(.2,.7,.2,1),
-
         filter .8s ease;
-
 }
 
 .project-image:hover img {
-
     transform:
         scale(1.025);
-
     filter:
         grayscale(0%)
         contrast(1);
-
 }
-
-
-/* ========================================================
-   CONTENT
-======================================================== */
 
 .project-content {
-
     max-width: 680px;
-
     margin: auto;
-
 }
-
 
 .content-label {
-
-    font-size: 8px;
-
+    font-family:
+        "Montserrat",
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
+    font-size: 12px;
     text-transform: uppercase;
-
     letter-spacing: .15em;
-
     color: #77716a;
-
     margin-bottom: 25px;
-
 }
-
-
 .project-content h2 {
 
     font-family:
-        "Quano",
+        "Montserrat",
         "Bodoni Moda",
         "Cormorant Garamond",
         Georgia,
         serif;
 
-    font-size: 39px;
-
+    font-size: 30px;
     font-weight: 400;
-
-    letter-spacing: -.045em;
-
+    letter-spacing: 0.005em;
     line-height: 1;
-
     margin-bottom: 25px;
-
 }
 
+.project-content h3 {
+    font-family:
+        "Montserrat",
+        "Bodoni Moda",
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 0.005em;
+    margin-bottom: 12px;
+}
+
+
+/* PARAGRAPHS */
 
 .project-content p {
 
     max-width: 560px;
 
-    font-size: 11px;
+    font-size: 13px;
 
     line-height: 1.9;
 
@@ -518,75 +311,47 @@ a {
 
 }
 
-
-/* ========================================================
-   LIST
-======================================================== */
+.project-content p.tight {
+    margin-bottom: 30px;
+}
 
 .project-content ul {
-
     margin-top: -40px;
-
     margin-bottom: 90px;
-
     padding-left: 18px;
+}
 
+.project-content ul.tight {
+    margin-top: 0;
+    margin-bottom: 30px;
 }
 
 .project-content li {
-
-    font-size: 10px;
-
+    font-size: 13px;
     line-height: 1.9;
-
     color: #66615b;
-
     padding-left: 5px;
-
 }
 
-
-/* ========================================================
-   SECOND IMAGE
-======================================================== */
-
 .project-image.secondary {
-
     margin:
         20px 0
         110px;
 
     height: 430px;
-
 }
-
-
-/* ========================================================
-   PROJECT NAVIGATION
-======================================================== */
 
 .project-navigation {
 
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
-
     margin-top: 120px;
-
     padding-top: 25px;
-
     border-top:
         1px solid
         rgba(25,24,23,.18);
-
 }
-
-
-/* ========================================================
-   FOOTER
-======================================================== */
 
 footer {
 
@@ -612,68 +377,39 @@ footer {
 }
 
 .footer-text {
-
-    font-size: 7px;
-
+    font-size: 10px;
     color: #8a847c;
-
     text-transform: uppercase;
-
     letter-spacing: .1em;
-
 }
 
 .footer-links {
-
     display: flex;
-
-    gap: 20px;
-
+    gap: 50px;
 }
 
 .footer-links a {
-
-    font-size: 7px;
-
+    font-size: 10px;
     text-transform: uppercase;
-
     letter-spacing: .1em;
-
 }
 
-
-/* ========================================================
-   MOBILE
-======================================================== */
-
 @media(max-width: 760px) {
-
-
     .page-width,
     .nav-inner,
     footer {
-
         width:
             calc(100% - 40px);
-
     }
-
-
     .site-nav {
-
         padding:
             20px 0;
-
     }
-
-
     .nav-links {
 
         display: none;
 
     }
-
-
     .project-hero {
 
         min-height: auto;
@@ -681,73 +417,38 @@ footer {
         padding:
             130px 0
             80px;
-
     }
-
-
     .back-link {
-
         margin-bottom: 45px;
-
     }
-
-
     .project-main-title {
-
         font-size:
             clamp(45px, 14vw, 70px);
-
     }
-
-
     .project-meta {
-
         grid-template-columns:
             1fr 1fr;
-
         gap: 30px;
-
         margin-top: 50px;
-
     }
-
-
     .project-body {
-
         padding:
             80px 0
             100px;
 
     }
-
-
     .project-image {
-
-        height: 300px;
-
+        height: 150px;
         margin-bottom: 80px;
-
     }
-
-
     .project-content h2 {
-
-        font-size: 34px;
-
+        font-size: 25px;
     }
-
-
     .project-content p {
-
         margin-bottom: 55px;
-
     }
-
-
     .project-image.secondary {
-
         height: 300px;
-
         margin:
             0 0
             80px;
@@ -756,42 +457,21 @@ footer {
 
 
     .project-navigation {
-
         margin-top: 80px;
-
     }
-
-
     footer {
-
         display: block;
-
     }
-
-
     .footer-links {
-
         margin-top: 15px;
-
     }
-
 }
-
 </style>
-
 </head>
-
 <body>
-
-<!-- ========================================================
-     NAVIGATION
-======================================================== -->
-
 <nav class="site-nav">
 
-```
 <div class="nav-inner">
-
 
     <a
         href="../index.html"
@@ -799,8 +479,6 @@ footer {
     >
         Vaishnavi Venkatesh
     </a>
-
-
     <ul class="nav-links">
 
         <li>
@@ -808,323 +486,437 @@ footer {
                 Work
             </a>
         </li>
-
         <li>
             <a href="../index.html#about">
                 About
             </a>
         </li>
-
         <li>
             <a href="../index.html#archive">
-                Archive
+                PLAYGROUND
             </a>
         </li>
-
         <li>
             <a href="../index.html#contact">
                 Contact
             </a>
         </li>
-
     </ul>
-
-
 </div>
-```
-
 </nav>
 
-<!-- ========================================================
-     PROJECT HERO
-======================================================== -->
-
 <header class="project-hero">
-
-```
 <div class="page-width">
 
     <div class="project-hero-content">
-
-
         <a
             href="../index.html#work"
             class="back-link"
         >
-            ← Back to selected work
+            #Back to selected work
         </a>
-
-
-        <p class="collection-label">
-
-            Work 02 / Selected Work
-
-        </p>
-
-
         <h1 class="project-main-title">
-
-            Project Two Title
-
+            Mandi — the market story
         </h1>
-
-
         <p class="project-intro">
-
-            A one-sentence summary of what this project
-            is and why it exists.
-
+            A field study of the Bopal vegetable market in Ahmedabad,
+            translated into stakeholder research, a strategy card game
+            and a zine.
         </p>
-
 
         <div class="project-meta">
+            <!-- These four fields weren't specified in the source PDF —
+                 edit freely to match the actual project details. -->
+            <div class="meta-item">
+                <span class="meta-label">
+                    Medium
+                </span>
+                <span class="meta-value">
+                   UX Research / Card Game / Zine
+                </span>
 
+            </div>
 
             <div class="meta-item">
-
                 <span class="meta-label">
                     Role
                 </span>
-
                 <span class="meta-value">
-                    Designer &amp; Developer
+                    Research / Concept / Game Design
                 </span>
-
             </div>
 
-
             <div class="meta-item">
-
-                <span class="meta-label">
-                    Timeline
-                </span>
-
-                <span class="meta-value">
-                    Month Year – Month Year
-                </span>
-
-            </div>
-
-
-            <div class="meta-item">
-
                 <span class="meta-label">
                     Tools
                 </span>
-
                 <span class="meta-value">
-                    React, Figma, Node.js
+                    Figma / Illustrator
                 </span>
-
             </div>
-
 
             <div class="meta-item">
-
                 <span class="meta-label">
-                    Link
+                    Year
                 </span>
 
                 <span class="meta-value">
-
-                    <a
-                        href="#"
-                        target="_blank"
-                        rel="noopener"
-                        style="text-decoration: underline;"
-                    >
-                        Live site ↗
-                    </a>
-
+                    2024
                 </span>
-
             </div>
-
-
         </div>
-
-
     </div>
-
 </div>
-```
 
 </header>
-
 <div class="museum-rule"></div>
-
-<!-- ========================================================
-     PROJECT BODY
-======================================================== -->
-
 <section class="project-body">
-
-```
 <div class="page-width">
-
 
     <div class="project-image">
 
         <!--
-        Replace with your actual project image:
+        Hero shot of the Bopal vegetable market:
 
         <img
-            src="../images/project-2.jpg"
-            alt="Project Two cover"
+            src="../images/mandi-market-hero.jpg"
+            alt="Bopal vegetable market, Ahmedabad"
         >
         -->
 
     </div>
 
-
     <div class="project-content">
-
+        <p class="content-label">
+            01 / About the market
+        </p>
+        <h2>
+            About the market
+        </h2>
+        <p>
+            The Bopal Vegetable Market, located near Bhavya Park in Bopal,
+            Ahmedabad, is a private marketplace owned by a family of ten
+            brothers, offering a wide variety of fresh produce. With over
+            100 vendors, shoppers can find an extensive selection of
+            vegetables, fruits and snacks at competitive prices. The
+            market also provides parking facilities behind the market
+            area.
+        </p>
 
         <p class="content-label">
-            01 / The brief
+            02 / Research question
         </p>
-
-
         <h2>
-            The brief
+            Research question
         </h2>
-
-
         <p>
-
-            Describe the problem you were solving or the
-            goal you set for yourself. Who was this for,
-            and what did they need? Keep this to a short,
-            clear paragraph.
-
+            How does the spatial layout and infrastructure of vegetable
+            markets impact vendor operations, customer flow, user
+            efficiency and the vendor and user experience?
         </p>
-
 
         <p class="content-label">
-            02 / Process
+            03 / Methodology
         </p>
-
-
         <h2>
-            What I did
+            Methodology
         </h2>
-
-
         <p>
-
-            Walk through your process — research, design
-            decisions, technical choices. This is the
-            section where you explain your thinking, not
-            just what the final thing looks like.
-
+            We interviewed key market stakeholders — consumers, vendors
+            and the plot owner — to understand their lifestyles and
+            current market conditions. Vendors highlighted challenges
+            like congestion, heat and high rent, while consumers valued
+            fresh produce but noted disorganisation and a lack of
+            shelter. Both emphasised peak crowd times and the need for
+            better infrastructure and comfort.
         </p>
-
-
-        <ul>
-
-            <li>
-                Key step or decision one
-            </li>
-
-            <li>
-                Key step or decision two
-            </li>
-
-            <li>
-                Key step or decision three
-            </li>
-
-        </ul>
-
-
     </div>
-
 
     <div class="project-image secondary">
 
         <!--
-        Replace with your second project image:
+        Vendor portrait — Manoj Bhai at his stall:
 
         <img
-            src="../images/project-2-process.jpg"
-            alt="Project Two process"
+            src="../images/mandi-vendor-manoj.jpg"
+            alt="Manoj Bhai, fruit and vegetable vendor"
         >
         -->
 
     </div>
-
-
     <div class="project-content">
-
-
         <p class="content-label">
-            03 / The outcome
+            04 / Stakeholder interviews
         </p>
-
-
         <h2>
-            The outcome
+            Manoj Bhai (vendor)
         </h2>
+        <ul class="tight">
+            <li>Age: Approx. 45</li>
+            <li>Role: Fruit &amp; vegetable vendor</li>
+            <li>Experience: 15+ years</li>
+            <li>Location: Stall within a private local market</li>
+            <li>Working hours: 8:00 AM – 10:00 PM</li>
+            <li>Family involvement: Family members assist daily</li>
+            <li>Supply source: Fresh produce from Jamalpur Market, sourced each morning</li>
+        </ul>
 
-
-        <p>
-
-            What happened as a result? Mention outcomes,
-            metrics, feedback, or simply what you learned
-            if it was a personal/academic project.
-
-        </p>
-
-
+        <h3>Challenges</h3>
+        <ul>
+            <li>
+                Congestion — cramped stalls and heavy footfall make
+                movement tough during peak hours.
+            </li>
+            <li>
+                Seasonal heat — summer temperatures affect comfort and
+                spoil produce faster.
+            </li>
+            <li>
+                Costs — pays monthly rent; amenities are maintained, but
+                not always efficiently.
+            </li>
+        </ul>
     </div>
 
+    <div class="project-image">
+
+        <!--
+        Consumer portrait — Vaishaliben shopping at the market:
+
+        <img
+            src="../images/mandi-consumer-vaishaliben.jpg"
+            alt="Vaishaliben, regular market customer"
+        >
+        -->
+
+    </div>
+    <div class="project-content">
+        <h2>
+            Vaishaliben (consumer)
+        </h2>
+        <ul class="tight">
+            <li>Age: Mid-50s</li>
+            <li>Occupation: Homemaker</li>
+            <li>Market connection: Loyal visitor for over 15 years</li>
+            <li>Location: Lives nearby, walks or drives to the market</li>
+            <li>Shopping frequency: A few times a week</li>
+            <li>Preferred time: Afternoon, to avoid peak crowds and find easier parking</li>
+        </ul>
+
+        <h3>Challenges</h3>
+        <ul>
+            <li>
+                Congestion — vendors sitting in pathways cause
+                bottlenecks.
+            </li>
+            <li>
+                Poor infrastructure — no proper sheds; heat and rain
+                make shopping uncomfortable.
+            </li>
+            <li>
+                Navigation issues — lack of clear structure makes
+                movement confusing and tiring.
+            </li>
+        </ul>
+    </div>
+
+    <div class="project-image secondary">
+
+        <!--
+        Stakeholder mapping diagram:
+
+        <img
+            src="../images/mandi-stakeholder-map.jpg"
+            alt="Stakeholder mapping of the market ecosystem"
+        >
+        -->
+
+    </div>
+    <div class="project-content">
+        <p class="content-label">
+            05 / Stakeholder mapping
+        </p>
+        <h2>
+            Stakeholder mapping
+        </h2>
+
+        <p class="content-label">
+            06 / Insights inferred
+        </p>
+        <h2>
+            Insights inferred
+        </h2>
+        <ul>
+            <li>
+                Many customers prioritise price over quality, buying from
+                multiple vendors at night when prices drop. Rising costs
+                make them more price-sensitive, leading to vendor shifts
+                and a preference for seasonal vegetables.
+            </li>
+            <li>
+                Stalls near entrances and parking get more sales due to
+                better visibility and easy access, as customers prefer
+                not to venture deeper into the market.
+            </li>
+            <li>
+                Vendors avoid the government market to maintain their
+                freedom, avoid strict regulations and lengthy paperwork,
+                and run their businesses more easily and flexibly.
+            </li>
+        </ul>
+    </div>
+
+    <div class="project-image">
+
+        <!--
+        Mandi. the card game — cards laid out / in play:
+
+        <img
+            src="../images/mandi-card-game.jpg"
+            alt="Mandi. the card game in play"
+        >
+        -->
+
+    </div>
+    <div class="project-content">
+        <p class="content-label">
+            07 / A creative output
+        </p>
+        <h2>
+            Mandi. the card game
+        </h2>
+        <p>
+            Step into the chaotic, colourful world of the local
+            vegetable bazaar, where every vendor, buyer and transporter
+            plays a vital role. Mandi. is a strategy-based card game
+            where players become market explorers, uncovering hidden
+            connections between stakeholders and the information they
+            hold.
+        </p>
+
+        <h3>Facilitator</h3>
+        <p class="tight">
+            Those who enable access or support the process without
+            directly selling.
+        </p>
+
+        <h3>Supplier</h3>
+        <p class="tight">
+            Those who offer goods or services for sale.
+        </p>
+
+        <h3>Customer</h3>
+        <p>
+            Those who purchase or request services or products.
+        </p>
+
+        <p>
+            If a player draws one of these cards, the person holding a
+            matching card must say it out loud — and the player with the
+            match is bound to give it up.
+        </p>
+    </div>
+
+    <div class="project-image secondary">
+
+        <!--
+        Gameplay / user testing session photos:
+
+        <img
+            src="../images/mandi-user-testing.jpg"
+            alt="User testing the Mandi card game"
+        >
+        -->
+
+    </div>
+    <div class="project-content">
+        <h2>
+            Gameplay and user testing
+        </h2>
+        <ul class="tight">
+            <li>Players: 3–6</li>
+            <li>Setup: Each player starts with 3 Insight Cards and 2 Stakeholder Cards.</li>
+            <li>Goal: Be the first to complete all your Insight objectives through matches and trades.</li>
+        </ul>
+
+        <h3>Gameplay</h3>
+        <ul>
+            <li>On your turn, draw 1 Character Card from the stack.</li>
+            <li>If it matches an Insight, announce the match and place it down.</li>
+            <li>
+                If not, you may offer a trade — give an Insight Card to
+                another player in exchange for one of their Insight
+                Cards, if they're willing.
+            </li>
+            <li>Continue taking turns in this way.</li>
+        </ul>
+
+        <h3>Win condition</h3>
+        <p>
+            The first player to complete all their Insight matches —
+            either by drawing or trading — wins the game.
+        </p>
+    </div>
+
+    <div class="project-image">
+
+        <!--
+        The market zine — spreads / cover:
+
+        <img
+            src="../images/mandi-zine.jpg"
+            alt="The market zine, combined research documentation"
+        >
+        -->
+
+    </div>
+    <div class="project-content">
+        <p class="content-label">
+            08 / The market zine
+        </p>
+        <h2>
+            The market zine
+        </h2>
+        <p>
+            After consolidating all the information gathered throughout
+            the project, I created a zine as a creative output that
+            highlights the most important insights. The zine focuses on
+            concisely presenting key aspects of the market research,
+            translating complex findings into a visually engaging and
+            easy-to-understand format.
+        </p>
+        <p>
+            Through this format, I aimed to combine research with
+            storytelling — making the information more accessible,
+            interactive and impactful.
+        </p>
+    </div>
 
     <div class="project-navigation">
-
-
         <a
             href="project-1.html"
             class="back-link"
         >
             ← Previous project
         </a>
-
-
         <a
             href="project-3.html"
             class="back-link"
         >
             Next project →
         </a>
-
-
     </div>
-
-
 </div>
-```
-
 </section>
-
-<!-- ========================================================
-     FOOTER
-======================================================== -->
 
 <footer>
 
-```
 <span class="footer-text">
-
     Vaishnavi Venkatesh
     ·
     2026
-
 </span>
-
-
 <div class="footer-links">
-
-
     <a
         href="https://github.com/blueexev"
         target="_blank"
@@ -1132,8 +924,6 @@ footer {
     >
         GitHub
     </a>
-
-
     <a
         href="https://linkedin.com"
         target="_blank"
@@ -1141,20 +931,10 @@ footer {
     >
         LinkedIn
     </a>
-
-
     <a href="../index.html">
-
         ↑ Top
-
     </a>
-
-
 </div>
-```
-
 </footer>
-
 </body>
-
 </html>

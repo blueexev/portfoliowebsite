@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Project Five Title — Vaishnavi Venkatesh</title>
+<title>Digital Museum of Tamil Culture — Vaishnavi Venkatesh</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 
 <style>
 
@@ -284,6 +285,7 @@ a {
 .project-main-title {
 
     font-family:
+        "Montserrat",
         "Quano",
         "Bodoni Moda",
         "Cormorant Garamond",
@@ -475,6 +477,13 @@ a {
 
 .content-label {
 
+    font-family:
+        "Montserrat",
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
+
     font-size: 8px;
 
     text-transform: uppercase;
@@ -493,6 +502,7 @@ a {
 .project-content h2 {
 
     font-family:
+        "Montserrat",
         "Quano",
         "Bodoni Moda",
         "Cormorant Garamond",
@@ -508,6 +518,28 @@ a {
     line-height: 1;
 
     margin-bottom: 25px;
+
+}
+
+/* SUB-HEADINGS (exhibits / games / learnings) */
+
+.project-content h3 {
+
+    font-family:
+        "Montserrat",
+        "Quano",
+        "Bodoni Moda",
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 17px;
+
+    font-weight: 500;
+
+    letter-spacing: -.01em;
+
+    margin-bottom: 12px;
 
 }
 
@@ -528,6 +560,12 @@ a {
 
 }
 
+.project-content p.tight {
+
+    margin-bottom: 30px;
+
+}
+
 
 /* ========================================================
    LIST
@@ -540,6 +578,14 @@ a {
     margin-bottom: 90px;
 
     padding-left: 18px;
+
+}
+
+.project-content ul.tight {
+
+    margin-top: 0;
+
+    margin-bottom: 30px;
 
 }
 
@@ -799,7 +845,6 @@ footer {
 
 <nav class="site-nav">
 
-```
 <div class="nav-inner">
 
 
@@ -841,7 +886,6 @@ footer {
 
 
 </div>
-```
 
 </nav>
 
@@ -851,7 +895,6 @@ footer {
 
 <header class="project-hero">
 
-```
 <div class="page-width">
 
     <div class="project-hero-content">
@@ -867,22 +910,22 @@ footer {
 
         <p class="collection-label">
 
-            Work 05 / Selected Work
+            Selected Work
 
         </p>
 
 
         <h1 class="project-main-title">
 
-            Project Five Title
+            Digital Museum of Tamil Culture
 
         </h1>
 
 
         <p class="project-intro">
 
-            A one-sentence summary of what this project
-            is and why it exists.
+            An immersive interactive museum exploring Tamil Nadu's
+            stories, art, architecture and mythology.
 
         </p>
 
@@ -891,6 +934,8 @@ footer {
 
         <div class="project-meta">
 
+            <!-- Timeline and Link weren't specified in the source PDF —
+                 edit as needed. -->
 
             <div class="meta-item">
 
@@ -899,7 +944,7 @@ footer {
                 </span>
 
                 <span class="meta-value">
-                    Designer &amp; Developer
+                    Concept / Environment / Interaction Design
                 </span>
 
             </div>
@@ -925,7 +970,7 @@ footer {
                 </span>
 
                 <span class="meta-value">
-                    React, Figma, Node.js
+                    Unity / 3D Design
                 </span>
 
             </div>
@@ -945,7 +990,7 @@ footer {
                         rel="noopener"
                         style="text-decoration: underline;"
                     >
-                        Live site ↗
+                        Project link ↗
                     </a>
 
                 </span>
@@ -959,7 +1004,6 @@ footer {
     </div>
 
 </div>
-```
 
 </header>
 
@@ -971,7 +1015,6 @@ footer {
 
 <section class="project-body">
 
-```
 <div class="page-width">
 
 
@@ -980,11 +1023,11 @@ footer {
     <div class="project-image">
 
         <!--
-        Replace with your actual project image:
+        Hero shot — a wide view of the museum environment in Unity:
 
         <img
-            src="../images/project-5.jpg"
-            alt="Project Five cover"
+            src="../images/tamil-museum-hero.jpg"
+            alt="Digital Museum of Tamil Culture — environment overview"
         >
         -->
 
@@ -994,80 +1037,135 @@ footer {
     <div class="project-content">
 
 
-        <!-- THE BRIEF -->
+        <!-- PROJECT OVERVIEW -->
 
         <p class="content-label">
-            01 / The brief
+            01 / Project overview
         </p>
 
 
         <h2>
-            The brief
+            Project overview
         </h2>
 
 
         <p>
 
-            Describe the problem you were solving or the
-            goal you set for yourself. Who was this for,
-            and what did they need? Keep this to a short,
-            clear paragraph.
+            This project explores how digital spaces can make cultural
+            heritage more interactive and engaging. I designed and
+            built a virtual museum in Unity that brings together
+            different aspects of Tamil culture — from mythology and
+            traditional art to architecture and sculpture.
 
         </p>
-
-
-        <!-- WHAT I DID -->
-
-        <p class="content-label">
-            02 / Process
-        </p>
-
-
-        <h2>
-            What I did
-        </h2>
-
 
         <p>
 
-            Walk through your process — research, design
-            decisions, technical choices. This is the
-            section where you explain your thinking, not
-            just what the final thing looks like.
+            Rather than presenting culture as static information, I
+            created an environment where visitors can explore,
+            interact and discover stories through play.
 
         </p>
-
-
-        <ul>
-
-            <li>
-                Key step or decision one
-            </li>
-
-            <li>
-                Key step or decision two
-            </li>
-
-            <li>
-                Key step or decision three
-            </li>
-
-        </ul>
 
 
     </div>
 
 
-    <!-- SECOND PROJECT IMAGE -->
+    <!-- THE EXPERIENCE -->
 
     <div class="project-image secondary">
 
         <!--
-        Replace with your second project image:
+        Tanjore Painting gallery room:
 
         <img
-            src="../images/project-5-process.jpg"
-            alt="Project Five process"
+            src="../images/tamil-museum-tanjore.jpg"
+            alt="Tanjore Painting gallery in the museum"
+        >
+        -->
+
+    </div>
+
+
+    <div class="project-content">
+
+        <p class="content-label">
+            02 / The experience
+        </p>
+
+        <h2>
+            The experience
+        </h2>
+
+        <p>
+
+            The museum is organised as a spatial journey through
+            different elements of Tamil heritage. Visitors move
+            through the environment, discovering cultural objects,
+            architectural references and interactive experiences. It
+            includes:
+
+        </p>
+
+        <h3>Tanjore Painting</h3>
+        <p class="tight">
+            Traditional Tamil painting and its visual richness.
+        </p>
+
+        <h3>Nataraja</h3>
+        <p class="tight">
+            The symbolism and cultural significance of the dancing
+            Shiva.
+        </p>
+
+        <h3>M. S. Subbulakshmi</h3>
+        <p class="tight">
+            Celebrating the legacy of the iconic Carnatic vocalist and
+            her contribution to Tamil and Indian musical heritage.
+        </p>
+
+        <h3>Silappathikaram</h3>
+        <p class="tight">
+            Bringing one of Tamil literature's most significant epics
+            to life through an interactive storytelling experience.
+        </p>
+
+        <h3>Gopuram</h3>
+        <p>
+            Exploring the monumental temple towers that define
+            Dravidian architecture and Tamil temple landscapes.
+        </p>
+
+    </div>
+
+
+    <!-- NATARAJA / SUBBULAKSHMI ROOM -->
+
+    <div class="project-image">
+
+        <!--
+        Nataraja and M. S. Subbulakshmi exhibit rooms:
+
+        <img
+            src="../images/tamil-museum-nataraja-subbulakshmi.jpg"
+            alt="Nataraja and M. S. Subbulakshmi exhibits"
+        >
+        -->
+
+    </div>
+
+
+    <!-- SILAPPATHIKARAM / GOPURAM -->
+
+    <div class="project-image secondary">
+
+        <!--
+        Silappathikaram interactive storytelling room and Gopuram
+        exteriors:
+
+        <img
+            src="../images/tamil-museum-silappathikaram-gopuram.jpg"
+            alt="Silappathikaram and Gopuram scenes"
         >
         -->
 
@@ -1077,26 +1175,229 @@ footer {
     <div class="project-content">
 
 
-        <!-- THE OUTCOME -->
+        <!-- THE GAMES -->
 
         <p class="content-label">
-            03 / The outcome
+            03 / The games
         </p>
 
-
         <h2>
-            The outcome
+            The games
         </h2>
 
+        <h3>Silappathikaram Sliding Puzzle</h3>
+        <p class="tight">
+            An interactive game where solving the puzzle reveals the
+            story of Kannagi and Kovalan.
+        </p>
+
+        <h3>Towering Stones Game</h3>
+        <p>
+            A puzzle-based interaction exploring the belief that
+            towering stones symbolise keeping families together.
+        </p>
+
+    </div>
+
+
+    <!-- GAME SCREENSHOTS -->
+
+    <div class="project-image">
+
+        <!--
+        Silappathikaram Sliding Puzzle in play:
+
+        <img
+            src="../images/tamil-museum-sliding-puzzle.jpg"
+            alt="Silappathikaram Sliding Puzzle gameplay"
+        >
+        -->
+
+    </div>
+
+    <div class="project-image secondary">
+
+        <!--
+        Towering Stones Game in play:
+
+        <img
+            src="../images/tamil-museum-towering-stones.jpg"
+            alt="Towering Stones Game gameplay"
+        >
+        -->
+
+    </div>
+
+
+    <div class="project-content">
+
+
+        <!-- DESIGN APPROACH -->
+
+        <p class="content-label">
+            04 / Design approach
+        </p>
+
+        <h2>
+            Design approach
+        </h2>
 
         <p>
 
-            What happened as a result? Mention outcomes,
-            metrics, feedback, or simply what you learned
-            if it was a personal/academic project.
+            I focused on creating a space that feels like a digital
+            cultural landscape rather than a conventional museum.
+            Spatial layout, scale, movement, interaction and visual
+            elements were used to guide visitors through the
+            experience.
 
         </p>
 
+        <p>
+
+            The project allowed me to explore how play can become a
+            method of cultural storytelling — making heritage
+            something that can be experienced and discovered rather
+            than simply observed.
+
+        </p>
+
+    </div>
+
+
+    <!-- SPATIAL LAYOUT -->
+
+    <div class="project-image">
+
+        <!--
+        Top-down spatial layout / site plan of the museum:
+
+        <img
+            src="../images/tamil-museum-spatial-layout.jpg"
+            alt="Spatial layout of the museum"
+        >
+        -->
+
+    </div>
+
+
+    <div class="project-content">
+
+        <p class="content-label">
+            05 / The spatial layout
+        </p>
+
+        <h2>
+            The spatial layout
+        </h2>
+
+        <p>
+
+            A top-down view of how the museum's spaces were arranged
+            — guiding visitors from one cultural moment to the next
+            through scale, sightlines and movement.
+
+        </p>
+
+
+        <!-- COLOR SCHEME -->
+
+        <p class="content-label">
+            06 / Color scheme of the museum
+        </p>
+
+        <h2>
+            Color scheme of the museum
+        </h2>
+
+        <ul>
+
+            <li>#9B8F7F</li>
+            <li>#AFA285</li>
+            <li>#928371</li>
+            <li>#34472B</li>
+            <li>#6B83A0</li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- SOME SCENES FROM THE MUSEUM -->
+
+    <div class="project-image secondary">
+
+        <!--
+        Scene collage — chariot/AR interaction, temple gate, hands
+        interacting with an exhibit:
+
+        <img
+            src="../images/tamil-museum-scenes-1.jpg"
+            alt="Scenes from the Digital Museum of Tamil Culture"
+        >
+        -->
+
+    </div>
+
+    <div class="project-image">
+
+        <!--
+        Further scenes — painting exhibit, doorway view, interior
+        details:
+
+        <img
+            src="../images/tamil-museum-scenes-2.jpg"
+            alt="More scenes from the Digital Museum of Tamil Culture"
+        >
+        -->
+
+    </div>
+
+
+    <div class="project-content">
+
+        <p class="content-label">
+            07 / Some scenes from the museum
+        </p>
+
+        <h2>
+            Some scenes from the museum
+        </h2>
+
+
+        <!-- LEARNINGS -->
+
+        <p class="content-label">
+            08 / Learnings
+        </p>
+
+        <h2>
+            Learnings
+        </h2>
+
+        <h3>Spatial storytelling</h3>
+        <p class="tight">
+            Understood how layout, movement, scale and environment can
+            guide a user through a narrative.
+        </p>
+
+        <h3>Game-based storytelling</h3>
+        <p class="tight">
+            Explored how simple mechanics like puzzles can make
+            cultural narratives more engaging and memorable.
+        </p>
+
+        <h3>Cultural research</h3>
+        <p class="tight">
+            Learned how to translate cultural stories and traditions
+            into engaging digital experiences.
+        </p>
+
+        <h3>Unity &amp; 3D design</h3>
+        <p>
+            Gained experience in building interactive spaces,
+            designing environments and creating immersive experiences
+            in Unity.
+        </p>
 
     </div>
 
@@ -1126,7 +1427,6 @@ footer {
 
 
 </div>
-```
 
 </section>
 
@@ -1136,7 +1436,6 @@ footer {
 
 <footer>
 
-```
 <span class="footer-text">
 
     Vaishnavi Venkatesh
@@ -1175,7 +1474,6 @@ footer {
 
 
 </div>
-```
 
 </footer>
 

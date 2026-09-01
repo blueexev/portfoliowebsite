@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Project Six Title — Vaishnavi Venkatesh</title>
+<title>Taru — Vaishnavi Venkatesh</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 
 <style>
 
@@ -284,6 +285,7 @@ a {
 .project-main-title {
 
     font-family:
+        "Montserrat",
         "Quano",
         "Bodoni Moda",
         "Cormorant Garamond",
@@ -475,6 +477,13 @@ a {
 
 .content-label {
 
+    font-family:
+        "Montserrat",
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
+
     font-size: 8px;
 
     text-transform: uppercase;
@@ -493,6 +502,7 @@ a {
 .project-content h2 {
 
     font-family:
+        "Montserrat",
         "Quano",
         "Bodoni Moda",
         "Cormorant Garamond",
@@ -508,6 +518,28 @@ a {
     line-height: 1;
 
     margin-bottom: 25px;
+
+}
+
+/* SUB-HEADINGS (game steps / features / learnings) */
+
+.project-content h3 {
+
+    font-family:
+        "Montserrat",
+        "Quano",
+        "Bodoni Moda",
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 17px;
+
+    font-weight: 500;
+
+    letter-spacing: -.01em;
+
+    margin-bottom: 12px;
 
 }
 
@@ -528,18 +560,34 @@ a {
 
 }
 
+.project-content p.tight {
+
+    margin-bottom: 30px;
+
+}
+
 
 /* ========================================================
-   LIST
+   LISTS
 ======================================================== */
 
-.project-content ul {
+.project-content ul,
+.project-content ol {
 
     margin-top: -40px;
 
     margin-bottom: 90px;
 
     padding-left: 18px;
+
+}
+
+.project-content ul.tight,
+.project-content ol.tight {
+
+    margin-top: 0;
+
+    margin-bottom: 30px;
 
 }
 
@@ -799,7 +847,6 @@ footer {
 
 <nav class="site-nav">
 
-```
 <div class="nav-inner">
 
 
@@ -841,7 +888,6 @@ footer {
 
 
 </div>
-```
 
 </nav>
 
@@ -851,7 +897,6 @@ footer {
 
 <header class="project-hero">
 
-```
 <div class="page-width">
 
     <div class="project-hero-content">
@@ -867,28 +912,32 @@ footer {
 
         <p class="collection-label">
 
-            Work 06 / Selected Work
+            Selected Work
 
         </p>
 
 
         <h1 class="project-main-title">
 
-            Project Six Title
+            Taru
 
         </h1>
 
 
         <p class="project-intro">
 
-            A one-sentence summary of what this project
-            is and why it exists.
+            A board game and companion app that helps autistic
+            children understand, express and connect with emotions
+            through the lens of the Navarasa — growing with every
+            emotion.
 
         </p>
 
 
         <div class="project-meta">
 
+            <!-- Timeline and Link weren't specified in the source PDF —
+                 edit as needed. -->
 
             <div class="meta-item">
 
@@ -897,7 +946,7 @@ footer {
                 </span>
 
                 <span class="meta-value">
-                    Designer &amp; Developer
+                    Concept / Game Design / App UI
                 </span>
 
             </div>
@@ -923,7 +972,7 @@ footer {
                 </span>
 
                 <span class="meta-value">
-                    React, Figma, Node.js
+                    Figma / Illustration / 3D Render
                 </span>
 
             </div>
@@ -943,7 +992,7 @@ footer {
                         rel="noopener"
                         style="text-decoration: underline;"
                     >
-                        Live site ↗
+                        Project link ↗
                     </a>
 
                 </span>
@@ -957,7 +1006,6 @@ footer {
     </div>
 
 </div>
-```
 
 </header>
 
@@ -969,18 +1017,17 @@ footer {
 
 <section class="project-body">
 
-```
 <div class="page-width">
 
 
     <div class="project-image">
 
         <!--
-        Replace with your actual project image:
+        Hero shot — the Taru board and game box:
 
         <img
-            src="../images/project-6.jpg"
-            alt="Project Six cover"
+            src="../images/taru-hero.jpg"
+            alt="Taru board game"
         >
         -->
 
@@ -990,58 +1037,93 @@ footer {
     <div class="project-content">
 
 
+        <!-- PROJECT BRIEF -->
+
         <p class="content-label">
-            01 / The brief
+            01 / Project brief
         </p>
 
 
         <h2>
-            The brief
+            Project brief
         </h2>
 
+        <h3>What is autism?</h3>
 
         <p>
 
-            Describe the problem you were solving or the
-            goal you set for yourself. Who was this for,
-            and what did they need? Keep this to a short,
-            clear paragraph.
+            Autism, or Autism Spectrum Disorder (ASD), is a condition
+            that affects how a person thinks, learns, communicates and
+            interacts with others. People with autism may find it hard
+            to talk or play with others, like to do the same things in
+            the same way, be very focused on certain interests, or get
+            upset by loud sounds or changes in routine.
+
+        </p>
+
+        <p>
+
+            Autism is not an illness — it's a different way of
+            experiencing the world. Every autistic person is unique,
+            and some may need more support than others.
+
+        </p>
+
+        <p>
+
+            Young children, especially those aged 5–8 and including
+            neurodiverse learners such as autistic children, often
+            struggle to recognise, interpret and express complex human
+            emotions. Traditional learning methods may not effectively
+            engage their attention or support the development of
+            emotional literacy in a playful, inclusive way.
+            Additionally, most educational games tend to oversimplify
+            emotions or lack culturally rooted, expressive frameworks.
 
         </p>
 
 
+        <!-- AVAILABLE SOLUTIONS -->
+
         <p class="content-label">
-            02 / Process
+            02 / Available solutions
         </p>
 
 
         <h2>
-            What I did
+            Available solutions
         </h2>
-
-
-        <p>
-
-            Walk through your process — research, design
-            decisions, technical choices. This is the
-            section where you explain your thinking, not
-            just what the final thing looks like.
-
-        </p>
-
 
         <ul>
 
             <li>
-                Key step or decision one
+                Emotion flashcards &amp; charts — visual aids to teach
+                facial expressions.
             </li>
 
             <li>
-                Key step or decision two
+                Therapeutic games &amp; apps — digital or physical
+                tools for emotion recognition.
             </li>
 
             <li>
-                Key step or decision three
+                Role-play &amp; puppets — acting out emotions through
+                play.
+            </li>
+
+            <li>
+                SEL programs — school-based emotional learning
+                curricula.
+            </li>
+
+            <li>
+                Storybooks — children's books focused on feelings and
+                empathy.
+            </li>
+
+            <li>
+                Therapy tools — used in speech or ABA therapy for
+                emotion learning.
             </li>
 
         </ul>
@@ -1050,14 +1132,196 @@ footer {
     </div>
 
 
+    <!-- OUR SOLUTION -->
+
     <div class="project-image secondary">
 
         <!--
-        Replace with your second project image:
+        Taru logo and game name exploration:
 
         <img
-            src="../images/project-6-process.jpg"
-            alt="Project Six process"
+            src="../images/taru-logo-name.jpg"
+            alt="Taru logo and game name"
+        >
+        -->
+
+    </div>
+
+
+    <div class="project-content">
+
+        <p class="content-label">
+            03 / Our solution
+        </p>
+
+        <h2>
+            Our solution
+        </h2>
+
+        <h3>Board game for autistic children</h3>
+
+        <p>
+
+            Taru is a playful learning tool designed to help autistic
+            children understand, express and connect with emotions
+            through the lens of the Navarasa.
+
+        </p>
+
+        <p>
+
+            Using colour-coded zones, expressive storytelling and
+            facial-expression practice through an app, Taru supports
+            emotional development in a gentle, engaging way.
+
+        </p>
+
+        <p>
+
+            It encourages self-awareness, builds social-emotional
+            skills, and gives caregivers insight into a child's
+            comfort with different emotions.
+
+        </p>
+
+        <p>
+
+            The tagline "growing with every emotion" means that Taru
+            doesn't just teach emotions — it helps children experience,
+            understand and grow through them.
+
+        </p>
+
+
+        <!-- LOGO AND GAME NAME -->
+
+        <p class="content-label">
+            04 / Logo and game name
+        </p>
+
+        <h2>
+            Logo and game name
+        </h2>
+
+        <p>
+
+            TARU means "tree" in Sanskrit — symbolising growth,
+            development and strength. Just like a tree, the game
+            supports emotional growth in children, especially autistic
+            learners, step by step. It's deeply connected to Indian
+            culture, aligning with the Navarasa — the nine emotions
+            used in the game.
+
+        </p>
+
+        <p>
+
+            The board design reflects this idea: a central flower/tree
+            motif, with each petal representing an emotion. TARU
+            stands for a safe, rooted and nurturing space, ideal for
+            neurodiverse emotional learning — more than a name, it
+            represents the journey of blossoming emotionally through
+            play.
+
+        </p>
+
+    </div>
+
+
+    <!-- NAVARASA PALETTE -->
+
+    <div class="project-image">
+
+        <!--
+        Colour + Navarasa key art:
+
+        <img
+            src="../images/taru-navarasa-palette.jpg"
+            alt="The nine Navarasa and their colours"
+        >
+        -->
+
+    </div>
+
+
+    <div class="project-content">
+
+        <p class="content-label">
+            05 / The Navarasa palette
+        </p>
+
+        <h2>
+            The Navarasa palette
+        </h2>
+
+        <p>
+
+            Each of the nine Navarasa was given its own colour, used
+            throughout the board, cards and app to help children
+            associate an emotion with a visual identity.
+
+        </p>
+
+        <ul>
+
+            <li>Shringaar — Baby pink — #E3A7C0</li>
+            <li>Hasya — Neon pink — #E83989</li>
+            <li>Raudra — Red — #CB2026</li>
+            <li>Bhayanaka — Purple — #733489</li>
+            <li>Adbhuta — Sky blue — #3157A7</li>
+            <li>Veera — Yellowish orange — #E5A44D</li>
+            <li>Bibhitsa — Brown — #836E56</li>
+            <li>Karuna — Greyish sky blue — #A2BDCB</li>
+            <li>Shanta — Muted grey — #B0B6AE</li>
+
+        </ul>
+
+
+        <!-- CHARACTER DESIGN -->
+
+        <p class="content-label">
+            06 / Character design
+        </p>
+
+        <h2>
+            Character design
+        </h2>
+
+        <p>
+
+            Each Navarasa was given its own character — Adbhuta,
+            Shanta, Veera, Hasya, Karuna, Bibhitsa, Raudra, Bhayankar
+            and Shringar — designed to make the nine emotions easy for
+            children to recognise and relate to.
+
+        </p>
+
+    </div>
+
+
+    <!-- CHARACTER SHEET / 3D RENDER -->
+
+    <div class="project-image secondary">
+
+        <!--
+        Full character line-up sheet:
+
+        <img
+            src="../images/taru-character-design.jpg"
+            alt="Taru character design sheet"
+        >
+        -->
+
+    </div>
+
+    <div class="project-image">
+
+        <!--
+        3D render of the game box:
+
+        <img
+            src="../images/taru-box-render.jpg"
+            alt="3D render of the Taru game box"
         >
         -->
 
@@ -1067,24 +1331,306 @@ footer {
     <div class="project-content">
 
 
+        <!-- STORIES AND SCENARIOS -->
+
         <p class="content-label">
-            03 / The outcome
+            07 / Stories and scenarios
         </p>
 
-
         <h2>
-            The outcome
+            Stories and scenarios
         </h2>
-
 
         <p>
 
-            What happened as a result? Mention outcomes,
-            metrics, feedback, or simply what you learned
-            if it was a personal/academic project.
+            Each Rasa zone is paired with a small, everyday scenario
+            that helps children connect the emotion to something
+            familiar.
 
         </p>
 
+        <ul>
+
+            <li>
+                Listening to bedtime stories in a soft voice — Shanta
+            </li>
+
+            <li>
+                Blowing bubbles and seeing them float in the sunlight
+                — Adbhuta
+            </li>
+
+            <li>
+                You smile and say thank you to the security guard of
+                the building — Shringaar
+            </li>
+
+            <li>
+                Someone shouts at you without any reason — Raudra
+            </li>
+
+            <li>
+                Screaming when you see a lizard or cockroach —
+                Bhayanaka
+            </li>
+
+            <li>
+                Seeing a military person for the first time in a
+                parade — Veera
+            </li>
+
+        </ul>
+
+
+    </div>
+
+
+    <!-- GAMEPLAY -->
+
+    <div class="project-image secondary">
+
+        <!--
+        Board layout showing the 9 Rasa zones:
+
+        <img
+            src="../images/taru-board-layout.jpg"
+            alt="Taru board layout with the nine Rasa zones"
+        >
+        -->
+
+    </div>
+
+
+    <div class="project-content">
+
+        <p class="content-label">
+            08 / Gameplay
+        </p>
+
+        <h2>
+            Gameplay
+        </h2>
+
+        <h3>Objective</h3>
+        <p class="tight">
+            Travel through all 9 Navarasa zones, explore each
+            expression, and collect tokens by guessing emotions
+            correctly. The player who finishes all 9 zones first and
+            has the most tokens wins!
+        </p>
+
+        <h3>Setup</h3>
+        <ul class="tight">
+            <li>Each player gets 1 token piece and 10 tokens.</li>
+            <li>Place all pieces at the start.</li>
+            <li>The dice contains numbers 1, 2 and 3 (repeated).</li>
+        </ul>
+
+        <h3>Winning the game</h3>
+        <p>
+            The game ends when a player completes all 9 emotion
+            zones. The first player to finish all zones with the most
+            tokens is the winner.
+        </p>
+
+
+        <!-- FLOW OF GAME -->
+
+        <p class="content-label">
+            09 / Flow of the game
+        </p>
+
+        <h2>
+            Flow of the game
+        </h2>
+
+        <ol>
+
+            <li>
+                Introduce yourselves — each player says their name or
+                a fun fact.
+            </li>
+
+            <li>
+                Roll the dice. Only if you roll a 1 can you enter the
+                first zone (Rasa 1).
+            </li>
+
+            <li>
+                Move your piece forward based on your dice number.
+            </li>
+
+            <li>
+                When you enter a zone, notice the facial expression
+                shown on the board for that Rasa (e.g. Joy, Fear,
+                Anger).
+            </li>
+
+            <li>
+                The Helper plays a short story or scenario — it
+                matches the emotion of the zone.
+            </li>
+
+            <li>
+                The player listens to the story and chooses a matching
+                card that shows the expression or emotion.
+            </li>
+
+            <li>
+                The player then reads or hears the scenario again and
+                guesses which emotion it represents.
+            </li>
+
+            <li>
+                The Helper asks: "What emotion is that?"
+            </li>
+
+            <li>
+                If the player guesses correctly, they get 2 tokens.
+            </li>
+
+            <li>
+                If the player guesses wrong, they give 1 token to each
+                other player.
+            </li>
+
+        </ol>
+
+    </div>
+
+
+    <!-- APP INTERFACE -->
+
+    <div class="project-image">
+
+        <!--
+        App login / sign-up and story category screens:
+
+        <img
+            src="../images/taru-app-interface.jpg"
+            alt="Taru companion app interface"
+        >
+        -->
+
+    </div>
+
+
+    <div class="project-content">
+
+        <p class="content-label">
+            10 / App interface
+        </p>
+
+        <h2>
+            App interface
+        </h2>
+
+        <p>
+
+            Alongside the physical board game, Taru extends into a
+            companion app.
+
+        </p>
+
+        <h3>App features</h3>
+        <ul>
+
+            <li>Digital version of the board game.</li>
+            <li>Animated stories with voice narration.</li>
+            <li>Touch-based emotion selection.</li>
+            <li>
+                Progress tracking for emotion-recognition improvement.
+            </li>
+            <li>Music therapy for calming sensations.</li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- LEARNINGS -->
+
+    <div class="project-image secondary">
+
+        <!--
+        Kids playing / testing the board game:
+
+        <img
+            src="../images/taru-playtest.jpg"
+            alt="Children playing the Taru board game"
+        >
+        -->
+
+    </div>
+
+
+    <div class="project-content">
+
+        <p class="content-label">
+            11 / Learnings of the board game
+        </p>
+
+        <h2>
+            Learnings of the board game
+        </h2>
+
+        <h3>Recognising expressions</h3>
+        <p class="tight">
+            Helps children identify facial expressions, tones and
+            situational cues through storytelling and illustrations.
+        </p>
+
+        <h3>A non-judgmental environment</h3>
+        <p class="tight">
+            Provides a non-judgmental environment to express and
+            guess emotions through structured play.
+        </p>
+
+        <h3>Non-overwhelming interactions</h3>
+        <p>
+            Controlled dice numbers, visuals and storytelling ensure
+            non-overwhelming interactions.
+        </p>
+
+
+        <!-- CONCLUSION -->
+
+        <p class="content-label">
+            12 / Conclusion
+        </p>
+
+        <h2>
+            Conclusion
+        </h2>
+
+        <p>
+
+            By completing the game, the player gains a better
+            understanding of different emotions, learns how to express
+            them, and builds confidence in recognising feelings in
+            themselves and others.
+
+        </p>
+
+        <ul>
+
+            <li>
+                They gain confidence in social interactions by
+                practising expressions in a safe, playful environment.
+            </li>
+
+            <li>
+                The game helps improve self-regulation and emotional
+                control, as players learn to recognise emotions before
+                reacting.
+            </li>
+
+            <li>
+                It encourages empathy, making it easier to understand
+                what others may be feeling based on expressions.
+            </li>
+
+        </ul>
 
     </div>
 
@@ -1112,7 +1658,6 @@ footer {
 
 
 </div>
-```
 
 </section>
 
@@ -1122,7 +1667,6 @@ footer {
 
 <footer>
 
-```
 <span class="footer-text">
 
     Vaishnavi Venkatesh
@@ -1161,7 +1705,6 @@ footer {
 
 
 </div>
-```
 
 </footer>
 

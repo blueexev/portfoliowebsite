@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Project Four Title — Vaishnavi Venkatesh</title>
+<title>Project Iti — Vaishnavi Venkatesh</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 
 <style>
 
@@ -284,6 +285,7 @@ a {
 .project-main-title {
 
     font-family:
+        "Montserrat",
         "Quano",
         "Bodoni Moda",
         "Cormorant Garamond",
@@ -319,6 +321,8 @@ a {
     line-height: 1.8;
 
     color: #68635d;
+
+    font-style: italic;
 
 }
 
@@ -475,6 +479,13 @@ a {
 
 .content-label {
 
+    font-family:
+        "Montserrat",
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
+
     font-size: 8px;
 
     text-transform: uppercase;
@@ -493,6 +504,7 @@ a {
 .project-content h2 {
 
     font-family:
+        "Montserrat",
         "Quano",
         "Bodoni Moda",
         "Cormorant Garamond",
@@ -508,6 +520,28 @@ a {
     line-height: 1;
 
     margin-bottom: 25px;
+
+}
+
+/* SUB-HEADINGS (gameplay steps / kit items / learnings) */
+
+.project-content h3 {
+
+    font-family:
+        "Montserrat",
+        "Quano",
+        "Bodoni Moda",
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 17px;
+
+    font-weight: 500;
+
+    letter-spacing: -.01em;
+
+    margin-bottom: 12px;
 
 }
 
@@ -528,6 +562,12 @@ a {
 
 }
 
+.project-content p.tight {
+
+    margin-bottom: 30px;
+
+}
+
 
 /* ========================================================
    LIST
@@ -540,6 +580,14 @@ a {
     margin-bottom: 90px;
 
     padding-left: 18px;
+
+}
+
+.project-content ul.tight {
+
+    margin-top: 0;
+
+    margin-bottom: 30px;
 
 }
 
@@ -799,7 +847,6 @@ footer {
 
 <nav class="site-nav">
 
-```
 <div class="nav-inner">
 
 
@@ -841,7 +888,6 @@ footer {
 
 
 </div>
-```
 
 </nav>
 
@@ -851,7 +897,6 @@ footer {
 
 <header class="project-hero">
 
-```
 <div class="page-width">
 
     <div class="project-hero-content">
@@ -867,22 +912,23 @@ footer {
 
         <p class="collection-label">
 
-            Work 04 / Selected Work
+            Selected Work
 
         </p>
 
 
         <h1 class="project-main-title">
 
-            Project Four Title
+            Project Iti
 
         </h1>
 
 
         <p class="project-intro">
 
-            A one-sentence summary of what this project
-            is and why it exists.
+            "How might we turn Indian folktales into an interactive
+            experience where children don't just hear the story —
+            they build, shape and perform it?"
 
         </p>
 
@@ -891,6 +937,8 @@ footer {
 
         <div class="project-meta">
 
+            <!-- Timeline and Link weren't specified in the source PDF —
+                 edit as needed. -->
 
             <div class="meta-item">
 
@@ -899,7 +947,7 @@ footer {
                 </span>
 
                 <span class="meta-value">
-                    Designer &amp; Developer
+                    Concept / Product Design / Fabrication
                 </span>
 
             </div>
@@ -925,7 +973,7 @@ footer {
                 </span>
 
                 <span class="meta-value">
-                    React, Figma, Node.js
+                    AR / Physical Prototyping / Illustration
                 </span>
 
             </div>
@@ -945,7 +993,7 @@ footer {
                         rel="noopener"
                         style="text-decoration: underline;"
                     >
-                        Live site ↗
+                        Project link ↗
                     </a>
 
                 </span>
@@ -959,7 +1007,6 @@ footer {
     </div>
 
 </div>
-```
 
 </header>
 
@@ -971,7 +1018,6 @@ footer {
 
 <section class="project-body">
 
-```
 <div class="page-width">
 
 
@@ -980,11 +1026,11 @@ footer {
     <div class="project-image">
 
         <!--
-        Replace with your actual project image:
+        Hero shot — the Iti puppet theatre kit / packaging:
 
         <img
-            src="../images/project-4.jpg"
-            alt="Project Four cover"
+            src="../images/iti-hero.jpg"
+            alt="Project Iti — DIY puppet theatre kit"
         >
         -->
 
@@ -994,80 +1040,282 @@ footer {
     <div class="project-content">
 
 
-        <!-- THE BRIEF -->
+        <!-- CONTEXT -->
 
         <p class="content-label">
-            01 / The brief
+            01 / Context
         </p>
 
 
         <h2>
-            The brief
+            Context
         </h2>
 
 
         <p>
 
-            Describe the problem you were solving or the
-            goal you set for yourself. Who was this for,
-            and what did they need? Keep this to a short,
-            clear paragraph.
+            Inspired by India's deep-rooted storytelling traditions —
+            ranging from folk theatre and puppetry to oral narratives
+            passed down through generations — I created Iti as a way
+            to help children reconnect with this rich cultural
+            heritage in a contemporary format. India is known for its
+            diverse traditional art forms like puppetry, folklore and
+            regional storytelling practices, but many of these are
+            slowly fading in today's digital age.
 
         </p>
 
 
-        <!-- WHAT I DID -->
+        <!-- THE PROBLEM -->
 
         <p class="content-label">
-            02 / Process
+            02 / The problem
         </p>
 
 
         <h2>
-            What I did
+            The problem
         </h2>
 
 
         <p>
 
-            Walk through your process — research, design
-            decisions, technical choices. This is the
-            section where you explain your thinking, not
-            just what the final thing looks like.
+            Children often experience stories by simply listening or
+            watching. I wanted to explore how storytelling could
+            become something they build, touch, change and perform
+            themselves.
 
         </p>
 
+
+        <!-- THE GAME -->
+
+        <p class="content-label">
+            03 / The game
+        </p>
+
+
+        <h2>
+            The game
+        </h2>
+
+
+        <p>
+
+            Iti is an interactive storytelling game and DIY theatre
+            kit designed to help children rediscover India's rich
+            cultural roots through folktales and performance. Blending
+            craft, play and technology, Iti encourages young minds to
+            create, imagine and connect with traditional stories in a
+            modern way.
+
+        </p>
+
+        <p>
+
+            Each child becomes both a creator and performer — building
+            their own miniature puppet theatre, crafting characters,
+            exploring them in 3D through AR, and finally bringing the
+            tale to life through a dramatic act. An added AR layer
+            lets them bring their handmade puppets to life in 3D,
+            blending traditional storytelling with digital wonder.
+
+        </p>
+
+
+    </div>
+
+
+    <!-- INSPIRATION -->
+
+    <div class="project-image secondary">
+
+        <!--
+        Inspiration references — Indian puppet theatre, shadow and
+        string puppetry, folk art motifs:
+
+        <img
+            src="../images/iti-inspiration.jpg"
+            alt="Inspiration references for Project Iti"
+        >
+        -->
+
+    </div>
+
+
+    <div class="project-content">
+
+        <p class="content-label">
+            04 / Inspiration
+        </p>
+
+        <h2>
+            Inspiration
+        </h2>
+
+        <p>
+
+            Drawing from traditional Indian puppet theatre — especially
+            shadow puppetry and string puppetry — the mood is rooted
+            in drama, folklore and handcrafted aesthetics. The stage
+            compositions, rich textiles and ornamental frames reflect
+            the essence of live folk performances, where storytelling
+            unfolds through movement, light and silhouette.
+
+        </p>
+
+
+        <!-- EXPERIENCE OF THE GAMEPLAY -->
+
+        <p class="content-label">
+            05 / Experience of the gameplay
+        </p>
+
+        <h2>
+            Experience of the gameplay
+        </h2>
+
+        <h3>Make</h3>
+        <p class="tight">
+            Children build their personal mini theatre using pre-cut
+            materials from the kit.
+        </p>
+
+        <h3>Create</h3>
+        <p class="tight">
+            They design and decorate character puppets inspired by
+            folktales.
+        </p>
+
+        <h3>Discover</h3>
+        <p class="tight">
+            Using AR, they scan activation cards to explore their
+            characters coming to life.
+        </p>
+
+        <h3>Perform</h3>
+        <p>
+            With dialogue flashcards, they enact the story as a full
+            theatre act — learning moral lessons, emotions and cultural
+            nuances of our country through play and game.
+        </p>
+
+    </div>
+
+
+    <!-- WHAT IS INSIDE THE KIT -->
+
+    <div class="project-image">
+
+        <!--
+        Kit contents laid out — theatre stage, templates, cards,
+        booklet:
+
+        <img
+            src="../images/iti-kit-contents.jpg"
+            alt="What is inside the Iti kit"
+        >
+        -->
+
+    </div>
+
+
+    <div class="project-content">
+
+        <p class="content-label">
+            06 / What is inside the kit?
+        </p>
+
+        <h2>
+            What is inside the kit?
+        </h2>
 
         <ul>
 
             <li>
-                Key step or decision one
+                DIY Theatre Kit — pre-cut materials and assembly guides
+                to build a personal mini stage.
             </li>
 
             <li>
-                Key step or decision two
+                Character Templates — blank puppets and cutouts to
+                design, decorate and personalize.
             </li>
 
             <li>
-                Key step or decision three
+                Cultural Insight Cards — fun facts and short learning
+                prompts about regions and folklore origins.
+            </li>
+
+            <li>
+                Story Flashcards — traditional Indian folktales broken
+                down into acts and dialogues.
+            </li>
+
+            <li>
+                AR Activation Cards — scan to view your characters come
+                alive in 3D through an AR feature.
+            </li>
+
+            <li>
+                Instruction Booklet — step-by-step guide for setup and
+                performance.
             </li>
 
         </ul>
 
 
+        <!-- MAKING STORYTELLING INTERACTIVE -->
+
+        <p class="content-label">
+            07 / Making storytelling interactive
+        </p>
+
+        <h2>
+            Making storytelling interactive
+        </h2>
+
+        <p>
+
+            Instead of giving children one fixed way to tell the
+            story, Iti gives them pieces to experiment with. They can
+            choose characters, arrange the stage, use dialogue cards
+            and perform the story in their own way.
+
+        </p>
+
+        <p>
+
+            The AR layer adds another dimension to the physical play.
+            Children can scan elements of the kit to discover
+            additional parts of the story, making the physical theatre
+            feel like it has another hidden layer.
+
+        </p>
+
+        <p>
+
+            Iti turns storytelling into a shared act of making and
+            performing. Children build something together, give
+            characters a voice and become part of the story instead of
+            simply watching it.
+
+        </p>
+
     </div>
 
 
-    <!-- SECOND PROJECT IMAGE -->
+    <!-- FINAL EXPERIENCE -->
 
     <div class="project-image secondary">
 
         <!--
-        Replace with your second project image:
+        Final experience — clay/3D-printed puppets and props from
+        the finished kit:
 
         <img
-            src="../images/project-4-process.jpg"
-            alt="Project Four process"
+            src="../images/iti-final-experience.jpg"
+            alt="Final experience — Iti puppets and props"
         >
         -->
 
@@ -1076,27 +1324,112 @@ footer {
 
     <div class="project-content">
 
-
-        <!-- THE OUTCOME -->
-
         <p class="content-label">
-            03 / The outcome
+            08 / Final experience
         </p>
 
+        <h2>
+            Final experience
+        </h2>
+
+    </div>
+
+
+    <!-- PACKAGING DESIGN -->
+
+    <div class="project-image">
+
+        <!--
+        Packaging design — die-line and finished box artwork:
+
+        <img
+            src="../images/iti-packaging.jpg"
+            alt="Iti packaging design"
+        >
+        -->
+
+    </div>
+
+
+    <div class="project-content">
+
+        <p class="content-label">
+            09 / Packaging design
+        </p>
 
         <h2>
-            The outcome
+            Packaging design
         </h2>
 
 
-        <p>
+        <!-- COLOR SCHEME -->
 
-            What happened as a result? Mention outcomes,
-            metrics, feedback, or simply what you learned
-            if it was a personal/academic project.
-
+        <p class="content-label">
+            10 / Color scheme
         </p>
 
+        <h2>
+            Color scheme
+        </h2>
+
+        <ul>
+
+            <li>#F47321</li>
+            <li>#05293E</li>
+            <li>#AE1F24</li>
+            <li>#FAC12A</li>
+            <li>#48451B</li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- WHAT KIDS LEARN -->
+
+    <div class="project-image secondary">
+
+        <!--
+        Kids playing with / performing with the finished kit:
+
+        <img
+            src="../images/iti-kids-learning.jpg"
+            alt="Children performing with the Iti kit"
+        >
+        -->
+
+    </div>
+
+
+    <div class="project-content">
+
+        <p class="content-label">
+            11 / What kids learn
+        </p>
+
+        <h2>
+            What kids learn
+        </h2>
+
+        <h3>Cultural learning</h3>
+        <p class="tight">
+            Discover Indian stories, characters and traditions.
+        </p>
+
+        <h3>Creativity &amp; imagination</h3>
+        <p class="tight">
+            Create their own stories and characters.
+        </p>
+
+        <h3>Teamwork</h3>
+        <p class="tight">
+            Build and play together.
+        </p>
+
+        <h3>Communication</h3>
+        <p>
+            Express ideas through dialogue and performance.
+        </p>
 
     </div>
 
@@ -1126,7 +1459,6 @@ footer {
 
 
 </div>
-```
 
 </section>
 
@@ -1136,7 +1468,6 @@ footer {
 
 <footer>
 
-```
 <span class="footer-text">
 
     Vaishnavi Venkatesh
@@ -1175,7 +1506,6 @@ footer {
 
 
 </div>
-```
 
 </footer>
 
