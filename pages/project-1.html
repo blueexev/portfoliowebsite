@@ -1,46 +1,83 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Dhanushkodi - A lost legend</title>
+<title>Dhanushkodi-A lost legend</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+    rel="stylesheet"
+>
 
 <style>
+
+/* ========================================================
+   FONT
+======================================================== */
+
 @font-face {
+
     font-family: "Montserrat";
-    src: url("../fonts/Montserrat-Regular.woff2")
-    format("woff2");
-    font-weight: 400;
+
+    src:
+        url("../fonts/Montserrat-Regular.woff2")
+        format("woff2");
+
+    font-weight: 200;
     font-style: normal;
 
 }
+
+
 @font-face {
+
     font-family: "Montserrat";
-    src: url("../fonts/Montserrat.woff2")
-    format("woff2");
-    font-weight: 400;
+
+    src:
+        url("../fonts/Montserrat.woff2")
+        format("woff2");
+
+    font-weight: 200;
     font-style: italic;
+
 }
+
+
+/* ========================================================
+   RESET
+======================================================== */
 
 * {
 
     margin: 0;
     padding: 0;
+
     box-sizing: border-box;
+
 }
+
 
 html {
+
     scroll-behavior: smooth;
+
 }
 
+
 body {
+
     background: #e9e4d9;
+
     color: #191817;
+
     font-family:
         "Helvetica Neue",
         Helvetica,
@@ -48,104 +85,199 @@ body {
         sans-serif;
 
     overflow-x: hidden;
+
 }
+
 
 a {
+
     color: inherit;
+
     text-decoration: none;
+
 }
+
 
 ::selection {
+
     background: #191817;
+
     color: #e9e4d9;
+
 }
 
+
+/* ========================================================
+   PAGE WIDTH
+======================================================== */
+
 .page-width {
-    width: min(
-        860px,
-        calc(100% - 200px)
-    );
+
+    width:
+        min(
+            860px,
+            calc(100% - 200px)
+        );
+
     margin: auto;
+
 }
+
+
+/* ========================================================
+   NAVIGATION
+======================================================== */
 
 .site-nav {
 
     position: fixed;
+
     top: 0;
     left: 0;
+
     width: 100%;
+
     z-index: 1000;
+
     padding: 26px 0;
 
 }
+
+
 .nav-inner {
 
-    width: min(
-        860px,
-        calc(100% - 200px)
-    );
+    width:
+        min(
+            860px,
+            calc(100% - 200px)
+        );
+
     margin: auto;
+
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
+
 }
+
 
 .artist-name {
+
     font-size: 12px;
+
     text-transform: uppercase;
+
     letter-spacing: .15em;
+
     font-weight: 500;
+
 }
+
+
 .nav-links {
+
     display: flex;
-    gap: 25px;
+
+    gap: 40px;
+
     list-style: none;
+
 }
+
 
 .nav-links a {
+
     font-size: 12px;
+
     text-transform: uppercase;
+
     letter-spacing: .12em;
+
     color: #77716a;
+
     transition:
         color .3s ease;
+
 }
+
 
 .nav-links a:hover {
+
     color: #191817;
+
 }
 
+
+/* ========================================================
+   PROJECT HERO
+======================================================== */
+
 .project-hero {
+
     min-height: 75vh;
+
     display: flex;
+
     align-items: center;
+
     padding:
-        150px 
+        150px
         100px;
 
 }
 
+
 .project-hero-content {
+
     width: 100%;
+
 }
+
+
+/* ========================================================
+   BACK LINK
+======================================================== */
+
 .back-link {
+
     display: inline-flex;
+
     align-items: center;
+
     gap: 8px;
+
     font-size: 10px;
+
     text-transform: uppercase;
+
     letter-spacing: .12em;
+
     color: #77716a;
+
     margin-bottom: 55px;
+
     transition:
         gap .3s ease,
         color .3s ease;
+
 }
 
+
 .back-link:hover {
+
     gap: 13px;
+
     color: #191817;
+
 }
+
+
+/* ========================================================
+   PROJECT TITLE
+======================================================== */
+
 .project-main-title {
 
     font-family:
@@ -156,115 +288,212 @@ a {
         serif;
 
     font-weight: 400;
+
     font-size:
-        clamp(50px, 7vw, 82px);
+        clamp(50px, 7vw, 60px);
+
     line-height: 1.50;
+
     letter-spacing: -.055em;
+
     max-width: 800px;
 
 }
+
+
+/* ========================================================
+   PROJECT INTRO
+======================================================== */
+
 .project-intro {
+
     max-width: 430px;
+
     margin-top: 35px;
+
     font-size: 13px;
+
     line-height: 1.8;
+
     color: #68635d;
+
 }
+
+
+/* ========================================================
+   PROJECT META
+======================================================== */
 
 .project-meta {
 
     display: grid;
+
     grid-template-columns:
         repeat(4, 1fr);
+
     gap: 25px;
+
     margin-top: 60px;
-    padding-top: 18px;
+
+    padding-top: 10px;
+
     border-top:
         1px solid
         rgba(25,24,23,.2);
+
 }
+
 
 .meta-item {
+
     min-width: 0;
+
 }
 
+
 .meta-label {
+
     display: block;
+
     font-size: 12px;
+
     text-transform: uppercase;
-    letter-spacing: 0.14em;
+
+    letter-spacing: .14em;
+
     color: #8a847c;
+
     margin-bottom: 8px;
 
 }
+
+
 .meta-value {
+
     font-size: 15px;
+
     line-height: 1.5;
+
 }
+
+
+/* ========================================================
+   MUSEUM RULE
+======================================================== */
 
 .museum-rule {
 
     width: 100%;
+
     height: 1px;
+
     background:
         rgba(25,24,23,.18);
 
 }
+
+
+/* ========================================================
+   PROJECT BODY
+======================================================== */
+
 .project-body {
+
     padding:
         50px 0
         140px;
 
 }
 
+
+/* ========================================================
+   PROJECT IMAGE
+======================================================== */
+
 .project-image {
+
     width: 100%;
+
     height: 520px;
+
     background: #d5cfc3;
+
     overflow: hidden;
-    margin-bottom: 110px;
+
+    margin-bottom: 90px;
+
 }
 
+
 .project-image img {
+
     width: 100%;
+
     height: 100%;
+
     object-fit: cover;
+
     display: block;
+
     filter:
         grayscale(20%)
         contrast(.95);
+
     transition:
         transform .8s
         cubic-bezier(.2,.7,.2,1),
         filter .8s ease;
+
 }
 
+
 .project-image:hover img {
+
     transform:
         scale(1.025);
+
     filter:
         grayscale(0%)
         contrast(1);
+
 }
+
+
+/* ========================================================
+   PROJECT CONTENT
+======================================================== */
 
 .project-content {
+
     max-width: 680px;
+
     margin: auto;
+
 }
 
+
 .content-label {
+
     font-family:
         "Montserrat",
         "Helvetica Neue",
         Helvetica,
         Arial,
         sans-serif;
+
     font-size: 12px;
+
     text-transform: uppercase;
+
     letter-spacing: .15em;
+
     color: #77716a;
+
     margin-bottom: 25px;
+
 }
+
+
 .project-content h2 {
 
     font-family:
@@ -275,85 +504,1204 @@ a {
         serif;
 
     font-size: 30px;
+
     font-weight: 400;
-    letter-spacing: 0.005em;
+
+    letter-spacing: .005em;
+
     line-height: 1;
+
     margin-bottom: 25px;
+
 }
 
+
 .project-content h3 {
+
     font-family:
         "Montserrat",
         "Bodoni Moda",
         "Cormorant Garamond",
         Georgia,
         serif;
-    font-size: 17px;
+
+    font-size: 20px;
+
     font-weight: 500;
-    letter-spacing: 0.005em;
+
+    letter-spacing: .005em;
+
     margin-bottom: 12px;
+
 }
 
-
-/* PARAGRAPHS */
 
 .project-content p {
 
-    max-width: 560px;
+    max-width: 1950px;
 
-    font-size: 13px;
+    font-size: 15px;
 
-    line-height: 1.9;
+    line-height: 1.8;
 
     color: #66615b;
 
-    margin-bottom: 70px;
+    margin-bottom: 30px;
 
 }
+
+
+.intro-statement {
+
+    max-width: 680px;
+
+    margin:
+        0 auto
+        90px;
+
+}
+
+
+.intro-statement p {
+
+    max-width: 800px;
+
+    font-family:
+        "Montserrat",
+        Georgia,
+        serif;
+
+    font-size: 30px;
+
+    line-height: 1.35;
+
+    letter-spacing: .08em;
+
+    color: #191817;
+
+}
+
+
+/* ========================================================
+   TIGHT PARAGRAPHS
+======================================================== */
 
 .project-content p.tight {
+
     margin-bottom: 30px;
+
 }
+
+
+/* ========================================================
+   NORMAL LISTS
+======================================================== */
 
 .project-content ul {
-    margin-top: -40px;
-    margin-bottom: 90px;
-    padding-left: 18px;
+
+    margin-top: 0;
+
+    margin-bottom: 55px;
+
+    padding-left: 20px;
+
 }
+
 
 .project-content li {
+
     font-size: 13px;
+
     line-height: 1.9;
+
     color: #66615b;
+
     padding-left: 5px;
+
+    margin-bottom: 12px;
+
 }
+
+
+/* ========================================================
+   IMPACT GRID
+======================================================== */
+
+.impact-grid {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    column-gap: 55px;
+
+    row-gap: 0;
+
+    margin-top: 35px;
+
+    margin-bottom: 55px;
+
+    padding: 0;
+
+    list-style: none;
+
+}
+
+
+.impact-grid li {
+
+    border-top:
+        1px solid
+        rgba(25,24,23,.20);
+
+    padding:
+        20px 5px
+        25px;
+
+    margin: 0;
+
+    font-size: 14px;
+
+    line-height: 1.75;
+
+    letter-spacing: .08em;
+
+    color: #191817;
+
+    text-align: center;
+
+}
+
+
+/* REMOVE BULLETS */
+
+.impact-grid li::before {
+
+    content: none;
+
+}
+
+
+/* ========================================================
+   IMPACT GRID SECOND ROW
+======================================================== */
+
+/*
+   First row:
+   1 | 2 | 3
+
+   Second row:
+   4 |   | 5
+*/
+
+.impact-grid li:nth-child(4) {
+
+    grid-column: 1;
+
+}
+
+
+.impact-grid li:nth-child(5) {
+
+    grid-column: 3;
+
+}
+
+
+/* ========================================================
+   MULTISENSORY INFORMATION GRID
+======================================================== */
+
+.multisensory-grid {
+
+    max-width: 860px;
+
+    margin:
+        100px auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    column-gap: 90px;
+
+    align-items: start;
+
+}
+
+
+.multisensory-heading {
+
+    border-top:
+        1px solid
+        rgba(25,24,23,.25);
+
+    padding-top: 20px;
+
+}
+
+
+.multisensory-heading .content-label {
+
+    margin-bottom: 35px;
+
+}
+
+
+.multisensory-heading h2 {
+
+    font-family:
+        "Montserrat",
+        "Bodoni Moda",
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 38px;
+
+    font-weight: 400;
+
+    line-height: 1.15;
+
+    letter-spacing: .01em;
+
+}
+
+
+.multisensory-points {
+
+    border-top:
+        1px solid
+        rgba(25,24,23,.25);
+
+    padding-top: 20px;
+
+}
+
+
+.multisensory-points ul {
+
+    list-style: none;
+
+    padding: 0;
+
+    margin: 0;
+
+}
+
+
+.multisensory-points li {
+
+    position: relative;
+
+    padding-left: 22px;
+
+    margin-bottom: 25px;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    color: #66615b;
+
+}
+
+
+.multisensory-points li::before {
+
+    content: "•";
+
+    position: absolute;
+
+    left: 0;
+
+    top: 0;
+
+    color: #66615b;
+
+}
+
+
+/* ========================================================
+   SECONDARY IMAGE
+======================================================== */
 
 .project-image.secondary {
+
     margin:
         20px 0
-        110px;
+        90px;
+
+    height: 400px;
+
+}
+
+
+/* ========================================================
+   MULTISENSORY IMAGE PAIR
+======================================================== */
+
+.multisensory-image-grid {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 20px;
+
+    margin:
+        0 0
+        90px;
+
+}
+
+
+.multisensory-image {
+
+    width: 100%;
+
+    height: 300px;
+
+    background: #d5cfc3;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.multisensory-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+
+}
+
+
+/* ========================================================
+   GESTURE IMAGE PAIR
+======================================================== */
+
+.gesture-image-grid {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 20px;
+
+    margin:
+        20px 0
+        90px;
+
+}
+
+
+.gesture-image {
+
+    width: 100%;
+
+    height: 300px;
+
+    background: #d5cfc3;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.gesture-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+
+}
+
+
+/* ========================================================
+   SENSES SECTION
+======================================================== */
+
+.senses-section {
+
+    max-width: 860px;
+
+    margin: 100px auto;
+
+}
+
+
+.senses-section > .content-label {
+
+    margin-bottom: 25px;
+
+}
+
+
+.senses-section > h2 {
+
+    font-family:
+        "Montserrat",
+        "Bodoni Moda",
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 38px;
+
+    font-weight: 400;
+
+    line-height: 1.15;
+
+    letter-spacing: .01em;
+
+}
+
+
+/* ========================================================
+   SENSES GRID
+======================================================== */
+
+.senses-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    column-gap: 70px;
+
+    row-gap: 70px;
+
+    margin-top: 50px;
+
+}
+
+
+/* ========================================================
+   INDIVIDUAL SENSE
+======================================================== */
+
+.sense-item {
+
+    border-top:
+        1px solid
+        rgba(25,24,23,.25);
+
+    padding-top: 20px;
+
+}
+
+
+.sense-number {
+
+    font-size: 10px;
+
+    letter-spacing: .12em;
+
+    text-transform: uppercase;
+
+    color: #8a847c;
+
+    margin-bottom: 25px;
+
+}
+
+
+.sense-item h3 {
+
+    font-family:
+        "Montserrat",
+        "Bodoni Moda",
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 24px;
+
+    font-weight: 400;
+
+    line-height: 1.2;
+
+    margin-bottom: 18px;
+
+}
+
+
+.sense-item p {
+
+    max-width: 100%;
+
+    font-size: 13px;
+
+    line-height: 1.9;
+
+    color: #66615b;
+
+    margin-bottom: 0;
+
+}
+
+
+/* ========================================================
+   ASSETS GRID
+======================================================== */
+
+.image-grid-6 {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        1.3fr 1fr 1fr;
+
+    gap: 20px;
+
+    margin:
+        50px 0
+        90px 0;
+
+}
+
+
+.image-grid-6 .image-placeholder {
+
+    width: 100%;
+
+    height: 300px;
+
+    background: transparent;
+
+    border: none;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    overflow: hidden;
+
+}
+
+
+.image-grid-6 .image-placeholder img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    object-position: left center;
+
+    display: block;
+
+}
+
+
+/* ========================================================
+   BOAT IMAGE
+======================================================== */
+
+.image-grid-6 .boat-image {
+
+    height: 400px;
+
+    justify-content: flex-start;
+
+    overflow: visible;
+
+}
+
+
+.image-grid-6 .boat-image img {
+
+    width: 150%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    object-position: left center;
+
+    display: block;
+
+    transform:
+        translateX(-100px)
+        translateY(-50px);
+
+    transform-origin:
+        left center;
+
+}
+
+
+/* ========================================================
+   CHURCH IMAGE
+======================================================== */
+
+.image-grid-6 .church-image {
+
+    overflow: visible;
+
+}
+
+
+.image-grid-6 .church-image img {
+
+    width: 300%;
+
+    height: 350%;
+
+    object-fit: contain;
+
+    object-position: left center;
+
+    display: block;
+
+    transform:
+        translateX(-150px);
+
+    transform-origin:
+        left center;
+
+}
+
+
+/* ========================================================
+   HOUSE IMAGE
+======================================================== */
+
+.image-grid-6 .house-image {
+
+    height: 400px;
+
+    overflow: visible;
+
+    justify-content: flex-start;
+
+}
+
+
+.image-grid-6 .house-image img {
+
+    width: 180%;
+
+    height: 250%;
+
+    object-fit: contain;
+
+    object-position: left center;
+
+    display: block;
+
+    transform:
+        translateX(150px)
+        translateY(150px)
+        scaleX(-1);
+
+    transform-origin:
+        left center;
+
+}
+
+
+/* ========================================================
+   ROCK STRUCTURE IMAGE
+======================================================== */
+
+.image-grid-6 .rock-structure-image {
+
+    height: 400px;
+
+    justify-content: flex-start;
+
+    overflow: visible;
+
+}
+
+
+.image-grid-6 .rock-structure-image img {
+
+    width: 250%;
+
+    height: 200%;
+
+    object-fit: contain;
+
+    object-position: left center;
+
+    display: block;
+
+    transform:
+        translateX(-250px)
+        translateY(-55px);
+
+    transform-origin:
+        left center;
+
+}
+
+
+/* ========================================================
+   MANDIR IMAGE
+======================================================== */
+
+.image-grid-6 .mandir-image {
+
+    height: 400px;
+
+    justify-content: flex-start;
+
+    overflow: visible;
+
+}
+
+
+.image-grid-6 .mandir-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    object-position: left center;
+
+    display: block;
+
+    transform:
+        translateX(250px)
+        translateY(-50px)
+        scaleX(-1);
+
+    transform-origin:
+        left center;
+
+}
+
+
+/* ========================================================
+   UNITY WORLD IMAGE LAYOUT
+======================================================== */
+
+.unity-world-grid {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 20px;
+
+    margin:
+        50px 0
+        90px 0;
+
+}
+
+
+.unity-world-image {
+
+    width: 100%;
+
+    height: 360px;
+
+    background: transparent;
+
+    overflow: hidden;
+
+}
+
+
+.unity-world-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+
+
+.unity-world-top {
+
+    grid-column:
+        1 / -1;
 
     height: 430px;
+
 }
+
+
+.unity-world-bottom {
+
+    height: 360px;
+
+}
+
+
+/* ========================================================
+   WORLDBUILDING 4 IMAGE GRID
+======================================================== */
+
+.worldbuilding-image-grid {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 20px;
+
+    margin:
+        50px 0
+        90px 0;
+
+}
+
+
+.worldbuilding-image {
+
+    width: 100%;
+
+    height: 300px;
+
+    background: #d5cfc3;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.worldbuilding-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+
+}
+
+
+/* ========================================================
+   VIDEO BASED STORYTELLING
+   MONTESERRAT FONT
+======================================================== */
+
+.story-location {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 60px;
+
+    align-items: center;
+
+    margin:
+        90px 0;
+
+    font-family:
+        "Montserrat",
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
+
+}
+
+
+.story-location-content {
+
+    border-top:
+        1px solid
+        rgba(25,24,23,.25);
+
+    padding-top: 20px;
+
+}
+
+
+.story-location-content .content-label {
+
+    margin-bottom: 25px;
+
+    font-family:
+        "Montserrat",
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
+
+}
+
+
+.story-location-content p {
+
+    max-width: 100%;
+
+    margin-bottom: 0;
+
+    font-family:
+        "Montserrat",
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    color: #66615b;
+
+}
+
+
+.story-location-image {
+
+    width: 100%;
+
+    height: 380px;
+
+    background: #d5cfc3;
+
+    overflow: hidden;
+
+}
+
+
+.story-location-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+
+
+/* ========================================================
+   ALTERNATING STORY ROWS
+======================================================== */
+
+.story-location.reverse {
+
+    grid-template-columns:
+        1fr 1fr;
+
+}
+
+
+.story-location.reverse .story-location-content {
+
+    order: 2;
+
+}
+
+
+.story-location.reverse .story-location-image {
+
+    order: 1;
+
+}
+
+
+/* ========================================================
+   EXHIBITION PHOTO GRID
+======================================================== */
+
+.exhibition-grid {
+
+    width: 100%;
+
+    margin:
+        50px 0
+        100px;
+
+}
+
+
+/* ========================================================
+   EXHIBITION TOP ROW
+======================================================== */
+
+.exhibition-top {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr 1fr;
+
+    gap: 20px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.exhibition-top .exhibition-image {
+
+    width: 100%;
+
+    height: 330px;
+
+    background: #d5cfc3;
+
+    overflow: hidden;
+
+}
+
+
+.exhibition-top .exhibition-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+
+
+/* ========================================================
+   EXHIBITION BOTTOM ROW
+======================================================== */
+
+.exhibition-bottom {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1.4fr;
+
+    gap: 20px;
+
+}
+
+
+.exhibition-bottom .exhibition-image {
+
+    width: 100%;
+
+    height: 300px;
+
+    background: #d5cfc3;
+
+    overflow: hidden;
+
+}
+
+
+.exhibition-bottom .exhibition-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+
+
+/* ========================================================
+   PROJECT NAVIGATION
+======================================================== */
 
 .project-navigation {
 
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
-    margin-top: 120px;
+
+    margin-top: 100px;
+
     padding-top: 25px;
+
     border-top:
         1px solid
         rgba(25,24,23,.18);
+
 }
+
+
+/* ========================================================
+   FOOTER
+======================================================== */
 
 footer {
 
-    width: min(
-        860px,
-        calc(100% - 200px)
-    );
+    width:
+        min(
+            860px,
+            calc(100% - 200px)
+        );
 
     margin: auto;
 
@@ -371,40 +1719,72 @@ footer {
 
 }
 
+
 .footer-text {
+
     font-size: 10px;
+
     color: #8a847c;
+
     text-transform: uppercase;
+
     letter-spacing: .1em;
+
 }
+
 
 .footer-links {
+
     display: flex;
+
     gap: 50px;
+
 }
+
 
 .footer-links a {
+
     font-size: 10px;
+
     text-transform: uppercase;
+
     letter-spacing: .1em;
+
 }
 
+
+/* ========================================================
+   MOBILE
+======================================================== */
+
 @media(max-width: 760px) {
+
+
     .page-width,
     .nav-inner,
     footer {
+
         width:
             calc(100% - 40px);
+
     }
+
+
     .site-nav {
+
         padding:
             20px 0;
+
     }
+
+
     .nav-links {
 
         display: none;
 
     }
+
+
     .project-hero {
 
         min-height: auto;
@@ -412,609 +1792,1632 @@ footer {
         padding:
             130px 0
             80px;
+
     }
+
+
     .back-link {
+
         margin-bottom: 45px;
+
     }
+
+
     .project-main-title {
+
         font-size:
             clamp(45px, 14vw, 70px);
+
     }
+
+
     .project-meta {
+
         grid-template-columns:
             1fr 1fr;
+
         gap: 30px;
+
         margin-top: 50px;
+
     }
+
+
     .project-body {
+
         padding:
             80px 0
             100px;
 
     }
+
+
     .project-image {
+
         height: 150px;
-        margin-bottom: 80px;
+
+        margin-bottom: 70px;
+
     }
+
+
     .project-content h2 {
+
         font-size: 25px;
+
     }
+
+
     .project-content p {
-        margin-bottom: 55px;
+
+        margin-bottom: 50px;
+
     }
-    .project-image.secondary {
-        height: 300px;
+
+
+    /* ====================================================
+       INTRO MOBILE
+    ==================================================== */
+
+    .intro-statement {
+
+        margin-bottom: 70px;
+
+    }
+
+
+    .intro-statement p {
+
+        font-size: 24px;
+
+        line-height: 1.4;
+
+        letter-spacing: .05em;
+
+    }
+
+
+    /* ====================================================
+       MULTISENSORY MOBILE
+    ==================================================== */
+
+    .multisensory-grid {
+
+        grid-template-columns: 1fr;
+
+        row-gap: 55px;
+
+        margin:
+            80px auto;
+
+    }
+
+
+    .multisensory-heading h2 {
+
+        font-size: 30px;
+
+    }
+
+
+    .multisensory-points li {
+
+        font-size: 14px;
+
+    }
+
+
+    /* ====================================================
+       MULTISENSORY IMAGE MOBILE
+    ==================================================== */
+
+    .multisensory-image-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
         margin:
             0 0
-            80px;
+            70px;
 
     }
 
+
+    .multisensory-image {
+
+        height: 220px;
+
+    }
+
+
+    /* ====================================================
+       GESTURE IMAGE MOBILE
+    ==================================================== */
+
+    .gesture-image-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+        margin:
+            20px 0
+            70px;
+
+    }
+
+
+    .gesture-image {
+
+        height: 220px;
+
+    }
+
+
+    /* ====================================================
+       SENSES MOBILE
+    ==================================================== */
+
+    .senses-section {
+
+        margin:
+            80px auto;
+
+    }
+
+
+    .senses-section > h2 {
+
+        font-size: 30px;
+
+    }
+
+
+    .senses-grid {
+
+        grid-template-columns: 1fr;
+
+        row-gap: 55px;
+
+        margin-top: 40px;
+
+    }
+
+
+    .sense-item h3 {
+
+        font-size: 22px;
+
+    }
+
+
+    /* ====================================================
+       IMPACT MOBILE
+    ==================================================== */
+
+    .impact-grid {
+
+        grid-template-columns:
+            1fr;
+
+        column-gap: 0;
+
+        row-gap: 0;
+
+        margin-top: 25px;
+
+    }
+
+
+    .impact-grid li {
+
+        grid-column: auto !important;
+
+        padding:
+            25px 15px;
+
+        font-size: 13px;
+
+    }
+
+
+    /* ====================================================
+       SECONDARY IMAGE MOBILE
+    ==================================================== */
+
+    .project-image.secondary {
+
+        height: 300px;
+
+        margin:
+            0 0
+            70px;
+
+    }
+
+
+    /* ====================================================
+       ASSETS MOBILE
+    ==================================================== */
+
+    .image-grid-6 {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        gap: 10px;
+
+        margin:
+            35px 0
+            70px;
+
+    }
+
+
+    .image-grid-6 .image-placeholder {
+
+        height: 150px;
+
+    }
+
+
+    .image-grid-6 .boat-image {
+
+        height: 200px;
+
+        overflow: visible;
+
+    }
+
+
+    .image-grid-6 .boat-image img {
+
+        width: 100%;
+
+        height: 100%;
+
+        object-fit: contain;
+
+        object-position: left center;
+
+        transform:
+            scale(1.25);
+
+        transform-origin:
+            left center;
+
+    }
+
+
+    .image-grid-6 .house-image img {
+
+        width: 120%;
+
+        height: 150%;
+
+        transform:
+            translateX(40px)
+            translateY(40px)
+            scaleX(-1);
+
+        transform-origin:
+            left center;
+
+    }
+
+
+    .image-grid-6 .rock-structure-image img {
+
+        width: 300%;
+
+        height: 250%;
+
+        object-fit: contain;
+
+        object-position: left center;
+
+        display: block;
+
+        transform:
+            translateX(250px)
+            translateY(-55px);
+
+        transform-origin:
+            left center;
+
+    }
+
+
+    .image-grid-6 .mandir-image img {
+
+        width: 120%;
+
+        height: 100%;
+
+        transform:
+            translateX(40px)
+            translateY(5px)
+            scaleX(-1);
+
+        transform-origin:
+            left center;
+
+    }
+
+
+    .image-grid-6 .image-placeholder span {
+
+        width: 100%;
+
+        height: 100%;
+
+        object-fit: contain;
+
+        object-position: left center;
+
+        transform:
+            scale(1.25);
+
+        transform-origin:
+            left center;
+
+    }
+
+
+    /* ====================================================
+       UNITY WORLD MOBILE
+    ==================================================== */
+
+    .unity-world-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 15px;
+
+        margin:
+            35px 0
+            70px;
+
+    }
+
+
+    .unity-world-top,
+    .unity-world-bottom {
+
+        grid-column: auto;
+
+        height: 260px;
+
+    }
+
+
+    /* ====================================================
+       WORLDBUILDING MOBILE
+    ==================================================== */
+
+    .worldbuilding-image-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 15px;
+
+        margin:
+            35px 0
+            70px;
+
+    }
+
+
+    .worldbuilding-image {
+
+        height: 220px;
+
+    }
+
+
+    /* ====================================================
+       VIDEO STORYTELLING MOBILE
+    ==================================================== */
+
+    .story-location,
+    .story-location.reverse {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 30px;
+
+        margin:
+            70px 0;
+
+    }
+
+
+    .story-location-content,
+    .story-location.reverse .story-location-content {
+
+        order: 1;
+
+    }
+
+
+    .story-location-image,
+    .story-location.reverse .story-location-image {
+
+        order: 2;
+
+        height: 260px;
+
+    }
+
+
+    /* ====================================================
+       EXHIBITION MOBILE
+    ==================================================== */
+
+    .exhibition-grid {
+
+        margin:
+            35px 0
+            70px;
+
+    }
+
+
+    .exhibition-top {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 15px;
+
+        margin-bottom: 15px;
+
+    }
+
+
+    .exhibition-bottom {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 15px;
+
+    }
+
+
+    .exhibition-top .exhibition-image,
+    .exhibition-bottom .exhibition-image {
+
+        height: 250px;
+
+    }
+
+
+    /* ====================================================
+       NAVIGATION MOBILE
+    ==================================================== */
 
     .project-navigation {
-        margin-top: 80px;
+
+        margin-top: 70px;
+
     }
+
+
+    /* ====================================================
+       FOOTER MOBILE
+    ==================================================== */
+
     footer {
+
         display: block;
+
     }
+
+
     .footer-links {
+
         margin-top: 15px;
+
     }
+
 }
+
 </style>
+
 </head>
+
+
 <body>
+
+
+<!-- ========================================================
+     NAVIGATION
+======================================================== -->
+
 <nav class="site-nav">
 
-<div class="nav-inner">
+    <div class="nav-inner">
 
-    <a
-        href="../index.html"
-        class="artist-name"
-    >
-        Vaishnavi Venkatesh
-    </a>
-    <ul class="nav-links">
+        <a
+            href="../index.html"
+            class="artist-name"
+        >
+            Vaishnavi Venkatesh
+        </a>
 
-        <li>
-            <a href="../index.html#work">
-                Work
-            </a>
-        </li>
-        <li>
-            <a href="../index.html#about">
-                About
-            </a>
-        </li>
-        <li>
-            <a href="../index.html#archive">
-                PLAYGROUND
-            </a>
-        </li>
-        <li>
-            <a href="../index.html#contact">
-                Contact
-            </a>
-        </li>
-    </ul>
-</div>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="../index.html#work">
+                    Work
+                </a>
+            </li>
+
+            <li>
+                <a href="../index.html#about">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="../index.html#archive">
+                    PLAYGROUND
+                </a>
+            </li>
+
+            <li>
+                <a href="../index.html#contact">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
 </nav>
 
+
+
+<!-- ========================================================
+     PROJECT HERO
+======================================================== -->
+
 <header class="project-hero">
-<div class="page-width">
 
-    <div class="project-hero-content">
-        <a
-            href="../index.html#work"
-            class="back-link"
-        >
-            #Back to selected work
-        </a>
-        <h1 class="project-main-title">
-            Dhanushkodi - the lost land
-        </h1>
-        <p class="project-intro">
-            A multisensory VR experience that reconstructs Dhanushkodi
-            through memory, place and the aftermath
-            of the 1964 cyclone.
-        </p>
+    <div class="page-width">
 
-        <div class="project-meta">
-            <div class="meta-item">
-                <span class="meta-label">
-                    Medium
-                </span>
-                <span class="meta-value">
-                   VR / 3D / Gesture Based Interactions
-                </span>
+        <div class="project-hero-content">
+
+            <a
+                href="../index.html#work"
+                class="back-link"
+            >
+                #Back to selected work
+            </a>
+
+
+            <h1 class="project-main-title">
+
+                Dhanushkodi-the lost land
+
+            </h1>
+
+
+            <p class="project-intro">
+
+                A multisensory VR experience that reconstructs
+                Dhanushkodi the almost southernmost tip of India through memory,
+                as a result of the aftermath of the 1964 cyclone.
+
+            </p>
+
+
+            <div class="project-meta">
+
+                <div class="meta-item">
+
+                    <span class="meta-label">
+                        Medium
+                    </span>
+
+                    <span class="meta-value">
+                        VR / 3D / Tangible and Gesture Based Interactions
+                    </span>
+
+                </div>
+
+
+                <div class="meta-item">
+
+                    <span class="meta-label">
+                        Role
+                    </span>
+
+                    <span class="meta-value">
+                        Concept / Experience Design / 3D Environment / Interaction
+                    </span>
+
+                </div>
+
+
+                <div class="meta-item">
+
+                    <span class="meta-label">
+                        Tools
+                    </span>
+
+                    <span class="meta-value">
+                        Unity / Blender / Arduino / Sensors
+                    </span>
+
+                </div>
+
+
+                <div class="meta-item">
+
+                    <span class="meta-label">
+                        Year
+                    </span>
+
+                    <span class="meta-value">
+                        2025
+                    </span>
+
+                </div>
 
             </div>
 
-
-            <div class="meta-item">
-                <span class="meta-label">
-                    Role
-                </span>
-                <span class="meta-value">
-                    Concept / Environment / 3D Assets
-                </span>
-            </div>
-
-            <div class="meta-item">
-                <span class="meta-label">
-                    Tools
-                </span>
-                <span class="meta-value">
-                    Unity / Blender / Arduino
-                </span>
-            </div>
-
-            <div class="meta-item">
-                <span class="meta-label">
-                    Year
-                </span>
-
-                <span class="meta-value">
-                    2025
-                </span>
-            </div>
         </div>
+
     </div>
-</div>
 
 </header>
+
+
+
 <div class="museum-rule"></div>
+
+
+
+<!-- ========================================================
+     PROJECT BODY
+======================================================== -->
+
 <section class="project-body">
+
 <div class="page-width">
+
+
+    <!-- ====================================================
+         HERO IMAGE
+    ==================================================== -->
 
     <div class="project-image">
 
-        <!--
-        Hero / establishing shot of Dhanushkodi coastline
-        (aerial / map view of the peninsula):
-
         <img
-            src="../images/dhanushkodi-coastline.jpg"
-            alt="Dhanushkodi coastline aerial view"
+            src="..\imagezz\map.png"
+            alt="map"
         >
-        -->
 
     </div>
 
+
+
+    <!-- ====================================================
+         INTRO STATEMENT
+    ==================================================== -->
+
+    <div class="project-content intro-statement">
+
+        <p>
+
+            How can we acknowledge, witness and communicate
+            the intangible memories of a vanished site?
+
+        </p>
+
+    </div>
+
+
+
+    <!-- ====================================================
+         01 / CONTEXT
+    ==================================================== -->
+
     <div class="project-content">
+
         <p class="content-label">
             01 / Context
         </p>
+
         <h2>
             Context
         </h2>
+
         <p>
-            Dhanushkodi is one of the southernmost towns in India, which
-            was once a thriving marketplace but was destroyed by a
-            cyclone that hit in 1964 and was later declared a ghost
-            town — making room for a lot of stories, religious
+
+            Dhanushkodi is one of the southernmost towns in India,
+            which was once a thriving marketplace but was destroyed
+            by a cyclone that hit in December 1964 and was later declared a
+            ghost town making room for a lot of stories, religious
             importance and myths about the place.
+
         </p>
-    </div>
-
-    <div class="project-image secondary">
-
-        <!--
-        Assets built — grid of 3D ruin assets
-        (boat, structure, church ruins etc):
-
-        <img
-            src="../images/assets-built.jpg"
-            alt="3D assets built for the Dhanushkodi VR world"
-        >
-        -->
 
     </div>
+
+
+
+    <!-- ====================================================
+         02 / ASSETS BUILT
+    ==================================================== -->
+
     <div class="project-content">
+
         <p class="content-label">
             02 / Assets built
         </p>
+
         <h2>
             Assets built
         </h2>
-    </div>
-
-    <div class="project-image">
-
-        <!--
-        Unity world built — screenshots of the environment
-        laid out in the Unity editor:
-
-        <img
-            src="../images/unity-world-built.jpg"
-            alt="Dhanushkodi environment built in Unity"
-        >
-        -->
 
     </div>
+
+
+    <div class="image-grid-6">
+
+        <div class="image-placeholder boat-image">
+
+            <img
+                src="../imagezz/boat.png"
+                alt="Boat 3D asset built for Dhanushkodi"
+            >
+
+        </div>
+
+
+        <div class="image-placeholder house-image">
+
+            <img
+                src="../imagezz/house.png"
+                alt="House 3D asset built for Dhanushkodi"
+            >
+
+        </div>
+
+
+        <div class="image-placeholder rock-structure-image">
+
+            <img
+                src="../imagezz/rock-structure.png"
+                alt="Rock structure 3D asset built for Dhanushkodi"
+            >
+
+        </div>
+
+
+        <div class="image-placeholder mandir-image">
+
+            <img
+                src="../imagezz/mandir.png"
+                alt="Mandir 3D asset built for Dhanushkodi"
+            >
+
+        </div>
+
+
+        <div class="image-placeholder church-image">
+
+            <img
+                src="../imagezz/church.png"
+                alt="Church 3D asset built for Dhanushkodi"
+            >
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ====================================================
+         03 / UNITY WORLD
+    ==================================================== -->
+
     <div class="project-content">
+
         <p class="content-label">
             03 / Unity world built
         </p>
+
         <h2>
             Unity world built
         </h2>
-    </div>
-
-    <div class="project-image secondary">
-
-        <!--
-        VR World screenshots — player POV as the archaeologist,
-        camera interaction, community spaces:
-
-        <img
-            src="../images/vr-world-screens.jpg"
-            alt="VR world screenshots showing player interactions"
-        >
-        -->
 
     </div>
+
+
+    <div class="unity-world-grid">
+
+        <div class="unity-world-image unity-world-top">
+
+            <img
+                src="../imagezz/unity world vr3.png"
+                alt="Top view of the Unity world"
+            >
+
+        </div>
+
+
+        <div class="unity-world-image unity-world-bottom">
+
+            <img
+                src="../imagezz/unity world vr1.png"
+                alt="Unity world environment view one"
+            >
+
+        </div>
+
+
+        <div class="unity-world-image unity-world-bottom">
+
+            <img
+                src="../imagezz/unity world vr2.png"
+                alt="Unity world environment view two"
+            >
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ====================================================
+         04 / VR WORLD
+    ==================================================== -->
+
     <div class="project-content">
+
         <p class="content-label">
             04 / VR World
         </p>
+
         <h2>
             Key insights and interactions
         </h2>
+
         <p>
-            The role of the player was that of an archaeologist from the
-            Government Survey of India.
+
+            The role of the player was that of an archaeologist
+            from the Government Survey of India.
+
         </p>
+
+
         <ul>
+
             <li>
+
                 A film camera "click" interaction let the user
                 photograph and document the VR world.
+
             </li>
+
+
             <li>
-                Important spaces of community interaction were built
-                into the VR world to help the user know more about the
-                place, Dhanushkodi.
+
+                Important spaces of community interaction were
+                built into the VR world to help the user know more
+                about the place, Dhanushkodi.
+
             </li>
+
         </ul>
 
-        <p class="content-label">
-            05 / Why make it multisensory?
-        </p>
-        <h2>
-            Why make it multisensory?
-        </h2>
-        <ul>
-            <li>
-                A natural and human way of interaction.
-            </li>
-            <li>
-                Makes users feel connected to Dhanushkodi's lost
-                memories.
-            </li>
-            <li>
-                Adds tactile / sensory feedback beyond VR hand tracking.
-            </li>
-            <li>
-                Bridges the gap between physical and virtual worlds.
-            </li>
-        </ul>
-    </div>
 
-    <div class="project-image">
+        <div class="unity-world-image unity-world-bottom">
 
-        <!--
-        Making it multisensory — narrative stills of the character
-        Arun revisiting Dhanushkodi:
+            <img
+                src="..\imagezz\key interactions1.png"
+                alt="Key interactions"
+            >
 
-        <img
-            src="../images/multisensory-narrative.jpg"
-            alt="Narrative stills of Arun revisiting Dhanushkodi"
-        >
-        -->
+        </div>
 
     </div>
+
+
+
+    <!-- ====================================================
+         05 / WHY MAKE IT MULTISENSORY
+    ==================================================== -->
+
+    <div class="multisensory-grid">
+
+        <div class="multisensory-heading">
+
+            <p class="content-label">
+
+                05 / Why make it multisensory?
+
+            </p>
+
+
+            <h2>
+
+                Why make it
+                multisensory?
+
+            </h2>
+
+        </div>
+
+
+        <div class="multisensory-points">
+
+            <ul>
+
+                <li>
+                    A natural and human way of interaction.
+                </li>
+
+                <li>
+                    Makes users feel connected to
+                    Dhanushkodi's lost memories.
+                </li>
+
+                <li>
+                    Adds tactile / sensory feedback beyond
+                    VR hand tracking.
+                </li>
+
+                <li>
+                    Bridges the gap between physical and
+                    virtual worlds.
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ====================================================
+         MULTISENSORY IMAGE PAIR
+    ==================================================== -->
+
+    <div class="multisensory-image-grid">
+
+        <div class="multisensory-image">
+
+            <img
+                src="..\imagezz\narrative3.png"
+                alt="Multisensory narrative image"
+            >
+
+        </div>
+
+
+        <div class="multisensory-image">
+
+            <img
+                src="..\imagezz\narrative2.png"
+                alt="Second multisensory narrative image"
+            >
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ====================================================
+         06 / MAKING IT MULTISENSORY
+    ==================================================== -->
+
     <div class="project-content">
+
         <p class="content-label">
-            06 / Making it multisensory — narrative
+
+            06 / Making it multisensory
+
         </p>
+
+
         <h2>
-            Making it multisensory — narrative
+            Making it multisensory
         </h2>
+
+
         <p>
-            The main character, Arun, is a 41-year-old archaeologist from
-            the Government Survey of India who revisits his hometown,
-            Dhanushkodi, 36 years after the tragic event took place.
+
+            The main character, Arun, is a 41-year-old archaeologist
+            from the Government Survey of India who revisits his
+            hometown, Dhanushkodi, 36 years after the tragic event
+            took place.
+
         </p>
+
+
         <p>
+
             He is assigned to document the place after so many years,
-            and in doing so also revives and witnesses some memories of
-            his own with his father, who died during the cyclone.
+            and in doing so also revives and witnesses some memories
+            of his own with his father, who died during the cyclone.
+
         </p>
+
+
         <p>
+
             His visits to specific places trigger memories and prompt
             the user to think about how the protagonist's life might
             have looked before all these years.
+
         </p>
+
     </div>
+
+
 
     <div class="project-image secondary">
 
-        <!--
-        Senses we focused on — sensory photography
-        (sea breeze, wet sand, coastal textures):
-
         <img
-            src="../images/senses-photography.jpg"
-            alt="Sensory photographs used to build the VR experience"
+            src="..\imagezz\narrative 1.png"
+            alt="Narrative scene"
         >
-        -->
 
     </div>
-    <div class="project-content">
+
+
+
+    <!-- ====================================================
+         07 / SENSES
+    ==================================================== -->
+
+    <div class="senses-section">
+
         <p class="content-label">
             07 / Senses we focused on
         </p>
+
+
         <h2>
             Senses we focused on
         </h2>
 
-        <h3>Sight</h3>
-        <p class="tight">
-            Visuals of ruined Dhanushkodi and recreated scenes of the
-            town before the cyclone help users see the contrast between
-            past and present.
-        </p>
 
-        <h3>Touch</h3>
-        <p class="tight">
-            Gesture-based controls let users use hand movements to
-            explore the space and reveal hidden memories, making the
-            experience more engaging.
-        </p>
+        <div class="senses-grid">
 
-        <h3>Hear</h3>
-        <p class="tight">
-            Ambient sounds like sea waves, wind, footsteps, conversations
-            and storm effects create an emotional and realistic
-            atmosphere.
-        </p>
+            <div class="sense-item">
 
-        <h3>Smell</h3>
-        <p>
-            Sensory photographs — of sea breeze, wet sand and the coastal
-            environment — enhance the setting and make users feel more
-            present in the scene.
-        </p>
+                <div class="sense-number">
+                    01
+                </div>
+
+                <h3>
+                    Sight
+                </h3>
+
+                <p>
+
+                    Visuals of ruined Dhanushkodi and recreated
+                    scenes of the town before the cyclone help
+                    users see the contrast between past and present.
+
+                </p>
+
+            </div>
+
+
+            <div class="sense-item">
+
+                <div class="sense-number">
+                    02
+                </div>
+
+                <h3>
+                    Touch
+                </h3>
+
+                <p>
+
+                    Gesture-based controls let users use hand
+                    movements to explore the space and reveal
+                    hidden memories, making the experience
+                    more engaging.
+
+                </p>
+
+            </div>
+
+
+            <div class="sense-item">
+
+                <div class="sense-number">
+                    03
+                </div>
+
+                <h3>
+                    Hear
+                </h3>
+
+                <p>
+
+                    Ambient sounds like sea waves, wind, footsteps,
+                    conversations and storm effects create an
+                    emotional and realistic atmosphere.
+
+                </p>
+
+            </div>
+
+
+            <div class="sense-item">
+
+                <div class="sense-number">
+                    04
+                </div>
+
+                <h3>
+                    Smell
+                </h3>
+
+                <p>
+
+                    Sensory photographs of sea breeze, wet sand
+                    and the coastal environment enhance the
+                    setting and make users feel more present
+                    in the scene.
+
+                </p>
+
+            </div>
+
+        </div>
+
     </div>
 
-    <div class="project-image">
 
-        <!--
-        Gesture based interactions — the Arduino glove prototype
-        in use:
 
-        <img
-            src="../images/gesture-glove.jpg"
-            alt="Gesture recognition glove built with Arduino"
-        >
-        -->
+    <!-- ====================================================
+         08 / GESTURE BASED INTERACTIONS
+    ==================================================== -->
 
-    </div>
     <div class="project-content">
+
         <p class="content-label">
             08 / Gesture based interactions
         </p>
+
+
         <h2>
             Why chosen interactions?
         </h2>
+
+
         <p>
+
             To enable this interaction, we developed a gesture
-            recognition glove using Arduino. When activated, the glove
-            triggers a transition allowing users to witness the town as
-            it existed before the devastating 1964 Rameshwaram cyclone.
-            The moment the user loses contact, the immersive VR
-            environment shifts back to the ruins.
+            recognition glove using Arduino. When activated,
+            the glove triggers a transition allowing users to
+            witness the town as it existed before the devastating
+            1964 Rameshwaram cyclone. The moment the user loses
+            contact, the immersive VR environment shifts back
+            to the ruins.
+
         </p>
+
+
         <p>
-            This deliberate shift between past and present creates a
-            powerful contrast, encouraging users to reflect on the
-            theme of loss. The interaction is not just visual but
-            emotional — making the user an active participant rather
-            than a passive observer.
+
+            This deliberate shift between past and present creates
+            a powerful contrast, encouraging users to reflect on
+            the theme of loss. The interaction is not just visual
+            but emotional making the user an active participant
+            rather than a passive observer.
+
         </p>
+
+
         <p>
-            Touch triggers memory far more deeply than just looking at
-            something. We wanted to make the user an active participant
-            in the experience rather than someone who simply witnesses
-            the visuals.
+
+            Touch triggers memory far more deeply than just looking
+            at something. We wanted to make the user an active
+            participant in the experience rather than someone who
+            simply witnesses the visuals.
+
         </p>
+
+
         <p>
-            To bring a ghost town to life, we needed to physically reach
-            into its past — so we tied that interaction to the
-            character's own memory.
+
+            To bring a ghost town to life, we needed to physically
+            reach into its past so we tied that interaction to
+            the character's own memory.
+
         </p>
+
+
         <p>
-            A glove makes it feel like your own hands are helping you
-            connect with the past. It's also a more feasible and
-            convenient option for building an immersive experience.
+
+            A glove makes it feel like your own hands are helping
+            you connect with the past. It's also a more feasible
+            and convenient option for building an immersive
+            experience.
+
         </p>
+
+
         <p>
-            The glove isn't a tech choice — it's a storytelling choice
-            to build an emotional connection.
+
+            The glove isn't a tech choice it's a storytelling
+            choice to build an emotional connection.
+
         </p>
+
+
+        <div class="gesture-image-grid">
+
+            <div class="gesture-image">
+
+                <img
+                    src="..\imagezz\gesture glove.png"
+                    alt="Gesture recognition glove"
+                >
+
+            </div>
+
+
+            <div class="gesture-image">
+
+                <img
+                    src="..\imagezz\gesture glove 2.png"
+                    alt="Second gesture based interaction image"
+                >
+
+            </div>
+
+        </div>
+
     </div>
 
-    <div class="project-image secondary">
 
-        <!--
-        Worldbuilding — environment concept art / renders of the
-        four VR locations:
 
-        <img
-            src="../images/worldbuilding.jpg"
-            alt="Worldbuilding renders of the VR environment"
-        >
-        -->
+    <!-- ====================================================
+         WORLDBUILDING
+    ==================================================== -->
 
-    </div>
     <div class="project-content">
+
+        <p class="content-label">
+            Worldbuilding
+        </p>
+
+        <h2>
+            Worldbuilding
+        </h2>
+
+    </div>
+
+
+    <div class="worldbuilding-image-grid">
+
+        <div class="worldbuilding-image">
+
+            <img
+                src="..\imagezz\worldbuilding1.png"
+                alt="Worldbuilding image one"
+            >
+
+        </div>
+
+
+        <div class="worldbuilding-image">
+
+            <img
+                src="..\imagezz\worldbuilding2.png"
+                alt="Worldbuilding image two"
+            >
+
+        </div>
+
+
+        <div class="worldbuilding-image">
+
+            <img
+                src="..\imagezz\worldbuilding3.png"
+                alt="Worldbuilding image three"
+            >
+
+        </div>
+
+
+        <div class="worldbuilding-image">
+
+            <img
+                src="..\imagezz\worldbuilding4.png"
+                alt="Worldbuilding image four"
+            >
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ====================================================
+         09 / VIDEO BASED STORYTELLING
+    ==================================================== -->
+
+    <div class="project-content">
+
         <p class="content-label">
             09 / Worldbuilding
         </p>
+
         <h2>
             Video based storytelling
         </h2>
+
         <p>
-            We built four main locations into our VR environment —
+
+            We built four main locations into our VR environment
             the Church, the Stone bridge, the Boats and the Market.
-            Understanding the importance of these places, we wove a
-            storyline around each location to give the player a better
-            insight into the protagonist's life.
+            Understanding the importance of these places, we wove
+            a storyline around each location to give the player a
+            better insight into the protagonist's life.
+
         </p>
-    </div>
-
-    <div class="project-image">
-
-        <!--
-        The Church — young Arun and his father outside the church:
-
-        <img
-            src="../images/story-church.jpg"
-            alt="The Church storytelling scene"
-        >
-        -->
 
     </div>
+
+
+
+    <!-- ====================================================
+         CHURCH
+    ==================================================== -->
+
+    <div class="story-location">
+
+        <div class="story-location-content">
+
+            <p class="content-label">
+                The Church
+            </p>
+
+            <p>
+
+                Young Arun used to go to the church with his dad,
+                the stereotypical Tamil dad, strict in principle yet
+                simple and innocent at heart. Arun would ask him
+                silly, curious questions, and his father always
+                answered every one.
+
+            </p>
+
+        </div>
+
+
+        <div class="story-location-image">
+
+            <img
+                src="..\imagezz\vbs1.png"
+                alt="The Church storytelling scene"
+            >
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ====================================================
+         MARKET
+    ==================================================== -->
+
+    <div class="story-location reverse">
+
+        <div class="story-location-content">
+
+            <p class="content-label">
+                Market
+            </p>
+
+            <p>
+
+                Arun used to whine for things he wanted, which his
+                mother denied, but his father would secretly buy
+                them for him anyway, becoming his favourite friend.
+
+            </p>
+
+        </div>
+
+
+        <div class="story-location-image">
+
+            <img
+                src="..\imagezz\vbs2.png"
+                alt="The Market storytelling scene"
+            >
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ====================================================
+         STONE BRIDGE
+    ==================================================== -->
+
+    <div class="story-location">
+
+        <div class="story-location-content">
+
+            <p class="content-label">
+                Stone bridge
+            </p>
+
+            <p>
+
+                Here, Arun learned the seashell game and heard about
+                the philosophies running through his family since the
+                time of his ancestors.
+
+            </p>
+
+        </div>
+
+
+        <div class="story-location-image">
+
+            <img
+                src="..\imagezz\vbs3.png"
+                alt="The Stone bridge storytelling scene"
+            >
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ====================================================
+         BOATS
+    ==================================================== -->
+
+    <div class="story-location reverse">
+
+        <div class="story-location-content">
+
+            <p class="content-label">
+                Boats
+            </p>
+
+            <p>
+
+                Arun used to hide among the boats, and his father
+                would come find him there, teaching him small
+                principles of life that he never forgot, even
+                after he grew up.
+
+            </p>
+
+        </div>
+
+
+        <div class="story-location-image">
+
+            <img
+                src="..\imagezz\vbs4.png"
+                alt="The Boats storytelling scene"
+            >
+
+        </div>
+
+    </div>
+
     <div class="project-content">
-        <p class="content-label">
-            The Church
-        </p>
-        <p>
-            Young Arun used to go to the church with his dad — the
-            stereotypical Tamil dad, strict in principle yet simple and
-            innocent at heart. Arun would ask him silly, curious
-            questions, and his father always answered every one.
-        </p>
-    </div>
 
-    <div class="project-image secondary">
-
-        <!--
-        The Market — Arun and his father at the market stalls:
-
-        <img
-            src="../images/story-market.jpg"
-            alt="The Market storytelling scene"
-        >
-        -->
-
-    </div>
-    <div class="project-content">
-        <p class="content-label">
-            Market
-        </p>
-        <p>
-            Arun used to whine for things he wanted, which his mother
-            denied — but his father would secretly buy them for him
-            anyway, becoming his favourite friend.
-        </p>
-    </div>
-
-    <div class="project-image">
-
-        <!--
-        Stone bridge — Arun playing the seashell game:
-
-        <img
-            src="../images/story-stone-bridge.jpg"
-            alt="Stone bridge storytelling scene"
-        >
-        -->
-
-    </div>
-    <div class="project-content">
-        <p class="content-label">
-            Stone bridge
-        </p>
-        <p>
-            Here, Arun learned the seashell game and heard about the
-            philosophies running through his family since the time of
-            his ancestors.
-        </p>
-    </div>
-
-    <div class="project-image secondary">
-
-        <!--
-        Boats — Arun hiding among the fishing boats with his father:
-
-        <img
-            src="../images/story-boats.jpg"
-            alt="Boats storytelling scene"
-        >
-        -->
-
-    </div>
-    <div class="project-content">
-        <p class="content-label">
-            Boats
-        </p>
-        <p>
-            Arun used to hide among the boats, and his father would come
-            find him there — teaching him small principles of life that
-            he never forgot, even after he grew up.
-        </p>
-    </div>
-
-    <div class="project-image">
-
-        <!--
-        Character design — Arun and family character sheets,
-        Malgudi Days-inspired art style:
-
-        <img
-            src="../images/character-design.jpg"
-            alt="Character design sheets inspired by Malgudi Days"
-        >
-        -->
-
-    </div>
-    <div class="project-content">
         <p class="content-label">
             10 / Character design
         </p>
         <h2>
             Character design
         </h2>
+
         <p>
-            The art style and colour scheme of the animation is inspired
-            by the cartoon Malgudi Days, chosen to keep the roots and
-            theme of the project alive through the video sequences —
-            making the story more interesting and easier to understand
-            from the user's perspective.
+            The art style and colour scheme of the animation is
+            inspired by the cartoon Malgudi Days, chosen to keep
+            the roots and theme of the project alive through the
+            video sequences making the story more interesting
+            and easier to understand from the user's perspective.
         </p>
     </div>
 
     <div class="project-image secondary">
 
-        <!--
-        Exhibition setup / documentation — photos of the physical
-        installation, glove demo, visitors experiencing the piece:
-
         <img
-            src="../images/exhibition-setup.jpg"
-            alt="Exhibition setup and documentation photos"
+            src="..\imagezz\character1.png"
+            alt="Character design"
         >
-        -->
 
     </div>
+    <div class="project-image secondary">
+
+        <img
+            src="..\imagezz\character2.png"
+            alt="Character design"
+        >
+    </div>
+
     <div class="project-content">
+
         <p class="content-label">
             11 / Exhibition setup / documentation
         </p>
+
         <h2>
             Exhibition setup / documentation
         </h2>
+
+    </div>
+
+    <div class="exhibition-grid">
+        <div class="exhibition-top">
+
+            <div class="exhibition-image">
+                <img
+                    src="..\imagezz\exhibition1.png"
+                    alt="Exhibition documentation"
+                >
+            </div>
+
+            <div class="exhibition-image">
+                <img
+                    src="..\imagezz\exhibition2.png"
+                    alt="Dhanushkodi VR installation documentation"
+                >
+            </div>
+            <div class="exhibition-image">
+                <img
+                    src="..\imagezz\exhibition3.png"
+                    alt="Exhibition interaction documentation"
+                >
+            </div>
+        </div>
+        <div class="exhibition-bottom">
+
+            <div class="exhibition-image">
+
+                <img
+                    src="..\imagezz\exhibition4.png"
+                    alt="Gesture glove interaction documentation"
+                >
+
+            </div>
+            <div class="exhibition-image">
+                <img
+                    src="..\imagezz\exhibition5.png"
+                    alt="Dhanushkodi VR exhibition setup"
+                >
+            </div>
+
+        </div>
+
+    </div>
+    <div class="project-content">
 
         <p class="content-label">
             12 / Impact created
@@ -1022,73 +3425,101 @@ footer {
         <h2>
             Impact created
         </h2>
-        <ul>
+        <ul class="impact-grid">
+
             <li>
-                Created an emotional connection with Dhanushkodi's lost
-                heritage.
+                Created an
+                emotional
+                connection with
+                Dhanushkodi's
+                lost heritage
             </li>
             <li>
-                Helped users experience history instead of just learning
-                about it.
+                Increased
+                immersion through
+                multisensory
+                storytelling and
+                interaction
             </li>
             <li>
-                Increased immersion through multisensory storytelling
-                and interaction.
+                Made cultural
+                preservation more
+                engaging using VR
+                and gesture-based
+                interaction
             </li>
             <li>
-                Encouraged empathy and curiosity toward forgotten places
-                and cultures.
+                Helped users
+                experience history
+                instead of just
+                learning about it
             </li>
             <li>
-                Made cultural preservation more engaging using VR and
-                gesture-based interaction.
+                Encouraged
+                empathy and
+                curiosity toward
+                forgotten places
+                and cultures
             </li>
         </ul>
+
     </div>
 
     <div class="project-navigation">
+
         <a
             href="project-6.html"
             class="back-link"
         >
+
             ← Previous project
+
         </a>
         <a
             href="project-2.html"
             class="back-link"
         >
+
             Next project →
+
         </a>
+
     </div>
 </div>
+
 </section>
 
 <footer>
 
-<span class="footer-text">
-    Vaishnavi Venkatesh
-    ·
-    2026
-</span>
-<div class="footer-links">
-    <a
-        href="https://github.com/blueexev"
-        target="_blank"
-        rel="noopener noreferrer"
-    >
-        GitHub
-    </a>
-    <a
-        href="https://linkedin.com"
-        target="_blank"
-        rel="noopener noreferrer"
-    >
-        LinkedIn
-    </a>
-    <a href="../index.html">
-        ↑ Top
-    </a>
-</div>
+    <span class="footer-text">
+        Vaishnavi Venkatesh
+        ·
+        2026
+
+    </span>
+    <div class="footer-links">
+
+        <a
+            href="https://github.com/blueexev"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            GitHub
+        </a>
+        <a
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            LinkedIn
+        </a>
+        <a href="../index.html">
+
+            ↑ Top
+
+        </a>
+
+    </div>
 </footer>
 </body>
 </html>
