@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -8,38 +10,28 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+    rel="stylesheet"
+>
 
 <style>
 
 /* ========================================================
-   QUANO FONT
+   FONTS
 ======================================================== */
 
 @font-face {
-
-    font-family: "Quano";
-
-    src: url("../fonts/Quano-Regular.woff2")
-    format("woff2");
-
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-Regular.woff2") format("woff2");
     font-weight: 400;
-
-    font-style: normal;
-
 }
 
 @font-face {
-
-    font-family: "Quano";
-
-    src: url("../fonts/Quano-Italic.woff2")
-    format("woff2");
-
-    font-weight: 400;
-
-    font-style: italic;
-
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat.woff2") format("woff2");
+    font-weight: 600;
 }
 
 
@@ -48,50 +40,31 @@
 ======================================================== */
 
 * {
-
     margin: 0;
     padding: 0;
-
     box-sizing: border-box;
-
 }
 
 html {
-
     scroll-behavior: smooth;
-
 }
 
 body {
-
     background: #e9e4d9;
-
     color: #191817;
-
-    font-family:
-        "Helvetica Neue",
-        Helvetica,
-        Arial,
-        sans-serif;
-
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
     overflow-x: hidden;
-
 }
 
 a {
-
     color: inherit;
-
     text-decoration: none;
-
 }
 
 ::selection {
-
     background: #191817;
-
     color: #e9e4d9;
-
 }
 
 
@@ -99,15 +72,11 @@ a {
    PAGE WIDTH
 ======================================================== */
 
-.page-width {
-
-    width: min(
-        860px,
-        calc(100% - 200px)
-    );
-
-    margin: auto;
-
+.page-width,
+.nav-inner,
+footer {
+    width: min(860px, calc(100% - 200px));
+    margin: 0 auto;
 }
 
 
@@ -116,84 +85,41 @@ a {
 ======================================================== */
 
 .site-nav {
-
-    position: fixed;
-
-    top: 0;
-    left: 0;
-
+    position: static;
     width: 100%;
-
+    padding: 30px 0;
     z-index: 1000;
-
-    padding: 26px 0;
-
 }
 
 .nav-inner {
-
-    width: min(
-        860px,
-        calc(100% - 200px)
-    );
-
-    margin: auto;
-
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
-
 }
-
-
-/* NAME */
 
 .artist-name {
-
-    font-size: 9px;
-
-    text-transform: uppercase;
-
-    letter-spacing: .15em;
-
-    font-weight: 500;
-
+    font-size: 11px;
+    text-transform: none;
+    letter-spacing: .03em;
+    font-weight: 400;
 }
 
-
-/* NAV LINKS */
-
 .nav-links {
-
     display: flex;
-
-    gap: 25px;
-
+    gap: 28px;
     list-style: none;
-
 }
 
 .nav-links a {
-
-    font-size: 8px;
-
+    font-size: 10px;
     text-transform: uppercase;
-
-    letter-spacing: .12em;
-
-    color: #77716a;
-
-    transition:
-        color .3s ease;
-
+    letter-spacing: .14em;
+    color: #191817;
+    transition: opacity .2s ease;
 }
 
 .nav-links a:hover {
-
-    color: #191817;
-
+    opacity: .5;
 }
 
 
@@ -202,126 +128,34 @@ a {
 ======================================================== */
 
 .project-hero {
-
-    min-height: 75vh;
-
-    display: flex;
-
-    align-items: center;
-
-    padding:
-        150px 0
-        100px;
-
+    min-height: 0;
+    display: block;
+    padding: 100px 0 85px;
 }
 
 .project-hero-content {
-
     width: 100%;
-
 }
-
-
-/* ========================================================
-   BACK LINK
-======================================================== */
 
 .back-link {
-
-    display: inline-flex;
-
-    align-items: center;
-
-    gap: 8px;
-
-    font-size: 8px;
-
-    text-transform: uppercase;
-
-    letter-spacing: .12em;
-
-    color: #77716a;
-
-    margin-bottom: 55px;
-
-    transition:
-        gap .3s ease,
-        color .3s ease;
-
+    display: none;
 }
-
-.back-link:hover {
-
-    gap: 13px;
-
-    color: #191817;
-
-}
-
-
-/* ========================================================
-   COLLECTION LABEL
-======================================================== */
-
-.collection-label {
-
-    font-size: 8px;
-
-    text-transform: uppercase;
-
-    letter-spacing: .2em;
-
-    color: #77716a;
-
-    margin-bottom: 28px;
-
-}
-
-
-/* ========================================================
-   PROJECT TITLE
-======================================================== */
 
 .project-main-title {
-
-    font-family:
-        "Montserrat",
-        "Quano",
-        "Bodoni Moda",
-        "Cormorant Garamond",
-        Georgia,
-        serif;
-
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(50px, 8vw, 82px);
     font-weight: 400;
-
-    font-size:
-        clamp(50px, 7vw, 82px);
-
-    line-height: .92;
-
+    line-height: 1.12;
     letter-spacing: -.055em;
-
-    max-width: 800px;
-
+    max-width: 900px;
 }
 
-
-/* ========================================================
-   PROJECT INTRO
-======================================================== */
-
 .project-intro {
-
-    max-width: 430px;
-
-    margin-top: 35px;
-
-    font-size: 11px;
-
+    max-width: 620px;
+    margin-top: 38px;
+    font-size: 14px;
     line-height: 1.8;
-
-    color: #68635d;
-
+    color: #66615b;
 }
 
 
@@ -330,68 +164,41 @@ a {
 ======================================================== */
 
 .project-meta {
-
     display: grid;
-
-    grid-template-columns:
-        repeat(4, 1fr);
-
-    gap: 25px;
-
-    margin-top: 60px;
-
-    padding-top: 18px;
-
-    border-top:
-        1px solid
-        rgba(25,24,23,.2);
-
+    grid-template-columns: repeat(4, 1fr);
+    gap: 35px;
+    margin-top: 0;
+    padding: 45px 0 80px;
+    border-top: 1px solid #bdb7ad;
 }
 
 .meta-item {
-
     min-width: 0;
-
 }
 
 .meta-label {
-
     display: block;
-
-    font-size: 7px;
-
+    font-size: 9px;
     text-transform: uppercase;
-
-    letter-spacing: .14em;
-
-    color: #8a847c;
-
-    margin-bottom: 8px;
-
+    letter-spacing: .16em;
+    color: #77716a;
+    margin-bottom: 12px;
 }
 
 .meta-value {
-
-    font-size: 9px;
-
-    line-height: 1.5;
-
+    font-size: 11px;
+    line-height: 1.7;
 }
 
 
 /* ========================================================
-   DIVIDER
+   MUSEUM RULE
 ======================================================== */
 
 .museum-rule {
-
     width: 100%;
-
     height: 1px;
-
-    background:
-        rgba(25,24,23,.18);
-
+    background: #bdb7ad;
 }
 
 
@@ -400,222 +207,747 @@ a {
 ======================================================== */
 
 .project-body {
-
-    padding:
-        110px 0
-        140px;
-
+    padding: 80px 0 150px;
 }
 
 
 /* ========================================================
-   PROJECT IMAGE
+   PROJECT IMAGES
 ======================================================== */
 
 .project-image {
-
     width: 100%;
-
-    height: 520px;
-
+    height: 470px;
     background: #d5cfc3;
-
     overflow: hidden;
-
-    margin-bottom: 110px;
-
+    margin-bottom: 115px;
 }
 
 .project-image img {
-
     width: 100%;
-
     height: 100%;
-
     object-fit: cover;
-
     display: block;
-
-    filter:
-        grayscale(20%)
-        contrast(.95);
-
-    transition:
-        transform .8s
-        cubic-bezier(.2,.7,.2,1),
-
-        filter .8s ease;
-
+    filter: grayscale(20%) contrast(.95);
+    transition: transform .5s ease, filter .5s ease;
 }
 
 .project-image:hover img {
+    transform: scale(1.025);
+    filter: grayscale(0%) contrast(1);
+}
 
-    transform:
-        scale(1.025);
-
-    filter:
-        grayscale(0%)
-        contrast(1);
-
+.project-image.secondary {
+    height: 390px;
+    margin: 10px 0 105px;
 }
 
 
 /* ========================================================
-   PROJECT CONTENT
+   CONTENT
 ======================================================== */
 
 .project-content {
-
     max-width: 680px;
-
-    margin: auto;
-
+    margin: 0 auto 105px;
 }
-
-
-/* CONTENT LABEL */
 
 .content-label {
-
-    font-family:
-        "Montserrat",
-        "Helvetica Neue",
-        Helvetica,
-        Arial,
-        sans-serif;
-
-    font-size: 8px;
-
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
     text-transform: uppercase;
-
-    letter-spacing: .15em;
-
+    letter-spacing: .16em;
     color: #77716a;
-
     margin-bottom: 25px;
-
 }
-
-
-/* CONTENT HEADINGS */
 
 .project-content h2 {
-
-    font-family:
-        "Montserrat",
-        "Quano",
-        "Bodoni Moda",
-        "Cormorant Garamond",
-        Georgia,
-        serif;
-
-    font-size: 39px;
-
-    font-weight: 400;
-
-    letter-spacing: -.045em;
-
-    line-height: 1;
-
+    font-family: "Montserrat", sans-serif;
+    font-size: 28px;
+    line-height: 1.3;
+    font-weight: 500;
+    letter-spacing: -.025em;
     margin-bottom: 25px;
-
 }
-
-/* SUB-HEADINGS (game steps / features / learnings) */
 
 .project-content h3 {
-
-    font-family:
-        "Montserrat",
-        "Quano",
-        "Bodoni Moda",
-        "Cormorant Garamond",
-        Georgia,
-        serif;
-
-    font-size: 17px;
-
-    font-weight: 500;
-
-    letter-spacing: -.01em;
-
-    margin-bottom: 12px;
-
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight: 600;
+    letter-spacing: 0;
+    margin-top: 35px;
+    margin-bottom: 10px;
 }
 
-
-/* CONTENT PARAGRAPHS */
-
 .project-content p {
-
-    max-width: 560px;
-
-    font-size: 11px;
-
-    line-height: 1.9;
-
+    max-width: none;
+    font-size: 12px;
+    line-height: 2;
     color: #66615b;
-
-    margin-bottom: 70px;
-
+    margin-bottom: 18px;
 }
 
 .project-content p.tight {
-
-    margin-bottom: 30px;
-
+    margin-bottom: 18px;
 }
-
-
-/* ========================================================
-   LISTS
-======================================================== */
 
 .project-content ul,
 .project-content ol {
-
-    margin-top: -40px;
-
-    margin-bottom: 90px;
-
-    padding-left: 18px;
-
-}
-
-.project-content ul.tight,
-.project-content ol.tight {
-
-    margin-top: 0;
-
+    margin-top: 15px;
     margin-bottom: 30px;
-
+    padding-left: 18px;
 }
 
 .project-content li {
-
-    font-size: 10px;
-
-    line-height: 1.9;
-
+    font-size: 12px;
+    line-height: 2;
     color: #66615b;
-
-    padding-left: 5px;
-
+    padding-left: 0;
+    margin-bottom: 8px;
 }
 
 
 /* ========================================================
-   SECOND IMAGE
+   AVAILABLE SOLUTIONS
 ======================================================== */
 
-.project-image.secondary {
+.solutions-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin: 45px 0 80px;
+}
 
-    margin:
-        20px 0
-        110px;
+.solution-card {
+    background: #eee6d3;
+    border: 1px solid #d2c7b0;
+    box-shadow: 0 5px 12px rgba(25, 24, 23, .10);
+    padding: 28px 22px 18px;
+    min-height: 255px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
-    height: 430px;
+.solution-card:nth-child(even) {
+    background: #bca37b;
+}
 
+.solution-text {
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    line-height: 1.65;
+    text-align: center;
+    color: #304b5b;
+    margin: 0;
+}
+
+.solution-photo {
+    width: 100%;
+    height: 105px;
+    object-fit: cover;
+    display: block;
+    margin-top: 22px;
+    border: 1px solid rgba(48, 75, 91, .20);
+    filter: saturate(.72) contrast(.95);
+}
+
+
+/* ========================================================
+   NAVARASA PALETTE
+======================================================== */
+
+.navarasa-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin: 40px 0 90px;
+}
+
+.navarasa-swatch {
+    min-height: 145px;
+    padding: 18px;
+    display: flex;
+    align-items: flex-end;
+    border: 1px solid rgba(25, 24, 23, .12);
+}
+
+.navarasa-swatch span {
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    line-height: 1.4;
+    text-transform: uppercase;
+    letter-spacing: .12em;
+    color: #191817;
+}
+
+.navarasa-swatch.light-text span {
+    color: #fff;
+}
+
+.swatch-shringaar {
+    background: #E3A7C0;
+}
+
+.swatch-hasya {
+    background: #E83989;
+}
+
+.swatch-raudra {
+    background: #CB2026;
+}
+
+.swatch-bhayanaka {
+    background: #733489;
+}
+
+.swatch-adbhuta {
+    background: #3157A7;
+}
+
+.swatch-veera {
+    background: #E5A44D;
+}
+
+.swatch-bibhitsa {
+    background: #836E56;
+}
+
+.swatch-karuna {
+    background: #A2BDCB;
+}
+
+.swatch-shanta {
+    background: #B0B6AE;
+}
+
+
+/* ========================================================
+   CHARACTER IMAGE
+======================================================== */
+
+.character-sheet {
+    width: 100%;
+    display: block;
+    margin: 0 auto 115px;
+}
+
+
+/* ========================================================
+   3D RENDER GRID
+======================================================== */
+
+.render-section {
+    width: 100%;
+    margin: 20px 0 115px;
+}
+
+.render-section-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: .16em;
+    color: #77716a;
+    margin-bottom: 25px;
+}
+
+.render-section-title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 28px;
+    line-height: 1.3;
+    font-weight: 500;
+    letter-spacing: -.025em;
+    margin-bottom: 35px;
+}
+
+.render-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1.45fr;
+    grid-template-rows: repeat(3, 175px);
+    gap: 16px;
+}
+
+.render-item {
+    overflow: hidden;
+    background: #d5cfc3;
+}
+
+.render-item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform .5s ease;
+}
+
+.render-item:hover img {
+    transform: scale(1.025);
+}
+
+.render-small-1 {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.render-small-2 {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.render-small-3 {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.render-large {
+    grid-column: 2;
+    grid-row: 1 / 4;
+}
+
+
+/* ========================================================
+   STORIES AND SCENARIOS
+======================================================== */
+
+.stories-image {
+    width: 100%;
+    display: block;
+    margin-top: 35px;
+    margin-bottom: 0;
+}
+
+
+/* ========================================================
+   GAMEPLAY SECTION
+======================================================== */
+
+.gameplay-section {
+    width: 100%;
+    margin: 0 auto 115px;
+}
+
+.gameplay-section .content-label {
+    margin-bottom: 25px;
+}
+
+.gameplay-section-title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 28px;
+    line-height: 1.3;
+    font-weight: 500;
+    letter-spacing: -.025em;
+    margin-bottom: 35px;
+}
+
+
+/* ========================================================
+   GAMEPLAY OBJECTIVE
+======================================================== */
+
+.gameplay-objective {
+    width: 100%;
+    background: #eee6d3;
+    padding: 30px 34px;
+    margin-bottom: 14px;
+}
+
+.gameplay-objective-title {
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 3px;
+}
+
+.gameplay-objective p {
+    font-size: 12px;
+    line-height: 1.55;
+    color: #30405b;
+    margin: 0;
+}
+
+
+/* ========================================================
+   GAMEPLAY SETUP
+======================================================== */
+
+.gameplay-setup {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1.15fr .85fr;
+    gap: 14px;
+    margin-bottom: 14px;
+}
+
+.gameplay-setup-image {
+    background: #d5cfc3;
+    min-height: 300px;
+    overflow: hidden;
+}
+
+.gameplay-setup-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.gameplay-setup-text {
+    background: #eee6d3;
+    padding: 27px 25px;
+    display: flex;
+    align-items: center;
+}
+
+.gameplay-setup-text p {
+    font-size: 12px;
+    line-height: 1.55;
+    color: #30405b;
+    margin: 0;
+}
+
+
+/* ========================================================
+   GAMEPLAY WINNING
+======================================================== */
+
+.gameplay-winning {
+    width: 100%;
+    background: #eee6d3;
+    padding: 27px 30px;
+}
+
+.gameplay-winning p {
+    font-size: 12px;
+    line-height: 1.8;
+    color: #30405b;
+    margin: 0 0 10px;
+}
+
+.gameplay-winning p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ========================================================
+   FLOW SECTION
+======================================================== */
+
+.flow-section {
+    width: 100%;
+    margin: 0 auto 115px;
+}
+
+.flow-section .content-label {
+    margin-bottom: 25px;
+}
+
+.flow-section-title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 28px;
+    line-height: 1.3;
+    font-weight: 500;
+    letter-spacing: -.025em;
+    margin-bottom: 35px;
+}
+
+
+/* ========================================================
+   FLOWCHART
+======================================================== */
+
+.flow-chart {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(125px, auto);
+    column-gap: 14px;
+    row-gap: 14px;
+    position: relative;
+}
+
+
+/* ========================================================
+   FLOW CARDS
+======================================================== */
+
+.flow-card {
+    position: relative;
+    background: #eee6d3;
+    border-radius: 4px;
+    min-height: 125px;
+    padding: 28px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #30405b;
+    font-size: 12px;
+    line-height: 1.55;
+    border: 1px solid rgba(48, 64, 91, .08);
+}
+
+.flow-number {
+    position: absolute;
+    top: 12px;
+    left: 15px;
+    font-size: 9px;
+    letter-spacing: .08em;
+    color: #77716a;
+}
+
+
+/* ========================================================
+   FLOW CARD POSITIONS
+
+   01 → 02 → 03
+                    ↓
+   06 ← 05 ← 04
+   ↓
+   07 → 08 → 09
+                    ↓
+                    10
+======================================================== */
+
+.flow-card-1 {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.flow-card-2 {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.flow-card-3 {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.flow-card-4 {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.flow-card-5 {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.flow-card-6 {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.flow-card-7 {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.flow-card-8 {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.flow-card-9 {
+    grid-column: 3;
+    grid-row: 3;
+}
+
+.flow-card-10 {
+    grid-column: 3;
+    grid-row: 4;
+}
+
+
+/* ========================================================
+   FLOW CONNECTORS
+======================================================== */
+
+.flow-arrow {
+    position: absolute;
+    width: 28px;
+    height: 1px;
+    background: #3157A7;
+    z-index: 5;
+}
+
+.flow-arrow::after {
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-top: 1px solid #3157A7;
+    border-right: 1px solid #3157A7;
+}
+
+
+/* 01 → 02 */
+
+.arrow-1 {
+    top: 62px;
+    left: calc(33.333% - 14px);
+}
+
+.arrow-1::after {
+    right: 0;
+    top: -3px;
+    transform: rotate(45deg);
+}
+
+
+/* 02 → 03 */
+
+.arrow-2 {
+    top: 62px;
+    left: calc(66.666% - 14px);
+}
+
+.arrow-2::after {
+    right: 0;
+    top: -3px;
+    transform: rotate(45deg);
+}
+
+
+/* 03 ↓ 04 */
+
+.arrow-3 {
+    top: 132px;
+    right: 30px;
+    transform: rotate(90deg);
+}
+
+.arrow-3::after {
+    right: 0;
+    top: -3px;
+    transform: rotate(45deg);
+}
+
+
+/* 04 → 05 */
+
+.arrow-4 {
+    top: 201px;
+    left: calc(66.666% - 14px);
+    transform: rotate(180deg);
+}
+
+.arrow-4::after {
+    right: 0;
+    top: -3px;
+    transform: rotate(45deg);
+}
+
+
+/* 05 → 06 */
+
+.arrow-5 {
+    top: 201px;
+    left: calc(33.333% - 14px);
+    transform: rotate(180deg);
+}
+
+.arrow-5::after {
+    right: 0;
+    top: -3px;
+    transform: rotate(45deg);
+}
+
+
+/* 06 ↓ 07 */
+
+.arrow-6 {
+    top: 271px;
+    left: 30px;
+    transform: rotate(90deg);
+}
+
+.arrow-6::after {
+    right: 0;
+    top: -3px;
+    transform: rotate(45deg);
+}
+
+
+/* 07 → 08 */
+
+.arrow-7 {
+    top: 340px;
+    left: calc(33.333% - 14px);
+}
+
+.arrow-7::after {
+    right: 0;
+    top: -3px;
+    transform: rotate(45deg);
+}
+
+
+/* 08 → 09 */
+
+.arrow-8 {
+    top: 340px;
+    left: calc(66.666% - 14px);
+}
+
+.arrow-8::after {
+    right: 0;
+    top: -3px;
+    transform: rotate(45deg);
+}
+
+
+/* 09 ↓ 10 */
+
+.arrow-9 {
+    top: 410px;
+    right: 30px;
+    transform: rotate(90deg);
+}
+
+.arrow-9::after {
+    right: 0;
+    top: -3px;
+    transform: rotate(45deg);
+}
+
+
+/* ========================================================
+   APP INTERFACE
+======================================================== */
+
+.app-image {
+    width: 100%;
+    height: 470px;
+    background: #d5cfc3;
+    overflow: hidden;
+    margin-bottom: 105px;
+}
+
+
+/* ========================================================
+   LEARNINGS IMAGE
+======================================================== */
+
+.learning-image {
+    width: 100%;
+    height: 390px;
+    background: #d5cfc3;
+    overflow: hidden;
+    margin: 10px 0 105px;
+}
+
+
+/* ========================================================
+   LEARNINGS / CONCLUSION IMAGES
+======================================================== */
+
+.project-content > img {
+    width: 100%;
+    display: block;
+    margin: 35px 0 45px;
 }
 
 
@@ -624,21 +956,23 @@ a {
 ======================================================== */
 
 .project-navigation {
-
+    border-top: 1px solid #bdb7ad;
+    padding-top: 35px;
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
+    margin-top: 0;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: .15em;
+}
 
-    margin-top: 120px;
+.project-navigation a {
+    transition: opacity .2s ease;
+}
 
-    padding-top: 25px;
-
-    border-top:
-        1px solid
-        rgba(25,24,23,.18);
-
+.project-navigation a:hover {
+    opacity: .5;
 }
 
 
@@ -647,56 +981,28 @@ a {
 ======================================================== */
 
 footer {
-
-    width: min(
-        860px,
-        calc(100% - 200px)
-    );
-
-    margin: auto;
-
-    padding:
-        25px 0
-        35px;
-
-    border-top:
-        1px solid
-        rgba(25,24,23,.18);
-
+    padding: 40px 0;
+    border-top: 1px solid #bdb7ad;
     display: flex;
-
     justify-content: space-between;
-
 }
 
 .footer-text {
-
-    font-size: 7px;
-
-    color: #8a847c;
-
+    font-size: 9px;
+    color: #77716a;
     text-transform: uppercase;
-
-    letter-spacing: .1em;
-
+    letter-spacing: .15em;
 }
 
 .footer-links {
-
     display: flex;
-
     gap: 20px;
-
 }
 
 .footer-links a {
-
-    font-size: 7px;
-
+    font-size: 9px;
     text-transform: uppercase;
-
-    letter-spacing: .1em;
-
+    letter-spacing: .15em;
 }
 
 
@@ -704,133 +1010,246 @@ footer {
    MOBILE
 ======================================================== */
 
-@media(max-width: 760px) {
-
+@media (max-width: 760px) {
 
     .page-width,
     .nav-inner,
     footer {
-
-        width:
-            calc(100% - 40px);
-
+        width: calc(100% - 40px);
     }
-
 
     .site-nav {
-
-        padding:
-            20px 0;
-
+        padding: 30px 0;
     }
-
 
     .nav-links {
-
         display: none;
-
     }
-
 
     .project-hero {
-
-        min-height: auto;
-
-        padding:
-            130px 0
-            80px;
-
+        min-height: 0;
+        padding: 70px 0 60px;
     }
-
-
-    .back-link {
-
-        margin-bottom: 45px;
-
-    }
-
 
     .project-main-title {
-
-        font-size:
-            clamp(45px, 14vw, 70px);
-
+        font-size: 50px;
+        line-height: 1.12;
     }
 
+    .project-intro {
+        font-size: 13px;
+    }
 
     .project-meta {
-
-        grid-template-columns:
-            1fr 1fr;
-
+        grid-template-columns: repeat(2, 1fr);
         gap: 30px;
-
-        margin-top: 50px;
-
+        padding: 45px 0 60px;
     }
-
 
     .project-body {
-
-        padding:
-            80px 0
-            100px;
-
+        padding: 55px 0 100px;
     }
-
 
     .project-image {
-
-        height: 300px;
-
-        margin-bottom: 80px;
-
+        height: 250px;
+        margin-bottom: 75px;
     }
-
-
-    .project-content h2 {
-
-        font-size: 34px;
-
-    }
-
-
-    .project-content p {
-
-        margin-bottom: 55px;
-
-    }
-
 
     .project-image.secondary {
+        height: 240px;
+        margin: 10px 0 75px;
+    }
 
-        height: 300px;
+    .project-content {
+        margin-bottom: 75px;
+    }
 
-        margin:
-            0 0
-            80px;
+    .project-content h2 {
+        font-size: 24px;
+    }
 
+    .project-content p,
+    .project-content li {
+        font-size: 12px;
     }
 
 
-    .project-navigation {
+    /* SOLUTIONS */
 
-        margin-top: 80px;
-
+    .solutions-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        margin: 35px 0 60px;
     }
 
+    .solution-card {
+        min-height: 220px;
+    }
+
+
+    /* NAVARASA */
+
+    .navarasa-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+    }
+
+    .navarasa-swatch {
+        min-height: 120px;
+    }
+
+
+    /* RENDER */
+
+    .render-section {
+        margin-bottom: 75px;
+    }
+
+    .render-section-title {
+        font-size: 24px;
+    }
+
+    .render-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 200px);
+        gap: 14px;
+    }
+
+    .render-small-1,
+    .render-small-2,
+    .render-small-3,
+    .render-large {
+        grid-column: 1;
+    }
+
+    .render-small-1 {
+        grid-row: 1;
+    }
+
+    .render-small-2 {
+        grid-row: 2;
+    }
+
+    .render-small-3 {
+        grid-row: 3;
+    }
+
+    .render-large {
+        grid-row: 4;
+    }
+
+
+    /* GAMEPLAY */
+
+    .gameplay-section {
+        margin-bottom: 75px;
+    }
+
+    .gameplay-section-title {
+        font-size: 24px;
+    }
+
+    .gameplay-objective {
+        padding: 25px 22px;
+    }
+
+    .gameplay-setup {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .gameplay-setup-image {
+        height: 260px;
+        min-height: 0;
+    }
+
+    .gameplay-setup-text {
+        min-height: 190px;
+    }
+
+
+    /* ====================================================
+       FLOW — MOBILE
+    ==================================================== */
+
+    .flow-section {
+        margin-bottom: 75px;
+    }
+
+    .flow-section-title {
+        font-size: 24px;
+    }
+
+    .flow-chart {
+        display: flex;
+        flex-direction: column;
+        gap: 34px;
+    }
+
+    .flow-card {
+        min-height: 115px;
+        width: 100%;
+        padding: 28px 20px;
+    }
+
+    .flow-card-1,
+    .flow-card-2,
+    .flow-card-3,
+    .flow-card-4,
+    .flow-card-5,
+    .flow-card-6,
+    .flow-card-7,
+    .flow-card-8,
+    .flow-card-9,
+    .flow-card-10 {
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+    /* Hide desktop arrows */
+
+    .flow-arrow {
+        display: none;
+    }
+
+    /* Vertical arrows */
+
+    .flow-card:not(:last-child)::after {
+        content: "↓";
+        position: absolute;
+        bottom: -31px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #3157A7;
+        font-size: 20px;
+        line-height: 1;
+    }
+
+
+    /* APP */
+
+    .app-image {
+        height: 250px;
+        margin-bottom: 75px;
+    }
+
+
+    /* LEARNING IMAGE */
+
+    .learning-image {
+        height: 250px;
+        margin-bottom: 75px;
+    }
+
+
+    /* FOOTER */
 
     footer {
-
         display: block;
-
     }
 
-
     .footer-links {
-
         margin-top: 15px;
-
     }
 
 }
@@ -839,7 +1258,9 @@ footer {
 
 </head>
 
+
 <body>
+
 
 <!-- ========================================================
      NAVIGATION
@@ -849,14 +1270,12 @@ footer {
 
 <div class="nav-inner">
 
-
     <a
         href="../index.html"
         class="artist-name"
     >
-        Vaishnavi Venkatesh
+        VAISHNAVI VENKATESH
     </a>
-
 
     <ul class="nav-links">
 
@@ -886,10 +1305,10 @@ footer {
 
     </ul>
 
-
 </div>
 
 </nav>
+
 
 <!-- ========================================================
      PROJECT HERO
@@ -901,43 +1320,20 @@ footer {
 
     <div class="project-hero-content">
 
-
-        <a
-            href="../index.html#work"
-            class="back-link"
-        >
-            ← Back to selected work
-        </a>
-
-
-        <p class="collection-label">
-
-            Selected Work
-
-        </p>
-
-
         <h1 class="project-main-title">
-
             Taru
-
         </h1>
 
-
         <p class="project-intro">
-
             A board game and companion app that helps autistic
             children understand, express and connect with emotions
-            through the lens of the Navarasa — growing with every
+            through the lens of the Navarasa growing with every
             emotion.
-
         </p>
 
+        <br><br><br><br><br><br>
 
         <div class="project-meta">
-
-            <!-- Timeline and Link weren't specified in the source PDF —
-                 edit as needed. -->
 
             <div class="meta-item">
 
@@ -978,30 +1374,9 @@ footer {
             </div>
 
 
-            <div class="meta-item">
-
-                <span class="meta-label">
-                    Link
-                </span>
-
-                <span class="meta-value">
-
-                    <a
-                        href="#"
-                        target="_blank"
-                        rel="noopener"
-                        style="text-decoration: underline;"
-                    >
-                        Project link ↗
-                    </a>
-
-                </span>
-
-            </div>
-
+            <div class="meta-item"></div>
 
         </div>
-
 
     </div>
 
@@ -1009,657 +1384,885 @@ footer {
 
 </header>
 
+
 <div class="museum-rule"></div>
 
-<!-- ========================================================
-     PROJECT BODY
-======================================================== -->
 
 <section class="project-body">
 
 <div class="page-width">
 
 
-    <div class="project-image">
+<!-- ========================================================
+     01 / PROJECT BRIEF
+======================================================== -->
 
-        <!--
-        Hero shot — the Taru board and game box:
+<div class="project-content">
 
-        <img
-            src="../images/taru-hero.jpg"
-            alt="Taru board game"
-        >
-        -->
+    <p class="content-label">
+        01 / Project brief
+    </p>
 
-    </div>
+    <h2>
+        Project brief
+    </h2>
 
+    <h3>
+        What is autism?
+    </h3>
 
-    <div class="project-content">
+    <p>
+        Autism, or Autism Spectrum Disorder (ASD), is a condition
+        that affects how a person thinks, learns, communicates and
+        interacts with others. People with autism may find it hard
+        to talk or play with others, like to do the same things in
+        the same way, be very focused on certain interests, or get
+        upset by loud sounds or changes in routine.
+    </p>
 
+    <p>
+        Autism is not an illness it's a different way of
+        experiencing the world. Every autistic person is unique,
+        and some may need more support than others.
+    </p>
 
-        <!-- PROJECT BRIEF -->
-
-        <p class="content-label">
-            01 / Project brief
-        </p>
-
-
-        <h2>
-            Project brief
-        </h2>
-
-        <h3>What is autism?</h3>
-
-        <p>
-
-            Autism, or Autism Spectrum Disorder (ASD), is a condition
-            that affects how a person thinks, learns, communicates and
-            interacts with others. People with autism may find it hard
-            to talk or play with others, like to do the same things in
-            the same way, be very focused on certain interests, or get
-            upset by loud sounds or changes in routine.
-
-        </p>
-
-        <p>
-
-            Autism is not an illness — it's a different way of
-            experiencing the world. Every autistic person is unique,
-            and some may need more support than others.
-
-        </p>
-
-        <p>
-
-            Young children, especially those aged 5–8 and including
-            neurodiverse learners such as autistic children, often
-            struggle to recognise, interpret and express complex human
-            emotions. Traditional learning methods may not effectively
-            engage their attention or support the development of
-            emotional literacy in a playful, inclusive way.
-            Additionally, most educational games tend to oversimplify
-            emotions or lack culturally rooted, expressive frameworks.
-
-        </p>
+    <p>
+        Young children, especially those aged 5 to 8 years and
+        including neurodiverse learners such as autistic children,
+        often struggle to recognise, interpret and express complex
+        human emotions. Traditional learning methods may not
+        effectively engage their attention or support the
+        development of emotional literacy in a playful, inclusive
+        way. Additionally, most educational games tend to
+        oversimplify emotions or lack culturally rooted,
+        expressive frameworks.
+    </p>
 
 
-        <!-- AVAILABLE SOLUTIONS -->
+<!-- ========================================================
+     02 / AVAILABLE SOLUTIONS
+======================================================== -->
 
-        <p class="content-label">
-            02 / Available solutions
-        </p>
+    <p class="content-label">
+        02 / Available solutions
+    </p>
+
+    <h2>
+        Available solutions
+    </h2>
+
+    <div class="solutions-grid">
+
+        <article class="solution-card">
+
+            <p class="solution-text">
+                Emotion flashcards charts — Visual aids to
+                teach facial expressions.
+            </p>
+
+            <img
+                class="solution-photo"
+                src="..\imagezz\emotion flashcards.jpg"
+                alt="Emotion flashcards and charts"
+            >
+
+        </article>
 
 
-        <h2>
-            Available solutions
-        </h2>
+        <article class="solution-card">
 
-        <ul>
-
-            <li>
-                Emotion flashcards &amp; charts — visual aids to teach
-                facial expressions.
-            </li>
-
-            <li>
-                Therapeutic games &amp; apps — digital or physical
+            <p class="solution-text">
+                Therapeutic games apps — Digital or physical
                 tools for emotion recognition.
-            </li>
+            </p>
 
-            <li>
-                Role-play &amp; puppets — acting out emotions through
-                play.
-            </li>
+            <img
+                class="solution-photo"
+                src="..\imagezz\theraputic games taru.png"
+                alt="Therapeutic games and apps"
+            >
 
-            <li>
-                SEL programs — school-based emotional learning
+        </article>
+
+
+        <article class="solution-card">
+
+            <p class="solution-text">
+                Role-play puppets — Acting out emotions
+                through play.
+            </p>
+
+            <img
+                class="solution-photo"
+                src="..\imagezz\roleplay taru.png"
+                alt="Role-play and puppets"
+            >
+
+        </article>
+
+
+        <article class="solution-card">
+
+            <p class="solution-text">
+                SEL programs — School-based emotional learning
                 curricula.
-            </li>
+            </p>
 
-            <li>
-                Storybooks — children's books focused on feelings and
-                empathy.
-            </li>
+            <img
+                class="solution-photo"
+                src="..\imagezz\sel programs taru.png"
+                alt="SEL programs"
+            >
 
-            <li>
-                Therapy tools — used in speech or ABA therapy for
+        </article>
+
+
+        <article class="solution-card">
+
+            <p class="solution-text">
+                Storybooks — Children’s books focused on feelings
+                and empathy.
+            </p>
+
+            <img
+                class="solution-photo"
+                src="..\imagezz\storybook taru.jpg"
+                alt="Storybooks focused on feelings and empathy"
+            >
+
+        </article>
+
+
+        <article class="solution-card">
+
+            <p class="solution-text">
+                Therapy tools — Used in speech or ABA therapy for
                 emotion learning.
-            </li>
+            </p>
 
-        </ul>
+            <img
+                class="solution-photo"
+                src="..\imagezz\theraphy tools taru.jpg"
+                alt="Therapy tools for emotion learning"
+            >
 
+        </article>
+
+    </div>
+
+</div>
+
+
+<!-- ========================================================
+     03 / OUR SOLUTION
+======================================================== -->
+
+<div class="project-content">
+
+    <p class="content-label">
+        03 / Our solution
+    </p>
+
+    <h2>
+        Our solution
+    </h2>
+
+    <h3>
+        Board game for autistic children
+    </h3>
+
+    <p>
+        Taru is a playful learning tool designed to help autistic
+        children understand, express and connect with emotions
+        through the lens of the Navarasa.
+    </p>
+
+    <p>
+        Using colour-coded zones, expressive storytelling and
+        facial-expression practice through an app, Taru supports
+        emotional development in a gentle, engaging way.
+    </p>
+
+    <p>
+        It encourages self-awareness, builds social-emotional
+        skills, and gives caregivers insight into a child's
+        comfort with different emotions.
+    </p>
+
+    <p>
+        The tagline "growing with every emotion" means that Taru
+        doesn't just teach emotions it helps children experience,
+        understand and grow through them.
+    </p>
+
+
+<!-- ========================================================
+     04 / LOGO AND GAME NAME
+======================================================== -->
+
+    <p class="content-label">
+        04 / Logo and game name
+    </p>
+
+    <h2>
+        Logo and game name
+    </h2>
+
+    <p>
+        TARU means "tree" in Sanskrit symbolising growth,
+        development and strength. Just like a tree, the game
+        supports emotional growth in children, especially autistic
+        learners, step by step. It's deeply connected to Indian
+        culture, aligning with the Navarasas the nine emotions
+        used in the game.
+    </p>
+
+    <p>
+        The board design reflects this idea: a central flower/tree
+        motif, with each petal representing an emotion. TARU
+        stands for a safe, rooted and nurturing space, ideal for
+        neurodiverse emotional learning more than a name, it
+        represents the journey of blossoming emotionally through
+        play.
+    </p>
+
+</div>
+
+
+<img
+    src="..\imagezz\taru.png"
+    alt="The nine Navarasa and their colours"
+    style="width:100%; display:block; margin:0 auto 105px;"
+>
+
+
+<!-- ========================================================
+     05 / NAVARASA PALETTE
+======================================================== -->
+
+<div class="project-content">
+
+    <p class="content-label">
+        05 / The Navarasa palette
+    </p>
+
+    <h2>
+        The Navarasa palette
+    </h2>
+
+    <p>
+        Each of the nine Navarasa was given its own colour, used
+        throughout the board, cards and app to help children
+        associate an emotion with a visual identity.
+    </p>
+
+
+    <div class="navarasa-grid">
+
+        <div class="navarasa-swatch swatch-shringaar">
+            <span>Shringaar</span>
+        </div>
+
+        <div class="navarasa-swatch swatch-hasya">
+            <span>Hasya</span>
+        </div>
+
+        <div class="navarasa-swatch swatch-raudra light-text">
+            <span>Raudra</span>
+        </div>
+
+        <div class="navarasa-swatch swatch-bhayanaka light-text">
+            <span>Bhayanaka</span>
+        </div>
+
+        <div class="navarasa-swatch swatch-adbhuta light-text">
+            <span>Adbhuta</span>
+        </div>
+
+        <div class="navarasa-swatch swatch-veera">
+            <span>Veera</span>
+        </div>
+
+        <div class="navarasa-swatch swatch-bibhitsa light-text">
+            <span>Bibhitsa</span>
+        </div>
+
+        <div class="navarasa-swatch swatch-karuna">
+            <span>Karuna</span>
+        </div>
+
+        <div class="navarasa-swatch swatch-shanta">
+            <span>Shanta</span>
+        </div>
 
     </div>
 
 
-    <!-- OUR SOLUTION -->
+<!-- ========================================================
+     06 / CHARACTER DESIGN
+======================================================== -->
 
-    <div class="project-image secondary">
+    <p class="content-label">
+        06 / Character design
+    </p>
 
-        <!--
-        Taru logo and game name exploration:
+    <h2>
+        Character design
+    </h2>
 
-        <img
-            src="../images/taru-logo-name.jpg"
-            alt="Taru logo and game name"
-        >
-        -->
+    <p>
+        Each Navarasa was given its own character — Adbhuta,
+        Shanta, Veera, Hasya, Karuna, Bibhitsa, Raudra, Bhayankar
+        and Shringar — designed to make the nine emotions easy for
+        children to recognise and relate to.
+    </p>
 
-    </div>
-
-
-    <div class="project-content">
-
-        <p class="content-label">
-            03 / Our solution
-        </p>
-
-        <h2>
-            Our solution
-        </h2>
-
-        <h3>Board game for autistic children</h3>
-
-        <p>
-
-            Taru is a playful learning tool designed to help autistic
-            children understand, express and connect with emotions
-            through the lens of the Navarasa.
-
-        </p>
-
-        <p>
-
-            Using colour-coded zones, expressive storytelling and
-            facial-expression practice through an app, Taru supports
-            emotional development in a gentle, engaging way.
-
-        </p>
-
-        <p>
-
-            It encourages self-awareness, builds social-emotional
-            skills, and gives caregivers insight into a child's
-            comfort with different emotions.
-
-        </p>
-
-        <p>
-
-            The tagline "growing with every emotion" means that Taru
-            doesn't just teach emotions — it helps children experience,
-            understand and grow through them.
-
-        </p>
+</div>
 
 
-        <!-- LOGO AND GAME NAME -->
+<!-- CHARACTER SHEET -->
 
-        <p class="content-label">
-            04 / Logo and game name
-        </p>
+<img
+    class="character-sheet"
+    src="..\imagezz\taru character.png"
+    alt="Taru character design sheet"
+>
 
-        <h2>
-            Logo and game name
-        </h2>
 
-        <p>
+<!-- ========================================================
+     07 / 3D RENDER OF GAME BOX
+======================================================== -->
 
-            TARU means "tree" in Sanskrit — symbolising growth,
-            development and strength. Just like a tree, the game
-            supports emotional growth in children, especially autistic
-            learners, step by step. It's deeply connected to Indian
-            culture, aligning with the Navarasa — the nine emotions
-            used in the game.
+<div class="render-section">
 
-        </p>
+    <p class="render-section-label">
+        07 / 3D render of game box
+    </p>
 
-        <p>
+    <h2 class="render-section-title">
+        3D render of game box
+    </h2>
 
-            The board design reflects this idea: a central flower/tree
-            motif, with each petal representing an emotion. TARU
-            stands for a safe, rooted and nurturing space, ideal for
-            neurodiverse emotional learning — more than a name, it
-            represents the journey of blossoming emotionally through
-            play.
+    <div class="render-grid">
 
-        </p>
+        <div class="render-item render-small-1">
+
+            <img
+                src="..\imagezz\render1.png"
+                alt="Taru game box 3D render"
+            >
+
+        </div>
+
+
+        <div class="render-item render-small-2">
+
+            <img
+                src="..\imagezz\render2.png"
+                alt="Taru game box 3D render"
+            >
+
+        </div>
+
+
+        <div class="render-item render-small-3">
+
+            <img
+                src="..\imagezz\render3.png"
+                alt="Taru game box 3D render"
+            >
+
+        </div>
+
+
+        <div class="render-item render-large">
+
+            <img
+                src="..\imagezz\render4.png"
+                alt="Final 3D render of Taru game box"
+            >
+
+        </div>
 
     </div>
 
-
-    <!-- NAVARASA PALETTE -->
-
-    <div class="project-image">
-
-        <!--
-        Colour + Navarasa key art:
-
-        <img
-            src="../images/taru-navarasa-palette.jpg"
-            alt="The nine Navarasa and their colours"
-        >
-        -->
-
-    </div>
+</div>
 
 
-    <div class="project-content">
+<!-- ========================================================
+     08 / STORIES AND SCENARIOS
+======================================================== -->
 
-        <p class="content-label">
-            05 / The Navarasa palette
-        </p>
+<div class="project-content">
 
-        <h2>
-            The Navarasa palette
-        </h2>
+    <p class="content-label">
+        08 / Stories and scenarios
+    </p>
 
-        <p>
+    <h2>
+        Stories and scenarios
+    </h2>
 
-            Each of the nine Navarasa was given its own colour, used
-            throughout the board, cards and app to help children
-            associate an emotion with a visual identity.
+    <p>
+        Each Rasa zone is paired with a small, everyday scenario
+        that helps children connect the emotion to something
+        familiar.
+    </p>
 
-        </p>
+    <img
+        class="stories-image"
+        src="..\imagezz\s and s.png"
+        alt="Stories and scenarios for Taru"
+    >
 
-        <ul>
-
-            <li>Shringaar — Baby pink — #E3A7C0</li>
-            <li>Hasya — Neon pink — #E83989</li>
-            <li>Raudra — Red — #CB2026</li>
-            <li>Bhayanaka — Purple — #733489</li>
-            <li>Adbhuta — Sky blue — #3157A7</li>
-            <li>Veera — Yellowish orange — #E5A44D</li>
-            <li>Bibhitsa — Brown — #836E56</li>
-            <li>Karuna — Greyish sky blue — #A2BDCB</li>
-            <li>Shanta — Muted grey — #B0B6AE</li>
-
-        </ul>
+</div>
 
 
-        <!-- CHARACTER DESIGN -->
+<!-- ========================================================
+     09 / GAMEPLAY
+======================================================== -->
 
-        <p class="content-label">
-            06 / Character design
-        </p>
+<div class="gameplay-section">
 
-        <h2>
-            Character design
-        </h2>
+    <p class="content-label">
+        09 / Gameplay
+    </p>
+
+    <h2 class="gameplay-section-title">
+        Gameplay
+    </h2>
+
+
+    <!-- OBJECTIVE -->
+
+    <div class="gameplay-objective">
+
+        <div class="gameplay-objective-title">
+            Objective:
+        </div>
 
         <p>
-
-            Each Navarasa was given its own character — Adbhuta,
-            Shanta, Veera, Hasya, Karuna, Bibhitsa, Raudra, Bhayankar
-            and Shringar — designed to make the nine emotions easy for
-            children to recognise and relate to.
-
-        </p>
-
-    </div>
-
-
-    <!-- CHARACTER SHEET / 3D RENDER -->
-
-    <div class="project-image secondary">
-
-        <!--
-        Full character line-up sheet:
-
-        <img
-            src="../images/taru-character-design.jpg"
-            alt="Taru character design sheet"
-        >
-        -->
-
-    </div>
-
-    <div class="project-image">
-
-        <!--
-        3D render of the game box:
-
-        <img
-            src="../images/taru-box-render.jpg"
-            alt="3D render of the Taru game box"
-        >
-        -->
-
-    </div>
-
-
-    <div class="project-content">
-
-
-        <!-- STORIES AND SCENARIOS -->
-
-        <p class="content-label">
-            07 / Stories and scenarios
-        </p>
-
-        <h2>
-            Stories and scenarios
-        </h2>
-
-        <p>
-
-            Each Rasa zone is paired with a small, everyday scenario
-            that helps children connect the emotion to something
-            familiar.
-
-        </p>
-
-        <ul>
-
-            <li>
-                Listening to bedtime stories in a soft voice — Shanta
-            </li>
-
-            <li>
-                Blowing bubbles and seeing them float in the sunlight
-                — Adbhuta
-            </li>
-
-            <li>
-                You smile and say thank you to the security guard of
-                the building — Shringaar
-            </li>
-
-            <li>
-                Someone shouts at you without any reason — Raudra
-            </li>
-
-            <li>
-                Screaming when you see a lizard or cockroach —
-                Bhayanaka
-            </li>
-
-            <li>
-                Seeing a military person for the first time in a
-                parade — Veera
-            </li>
-
-        </ul>
-
-
-    </div>
-
-
-    <!-- GAMEPLAY -->
-
-    <div class="project-image secondary">
-
-        <!--
-        Board layout showing the 9 Rasa zones:
-
-        <img
-            src="../images/taru-board-layout.jpg"
-            alt="Taru board layout with the nine Rasa zones"
-        >
-        -->
-
-    </div>
-
-
-    <div class="project-content">
-
-        <p class="content-label">
-            08 / Gameplay
-        </p>
-
-        <h2>
-            Gameplay
-        </h2>
-
-        <h3>Objective</h3>
-        <p class="tight">
             Travel through all 9 Navarasa zones, explore each
             expression, and collect tokens by guessing emotions
-            correctly. The player who finishes all 9 zones first and
-            has the most tokens wins!
+            correctly.<br>
+
+            The player who finishes all 9 zones first and has the
+            most tokens wins!
         </p>
 
-        <h3>Setup</h3>
-        <ul class="tight">
-            <li>Each player gets 1 token piece and 10 tokens.</li>
-            <li>Place all pieces at the start.</li>
-            <li>The dice contains numbers 1, 2 and 3 (repeated).</li>
-        </ul>
+    </div>
 
-        <h3>Winning the game</h3>
+
+    <!-- GAMEPLAY IMAGE + SETUP -->
+
+    <div class="gameplay-setup">
+
+        <div class="gameplay-setup-image">
+
+            <img
+                src="..\imagezz\gameplay taru.png"
+                alt="Taru gameplay board and pieces"
+            >
+
+        </div>
+
+
+        <div class="gameplay-setup-text">
+
+            <p>
+
+                <strong>Setup:</strong><br><br>
+
+                Each player gets:<br>
+
+                1 token piece<br>
+                10 tokens<br>
+
+                Place all pieces at the start.<br>
+
+                Dice contains numbers 1, 2 and 3
+                (repeated).
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- WINNING -->
+
+    <div class="gameplay-winning">
+
         <p>
+
+            <strong>Winning the Game:</strong><br>
+
             The game ends when a player completes all 9 emotion
-            zones. The first player to finish all zones with the most
+            zones.
+
+        </p>
+
+        <p>
+
+            The first player to finish all zones with the most
             tokens is the winner.
+
         </p>
-
-
-        <!-- FLOW OF GAME -->
-
-        <p class="content-label">
-            09 / Flow of the game
-        </p>
-
-        <h2>
-            Flow of the game
-        </h2>
-
-        <ol>
-
-            <li>
-                Introduce yourselves — each player says their name or
-                a fun fact.
-            </li>
-
-            <li>
-                Roll the dice. Only if you roll a 1 can you enter the
-                first zone (Rasa 1).
-            </li>
-
-            <li>
-                Move your piece forward based on your dice number.
-            </li>
-
-            <li>
-                When you enter a zone, notice the facial expression
-                shown on the board for that Rasa (e.g. Joy, Fear,
-                Anger).
-            </li>
-
-            <li>
-                The Helper plays a short story or scenario — it
-                matches the emotion of the zone.
-            </li>
-
-            <li>
-                The player listens to the story and chooses a matching
-                card that shows the expression or emotion.
-            </li>
-
-            <li>
-                The player then reads or hears the scenario again and
-                guesses which emotion it represents.
-            </li>
-
-            <li>
-                The Helper asks: "What emotion is that?"
-            </li>
-
-            <li>
-                If the player guesses correctly, they get 2 tokens.
-            </li>
-
-            <li>
-                If the player guesses wrong, they give 1 token to each
-                other player.
-            </li>
-
-        </ol>
 
     </div>
 
+</div>
 
-    <!-- APP INTERFACE -->
 
-    <div class="project-image">
+<!-- ========================================================
+     10 / FLOW OF THE GAME
+======================================================== -->
 
-        <!--
-        App login / sign-up and story category screens:
+<div class="flow-section">
 
-        <img
-            src="../images/taru-app-interface.jpg"
-            alt="Taru companion app interface"
-        >
-        -->
+    <p class="content-label">
+        10 / Flow of the game
+    </p>
+
+    <h2 class="flow-section-title">
+        Flow of the game
+    </h2>
+
+
+    <div class="flow-chart">
+
+
+        <!-- FLOW CARDS -->
+
+        <div class="flow-card flow-card-1">
+
+            <span class="flow-number">
+                01
+            </span>
+
+            Introduce yourselves.<br>
+
+            Each player says their name
+            or a fun fact.
+
+        </div>
+
+
+        <div class="flow-card flow-card-2">
+
+            <span class="flow-number">
+                02
+            </span>
+
+            Roll the dice.<br>
+
+            Only if you roll a 1, you can
+            enter the first zone (Rasa 1).
+
+        </div>
+
+
+        <div class="flow-card flow-card-3">
+
+            <span class="flow-number">
+                03
+            </span>
+
+            Move your piece forward
+            based on your dice number.
+
+        </div>
+
+
+        <div class="flow-card flow-card-4">
+
+            <span class="flow-number">
+                04
+            </span>
+
+            When you enter a zone,
+            notice the facial expression
+            shown on the board for that
+            Rasa.
+
+        </div>
+
+
+        <div class="flow-card flow-card-5">
+
+            <span class="flow-number">
+                05
+            </span>
+
+            The Helper plays a short
+            story or scenario.<br>
+
+            The story matches the emotion
+            of the zone.
+
+        </div>
+
+
+        <div class="flow-card flow-card-6">
+
+            <span class="flow-number">
+                06
+            </span>
+
+            The player listens to the story
+            and chooses a matching card
+            showing the expression or
+            emotion.
+
+        </div>
+
+
+        <div class="flow-card flow-card-7">
+
+            <span class="flow-number">
+                07
+            </span>
+
+            The player reads or hears
+            the scenario again and
+            guesses which emotion it
+            represents.
+
+        </div>
+
+
+        <div class="flow-card flow-card-8">
+
+            <span class="flow-number">
+                08
+            </span>
+
+            The Helper asks:<br>
+
+            “What emotion is that?”
+
+        </div>
+
+
+        <div class="flow-card flow-card-9">
+
+            <span class="flow-number">
+                09
+            </span>
+
+            If the player guesses
+            correctly:<br>
+
+            They get 2 tokens.
+
+        </div>
+
+
+        <div class="flow-card flow-card-10">
+
+            <span class="flow-number">
+                10
+            </span>
+
+            If the player guesses wrong:<br>
+
+            They give 1 token to each
+            other player.
+
+        </div>
+
+
+        <!-- CONNECTORS -->
+
+        <span class="flow-arrow arrow-1"></span>
+        <span class="flow-arrow arrow-2"></span>
+        <span class="flow-arrow arrow-3"></span>
+        <span class="flow-arrow arrow-4"></span>
+        <span class="flow-arrow arrow-5"></span>
+        <span class="flow-arrow arrow-6"></span>
+        <span class="flow-arrow arrow-7"></span>
+        <span class="flow-arrow arrow-8"></span>
+        <span class="flow-arrow arrow-9"></span>
 
     </div>
 
-
-    <div class="project-content">
-
-        <p class="content-label">
-            10 / App interface
-        </p>
-
-        <h2>
-            App interface
-        </h2>
-
-        <p>
-
-            Alongside the physical board game, Taru extends into a
-            companion app.
-
-        </p>
-
-        <h3>App features</h3>
-        <ul>
-
-            <li>Digital version of the board game.</li>
-            <li>Animated stories with voice narration.</li>
-            <li>Touch-based emotion selection.</li>
-            <li>
-                Progress tracking for emotion-recognition improvement.
-            </li>
-            <li>Music therapy for calming sensations.</li>
-
-        </ul>
-
-    </div>
+</div>
 
 
-    <!-- LEARNINGS -->
+<!-- ========================================================
+     11 / APP INTERFACE
+======================================================== -->
 
-    <div class="project-image secondary">
+<div class="project-content">
 
-        <!--
-        Kids playing / testing the board game:
+    <p class="content-label">
+        11 / App interface
+    </p>
 
-        <img
-            src="../images/taru-playtest.jpg"
-            alt="Children playing the Taru board game"
-        >
-        -->
+    <h2>
+        App interface
+    </h2>
 
-    </div>
+    <p>
+        Alongside the physical board game, Taru extends into a
+        companion app.
+    </p>
 
+    <h3>
+        App features
+    </h3>
 
-    <div class="project-content">
+    <ul>
 
-        <p class="content-label">
-            11 / Learnings of the board game
-        </p>
+        <li>
+            Digital version of the board game.
+        </li>
 
-        <h2>
-            Learnings of the board game
-        </h2>
+        <li>
+            Animated stories with voice narration.
+        </li>
 
-        <h3>Recognising expressions</h3>
-        <p class="tight">
-            Helps children identify facial expressions, tones and
-            situational cues through storytelling and illustrations.
-        </p>
+        <li>
+            Touch-based emotion selection.
+        </li>
 
-        <h3>A non-judgmental environment</h3>
-        <p class="tight">
-            Provides a non-judgmental environment to express and
-            guess emotions through structured play.
-        </p>
+        <li>
+            Progress tracking for emotion-recognition improvement.
+        </li>
 
-        <h3>Non-overwhelming interactions</h3>
-        <p>
-            Controlled dice numbers, visuals and storytelling ensure
-            non-overwhelming interactions.
-        </p>
+        <li>
+            Music therapy for calming sensations.
+        </li>
 
+    </ul>
 
-        <!-- CONCLUSION -->
-
-        <p class="content-label">
-            12 / Conclusion
-        </p>
-
-        <h2>
-            Conclusion
-        </h2>
-
-        <p>
-
-            By completing the game, the player gains a better
-            understanding of different emotions, learns how to express
-            them, and builds confidence in recognising feelings in
-            themselves and others.
-
-        </p>
-
-        <ul>
-
-            <li>
-                They gain confidence in social interactions by
-                practising expressions in a safe, playful environment.
-            </li>
-
-            <li>
-                The game helps improve self-regulation and emotional
-                control, as players learn to recognise emotions before
-                reacting.
-            </li>
-
-            <li>
-                It encourages empathy, making it easier to understand
-                what others may be feeling based on expressions.
-            </li>
-
-        </ul>
-
-    </div>
+</div>
 
 
-    <div class="project-navigation">
+<div class="learning-image">
+<img
+        src="..\imagezz\taru mobile.png"
+        alt="Children playing the Taru board game"
+    >
+</div>
 
 
-        <a
-            href="project-5.html"
-            class="back-link"
-        >
-            ← Previous project
-        </a>
+<!-- ========================================================
+     12 / LEARNINGS
+======================================================== -->
+
+<div class="project-content">
+
+    <p class="content-label">
+        12 / Learnings of the board game
+    </p>
+
+    <h2>
+        Learnings of the board game
+    </h2>
+
+    <img
+        src="..\imagezz\taru learnings.png"
+        alt="Children playing the Taru board game"
+    >
+
+    <h3>
+        Recognising expressions
+    </h3>
+
+    <p class="tight">
+        Helps children identify facial expressions, tones and
+        situational cues through storytelling and illustrations.
+    </p>
+
+    <h3>
+        A non-judgmental environment
+    </h3>
+
+    <p class="tight">
+        Provides a non-judgmental environment to express and
+        guess emotions through structured play.
+    </p>
+
+    <h3>
+        Non-overwhelming interactions
+    </h3>
+
+    <p>
+        Controlled dice numbers, visuals and storytelling ensure
+        non-overwhelming interactions.
+    </p>
 
 
-        <a
-            href="project-1.html"
-            class="back-link"
-        >
-            Next project →
-        </a>
+<!-- ========================================================
+     13 / CONCLUSION
+======================================================== -->
+
+    <p class="content-label">
+        13 / Conclusion
+    </p>
+
+    <h2>
+        Conclusion
+    </h2>
+
+    <p>
+        By completing the game, the player gains a better
+        understanding of different emotions, learns how to express
+        them, and builds confidence in recognising feelings in
+        themselves and others.
+    </p>
+
+    <ul>
+
+        <li>
+            They gain confidence in social interactions by
+            practising expressions in a safe, playful environment.
+        </li>
+
+        <li>
+            The game helps improve self-regulation and emotional
+            control, as players learn to recognise emotions before
+            reacting.
+        </li>
+
+        <li>
+            It encourages empathy, making it easier to understand
+            what others may be feeling based on expressions.
+        </li>
+
+    </ul>
+
+    <img
+        src="..\imagezz\taru conclusion.png"
+        alt="Children playing the Taru board game"
+    >
+
+</div>
 
 
-    </div>
+<!-- ========================================================
+     PROJECT NAVIGATION
+======================================================== -->
+
+<div class="project-navigation">
+
+    <a href="project-5.html">
+        ← Previous project
+    </a>
+
+    <a href="project-1.html">
+        Next project →
+    </a>
+
+</div>
 
 
 </div>
 
 </section>
+
 
 <!-- ========================================================
      FOOTER
@@ -1677,7 +2280,6 @@ footer {
 
 
 <div class="footer-links">
-
 
     <a
         href="https://github.com/blueexev"
@@ -1698,15 +2300,13 @@ footer {
 
 
     <a href="../index.html">
-
         ↑ Top
-
     </a>
-
 
 </div>
 
 </footer>
+
 
 </body>
 
