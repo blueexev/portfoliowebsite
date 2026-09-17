@@ -9,14 +9,14 @@
 <style>
 
 /* ========================================================
-   QUANO FONT
+   MONTSERRAT FONT
 ======================================================== */
 
 @font-face {
 
-    font-family: "Quano";
+    font-family: "Montserrat";
 
-    src: url("../fonts/Quano-Regular.woff2")
+    src: url("../fonts/Montserrat-Regular.woff2")
     format("woff2");
 
     font-weight: 400;
@@ -27,9 +27,9 @@
 
 @font-face {
 
-    font-family: "Quano";
+    font-family: "Montserrat";
 
-    src: url("../fonts/Quano-Italic.woff2")
+    src: url("../fonts/Montserrat.woff2")
     format("woff2");
 
     font-weight: 400;
@@ -148,7 +148,7 @@ a {
 
 .artist-name {
 
-    font-size: 9px;
+    font-size: 12px;
 
     text-transform: uppercase;
 
@@ -165,7 +165,7 @@ a {
 
     display: flex;
 
-    gap: 25px;
+    gap: 40px;
 
     list-style: none;
 
@@ -173,7 +173,7 @@ a {
 
 .nav-links a {
 
-    font-size: 8px;
+    font-size: 12px;
 
     text-transform: uppercase;
 
@@ -228,7 +228,7 @@ a {
 
     gap: 8px;
 
-    font-size: 8px;
+    font-size: 10px;
 
     text-transform: uppercase;
 
@@ -257,7 +257,7 @@ a {
 
 .collection-label {
 
-    font-size: 8px;
+    font-size: 12px;
 
     text-transform: uppercase;
 
@@ -275,7 +275,7 @@ a {
 .project-main-title {
 
     font-family:
-        "Quano",
+        "Montserrat",
         "Bodoni Moda",
         "Cormorant Garamond",
         Georgia,
@@ -284,9 +284,9 @@ a {
     font-weight: 400;
 
     font-size:
-        clamp(50px, 7vw, 82px);
+        clamp(50px, 7vw, 60px);
 
-    line-height: .92;
+    line-height: 1.50;
 
     letter-spacing: -.055em;
 
@@ -303,7 +303,7 @@ a {
 
     margin-top: 35px;
 
-    font-size: 11px;
+    font-size: 13px;
 
     line-height: 1.8;
 
@@ -327,7 +327,7 @@ a {
 
     margin-top: 60px;
 
-    padding-top: 18px;
+    padding-top: 10px;
 
     border-top:
         1px solid
@@ -345,7 +345,7 @@ a {
 
     display: block;
 
-    font-size: 7px;
+    font-size: 12px;
 
     text-transform: uppercase;
 
@@ -359,7 +359,7 @@ a {
 
 .meta-value {
 
-    font-size: 9px;
+    font-size: 15px;
 
     line-height: 1.5;
 
@@ -389,8 +389,7 @@ a {
 .project-body {
 
     padding:
-        110px 0
-        140px;
+        50px 0 140px;
 
 }
 
@@ -403,13 +402,13 @@ a {
 
     width: 100%;
 
-    height: 520px;
+    height: 200px;
 
     background: #d5cfc3;
 
     overflow: hidden;
 
-    margin-bottom: 110px;
+    margin: 0 auto 90px;
 
 }
 
@@ -464,7 +463,7 @@ a {
 
 .content-label {
 
-    font-size: 8px;
+    font-size: 12px;
 
     text-transform: uppercase;
 
@@ -482,17 +481,17 @@ a {
 .project-content h2 {
 
     font-family:
-        "Quano",
+        "Montserrat",
         "Bodoni Moda",
         "Cormorant Garamond",
         Georgia,
         serif;
 
-    font-size: 39px;
+    font-size: 30px;
 
     font-weight: 400;
 
-    letter-spacing: -.045em;
+    letter-spacing: .005em;
 
     line-height: 1;
 
@@ -500,22 +499,23 @@ a {
 
 }
 
-/* SUB-HEADINGS (component / subsection names) */
+
+/* SUB-HEADINGS */
 
 .project-content h3 {
 
     font-family:
-        "Quano",
+        "Montserrat",
         "Bodoni Moda",
         "Cormorant Garamond",
         Georgia,
         serif;
 
-    font-size: 18px;
+    font-size: 20px;
 
-    font-weight: 400;
+    font-weight: 500;
 
-    letter-spacing: -.02em;
+    letter-spacing: .005em;
 
     margin-bottom: 12px;
 
@@ -526,15 +526,15 @@ a {
 
 .project-content p {
 
-    max-width: 560px;
+    max-width: 1950px;
 
-    font-size: 11px;
+    font-size: 15px;
 
-    line-height: 1.9;
+    line-height: 1.8;
 
     color: #66615b;
 
-    margin-bottom: 70px;
+    margin-bottom: 30px;
 
 }
 
@@ -549,11 +549,11 @@ a {
 
 .project-content ul {
 
-    margin-top: -40px;
+    margin-top: 0;
 
-    margin-bottom: 90px;
+    margin-bottom: 55px;
 
-    padding-left: 18px;
+    padding-left: 20px;
 
 }
 
@@ -567,13 +567,15 @@ a {
 
 .project-content li {
 
-    font-size: 10px;
+    font-size: 13px;
 
     line-height: 1.9;
 
     color: #66615b;
 
     padding-left: 5px;
+
+    margin-bottom: 12px;
 
 }
 
@@ -585,10 +587,9 @@ a {
 .project-image.secondary {
 
     margin:
-        20px 0
-        110px;
+        20px 0 90px;
 
-    height: 430px;
+    height: 400px;
 
 }
 
@@ -605,7 +606,7 @@ a {
 
     align-items: center;
 
-    margin-top: 120px;
+    margin-top: 100px;
 
     padding-top: 25px;
 
@@ -630,8 +631,7 @@ footer {
     margin: auto;
 
     padding:
-        25px 0
-        35px;
+        25px 0 35px;
 
     border-top:
         1px solid
@@ -645,7 +645,7 @@ footer {
 
 .footer-text {
 
-    font-size: 7px;
+    font-size: 10px;
 
     color: #8a847c;
 
@@ -659,17 +659,833 @@ footer {
 
     display: flex;
 
-    gap: 20px;
+    gap: 50px;
 
 }
 
 .footer-links a {
 
-    font-size: 7px;
+    font-size: 10px;
 
     text-transform: uppercase;
 
     letter-spacing: .1em;
+
+}
+
+
+/* ========================================================
+   INTENT — 4 IMAGE GRID
+======================================================== */
+
+.intent-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 14px;
+
+    width: 100%;
+
+    margin-top: 35px;
+
+    margin-bottom: 70px;
+
+}
+
+.intent-grid-item {
+
+    width: 100%;
+
+    height: 150px;
+
+    overflow: hidden;
+
+    background: #d5cfc3;
+
+}
+
+.intent-grid-item img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+}
+
+@media(max-width: 760px) {
+
+    .intent-grid {
+
+        gap: 10px;
+
+        margin-top: 30px;
+
+        margin-bottom: 60px;
+
+    }
+
+    .intent-grid-item {
+
+        height: 110px;
+
+    }
+
+}
+
+
+/* ========================================================
+   FRAMING — WHY BIRDS / WHY ARCHITECTS
+======================================================== */
+
+.framing-panel {
+
+    position: relative;
+
+    height: 290px;
+
+    padding: 18px 20px;
+
+}
+
+
+.framing-title {
+
+    font-family:
+        "Montserrat",
+        sans-serif;
+
+    font-size: 30px;
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    margin-bottom: 28px;
+
+}
+
+.framing-chart {
+
+    position: relative;
+
+    width: 82%;
+
+    height: 175px;
+
+    margin: auto;
+
+}
+
+.framing-chart::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 10px;
+
+    bottom: 10px;
+
+    width: 1px;
+
+    background: #191817;
+
+}
+
+.framing-chart::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    top: 50%;
+
+    height: 1px;
+
+    background: #191817;
+
+}
+
+.framing-label {
+
+    position: absolute;
+
+    font-family:
+        "Montserrat",
+        sans-serif;
+
+    font-size: 9px;
+
+    line-height: 1.2;
+
+    white-space: nowrap;
+
+}
+
+.framing-label.top {
+
+    top: -10px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+}
+
+.framing-label.left {
+
+    top: 50%;
+
+    left: -8px;
+
+    transform:
+        translate(-100%, -50%);
+
+}
+
+.framing-label.right {
+
+    top: 50%;
+
+    right: -8px;
+
+    transform:
+        translate(100%, -50%);
+
+}
+
+.framing-label.bottom {
+
+    bottom: -10px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+}
+
+.framing-dot {
+
+    position: absolute;
+
+    width: 18px;
+
+    height: 18px;
+
+    border-radius: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+}
+
+.framing-dot.bird {
+
+    left: 87%;
+
+    top: 74%;
+
+    background: #ff1717;
+
+}
+
+.framing-dot.architect {
+
+    left: 43%;
+
+    top: 36%;
+
+    background: #8aa85e;
+
+}
+
+@media(max-width: 760px) {
+
+    .framing-graphic {
+
+        margin:
+            35px auto 65px;
+
+    }
+
+    .framing-panel {
+
+        height: 230px;
+
+        padding:
+            15px 10px;
+
+    }
+
+    .framing-title {
+
+        font-size: 23px;
+
+    }
+
+    .framing-chart {
+
+        width: 75%;
+
+        height: 135px;
+
+    }
+
+    .framing-label {
+
+        font-size: 7px;
+
+    }
+
+    .framing-dot {
+
+        width: 14px;
+
+        height: 14px;
+
+    }
+
+}
+
+
+/* ========================================================
+   DATASETS — REFERENCE LAYOUT
+======================================================== */
+
+.datasets-layout {
+
+    width: 100%;
+
+    max-width: 760px;
+
+    margin:
+        45px auto 90px;
+
+}
+
+.datasets-top {
+
+    display: grid;
+
+    grid-template-columns:
+        1.35fr .85fr;
+
+    gap: 28px;
+
+    align-items: start;
+
+}
+
+.datasets-list {
+
+    padding-top: 48px;
+
+}
+
+.datasets-list ul {
+
+    margin: 0;
+
+    padding-left: 18px;
+
+}
+
+.datasets-list li {
+
+    font-size: 15px;
+
+    line-height: 1.45;
+
+    color: #191817;
+
+    margin-bottom: 3px;
+
+}
+
+.datasets-map-top {
+
+    width: 100%;
+
+    height: 195px;
+
+    overflow: hidden;
+
+    background: #d5cfc3;
+
+}
+
+.datasets-map-top img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+}
+
+.datasets-bottom-images {
+
+    display: grid;
+
+    grid-template-columns:
+        1.25fr .95fr;
+
+    gap: 28px;
+
+    margin-top: 30px;
+
+}
+
+.datasets-bottom-image {
+
+    width: 100%;
+
+    height: 195px;
+
+    overflow: hidden;
+
+    background: #d5cfc3;
+
+}
+
+.datasets-bottom-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+}
+
+.datasets-table {
+
+    width: 100%;
+
+    margin-top: 30px;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        rgba(25,24,23,.5);
+
+}
+
+.datasets-table img {
+
+    width: 100%;
+
+    height: auto;
+
+    display: block;
+
+}
+
+@media(max-width: 760px) {
+
+    .datasets-layout {
+
+        margin:
+            35px auto 65px;
+
+    }
+
+    .datasets-top {
+
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+    }
+
+    .datasets-list {
+
+        padding-top: 0;
+
+    }
+
+    .datasets-map-top {
+
+        height: 180px;
+
+    }
+
+    .datasets-bottom-images {
+
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+        margin-top: 20px;
+
+    }
+
+    .datasets-bottom-image {
+
+        height: 180px;
+
+    }
+
+    .datasets-table {
+
+        margin-top: 20px;
+
+    }
+
+}
+
+
+/* ========================================================
+   MAJOR COMPONENTS — 3 COLUMN GRID
+======================================================== */
+
+.major-components-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    column-gap: 35px;
+
+    row-gap: 55px;
+
+    width: 100%;
+
+    margin-top: 45px;
+
+    margin-bottom: 90px;
+
+}
+
+.major-component {
+
+    min-width: 0;
+
+}
+
+.major-component h3 {
+
+    font-family:
+        "Montserrat",
+        sans-serif;
+
+    font-size: 20px;
+
+    font-weight: 500;
+
+    line-height: 1.15;
+
+    margin-bottom: 7px;
+
+}
+
+.major-component p {
+
+    font-size: 15px;
+
+    line-height: 1.35;
+
+    color: #191817;
+
+    margin-bottom: 0;
+
+}
+
+@media(max-width: 760px) {
+
+    .major-components-grid {
+
+        grid-template-columns: 1fr;
+
+        row-gap: 35px;
+
+        margin-top: 30px;
+
+        margin-bottom: 65px;
+
+    }
+
+    .major-component h3 {
+
+        font-size: 20px;
+
+    }
+
+    .major-component p {
+
+        font-size: 14px;
+
+    }
+
+}
+
+
+/* ========================================================
+   VISUAL LANGUAGE — DATASET STYLE IMAGE GRID
+======================================================== */
+
+.visual-language-grid {
+
+    width: 100%;
+
+    max-width: 760px;
+
+    margin:
+        45px auto 85px;
+
+    display: grid;
+
+    grid-template-columns:
+        1.25fr .95fr;
+
+    gap: 28px;
+
+    align-items: start;
+
+}
+
+
+/* EACH VISUAL LANGUAGE IMAGE */
+
+.visual-language-image {
+
+    width: 100%;
+
+    height: 240px;
+
+    display: block;
+
+    object-fit: contain;
+
+    background: #d5cfc3;
+
+}
+
+
+/* VL1 */
+
+.visual-language-main {
+
+    width: 100%;
+
+}
+
+
+/* VL2 */
+
+.visual-language-map {
+
+    width: 100%;
+
+}
+
+
+/* VL3 */
+
+.visual-language-statement {
+
+    width: 100%;
+
+}
+
+
+/* VL4 */
+
+.visual-language-bird {
+
+    width: 100%;
+
+}
+
+
+/* VL5 */
+
+.visual-language-grid > img:not(.visual-language-main):not(.visual-language-map):not(.visual-language-statement):not(.visual-language-bird) {
+
+    width: 100%;
+
+    height: 240px;
+
+    display: block;
+
+    object-fit: contain;
+
+    background: #d5cfc3;
+
+}
+
+
+/* COLOUR PALETTE */
+
+.visual-language-palette {
+
+    grid-column:
+        1 / -1;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 8px;
+
+    margin-top: 2px;
+
+}
+
+
+.visual-language-colour {
+
+    width: 56px;
+
+    height: 56px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #ffffff;
+
+    font-size: 8px;
+
+    line-height: 1;
+
+    text-align: center;
+
+}
+
+
+.visual-language-colour.c1 {
+
+    background: #8B091D;
+
+}
+
+.visual-language-colour.c2 {
+
+    background: #DC2424;
+
+}
+
+.visual-language-colour.c3 {
+
+    background: #163D5D;
+
+}
+
+.visual-language-colour.c4 {
+
+    background: #177E79;
+
+}
+
+.visual-language-colour.c5 {
+
+    background: #18A900;
+
+}
+
+
+/* ========================================================
+   FINAL DISPLAY IMAGE
+======================================================== */
+
+.final-display-image {
+
+    width: 100%;
+
+    max-width: 680px;
+
+    height: auto;
+
+    display: block;
+
+    margin:
+        45px auto 85px;
+
+}
+
+
+@media(max-width: 760px) {
+
+    .visual-language-grid {
+
+        max-width: 760px;
+
+        margin:
+            35px auto 65px;
+
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+    }
+
+    .visual-language-image {
+
+        height: 180px;
+
+    }
+
+    .visual-language-grid > img:not(.visual-language-main):not(.visual-language-map):not(.visual-language-statement):not(.visual-language-bird) {
+
+        height: 180px;
+
+    }
+
+    .visual-language-palette {
+
+        gap: 5px;
+
+        margin-top: 5px;
+
+    }
+
+    .visual-language-colour {
+
+        width: 42px;
+
+        height: 42px;
+
+        font-size: 6px;
+
+    }
+
+    .final-display-image {
+
+        margin:
+            35px auto 65px;
+
+    }
 
 }
 
@@ -755,23 +1571,23 @@ footer {
 
     .project-image {
 
-        height: 300px;
+        height: 150px;
 
-        margin-bottom: 80px;
+        margin-bottom: 70px;
 
     }
 
 
     .project-content h2 {
 
-        font-size: 34px;
+        font-size: 25px;
 
     }
 
 
     .project-content p {
 
-        margin-bottom: 55px;
+        margin-bottom: 50px;
 
     }
 
@@ -865,6 +1681,7 @@ footer {
 
 </nav>
 
+
 <!-- ========================================================
      PROJECT HERO
 ======================================================== -->
@@ -912,8 +1729,6 @@ footer {
 
         <div class="project-meta">
 
-            <!-- Tools/role/year weren't explicitly stated in the
-                 source PDF beyond p5.js — edit as needed. -->
 
             <div class="meta-item">
 
@@ -978,6 +1793,7 @@ footer {
 
 <div class="museum-rule"></div>
 
+
 <!-- ========================================================
      PROJECT BODY
 ======================================================== -->
@@ -987,20 +1803,12 @@ footer {
 <div class="page-width">
 
 
-    <!-- ==================================================
-         PROJECT COVER
-    ================================================== -->
-
     <div class="project-image">
 
-        <!--
-        Hero shot — birds in the Ahmedabad smog:
-
         <img
-            src="../images/fragile-flights-hero.jpg"
+            src="..\imagezz\aqi map.jpg"
             alt="Fragile Flights — birds in Ahmedabad smog"
         >
-        -->
 
     </div>
 
@@ -1008,92 +1816,76 @@ footer {
     <div class="project-content">
 
 
-        <!-- ==================================================
-             PROJECT BRIEF
-        ================================================== -->
-
         <p class="content-label">
             01 / Project brief
         </p>
-
 
         <h2>
             Project brief
         </h2>
 
-
         <p>
-
             Ahmedabad today exists as a collection of fragmented
             ecological islands. Famous green lungs like Parimal
             Garden and the Riverfront are majestic in isolation, but
             they are severed by vast, hostile expanses of heat and
             toxic air.
-
         </p>
 
         <p>
-
             While our urban planning has successfully created a
             seamless network for human transit and concrete density,
             it has inadvertently constructed a series of "Biological
             Deserts" for the wildlife that sustains our ecosystem.
-
         </p>
 
         <p>
-
             For a bird or a pollinator, the city is not a grid of
             roads; it is a landscape of impassable "Chemical Walls,"
             where high AQI and extreme thermal stress act as
             invisible barriers, trapping life in shrinking pockets of
             green.
-
         </p>
 
-
-        <!-- ==================================================
-             INTENT
-        ================================================== -->
 
         <p class="content-label">
             02 / Intent
         </p>
 
-
         <h2>
             Intent
         </h2>
 
-
         <p>
-
             This project focuses on birds in Ahmedabad. Through data
-            visualisation, it highlights how poor air quality —
-            especially PM2.5 pollution caused by urban construction —
+            visualisation, it highlights how poor air quality 
+            especially PM2.5 pollution caused by urban construction 
             affects bird health and disrupts their natural habitat
             and survival.
-
         </p>
 
 
-    </div>
+        <!-- INTENT IMAGE GRID -->
 
+        <div class="intent-grid">
 
-    <!-- ==================================================
-         WHY BIRDS / WHY ARCHITECTS MATRIX
-    ================================================== -->
+            <div class="intent-grid-item">
+                <img src="..\imagezz\intent1.png" alt="Fragile Flights — intent image 1">
+            </div>
 
-    <div class="project-image secondary">
+            <div class="intent-grid-item">
+                <img src="..\imagezz\intent2.png" alt="Fragile Flights — intent image 2">
+            </div>
 
-        <!--
-        Influence/impact quadrant diagrams:
+            <div class="intent-grid-item">
+                <img src="..\imagezz\intent3.png" alt="Fragile Flights — intent image 3">
+            </div>
 
-        <img
-            src="../images/why-birds-why-architects.jpg"
-            alt="Why birds / why architects influence-impact matrix"
-        >
-        -->
+            <div class="intent-grid-item">
+                <img src="..\imagezz\intent4.png" alt="Fragile Flights — intent image 4">
+            </div>
+
+        </div>
 
     </div>
 
@@ -1109,18 +1901,78 @@ footer {
         </h2>
 
         <p>
-
-            Two influence–impact matrices were used to position birds
-            and architects on the same axes — most/least influential
-            against most/least affected — to make the case for why
+            Two influence impact matrices were used to position birds
+            and architects on the same axes most/least influential
+            against most/least affected to make the case for why
             each belongs at the centre of this project.
-
         </p>
 
 
-        <!-- ==================================================
-             TARGET AUDIENCE
-        ================================================== -->
+        <div class="framing-graphic">
+
+            <div class="framing-panel">
+
+                <h3 class="framing-title">
+                    Why birds?
+                </h3>
+
+                <div class="framing-chart">
+
+                    <span class="framing-label top">
+                        Most influential
+                    </span>
+
+                    <span class="framing-label left">
+                        least affected
+                    </span>
+
+                    <span class="framing-label right">
+                        most affected
+                    </span>
+
+                    <span class="framing-label bottom">
+                        least influential
+                    </span>
+
+                    <span class="framing-dot bird"></span>
+
+                </div>
+
+            </div>
+
+
+            <div class="framing-panel">
+
+                <h3 class="framing-title">
+                    Why Architects?
+                </h3>
+
+                <div class="framing-chart">
+
+                    <span class="framing-label top">
+                        Most influential
+                    </span>
+
+                    <span class="framing-label left">
+                        least affected
+                    </span>
+
+                    <span class="framing-label right">
+                        most affected
+                    </span>
+
+                    <span class="framing-label bottom">
+                        least influential
+                    </span>
+
+                    <span class="framing-dot architect"></span>
+
+                </div>
+
+            </div>
+
+        </div>
+
 
         <p class="content-label">
             04 / Target audience
@@ -1131,15 +1983,15 @@ footer {
             Target audience
         </h2>
 
-        <h3>Architects</h3>
+        <h3>
+            Architects
+        </h3>
 
         <p>
-
             This data prompts architects and urban planners to
             advocate for inserting green bubbles every 500 metres as
             an ecological requirement. Our target audience are the
             designers of the city who can make an actual impact.
-
         </p>
 
         <ul>
@@ -1157,7 +2009,7 @@ footer {
 
             <li>
                 They are the professionals responsible for essential
-                life-support infrastructure — this project argues that
+                life-support infrastructure this project argues that
                 biological connectivity is a fundamental part of that
                 urban utility.
             </li>
@@ -1165,55 +2017,99 @@ footer {
         </ul>
 
 
-        <!-- ==================================================
-             DATASETS
-        ================================================== -->
-
         <p class="content-label">
             05 / Datasets
         </p>
-
 
         <h2>
             Datasets we chose to work with
         </h2>
 
-        <ul>
 
-            <li>The physical map of the city of Ahmedabad</li>
+        <div class="datasets-layout">
 
-            <li>The AQI data over the past 3 years (2022–2024)</li>
+            <div class="datasets-top">
 
-            <li>The body mass of specific bird species</li>
+                <div class="datasets-list">
 
-            <li>
-                Locations of different talukas and important places,
-                in (x, y) format
-            </li>
+                    <ul>
 
-            <li>AQI data across the city — most and least affected</li>
+                        <li>
+                            The physical map of the city of Ahmedabad
+                        </li>
 
-            <li>Research papers</li>
+                        <li>
+                            The AQI data over the past 3 years (2022–2024)
+                        </li>
 
-        </ul>
+                        <li>
+                            The body mass of specific bird species
+                        </li>
 
-    </div>
+                        <li>
+                            Locations of different talukas and important
+                            places, in (x, y) format
+                        </li>
+
+                        <li>
+                            AQI data across the city most and least affected
+                        </li>
+
+                        <li>
+                            Research papers
+                        </li>
+
+                    </ul>
+
+                </div>
 
 
-    <!-- ==================================================
-         MAJOR COMPONENTS
-    ================================================== -->
+                <div class="datasets-map-top">
 
-    <div class="project-image">
+                    <img
+                        src="..\imagezz\dataset1.png"
+                        alt="1"
+                    >
 
-        <!--
-        System diagram / UI flow of the simulation's components:
+                </div>
 
-        <img
-            src="../images/major-components.jpg"
-            alt="Major components of the Fragile Flights simulation"
-        >
-        -->
+            </div>
+
+
+            <div class="datasets-bottom-images">
+
+                <div class="datasets-bottom-image">
+
+                    <img
+                        src="..\imagezz\dataset2.png"
+                        alt="2"
+                    >
+
+                </div>
+
+
+                <div class="datasets-bottom-image">
+
+                    <img
+                        src="..\imagezz\dataset3.png"
+                        alt="3"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="datasets-table">
+
+                <img
+                    src="..\imagezz\dataset4.png"
+                    alt="4"
+                >
+
+            </div>
+
+        </div>
 
     </div>
 
@@ -1228,59 +2124,101 @@ footer {
             Major components of our project
         </h2>
 
-        <h3>Loading screen</h3>
-        <p class="tight">
-            The user selects a bird species, and the corresponding
-            habitat and AQI map load.
-        </p>
 
-        <h3>Bird simulation</h3>
-        <p class="tight">
-            Birds move as a flock using noise-based motion, cohesion
-            behaviour and collision avoidance.
-        </p>
-
-        <h3>AQI detection</h3>
-        <p class="tight">
-            Each bird samples the AQI map's colours — pollution
-            severity is classified into different colours.
-        </p>
-
-        <h3>Health system</h3>
-        <p class="tight">
-            Three sliders decrease based on pollution: lung damage,
-            wing damage and neurological damage.
-        </p>
-
-        <h3>Path visualization</h3>
-        <p class="tight">
-            After extinction, bird movement paths can be displayed.
-            Users can export a path image, or restart.
-        </p>
-
-        <h3>Weekly progression</h3>
-        <p>
-            Every 10 seconds equals one week. Environmental warnings
-            appear, and birds gradually die over time.
-        </p>
-
-    </div>
+        <div class="major-components-grid">
 
 
-    <!-- ==================================================
-         GOAL OF THE PROJECT
-    ================================================== -->
+            <div class="major-component">
 
-    <div class="project-image secondary">
+                <h3>
+                    Loading Screen
+                </h3>
 
-        <!--
-        Connectivity-gap map output of the simulation:
+                <p>
+                    User selects a bird species, and the corresponding
+                    habitat and AQI map load.
+                </p>
 
-        <img
-            src="../images/goal-connectivity-map.jpg"
-            alt="Map identifying connectivity gaps for wildlife"
-        >
-        -->
+            </div>
+
+
+            <div class="major-component">
+
+                <h3>
+                    Bird Simulation
+                </h3>
+
+                <p>
+                    Birds move as a flock using noise-based motion,
+                    cohesion behavior and collision avoidance.
+                </p>
+
+            </div>
+
+
+            <div class="major-component">
+
+                <h3>
+                    AQI Detection
+                </h3>
+
+                <p>
+                    Each bird samples AQI map colors.
+                    Pollution severity is classified into
+                    different colours.
+                </p>
+
+            </div>
+
+
+            <div class="major-component">
+
+                <h3>
+                    Health System
+                </h3>
+
+                <p>
+                    Three sliders decrease based on pollution:
+                    <br>Lung Damage
+                    <br>Wing Damage
+                    <br>Neurological Damage
+                </p>
+
+            </div>
+
+
+            <div class="major-component">
+
+                <h3>
+                    Path Visualization
+                </h3>
+
+                <p>
+                    After extinction:
+                    <br>Bird movement paths can be displayed.
+                    <br>User can export path image.
+                    <br>User can restart.
+                </p>
+
+            </div>
+
+
+            <div class="major-component">
+
+                <h3>
+                    Weekly Progression
+                </h3>
+
+                <p>
+                    Every 10 seconds = 1 week.
+                    <br>Environmental warnings appear.
+                    <br>Birds gradually die over time.
+                </p>
+
+            </div>
+
+
+        </div>
 
     </div>
 
@@ -1296,21 +2234,17 @@ footer {
         </h2>
 
         <p>
-
             The goal is to generate a map that identifies
             connectivity gaps — places where wildlife is being
             throttled.
-
         </p>
 
         <p>
-
             More broadly, the project is meant to prompt urban
             architects and planners to create ecological spaces and
             bubbles for birds to cope with bad AQI levels. It also
             adds value if people become more aware of their own
             actions and their effect.
-
         </p>
 
     </div>
@@ -1319,21 +2253,6 @@ footer {
     <!-- ==================================================
          VISUAL LANGUAGE
     ================================================== -->
-
-    <div class="project-image">
-
-        <!--
-        Visual language board — loading screens, "ALL THE BIRDS ARE
-        DEAD" end screen, bird species cards, health-status icons:
-
-        <img
-            src="../images/visual-language.jpg"
-            alt="Visual language of the Fragile Flights project"
-        >
-        -->
-
-    </div>
-
 
     <div class="project-content">
 
@@ -1346,28 +2265,82 @@ footer {
         </h2>
 
         <p>
-
             A high-contrast palette of alert reds, deep blues and
             toxic greens was used throughout the interface to keep the
             tone urgent and diagnostic, closer to a warning system
             than a nature app.
-
         </p>
-
-        <ul>
-
-            <li>#8B091D</li>
-            <li>#DC2424</li>
-            <li>#163D5D</li>
-            <li>#177E79</li>
-            <li>#18A900</li>
-
-        </ul>
 
 
         <!-- ==================================================
-             FINAL LINK AND DISPLAY
+             VISUAL LANGUAGE IMAGE GRID
         ================================================== -->
+
+        <div class="visual-language-grid">
+
+
+            <img
+                src="..\imagezz\vl1.png"
+                alt="Fragile Flights main interface"
+                class="visual-language-image visual-language-main"
+            >
+
+
+            <img
+                src="..\imagezz\vl2.png"
+                alt="Ahmedabad AQI map"
+                class="visual-language-image visual-language-map"
+            >
+
+
+            <img
+                src="..\imagezz\vl3.png"
+                alt="All the birds are dead interface statement"
+                class="visual-language-image visual-language-statement"
+            >
+
+
+            <img
+                src="..\imagezz\vl4.png"
+                alt="Indian Peafowl information screen"
+                class="visual-language-image visual-language-bird"
+            >
+
+
+            <img
+                src="..\imagezz\vl5.png"
+                alt="Indian Peafowl information screen"
+                class="visual-language-image"
+            >
+
+
+            <div class="visual-language-palette">
+
+                <div class="visual-language-colour c1">
+                    #8B091D
+                </div>
+
+                <div class="visual-language-colour c2">
+                    #DC2424
+                </div>
+
+                <div class="visual-language-colour c3">
+                    #163D5D
+                </div>
+
+                <div class="visual-language-colour c4">
+                    #177E79
+                </div>
+
+                <div class="visual-language-colour c5">
+                    #18A900
+                </div>
+
+            </div>
+
+
+        </div>
+
 
         <p class="content-label">
             09 / Final link and display
@@ -1378,23 +2351,20 @@ footer {
         </h2>
 
         <p>
-
             The full interactive simulation is built in p5.js and can
             be tried at
+
             <a
                 href="https://editor.p5js.org/vaishnavichettiar/full/7Rpw5pZBL"
                 target="_blank"
                 rel="noopener noreferrer"
-            >editor.p5js.org/vaishnavichettiar/full/7Rpw5pZBL</a>.
-
+            >
+                editor.p5js.org/vaishnavichettiar/full/7Rpw5pZBL
+            </a>.
         </p>
 
     </div>
 
-
-    <!-- ==================================================
-         PREVIOUS / NEXT PROJECT
-    ================================================== -->
 
     <div class="project-navigation">
 
@@ -1422,9 +2392,6 @@ footer {
 
 </section>
 
-<!-- ========================================================
-     FOOTER
-======================================================== -->
 
 <footer>
 
@@ -1467,7 +2434,9 @@ footer {
 
 </div>
 
+
 </footer>
+
 
 </body>
 
