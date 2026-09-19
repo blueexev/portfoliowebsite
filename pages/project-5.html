@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -8,91 +10,46 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+    rel="stylesheet"
+>
 
 <style>
-
-/* ========================================================
-   QUANO FONT
-======================================================== */
-
-@font-face {
-
-    font-family: "Quano";
-
-    src: url("../fonts/Quano-Regular.woff2")
-    format("woff2");
-
-    font-weight: 400;
-
-    font-style: normal;
-
-}
-
-@font-face {
-
-    font-family: "Quano";
-
-    src: url("../fonts/Quano-Italic.woff2")
-    format("woff2");
-
-    font-weight: 400;
-
-    font-style: italic;
-
-}
-
 
 /* ========================================================
    RESET
 ======================================================== */
 
 * {
-
     margin: 0;
     padding: 0;
-
     box-sizing: border-box;
-
 }
 
 html {
-
     scroll-behavior: smooth;
-
 }
 
 body {
-
     background: #e9e4d9;
-
     color: #191817;
-
-    font-family:
-        "Helvetica Neue",
-        Helvetica,
-        Arial,
-        sans-serif;
-
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
     overflow-x: hidden;
-
 }
 
 a {
-
     color: inherit;
-
     text-decoration: none;
-
 }
 
 ::selection {
-
     background: #191817;
-
     color: #e9e4d9;
-
 }
+
 
 
 /* ========================================================
@@ -100,15 +57,10 @@ a {
 ======================================================== */
 
 .page-width {
-
-    width: min(
-        860px,
-        calc(100% - 200px)
-    );
-
-    margin: auto;
-
+    width: min(860px, calc(100% - 200px));
+    margin: 0 auto;
 }
+
 
 
 /* ========================================================
@@ -116,85 +68,44 @@ a {
 ======================================================== */
 
 .site-nav {
-
-    position: fixed;
-
-    top: 0;
-    left: 0;
-
-    width: 100%;
-
-    z-index: 1000;
-
-    padding: 26px 0;
-
+    padding: 30px 0;
 }
 
 .nav-inner {
-
-    width: min(
-        860px,
-        calc(100% - 200px)
-    );
-
-    margin: auto;
+    width: min(860px, calc(100% - 200px));
+    margin: 0 auto;
 
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
-
 }
-
-
-/* NAME */
 
 .artist-name {
-
-    font-size: 9px;
-
-    text-transform: uppercase;
-
-    letter-spacing: .15em;
-
-    font-weight: 500;
-
+    font-size: 11px;
+    letter-spacing: .03em;
+    text-transform: none;
+    font-weight: 400;
 }
 
-
-/* NAV LINKS */
-
 .nav-links {
-
     display: flex;
-
-    gap: 25px;
-
+    gap: 28px;
     list-style: none;
-
 }
 
 .nav-links a {
-
-    font-size: 8px;
-
+    font-size: 10px;
     text-transform: uppercase;
+    letter-spacing: .14em;
+    color: #191817;
 
-    letter-spacing: .12em;
-
-    color: #77716a;
-
-    transition:
-        color .3s ease;
-
+    transition: opacity .2s ease;
 }
 
 .nav-links a:hover {
-
-    color: #191817;
-
+    opacity: .5;
 }
+
 
 
 /* ========================================================
@@ -202,127 +113,70 @@ a {
 ======================================================== */
 
 .project-hero {
+    min-height: auto;
+    display: block;
 
-    min-height: 75vh;
-
-    display: flex;
-
-    align-items: center;
-
-    padding:
-        150px 0
-        100px;
-
+    padding: 100px 0 85px;
 }
 
 .project-hero-content {
-
     width: 100%;
-
 }
-
-
-/* ========================================================
-   BACK LINK
-======================================================== */
 
 .back-link {
-
     display: inline-flex;
-
     align-items: center;
-
     gap: 8px;
 
-    font-size: 8px;
-
+    font-size: 10px;
     text-transform: uppercase;
-
-    letter-spacing: .12em;
-
-    color: #77716a;
-
-    margin-bottom: 55px;
-
-    transition:
-        gap .3s ease,
-        color .3s ease;
-
-}
-
-.back-link:hover {
-
-    gap: 13px;
-
-    color: #191817;
-
-}
-
-
-/* ========================================================
-   COLLECTION LABEL
-======================================================== */
-
-.collection-label {
-
-    font-size: 8px;
-
-    text-transform: uppercase;
-
-    letter-spacing: .2em;
+    letter-spacing: .15em;
 
     color: #77716a;
 
     margin-bottom: 28px;
 
+    transition:
+        gap .2s ease,
+        opacity .2s ease;
 }
 
+.back-link:hover {
+    gap: 12px;
+    opacity: .5;
+}
 
-/* ========================================================
-   PROJECT TITLE
-======================================================== */
+.collection-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: .18em;
+
+    color: #77716a;
+
+    margin-bottom: 28px;
+}
 
 .project-main-title {
-
-    font-family:
-        "Montserrat",
-        "Quano",
-        "Bodoni Moda",
-        "Cormorant Garamond",
-        Georgia,
-        serif;
-
+    font-size: clamp(50px, 8vw, 82px);
     font-weight: 400;
 
-    font-size:
-        clamp(50px, 7vw, 82px);
-
-    line-height: .92;
-
+    line-height: 1.12;
     letter-spacing: -.055em;
 
-    max-width: 800px;
-
+    max-width: 900px;
 }
-
-
-/* ========================================================
-   PROJECT INTRO
-======================================================== */
 
 .project-intro {
+    max-width: 620px;
 
-    max-width: 430px;
+    margin-top: 38px;
 
-    margin-top: 35px;
-
-    font-size: 11px;
-
+    font-size: 14px;
     line-height: 1.8;
 
-    color: #68635d;
-
+    color: #66615b;
 }
+
 
 
 /* ========================================================
@@ -330,69 +184,43 @@ a {
 ======================================================== */
 
 .project-meta {
-
     display: grid;
+    grid-template-columns: repeat(4, 1fr);
 
-    grid-template-columns:
-        repeat(4, 1fr);
+    gap: 35px;
 
-    gap: 25px;
+    margin-top: 55px;
 
-    margin-top: 60px;
+    padding: 45px 0 80px;
 
-    padding-top: 18px;
-
-    border-top:
-        1px solid
-        rgba(25,24,23,.2);
-
+    border-top: 1px solid #bdb7ad;
 }
 
 .meta-item {
-
     min-width: 0;
-
 }
 
 .meta-label {
-
     display: block;
 
-    font-size: 7px;
-
+    font-size: 9px;
     text-transform: uppercase;
+    letter-spacing: .16em;
 
-    letter-spacing: .14em;
+    color: #77716a;
 
-    color: #8a847c;
-
-    margin-bottom: 8px;
-
+    margin-bottom: 12px;
 }
 
 .meta-value {
-
-    font-size: 9px;
-
-    line-height: 1.5;
-
+    font-size: 11px;
+    line-height: 1.7;
 }
-
-
-/* ========================================================
-   DIVIDER
-======================================================== */
 
 .museum-rule {
-
-    width: 100%;
-
-    height: 1px;
-
-    background:
-        rgba(25,24,23,.18);
-
+    display: none;
 }
+
 
 
 /* ========================================================
@@ -400,64 +228,54 @@ a {
 ======================================================== */
 
 .project-body {
-
-    padding:
-        110px 0
-        140px;
-
+    padding: 80px 0 150px;
 }
+
 
 
 /* ========================================================
-   PROJECT IMAGE
+   PROJECT IMAGES
 ======================================================== */
 
-.project-image {
+/*
+   Images are no longer placed inside fixed-height boxes.
+   They keep their original aspect ratio and are never cropped.
+*/
 
+.project-image {
     width: 100%;
 
-    height: 520px;
+    background: transparent;
 
-    background: #d5cfc3;
-
-    overflow: hidden;
-
-    margin-bottom: 110px;
-
+    margin-bottom: 115px;
 }
 
 .project-image img {
-
     width: 100%;
-
-    height: 100%;
-
-    object-fit: cover;
+    height: auto;
 
     display: block;
 
-    filter:
-        grayscale(20%)
-        contrast(.95);
+    object-fit: contain;
+
+    filter: grayscale(20%) contrast(.95);
 
     transition:
-        transform .8s
-        cubic-bezier(.2,.7,.2,1),
-
-        filter .8s ease;
-
+        filter .5s ease;
 }
 
 .project-image:hover img {
-
-    transform:
-        scale(1.025);
-
     filter:
         grayscale(0%)
         contrast(1);
-
 }
+
+.project-image.secondary {
+    width: 100%;
+
+    margin: 10px 0 105px;
+}
+
 
 
 /* ========================================================
@@ -465,156 +283,351 @@ a {
 ======================================================== */
 
 .project-content {
-
     max-width: 680px;
 
-    margin: auto;
-
+    margin: 0 auto 105px;
 }
 
-
-/* CONTENT LABEL */
-
 .content-label {
-
-    font-family:
-        "Montserrat",
-        "Helvetica Neue",
-        Helvetica,
-        Arial,
-        sans-serif;
-
-    font-size: 8px;
-
+    font-size: 10px;
     text-transform: uppercase;
-
-    letter-spacing: .15em;
+    letter-spacing: .16em;
 
     color: #77716a;
 
     margin-bottom: 25px;
-
 }
-
-
-/* CONTENT HEADINGS */
 
 .project-content h2 {
+    font-size: 28px;
 
-    font-family:
-        "Montserrat",
-        "Quano",
-        "Bodoni Moda",
-        "Cormorant Garamond",
-        Georgia,
-        serif;
-
-    font-size: 39px;
-
-    font-weight: 400;
-
-    letter-spacing: -.045em;
-
-    line-height: 1;
-
-    margin-bottom: 25px;
-
-}
-
-/* SUB-HEADINGS (exhibits / games / learnings) */
-
-.project-content h3 {
-
-    font-family:
-        "Montserrat",
-        "Quano",
-        "Bodoni Moda",
-        "Cormorant Garamond",
-        Georgia,
-        serif;
-
-    font-size: 17px;
+    line-height: 1.3;
 
     font-weight: 500;
 
-    letter-spacing: -.01em;
+    letter-spacing: -.025em;
 
-    margin-bottom: 12px;
+    margin-bottom: 25px;
+}
 
+.project-content h3 {
+    font-size: 15px;
+
+    line-height: 1.5;
+
+    font-weight: 600;
+
+    margin-top: 35px;
+    margin-bottom: 10px;
+}
+
+.project-content p {
+    max-width: 620px;
+
+    font-size: 12px;
+
+    line-height: 2;
+
+    color: #66615b;
+
+    margin-bottom: 18px;
+}
+
+.project-content p.tight {
+    margin-bottom: 18px;
 }
 
 
-/* CONTENT PARAGRAPHS */
 
-.project-content p {
+/* ========================================================
+   EXPERIENCE GRID
+======================================================== */
 
-    max-width: 560px;
+.experience-intro {
+    margin-bottom: 65px;
+}
 
+.experience-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    column-gap: 24px;
+    row-gap: 70px;
+
+    margin-bottom: 120px;
+}
+
+.experience-card {
+    min-width: 0;
+}
+
+.experience-card-image {
+    width: 100%;
+
+    background: transparent;
+
+    overflow: visible;
+
+    margin-bottom: 22px;
+}
+
+.experience-card-image img {
+    width: 100%;
+    height: auto;
+
+    display: block;
+
+    object-fit: contain;
+
+    filter:
+        grayscale(20%)
+        contrast(.95);
+
+    transition:
+        filter .5s ease;
+}
+
+.experience-card:hover .experience-card-image img {
+    filter:
+        grayscale(0%)
+        contrast(1);
+}
+
+.experience-card-content h3 {
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    font-weight: 600;
+
+    letter-spacing: -.015em;
+
+    margin: 0 0 10px;
+}
+
+.experience-card-content p {
+    font-size: 11px;
+
+    line-height: 1.8;
+
+    color: #66615b;
+
+    margin: 0;
+}
+
+
+
+/* ========================================================
+   COLOR SCHEME
+======================================================== */
+
+.color-section {
+    max-width: 860px;
+
+    margin: 0 auto 125px;
+}
+
+.color-section .content-label {
+    margin-bottom: 25px;
+}
+
+.color-section h2 {
+    font-size: 28px;
+
+    line-height: 1.3;
+
+    font-weight: 500;
+
+    letter-spacing: -.025em;
+
+    margin-bottom: 50px;
+}
+
+.color-palette {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 25px;
+
+    align-items: start;
+}
+
+.color-item {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+.color-circle {
+    width: 125px;
+    height: 125px;
+
+    border-radius: 50%;
+
+    margin-bottom: 18px;
+
+    transition:
+        transform .3s ease,
+        opacity .3s ease;
+}
+
+.color-item:hover .color-circle {
+    transform: scale(1.04);
+}
+
+.color-code {
+    font-size: 11px;
+
+    letter-spacing: .03em;
+
+    color: #191817;
+}
+
+
+
+/* Individual museum colours */
+
+.color-1 {
+    background: #AFA285;
+}
+
+.color-2 {
+    background: #928371;
+}
+
+.color-3 {
+    background: #9B8F7F;
+}
+
+.color-4 {
+    background: #34472B;
+}
+
+.color-5 {
+    background: #6B83A0;
+}
+
+
+
+/* ========================================================
+   LEARNINGS
+======================================================== */
+
+.learnings-section {
+    width: 100%;
+
+    margin-bottom: 120px;
+}
+
+.learnings-heading {
+    max-width: 680px;
+
+    margin: 0 auto 50px;
+}
+
+.learnings-heading h2 {
+    font-size: 28px;
+
+    line-height: 1.3;
+
+    font-weight: 500;
+
+    letter-spacing: -.025em;
+}
+
+.learning-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 55px 35px;
+}
+
+.learning-card {
+    min-width: 0;
+}
+
+.learning-image {
+    width: 100%;
+
+    background: transparent;
+
+    overflow: visible;
+
+    margin-bottom: 22px;
+}
+
+.learning-image img {
+    width: 100%;
+    height: auto;
+
+    display: block;
+
+    object-fit: contain;
+
+    filter:
+        grayscale(20%)
+        contrast(.95);
+
+    transition:
+        filter .5s ease;
+}
+
+.learning-card:hover .learning-image img {
+    filter:
+        grayscale(0%)
+        contrast(1);
+}
+
+.learning-text {
+    display: grid;
+
+    grid-template-columns: 10px 1fr;
+
+    gap: 12px;
+}
+
+.learning-bullet {
+    width: 5px;
+    height: 5px;
+
+    background: #191817;
+
+    border-radius: 50%;
+
+    margin-top: 8px;
+}
+
+.learning-content h3 {
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    font-weight: 600;
+
+    margin: 0 0 8px;
+}
+
+.learning-content p {
     font-size: 11px;
 
     line-height: 1.9;
 
     color: #66615b;
 
-    margin-bottom: 70px;
-
+    margin: 0;
 }
 
-.project-content p.tight {
-
-    margin-bottom: 30px;
-
-}
-
-
-/* ========================================================
-   LIST
-======================================================== */
-
-.project-content ul {
-
-    margin-top: -40px;
-
-    margin-bottom: 90px;
-
-    padding-left: 18px;
-
-}
-
-.project-content ul.tight {
-
-    margin-top: 0;
-
-    margin-bottom: 30px;
-
-}
-
-.project-content li {
-
-    font-size: 10px;
-
-    line-height: 1.9;
-
-    color: #66615b;
-
-    padding-left: 5px;
-
-}
-
-
-/* ========================================================
-   SECOND IMAGE
-======================================================== */
-
-.project-image.secondary {
-
-    margin:
-        20px 0
-        110px;
-
-    height: 430px;
-
-}
 
 
 /* ========================================================
@@ -622,22 +635,31 @@ a {
 ======================================================== */
 
 .project-navigation {
+    border-top: 1px solid #bdb7ad;
+
+    padding-top: 35px;
 
     display: flex;
 
     justify-content: space-between;
 
-    align-items: center;
+    font-size: 10px;
 
-    margin-top: 120px;
+    text-transform: uppercase;
 
-    padding-top: 25px;
-
-    border-top:
-        1px solid
-        rgba(25,24,23,.18);
-
+    letter-spacing: .15em;
 }
+
+.project-navigation .back-link {
+    margin-bottom: 0;
+
+    color: #191817;
+}
+
+.project-navigation a:hover {
+    opacity: .5;
+}
+
 
 
 /* ========================================================
@@ -645,190 +667,279 @@ a {
 ======================================================== */
 
 footer {
+    width: min(860px, calc(100% - 200px));
 
-    width: min(
-        860px,
-        calc(100% - 200px)
-    );
+    margin: 0 auto;
 
-    margin: auto;
+    padding: 100px 0 40px;
 
-    padding:
-        25px 0
-        35px;
-
-    border-top:
-        1px solid
-        rgba(25,24,23,.18);
+    border-top: none;
 
     display: flex;
 
     justify-content: space-between;
-
 }
 
 .footer-text {
-
-    font-size: 7px;
-
-    color: #8a847c;
+    font-size: 9px;
 
     text-transform: uppercase;
 
-    letter-spacing: .1em;
+    letter-spacing: .15em;
 
+    color: #77716a;
 }
 
 .footer-links {
-
     display: flex;
 
     gap: 20px;
-
 }
 
 .footer-links a {
-
-    font-size: 7px;
+    font-size: 9px;
 
     text-transform: uppercase;
 
-    letter-spacing: .1em;
+    letter-spacing: .15em;
+}
+
+
+
+/* ========================================================
+   TABLET
+======================================================== */
+
+@media (max-width: 1000px) {
+
+    .color-circle {
+        width: 100px;
+        height: 100px;
+    }
 
 }
+
 
 
 /* ========================================================
    MOBILE
 ======================================================== */
 
-@media(max-width: 760px) {
-
+@media (max-width: 760px) {
 
     .page-width,
     .nav-inner,
     footer {
-
-        width:
-            calc(100% - 40px);
-
+        width: calc(100% - 40px);
     }
+
 
 
     .site-nav {
-
-        padding:
-            20px 0;
-
+        padding: 20px 0;
     }
+
 
 
     .nav-links {
-
         display: none;
-
     }
+
 
 
     .project-hero {
-
-        min-height: auto;
-
-        padding:
-            130px 0
-            80px;
-
+        padding: 70px 0 60px;
     }
+
 
 
     .back-link {
-
-        margin-bottom: 45px;
-
+        margin-bottom: 25px;
     }
+
 
 
     .project-main-title {
+        font-size: 50px;
 
-        font-size:
-            clamp(45px, 14vw, 70px);
-
+        line-height: 1.12;
     }
+
+
+
+    .project-intro {
+        font-size: 13px;
+
+        margin-top: 30px;
+    }
+
 
 
     .project-meta {
-
-        grid-template-columns:
-            1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
 
         gap: 30px;
 
-        margin-top: 50px;
+        margin-top: 45px;
 
+        padding-bottom: 60px;
     }
+
 
 
     .project-body {
-
-        padding:
-            80px 0
-            100px;
-
+        padding: 55px 0 100px;
     }
 
+
+
+    /* PROJECT IMAGES */
 
     .project-image {
+        width: 100%;
 
-        height: 300px;
-
-        margin-bottom: 80px;
-
+        margin-bottom: 75px;
     }
+
+    .project-image.secondary {
+        width: 100%;
+
+        margin-bottom: 75px;
+    }
+
+
+
+    .project-content {
+        margin-bottom: 75px;
+    }
+
 
 
     .project-content h2 {
-
-        font-size: 34px;
-
+        font-size: 24px;
     }
+
 
 
     .project-content p {
-
-        margin-bottom: 55px;
-
+        font-size: 12px;
     }
 
 
-    .project-image.secondary {
 
-        height: 300px;
+    /* EXPERIENCE GRID */
 
-        margin:
-            0 0
-            80px;
-
+    .experience-intro {
+        margin-bottom: 45px;
     }
+
+
+
+    .experience-grid {
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+
+        margin-bottom: 80px;
+    }
+
+
+
+    .experience-card-image {
+        width: 100%;
+
+        margin-bottom: 18px;
+    }
+
+
+
+    .experience-card-content h3 {
+        font-size: 14px;
+    }
+
+
+
+    .experience-card-content p {
+        font-size: 12px;
+    }
+
+
+
+    /* COLOR SCHEME */
+
+    .color-section {
+        margin-bottom: 85px;
+    }
+
+    .color-section h2 {
+        font-size: 24px;
+
+        margin-bottom: 35px;
+    }
+
+    .color-palette {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 35px 20px;
+    }
+
+    .color-circle {
+        width: 105px;
+        height: 105px;
+
+        margin-bottom: 14px;
+    }
+
+
+
+    /* LEARNINGS */
+
+    .learnings-section {
+        margin-bottom: 80px;
+    }
+
+    .learnings-heading {
+        margin-bottom: 40px;
+    }
+
+    .learnings-heading h2 {
+        font-size: 24px;
+    }
+
+    .learning-grid {
+        grid-template-columns: 1fr;
+
+        gap: 55px;
+    }
+
+    .learning-content h3 {
+        font-size: 14px;
+    }
+
+    .learning-content p {
+        font-size: 12px;
+    }
+
 
 
     .project-navigation {
-
-        margin-top: 80px;
-
+        margin-top: 20px;
     }
+
 
 
     footer {
-
         display: block;
 
+        padding-top: 70px;
     }
 
 
-    .footer-links {
 
+    .footer-links {
         margin-top: 15px;
 
+        flex-wrap: wrap;
     }
 
 }
@@ -837,7 +948,11 @@ footer {
 
 </head>
 
+
+
 <body>
+
+
 
 <!-- ========================================================
      NAVIGATION
@@ -845,49 +960,52 @@ footer {
 
 <nav class="site-nav">
 
-<div class="nav-inner">
+    <div class="nav-inner">
+
+        <a
+            href="../index.html"
+            class="artist-name"
+        >
+            VAISHNAVI VENKATESH
+        </a>
 
 
-    <a
-        href="../index.html"
-        class="artist-name"
-    >
-        Vaishnavi Venkatesh
-    </a>
 
+        <ul class="nav-links">
 
-    <ul class="nav-links">
+            <li>
+                <a href="../index.html#work">
+                    Work
+                </a>
+            </li>
 
-        <li>
-            <a href="../index.html#work">
-                Work
-            </a>
-        </li>
+            <li>
+                <a href="../index.html#about">
+                    About
+                </a>
+            </li>
 
-        <li>
-            <a href="../index.html#about">
-                About
-            </a>
-        </li>
+            <li>
+                <a href="../index.html#archive">
+                    Archive
+                </a>
+            </li>
 
-        <li>
-            <a href="../index.html#archive">
-                Archive
-            </a>
-        </li>
+            <li>
+                <a href="../index.html#contact">
+                    Contact
+                </a>
+            </li>
 
-        <li>
-            <a href="../index.html#contact">
-                Contact
-            </a>
-        </li>
+        </ul>
 
-    </ul>
-
-
-</div>
+    </div>
 
 </nav>
+
+
+
+
 
 <!-- ========================================================
      PROJECT HERO
@@ -895,119 +1013,130 @@ footer {
 
 <header class="project-hero">
 
-<div class="page-width">
+    <div class="page-width">
 
-    <div class="project-hero-content">
-
-
-        <a
-            href="../index.html#work"
-            class="back-link"
-        >
-            ← Back to selected work
-        </a>
+        <div class="project-hero-content">
 
 
-        <p class="collection-label">
 
-            Selected Work
-
-        </p>
-
-
-        <h1 class="project-main-title">
-
-            Digital Museum of Tamil Culture
-
-        </h1>
+            <a
+                href="../index.html#work"
+                class="back-link"
+            >
+                ← Back to selected work
+            </a>
 
 
-        <p class="project-intro">
 
-            An immersive interactive museum exploring Tamil Nadu's
-            stories, art, architecture and mythology.
-
-        </p>
+            <p class="collection-label">
+                Selected Work
+            </p>
 
 
-        <!-- PROJECT META -->
 
-        <div class="project-meta">
+            <h1 class="project-main-title">
+                Digital Museum of Tamil Culture
+            </h1>
 
-            <!-- Timeline and Link weren't specified in the source PDF —
-                 edit as needed. -->
 
-            <div class="meta-item">
 
-                <span class="meta-label">
-                    Role
-                </span>
+            <p class="project-intro">
 
-                <span class="meta-value">
-                    Concept / Environment / Interaction Design
-                </span>
+                An immersive interactive museum exploring Tamil Nadu's
+                stories, art, architecture and mythology.
+
+            </p>
+
+
+
+
+
+            <!-- PROJECT META -->
+
+            <div class="project-meta">
+
+
+
+                <div class="meta-item">
+
+                    <span class="meta-label">
+                        Role
+                    </span>
+
+                    <span class="meta-value">
+                        Concept / Environment / Interaction Design
+                    </span>
+
+                </div>
+
+
+
+                <div class="meta-item">
+
+                    <span class="meta-label">
+                        Timeline
+                    </span>
+
+                    <span class="meta-value">
+                        Month Year – Month Year
+                    </span>
+
+                </div>
+
+
+
+                <div class="meta-item">
+
+                    <span class="meta-label">
+                        Tools
+                    </span>
+
+                    <span class="meta-value">
+                        Unity / 3D Design
+                    </span>
+
+                </div>
+
+
+
+                <div class="meta-item">
+
+                    <span class="meta-label">
+                        Link
+                    </span>
+
+                    <span class="meta-value">
+
+                        <a
+                            href="#"
+                            target="_blank"
+                            rel="noopener"
+                            style="text-decoration: underline;"
+                        >
+                            Project link ↗
+                        </a>
+
+                    </span>
+
+                </div>
+
+
 
             </div>
-
-
-            <div class="meta-item">
-
-                <span class="meta-label">
-                    Timeline
-                </span>
-
-                <span class="meta-value">
-                    Month Year – Month Year
-                </span>
-
-            </div>
-
-
-            <div class="meta-item">
-
-                <span class="meta-label">
-                    Tools
-                </span>
-
-                <span class="meta-value">
-                    Unity / 3D Design
-                </span>
-
-            </div>
-
-
-            <div class="meta-item">
-
-                <span class="meta-label">
-                    Link
-                </span>
-
-                <span class="meta-value">
-
-                    <a
-                        href="#"
-                        target="_blank"
-                        rel="noopener"
-                        style="text-decoration: underline;"
-                    >
-                        Project link ↗
-                    </a>
-
-                </span>
-
-            </div>
-
 
         </div>
 
-
     </div>
-
-</div>
 
 </header>
 
+
+
 <div class="museum-rule"></div>
+
+
+
+
 
 <!-- ========================================================
      PROJECT BODY
@@ -1015,420 +1144,763 @@ footer {
 
 <section class="project-body">
 
-<div class="page-width">
+    <div class="page-width">
 
 
-    <!-- PROJECT COVER -->
 
-    <div class="project-image">
 
-        <!--
-        Hero shot — a wide view of the museum environment in Unity:
 
-        <img
-            src="../images/tamil-museum-hero.jpg"
-            alt="Digital Museum of Tamil Culture — environment overview"
-        >
-        -->
+        <!-- ==================================================
+             01 / PROJECT OVERVIEW
+        ================================================== -->
+
+        <div class="project-content">
+
+            <p class="content-label">
+                01 / Project overview
+            </p>
+
+            <h2>
+                Project overview
+            </h2>
+
+            <p>
+                This project explores how digital spaces can make cultural
+                heritage more interactive and engaging. I designed and
+                built a virtual museum in Unity that brings together
+                different aspects of Tamil culture from mythology and
+                traditional art to architecture and sculpture.
+            </p>
+
+            <p>
+                Rather than presenting culture as static information, I
+                created an environment where visitors can explore,
+                interact and discover stories through play.
+            </p>
+
+        </div>
+
+
+
+
+
+        <div class="project-image secondary">
+
+            <img
+                src="../imagezz/dm hero.png"
+                alt="Tanjore Painting gallery in the museum"
+            >
+
+        </div>
+
+
+
+
+
+        <!-- ==================================================
+             02 / THE EXPERIENCE
+        ================================================== -->
+
+        <div class="project-content experience-intro">
+
+            <p class="content-label">
+                02 / The experience
+            </p>
+
+            <h2>
+                The experience
+            </h2>
+
+            <p>
+                The museum is organised as a spatial journey through
+                different elements of Tamil heritage. Visitors move
+                through the environment, discovering cultural objects,
+                architectural references and interactive experiences.
+                It includes:
+            </p>
+
+        </div>
+
+
+
+
+
+        <!-- EXPERIENCE GRID -->
+
+        <div class="experience-grid">
+
+
+
+            <!-- TANJORE PAINTING -->
+
+            <div class="experience-card">
+
+                <div class="experience-card-image">
+
+                    <img
+                        src="../imagezz/dmt.png"
+                        alt="Tanjore Painting exhibit"
+                    >
+
+                </div>
+
+                <div class="experience-card-content">
+
+                    <h3>
+                        Tanjore Painting
+                    </h3>
+
+                    <p>
+                        Traditional Tamil painting and its visual richness.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+
+
+            <!-- NATARAJA -->
+
+            <div class="experience-card">
+
+                <div class="experience-card-image">
+
+                    <img
+                        src="../imagezz/dms.png"
+                        alt="Nataraja exhibit"
+                    >
+
+                </div>
+
+                <div class="experience-card-content">
+
+                    <h3>
+                        Natarajar and M.S. Subbalakshmi
+                    </h3>
+
+                    <p>
+                        The symbolism and cultural significance of the
+                        dancing Shiva; celebrating the legacy of the iconic
+                        Carnatic vocalist and her contribution to Tamil and
+                        Indian musical heritage.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+
+
+            <!-- SCULPTURES -->
+
+            <div class="experience-card">
+
+                <div class="experience-card-image">
+
+                    <img
+                        src="../imagezz/dmsculture.png"
+                        alt="Tamil sculpture exhibit"
+                    >
+
+                </div>
+
+                <div class="experience-card-content">
+
+                    <h3>
+                        Sculptures
+                    </h3>
+
+                    <p>
+                        Exploring one of Tamil Nadu's most ancient artistic
+                        traditions through sculptural representations of
+                        important deities.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+
+
+            <!-- SILAPPATHIKARAM -->
+
+            <div class="experience-card">
+
+                <div class="experience-card-image">
+
+                    <img
+                        src="../imagezz/dmsila.png"
+                        alt="Silappathikaram exhibit"
+                    >
+
+                </div>
+
+                <div class="experience-card-content">
+
+                    <h3>
+                        Silappathikaram
+                    </h3>
+
+                    <p>
+                        Bringing one of Tamil literature's most significant
+                        epics to life through an interactive storytelling
+                        experience.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+
+
+            <!-- GOPURAM -->
+
+            <div class="experience-card">
+
+                <div class="experience-card-image">
+
+                    <img
+                        src="../imagezz/dmgopuram.png"
+                        alt="Gopuram exhibit"
+                    >
+
+                </div>
+
+                <div class="experience-card-content">
+
+                    <h3>
+                        Gopuram
+                    </h3>
+
+                    <p>
+                        Exploring the monumental temple towers that define
+                        Dravidian architecture and Tamil temple landscapes.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+
+
+
+
+        <!-- ==================================================
+             03 / THE GAMES
+        ================================================== -->
+
+        <div class="project-content">
+
+            <p class="content-label">
+                03 / The games
+            </p>
+
+            <h2>
+                The games
+            </h2>
+
+            <h3>
+                Silappathikaram Sliding Puzzle
+            </h3>
+
+            <p class="tight">
+                An interactive game where solving the puzzle reveals the
+                story of Kannagi and Kovalan.
+            </p>
+
+        </div>
+
+
+
+
+
+        <div class="project-image secondary">
+
+            <img
+                src="../imagezz/dmgame1.png"
+                alt="Silappathikaram interactive storytelling room"
+            >
+
+        </div>
+
+
+
+
+
+        <div class="project-image">
+
+            <img
+                src="../imagezz/dmgame2.png"
+                alt="Nataraja and M. S. Subbulakshmi exhibits"
+            >
+
+        </div>
+
+
+
+
+
+        <div class="project-content">
+
+            <h3>
+                Towering Stones Game
+            </h3>
+
+            <p>
+                A puzzle-based interaction exploring the belief that
+                towering stones symbolise keeping families together.
+            </p>
+
+        </div>
+
+
+
+
+
+        <div class="project-image">
+
+            <img
+                src="../imagezz/dmgames3.png"
+                alt="Silappathikaram Sliding Puzzle gameplay"
+            >
+
+        </div>
+
+
+
+
+
+        <!-- ==================================================
+             04 / DESIGN APPROACH
+        ================================================== -->
+
+        <div class="project-content">
+
+            <p class="content-label">
+                04 / Design approach
+            </p>
+
+            <h2>
+                Design approach
+            </h2>
+
+            <p>
+                I focused on creating a space that feels like a digital
+                cultural landscape rather than a conventional museum.
+                Spatial layout, scale, movement, interaction and visual
+                elements were used to guide visitors through the
+                experience.
+            </p>
+
+            <p>
+                The project allowed me to explore how play can become a
+                method of cultural storytelling, making heritage
+                something that can be experienced and discovered rather
+                than simply observed.
+            </p>
+
+        </div>
+
+
+
+
+
+        <!-- ==================================================
+             05 / SPATIAL LAYOUT
+        ================================================== -->
+
+        <div class="project-content">
+
+            <p class="content-label">
+                05 / The spatial layout
+            </p>
+
+            <h2>
+                The spatial layout
+            </h2>
+
+            <p>
+                A top-down view of how the museum's spaces were arranged,
+                guiding visitors from one cultural moment to the next
+                through scale, sightlines and movement.
+            </p>
+
+        </div>
+
+
+
+        <div class="project-image">
+
+            <img
+                src="../imagezz/DigitalMuseum.png"
+                alt="Spatial layout of the museum"
+            >
+
+        </div>
+
+
+
+
+
+        <!-- ==================================================
+             06 / COLOR SCHEME
+        ================================================== -->
+
+        <div class="color-section">
+
+            <p class="content-label">
+                06 / Color scheme of the museum
+            </p>
+
+            <h2>
+                Color scheme of the museum
+            </h2>
+
+
+
+            <div class="color-palette">
+
+
+
+                <div class="color-item">
+
+                    <div class="color-circle color-1"></div>
+
+                    <span class="color-code">
+                        AFA285
+                    </span>
+
+                </div>
+
+
+
+                <div class="color-item">
+
+                    <div class="color-circle color-2"></div>
+
+                    <span class="color-code">
+                        928371
+                    </span>
+
+                </div>
+
+
+
+                <div class="color-item">
+
+                    <div class="color-circle color-3"></div>
+
+                    <span class="color-code">
+                        9B8F7F
+                    </span>
+
+                </div>
+
+
+
+                <div class="color-item">
+
+                    <div class="color-circle color-4"></div>
+
+                    <span class="color-code">
+                        34472B
+                    </span>
+
+                </div>
+
+
+
+                <div class="color-item">
+
+                    <div class="color-circle color-5"></div>
+
+                    <span class="color-code">
+                        6B83A0
+                    </span>
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+
+
+
+
+        <!-- ==================================================
+             07 / SOME SCENES FROM THE MUSEUM
+        ================================================== -->
+
+        <div class="project-content">
+
+            <p class="content-label">
+                07 / Some scenes from the museum
+            </p>
+
+            <h2>
+                Some scenes from the museum
+            </h2>
+
+        </div>
+
+
+
+        <div class="project-image secondary">
+
+            <img
+                src="../imagezz/dmscenes.png"
+                alt="Scenes from the Digital Museum of Tamil Culture"
+            >
+
+        </div>
+
+
+
+
+
+        <!-- ==================================================
+             08 / LEARNINGS
+        ================================================== -->
+
+        <div class="learnings-section">
+
+            <div class="learnings-heading">
+
+                <p class="content-label">
+                    08 / Learnings
+                </p>
+
+                <h2>
+                    Learnings
+                </h2>
+
+            </div>
+
+
+
+            <div class="learning-grid">
+
+
+
+                <!-- LEARNING 01 -->
+
+                <div class="learning-card">
+
+                    <div class="learning-image">
+
+                        <img
+                            src="../imagezz/dmspatial.png"
+                            alt="Spatial storytelling in the museum"
+                        >
+
+                    </div>
+
+
+
+                    <div class="learning-text">
+
+                        <span class="learning-bullet"></span>
+
+                        <div class="learning-content">
+
+                            <h3>
+                                Spatial storytelling
+                            </h3>
+
+                            <p>
+                                Understood how layout, movement, scale and
+                                environment can guide a user through a
+                                narrative.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+
+
+                <!-- LEARNING 02 -->
+
+                <div class="learning-card">
+
+                    <div class="learning-image">
+
+                        <img
+                            src="../imagezz/dmstorytelling.png"
+                            alt="Game-based storytelling interaction"
+                        >
+
+                    </div>
+
+
+
+                    <div class="learning-text">
+
+                        <span class="learning-bullet"></span>
+
+                        <div class="learning-content">
+
+                            <h3>
+                                Game-based storytelling
+                            </h3>
+
+                            <p>
+                                Explored how simple mechanics like puzzles
+                                can make cultural narratives more engaging
+                                and memorable.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+
+
+                <!-- LEARNING 03 -->
+
+                <div class="learning-card">
+
+                    <div class="learning-image">
+
+                        <img
+                            src="../imagezz/dmcultural.png"
+                            alt="Cultural research for the museum"
+                        >
+
+                    </div>
+
+
+
+                    <div class="learning-text">
+
+                        <span class="learning-bullet"></span>
+
+                        <div class="learning-content">
+
+                            <h3>
+                                Cultural research
+                            </h3>
+
+                            <p>
+                                Learned how to translate cultural stories
+                                and traditions into engaging digital
+                                experiences.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+
+
+                <!-- LEARNING 04 -->
+
+                <div class="learning-card">
+
+                    <div class="learning-image">
+
+                        <img
+                            src="../imagezz/dmunity.png"
+                            alt="Unity and 3D environment design"
+                        >
+
+                    </div>
+
+
+
+                    <div class="learning-text">
+
+                        <span class="learning-bullet"></span>
+
+                        <div class="learning-content">
+
+                            <h3>
+                                Unity &amp; 3D design
+                            </h3>
+
+                            <p>
+                                Gained experience in building interactive
+                                spaces, designing environments and creating
+                                immersive experiences in Unity.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+
+
+
+
+        <!-- ==================================================
+             PREVIOUS / NEXT
+        ================================================== -->
+
+        <div class="project-navigation">
+
+            <a
+                href="project-4.html"
+                class="back-link"
+            >
+                ← Previous project
+            </a>
+
+
+
+            <a
+                href="project-6.html"
+                class="back-link"
+            >
+                Next project →
+            </a>
+
+        </div>
+
+
 
     </div>
-
-
-    <div class="project-content">
-
-
-        <!-- PROJECT OVERVIEW -->
-
-        <p class="content-label">
-            01 / Project overview
-        </p>
-
-
-        <h2>
-            Project overview
-        </h2>
-
-
-        <p>
-
-            This project explores how digital spaces can make cultural
-            heritage more interactive and engaging. I designed and
-            built a virtual museum in Unity that brings together
-            different aspects of Tamil culture — from mythology and
-            traditional art to architecture and sculpture.
-
-        </p>
-
-        <p>
-
-            Rather than presenting culture as static information, I
-            created an environment where visitors can explore,
-            interact and discover stories through play.
-
-        </p>
-
-
-    </div>
-
-
-    <!-- THE EXPERIENCE -->
-
-    <div class="project-image secondary">
-
-        <!--
-        Tanjore Painting gallery room:
-
-        <img
-            src="../images/tamil-museum-tanjore.jpg"
-            alt="Tanjore Painting gallery in the museum"
-        >
-        -->
-
-    </div>
-
-
-    <div class="project-content">
-
-        <p class="content-label">
-            02 / The experience
-        </p>
-
-        <h2>
-            The experience
-        </h2>
-
-        <p>
-
-            The museum is organised as a spatial journey through
-            different elements of Tamil heritage. Visitors move
-            through the environment, discovering cultural objects,
-            architectural references and interactive experiences. It
-            includes:
-
-        </p>
-
-        <h3>Tanjore Painting</h3>
-        <p class="tight">
-            Traditional Tamil painting and its visual richness.
-        </p>
-
-        <h3>Nataraja</h3>
-        <p class="tight">
-            The symbolism and cultural significance of the dancing
-            Shiva.
-        </p>
-
-        <h3>M. S. Subbulakshmi</h3>
-        <p class="tight">
-            Celebrating the legacy of the iconic Carnatic vocalist and
-            her contribution to Tamil and Indian musical heritage.
-        </p>
-
-        <h3>Silappathikaram</h3>
-        <p class="tight">
-            Bringing one of Tamil literature's most significant epics
-            to life through an interactive storytelling experience.
-        </p>
-
-        <h3>Gopuram</h3>
-        <p>
-            Exploring the monumental temple towers that define
-            Dravidian architecture and Tamil temple landscapes.
-        </p>
-
-    </div>
-
-
-    <!-- NATARAJA / SUBBULAKSHMI ROOM -->
-
-    <div class="project-image">
-
-        <!--
-        Nataraja and M. S. Subbulakshmi exhibit rooms:
-
-        <img
-            src="../images/tamil-museum-nataraja-subbulakshmi.jpg"
-            alt="Nataraja and M. S. Subbulakshmi exhibits"
-        >
-        -->
-
-    </div>
-
-
-    <!-- SILAPPATHIKARAM / GOPURAM -->
-
-    <div class="project-image secondary">
-
-        <!--
-        Silappathikaram interactive storytelling room and Gopuram
-        exteriors:
-
-        <img
-            src="../images/tamil-museum-silappathikaram-gopuram.jpg"
-            alt="Silappathikaram and Gopuram scenes"
-        >
-        -->
-
-    </div>
-
-
-    <div class="project-content">
-
-
-        <!-- THE GAMES -->
-
-        <p class="content-label">
-            03 / The games
-        </p>
-
-        <h2>
-            The games
-        </h2>
-
-        <h3>Silappathikaram Sliding Puzzle</h3>
-        <p class="tight">
-            An interactive game where solving the puzzle reveals the
-            story of Kannagi and Kovalan.
-        </p>
-
-        <h3>Towering Stones Game</h3>
-        <p>
-            A puzzle-based interaction exploring the belief that
-            towering stones symbolise keeping families together.
-        </p>
-
-    </div>
-
-
-    <!-- GAME SCREENSHOTS -->
-
-    <div class="project-image">
-
-        <!--
-        Silappathikaram Sliding Puzzle in play:
-
-        <img
-            src="../images/tamil-museum-sliding-puzzle.jpg"
-            alt="Silappathikaram Sliding Puzzle gameplay"
-        >
-        -->
-
-    </div>
-
-    <div class="project-image secondary">
-
-        <!--
-        Towering Stones Game in play:
-
-        <img
-            src="../images/tamil-museum-towering-stones.jpg"
-            alt="Towering Stones Game gameplay"
-        >
-        -->
-
-    </div>
-
-
-    <div class="project-content">
-
-
-        <!-- DESIGN APPROACH -->
-
-        <p class="content-label">
-            04 / Design approach
-        </p>
-
-        <h2>
-            Design approach
-        </h2>
-
-        <p>
-
-            I focused on creating a space that feels like a digital
-            cultural landscape rather than a conventional museum.
-            Spatial layout, scale, movement, interaction and visual
-            elements were used to guide visitors through the
-            experience.
-
-        </p>
-
-        <p>
-
-            The project allowed me to explore how play can become a
-            method of cultural storytelling — making heritage
-            something that can be experienced and discovered rather
-            than simply observed.
-
-        </p>
-
-    </div>
-
-
-    <!-- SPATIAL LAYOUT -->
-
-    <div class="project-image">
-
-        <!--
-        Top-down spatial layout / site plan of the museum:
-
-        <img
-            src="../images/tamil-museum-spatial-layout.jpg"
-            alt="Spatial layout of the museum"
-        >
-        -->
-
-    </div>
-
-
-    <div class="project-content">
-
-        <p class="content-label">
-            05 / The spatial layout
-        </p>
-
-        <h2>
-            The spatial layout
-        </h2>
-
-        <p>
-
-            A top-down view of how the museum's spaces were arranged
-            — guiding visitors from one cultural moment to the next
-            through scale, sightlines and movement.
-
-        </p>
-
-
-        <!-- COLOR SCHEME -->
-
-        <p class="content-label">
-            06 / Color scheme of the museum
-        </p>
-
-        <h2>
-            Color scheme of the museum
-        </h2>
-
-        <ul>
-
-            <li>#9B8F7F</li>
-            <li>#AFA285</li>
-            <li>#928371</li>
-            <li>#34472B</li>
-            <li>#6B83A0</li>
-
-        </ul>
-
-    </div>
-
-
-    <!-- SOME SCENES FROM THE MUSEUM -->
-
-    <div class="project-image secondary">
-
-        <!--
-        Scene collage — chariot/AR interaction, temple gate, hands
-        interacting with an exhibit:
-
-        <img
-            src="../images/tamil-museum-scenes-1.jpg"
-            alt="Scenes from the Digital Museum of Tamil Culture"
-        >
-        -->
-
-    </div>
-
-    <div class="project-image">
-
-        <!--
-        Further scenes — painting exhibit, doorway view, interior
-        details:
-
-        <img
-            src="../images/tamil-museum-scenes-2.jpg"
-            alt="More scenes from the Digital Museum of Tamil Culture"
-        >
-        -->
-
-    </div>
-
-
-    <div class="project-content">
-
-        <p class="content-label">
-            07 / Some scenes from the museum
-        </p>
-
-        <h2>
-            Some scenes from the museum
-        </h2>
-
-
-        <!-- LEARNINGS -->
-
-        <p class="content-label">
-            08 / Learnings
-        </p>
-
-        <h2>
-            Learnings
-        </h2>
-
-        <h3>Spatial storytelling</h3>
-        <p class="tight">
-            Understood how layout, movement, scale and environment can
-            guide a user through a narrative.
-        </p>
-
-        <h3>Game-based storytelling</h3>
-        <p class="tight">
-            Explored how simple mechanics like puzzles can make
-            cultural narratives more engaging and memorable.
-        </p>
-
-        <h3>Cultural research</h3>
-        <p class="tight">
-            Learned how to translate cultural stories and traditions
-            into engaging digital experiences.
-        </p>
-
-        <h3>Unity &amp; 3D design</h3>
-        <p>
-            Gained experience in building interactive spaces,
-            designing environments and creating immersive experiences
-            in Unity.
-        </p>
-
-    </div>
-
-
-    <!-- PREVIOUS / NEXT -->
-
-    <div class="project-navigation">
-
-
-        <a
-            href="project-4.html"
-            class="back-link"
-        >
-            ← Previous project
-        </a>
-
-
-        <a
-            href="project-6.html"
-            class="back-link"
-        >
-            Next project →
-        </a>
-
-
-    </div>
-
-
-</div>
 
 </section>
+
+
+
+
 
 <!-- ========================================================
      FOOTER
@@ -1436,46 +1908,47 @@ footer {
 
 <footer>
 
-<span class="footer-text">
+    <span class="footer-text">
 
-    Vaishnavi Venkatesh
-    ·
-    2026
+        Vaishnavi Venkatesh
+        ·
+        2026
 
-</span>
-
-
-<div class="footer-links">
+    </span>
 
 
-    <a
-        href="https://github.com/blueexev"
-        target="_blank"
-        rel="noopener noreferrer"
-    >
-        GitHub
-    </a>
+
+    <div class="footer-links">
+
+        <a
+            href="https://github.com/blueexev"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            GitHub
+        </a>
 
 
-    <a
-        href="https://linkedin.com"
-        target="_blank"
-        rel="noopener noreferrer"
-    >
-        LinkedIn
-    </a>
+
+        <a
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            LinkedIn
+        </a>
 
 
-    <a href="../index.html">
 
-        ↑ Top
+        <a href="../index.html">
+            ↑ Top
+        </a>
 
-    </a>
-
-
-</div>
+    </div>
 
 </footer>
+
+
 
 </body>
 
